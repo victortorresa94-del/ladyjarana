@@ -87,8 +87,8 @@ export const proximosEventos: ProximoEvento[] = [
     lugar: 'Puerto de la Barceloneta',
   },
   {
-    fecha: 'Abril 2026',
-    fechaCorta: 'abr',
-    lugar: 'Puerto de la Barceloneta — apertura temporada',
+    fecha: '27 de Junio 2026',
+    fechaCorta: '27 jun',
+    lugar: 'Lleida',
   },
 ];
