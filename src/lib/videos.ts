@@ -10,9 +10,30 @@ export interface LiveVideo {
 export const liveVideos: LiveVideo[] = [
   {
     source: 'instagram',
+    id: 'DPquEqBDKp8',
+    title: '@lady.jarana',
+    description: 'Reel · En directo',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'instagram',
     id: 'DOeQihBDPfm',
-    title: 'Reel @lady.jarana',
-    description: 'En directo · Instagram',
+    title: '@lady.jarana',
+    description: 'Reel · Última noche de verano',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'instagram',
+    id: 'DL0gjhfs5vd',
+    title: '@lady.jarana',
+    description: 'Reel · Directo',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'instagram',
+    id: 'DKaG2BNsrX5',
+    title: '@lady.jarana',
+    description: 'Reel · Directo',
     aspectRatio: '9:16',
   },
   {
