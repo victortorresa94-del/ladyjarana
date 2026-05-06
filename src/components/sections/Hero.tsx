@@ -1,19 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Button from '../ui/Button';
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-negro">
-      {/* Hero video background */}
+      {/* Real footage from a Lady Jarana event */}
       <video
         autoPlay
         loop
         muted
         playsInline
         poster="/videos/hero-poster.jpg"
-        className="absolute inset-0 h-full w-full object-cover opacity-60"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
@@ -23,27 +24,29 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(180deg, rgba(31,26,24,0.55) 0%, rgba(214,59,54,0.35) 60%, rgba(31,26,24,0.85) 100%)',
+            'linear-gradient(180deg, rgba(31,26,24,0.50) 0%, rgba(214,59,54,0.25) 60%, rgba(31,26,24,0.85) 100%)',
         }}
       />
 
-      {/* Bombillas */}
-      <div className="absolute top-20 left-0 right-0 flex items-center justify-center gap-3 px-4 opacity-90">
+      {/* Bombillas animadas */}
+      <div className="absolute top-20 left-0 right-0 flex items-center justify-center gap-3 px-4">
         {[...Array(15)].map((_, i) => (
-          <span
+          <motion.span
             key={i}
             className="h-2 w-2 rounded-full"
             style={{
               backgroundColor: i % 3 === 0 ? '#F47A1F' : i % 3 === 1 ? '#F5B73C' : '#FBF1DC',
-              boxShadow: '0 0 12px currentColor',
+              boxShadow: '0 0 14px currentColor',
             }}
+            animate={{ opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 2, repeat: Infinity, delay: i * 0.15 }}
           />
         ))}
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <motion.p
-          className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-sol"
+          className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -51,29 +54,39 @@ export default function Hero() {
           ✦ Rumba & Rock Band ✦ Barcelona ✦
         </motion.p>
 
-        <motion.h1
-          className="mb-6 font-display text-blanco leading-[0.85]"
+        <motion.div
+          className="relative mx-auto mb-6 w-full max-w-3xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          style={{ fontSize: 'clamp(4rem, 14vw, 11rem)' }}
         >
-          <span className="italic text-sol">Lady</span>
-          <br />
-          <span className="italic">Jarana</span>
+          <Image
+            src="/logo/lady-jarana-melon.png"
+            alt="Lady Jarana"
+            width={1024}
+            height={1024}
+            priority
+            className="mx-auto h-auto w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)]"
+          />
+        </motion.div>
+
+        <motion.h1
+          className="sr-only"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          Lady Jarana — Banda en directo de pop-rock español, rumba y latineo en Barcelona
         </motion.h1>
 
         <motion.p
-          className="mx-auto mb-10 max-w-2xl text-lg text-crema leading-relaxed lg:text-2xl font-medium"
+          className="mx-auto mb-10 max-w-3xl text-lg text-crema leading-relaxed lg:text-2xl font-medium drop-shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          No somos una banda tributo.
-          <br className="hidden sm:block" />
-          <em className="font-display text-3xl lg:text-4xl text-sol not-italic">
-            <em>Somos una verbena en directo.</em>
-          </em>
+          Banda en directo para <strong className="text-sol">bodas</strong>,{' '}
+          <strong className="text-sol">fiestas mayores</strong> y eventos privados en{' '}
+          <strong className="text-sol">Barcelona y toda Cataluña</strong>. Pop-rock, rumba y latineo en formato cuarteto.
         </motion.p>
 
         <motion.div

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import Button from './ui/Button';
 
@@ -45,10 +46,17 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-display text-2xl font-bold text-azul italic">
-              Lady Jarana
-            </span>
+          <Link href="/" className="flex items-center" aria-label="Lady Jarana — inicio">
+            <Image
+              src="/logo/lady-jarana-blanco.png"
+              alt="Lady Jarana"
+              width={140}
+              height={70}
+              priority
+              className={`h-10 w-auto transition-[filter] duration-300 ${
+                scrolled ? '[filter:brightness(0)_saturate(100%)_invert(31%)_sepia(28%)_saturate(2014%)_hue-rotate(173deg)]' : '[filter:brightness(0)_saturate(100%)_invert(94%)_sepia(54%)_saturate(525%)_hue-rotate(338deg)]'
+              }`}
+            />
           </Link>
 
           <div className="hidden items-center gap-8 lg:flex">

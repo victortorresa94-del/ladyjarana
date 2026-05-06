@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const navLinks = [
@@ -46,9 +47,13 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="font-display text-4xl font-bold italic text-sol">
-              Lady Jarana
-            </span>
+            <Image
+              src="/logo/lady-jarana-melon.png"
+              alt="Lady Jarana"
+              width={300}
+              height={150}
+              className="h-16 w-auto"
+            />
             <p className="mt-4 max-w-sm font-body text-crema/80 leading-relaxed">
               Pop-rock español, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor. Barcelona, 2025.
             </p>
