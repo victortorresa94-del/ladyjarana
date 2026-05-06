@@ -1,7 +1,11 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Instrument_Serif } from 'next/font/google';
 import { siteMetadata, jsonLdMusicGroup, jsonLdLocalBusiness } from '@/lib/metadata';
 import './globals.css';
+
+export const viewport: Viewport = {
+  themeColor: '#2B6FA3',
+};
 
 const inter = Inter({
   subsets: ['latin'],
