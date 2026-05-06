@@ -7,7 +7,6 @@ import Button from '../ui/Button';
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-negro">
-      {/* Real footage from a Lady Jarana event */}
       <video
         autoPlay
         loop
@@ -19,18 +18,17 @@ export default function Hero() {
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Color overlay for legibility */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(180deg, rgba(31,26,24,0.50) 0%, rgba(214,59,54,0.25) 60%, rgba(31,26,24,0.85) 100%)',
+            'linear-gradient(180deg, rgba(31,26,24,0.55) 0%, rgba(31,26,24,0.35) 40%, rgba(214,59,54,0.25) 70%, rgba(31,26,24,0.85) 100%)',
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
         <motion.p
-          className="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg sm:text-sm"
+          className="mb-3 text-[10px] font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg sm:text-xs lg:mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -39,7 +37,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="relative mx-auto mb-8 w-full max-w-md lg:max-w-lg"
+          className="relative mx-auto mb-6 w-full max-w-md sm:max-w-lg lg:mb-8 lg:max-w-2xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -54,16 +52,12 @@ export default function Hero() {
           />
         </motion.div>
 
-        <motion.h1
-          className="sr-only"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
+        <h1 className="sr-only">
           Lady Jarana — Banda en directo de pop-rock español, rumba y latineo en Barcelona
-        </motion.h1>
+        </h1>
 
         <motion.p
-          className="mx-auto mb-10 max-w-3xl text-lg text-crema leading-relaxed lg:text-2xl font-medium drop-shadow-md"
+          className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-crema font-medium drop-shadow-md sm:text-base lg:mb-10 lg:text-lg lg:max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -74,7 +68,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
@@ -89,7 +83,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >

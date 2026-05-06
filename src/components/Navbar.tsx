@@ -48,12 +48,12 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center" aria-label="Lady Jarana — inicio">
             <Image
-              src="/generated/palm-left.png"
+              src="/logo/palmera-melon.png"
               alt="Lady Jarana"
               width={120}
               height={120}
               priority
-              className="h-14 w-auto"
+              className="h-12 w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
             />
           </Link>
 
@@ -62,7 +62,9 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-body text-sm font-bold text-negro transition-colors hover:text-rojo"
+                className={`font-body text-sm font-bold transition-colors hover:text-rojo ${
+                  scrolled ? 'text-negro' : 'text-crema drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]'
+                }`}
               >
                 {link.label}
               </a>
@@ -78,17 +80,17 @@ export default function Navbar() {
             aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
           >
             <motion.span
-              className="block h-0.5 w-6 bg-negro"
+              className={`block h-0.5 w-6 ${scrolled || menuOpen ? 'bg-negro' : 'bg-crema'}`}
               animate={
                 menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }
               }
             />
             <motion.span
-              className="block h-0.5 w-6 bg-negro"
+              className={`block h-0.5 w-6 ${scrolled || menuOpen ? 'bg-negro' : 'bg-crema'}`}
               animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
             />
             <motion.span
-              className="block h-0.5 w-6 bg-negro"
+              className={`block h-0.5 w-6 ${scrolled || menuOpen ? 'bg-negro' : 'bg-crema'}`}
               animate={
                 menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }
               }
