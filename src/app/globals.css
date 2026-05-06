@@ -1,23 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --azul-jarana: #3DA2D4;
-  --azul-oscuro: #2B8BBF;
-  --azul-claro: #E8F4FA;
-  --negro: #1A1A1A;
-  --gris: #6B7280;
+  /* Brand palette — Mediterranean fiesta / verbena */
+  --sol: #F5B73C;          /* mustard / sun yellow */
+  --sol-claro: #FCE2A0;    /* soft cream-yellow */
+  --naranja: #F47A1F;      /* sunset orange */
+  --naranja-oscuro: #E85D0C;
+  --rojo: #D63B36;         /* verbena red */
+  --rojo-oscuro: #A82A26;
+  --crema: #FBF1DC;        /* paper cream */
+  --crema-oscuro: #F4E4C2;
+  --azul-jarana: #2B6FA3;  /* logo wordmark blue (accent only) */
+  --verde: #2D5A3D;        /* palm leaf green */
+  --negro: #1F1A18;        /* warm dark brown-black */
+  --gris: #6B5D55;
   --blanco: #FFFFFF;
 
-  --background: var(--blanco);
+  --background: var(--crema);
   --foreground: var(--negro);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-sol: var(--sol);
+  --color-sol-claro: var(--sol-claro);
+  --color-naranja: var(--naranja);
+  --color-naranja-oscuro: var(--naranja-oscuro);
+  --color-rojo: var(--rojo);
+  --color-rojo-oscuro: var(--rojo-oscuro);
+  --color-crema: var(--crema);
+  --color-crema-oscuro: var(--crema-oscuro);
   --color-azul: var(--azul-jarana);
-  --color-azul-oscuro: var(--azul-oscuro);
-  --color-azul-claro: var(--azul-claro);
+  --color-verde: var(--verde);
   --color-negro: var(--negro);
   --color-gris: var(--gris);
   --color-blanco: var(--blanco);
@@ -28,6 +43,8 @@
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee-reverse 30s linear infinite;
   --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-slow: spin 40s linear infinite;
+  --animate-sway: sway 5s ease-in-out infinite;
 }
 
 @keyframes marquee {
@@ -43,6 +60,11 @@
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(-3deg); }
   50% { transform: translateY(-10px) rotate(-1deg); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
 }
 
 html {
@@ -64,17 +86,17 @@ body {
 }
 
 ::selection {
-  background-color: var(--azul-jarana);
-  color: var(--blanco);
+  background-color: var(--sol);
+  color: var(--negro);
 }
 
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--azul-claro);
+  background: var(--crema);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--azul-jarana);
+  background: var(--naranja);
   border-radius: 4px;
 }

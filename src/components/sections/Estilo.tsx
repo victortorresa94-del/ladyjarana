@@ -6,75 +6,95 @@ import Marquee from '../ui/Marquee';
 
 const pilares = [
   {
-    titulo: 'El soundtrack de una generación',
+    titulo: 'Pop-Rock Español 2000s',
     texto:
-      'Jarabe de Palo, Pignoise, El Canto del Loco, Fito & Fitipaldis. Las canciones que se saben de memoria, tocadas con la energía con la que se merecen.',
+      'El núcleo del concepto. Canciones que conectan con varias generaciones. El Canto del Loco, Fito & Fitipaldis, Jarabe de Palo, Pignoise.',
     icon: '🎸',
+    color: 'sol',
   },
   {
-    titulo: 'El sello Lady Jarana',
+    titulo: 'Rumba / Flamenco Pop',
     texto:
-      'Estopa, Melendi, Los Delinqüentes, El Barrio. La rumba es nuestro ingrediente diferencial: groove, palmas, guitarra española y mucha mucha fiesta.',
+      'El motor del baile. Arreglos orgánicos con guitarra española, palmas y mucho groove. Estopa, Los Delinqüentes, El Barrio.',
     icon: '🌴',
+    color: 'naranja',
   },
   {
-    titulo: 'Para que baile todo el mundo',
+    titulo: 'Pop Latino Actual',
     texto:
-      'Manuel Turizo, Sebastián Yatra y los hits del momento. Pero a nuestra manera: más acústicos, más rumberos, más nuestros.',
+      'El toque moderno. Adaptados a nuestro estilo propio, más acústicos y rumberos. Manuel Turizo, Sebastián Yatra.',
     icon: '💃',
+    color: 'rojo',
   },
 ];
 
+const colorClasses: Record<string, { bg: string; text: string }> = {
+  sol: { bg: 'bg-sol', text: 'text-negro' },
+  naranja: { bg: 'bg-naranja', text: 'text-blanco' },
+  rojo: { bg: 'bg-rojo', text: 'text-blanco' },
+};
+
 const artistas = [
-  'Jarabe de Palo',
-  'Estopa',
-  'Pignoise',
-  'Melendi',
-  'El Canto del Loco',
-  'Los Delinqüentes',
-  'Fito & Fitipaldis',
-  'El Barrio',
-  'Manuel Turizo',
-  'Sebastián Yatra',
+  '★ Jarabe de Palo',
+  '★ Estopa',
+  '★ Pignoise',
+  '★ Melendi',
+  '★ El Canto del Loco',
+  '★ Los Delinqüentes',
+  '★ Fito & Fitipaldis',
+  '★ El Barrio',
+  '★ Manuel Turizo',
+  '★ Sebastián Yatra',
 ];
 
 export default function Estilo() {
   return (
-    <section id="musica" className="relative bg-azul-claro py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <SectionNumber number="02" label="Nuestro sonido" />
+    <section id="musica" className="relative bg-negro py-24 lg:py-32 overflow-hidden">
+      {/* Decorative sun */}
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-20"
+        style={{ background: 'radial-gradient(circle, var(--sol) 0%, transparent 70%)' }}
+      />
 
-        <h2 className="mb-16 max-w-3xl font-display text-4xl font-bold text-negro leading-tight lg:text-5xl">
-          Tres mundos, un solo show
+      <div className="relative mx-auto max-w-7xl px-6">
+        <SectionNumber number="02" label="El ADN musical" inverted />
+
+        <h2 className="mb-4 max-w-3xl font-display text-4xl font-bold text-crema leading-[1.05] lg:text-6xl">
+          Tres pilares, <span className="italic text-sol">una sola jarana.</span>
         </h2>
+        <p className="mb-16 max-w-2xl font-body text-lg text-crema/70">
+          El sonido Lady Jarana es <strong className="text-sol">fiesta mediterránea</strong> en directo: pop-rock español, rumba flamenca y latineo actual fusionados en un único show.
+        </p>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {pilares.map((pilar, i) => (
-            <motion.div
-              key={i}
-              className="group relative overflow-hidden rounded-3xl bg-blanco p-8 shadow-sm hover:shadow-lg transition-shadow lg:p-10"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              whileHover={{ y: -5 }}
-            >
-              <span className="mb-4 block text-4xl">{pilar.icon}</span>
-              <h3 className="mb-3 font-display text-2xl font-bold text-negro">
-                {pilar.titulo}
-              </h3>
-              <p className="font-body text-gris leading-relaxed">
-                {pilar.texto}
-              </p>
-            </motion.div>
-          ))}
+          {pilares.map((pilar, i) => {
+            const c = colorClasses[pilar.color];
+            return (
+              <motion.div
+                key={i}
+                className={`group relative overflow-hidden rounded-3xl ${c.bg} ${c.text} p-8 border-2 border-negro shadow-[6px_6px_0_var(--crema)] lg:p-10`}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                whileHover={{ y: -5, rotate: i % 2 === 0 ? -1 : 1 }}
+              >
+                <span className="mb-4 block text-5xl">{pilar.icon}</span>
+                <h3 className="mb-3 font-display text-2xl font-bold leading-tight">
+                  {pilar.titulo}
+                </h3>
+                <p className="font-body leading-relaxed">
+                  {pilar.texto}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
-      <div className="mt-16 py-5 bg-azul text-blanco">
+      <div className="relative mt-20 py-6 bg-sol border-y-4 border-negro -rotate-1">
         <Marquee
           items={artistas}
-          className="font-display text-2xl font-bold opacity-80 lg:text-3xl"
+          className="font-display text-2xl font-bold italic text-negro lg:text-4xl"
         />
       </div>
     </section>

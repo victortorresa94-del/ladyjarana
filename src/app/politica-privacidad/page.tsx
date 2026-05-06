@@ -11,7 +11,7 @@ export default function PoliticaPrivacidad() {
   return (
     <>
       <Navbar />
-      <main className="bg-azul-claro pt-28 pb-16 min-h-screen">
+      <main className="bg-crema pt-28 pb-16 min-h-screen">
         <div className="mx-auto max-w-3xl px-6">
           <h1 className="mb-8 font-display text-4xl font-bold text-negro">
             Política de Privacidad
@@ -27,7 +27,7 @@ export default function PoliticaPrivacidad() {
             </h2>
             <ul className="list-disc pl-6 space-y-1">
               <li>Responsable: Lady Jarana / 94 Music</li>
-              <li>Email: info@ladyjarana.com</li>
+              <li>Email: ladyjaranamusic@gmail.com</li>
               <li>Finalidad: gestión de solicitudes de contratación</li>
             </ul>
             <h2 className="font-display text-2xl font-bold text-negro">
@@ -58,7 +58,7 @@ export default function PoliticaPrivacidad() {
             <p>
               Puedes ejercer tus derechos de acceso, rectificación, supresión,
               portabilidad, limitación y oposición escribiendo a
-              info@ladyjarana.com.
+              ladyjaranamusic@gmail.com.
             </p>
           </div>
         </div>

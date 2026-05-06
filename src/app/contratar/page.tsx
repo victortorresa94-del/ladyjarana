@@ -33,7 +33,7 @@ export default function ContratarPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-24 pb-16 bg-azul-claro min-h-screen">
+      <main className="pt-24 pb-16 bg-crema min-h-screen">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Left column - Info */}
@@ -48,7 +48,7 @@ export default function ContratarPage() {
 
               <div className="mb-10 space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="mt-1 text-azul text-xl">⚡</span>
+                  <span className="mt-1 text-rojo text-xl">⚡</span>
                   <div>
                     <p className="font-body font-semibold text-negro">
                       Respuesta en 24h
@@ -59,7 +59,7 @@ export default function ContratarPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="mt-1 text-azul text-xl">🎸</span>
+                  <span className="mt-1 text-rojo text-xl">🎸</span>
                   <div>
                     <p className="font-body font-semibold text-negro">
                       Formatos flexibles
@@ -70,7 +70,7 @@ export default function ContratarPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="mt-1 text-azul text-xl">📍</span>
+                  <span className="mt-1 text-rojo text-xl">📍</span>
                   <div>
                     <p className="font-body font-semibold text-negro">
                       Barcelona y desplazamientos
@@ -89,11 +89,11 @@ export default function ContratarPage() {
                 {faqs.map((faq, i) => (
                   <details
                     key={i}
-                    className="group rounded-2xl bg-blanco shadow-sm p-5"
+                    className="group rounded-2xl bg-blanco border-2 border-negro p-5"
                   >
                     <summary className="cursor-pointer font-body font-semibold text-negro list-none flex items-center justify-between">
                       {faq.q}
-                      <span className="text-azul transition-transform group-open:rotate-45">
+                      <span className="text-rojo transition-transform group-open:rotate-45">
                         +
                       </span>
                     </summary>
@@ -107,7 +107,7 @@ export default function ContratarPage() {
 
             {/* Right column - Form */}
             <div className="lg:col-span-3">
-              <div className="rounded-3xl bg-blanco shadow-sm p-8 shadow-xl lg:p-10">
+              <div className="rounded-3xl bg-blanco border-4 border-negro shadow-[8px_8px_0_var(--negro)] p-8 lg:p-10">
                 <ContratarForm />
               </div>
             </div>

@@ -37,7 +37,7 @@ export default function Navbar() {
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-azul/95 backdrop-blur-xl shadow-lg'
+            ? 'bg-crema/95 backdrop-blur-xl shadow-md border-b-2 border-negro/10'
             : 'bg-transparent'
         }`}
         initial={{ y: -100 }}
@@ -46,7 +46,7 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-display text-2xl font-bold text-blanco italic">
+            <span className="font-display text-2xl font-bold text-azul italic">
               Lady Jarana
             </span>
           </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-body text-sm font-medium text-blanco/80 transition-colors hover:text-blanco"
+                className="font-body text-sm font-bold text-negro transition-colors hover:text-rojo"
               >
                 {link.label}
               </a>
@@ -72,17 +72,17 @@ export default function Navbar() {
             aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
           >
             <motion.span
-              className="block h-0.5 w-6 bg-blanco"
+              className="block h-0.5 w-6 bg-negro"
               animate={
                 menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }
               }
             />
             <motion.span
-              className="block h-0.5 w-6 bg-blanco"
+              className="block h-0.5 w-6 bg-negro"
               animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
             />
             <motion.span
-              className="block h-0.5 w-6 bg-blanco"
+              className="block h-0.5 w-6 bg-negro"
               animate={
                 menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }
               }
@@ -94,7 +94,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-azul"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-crema"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -105,7 +105,7 @@ export default function Navbar() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className="font-display text-4xl font-bold text-blanco hover:text-blanco/80 transition-colors italic"
+                  className="font-display text-4xl font-bold text-azul hover:text-rojo transition-colors italic"
                   onClick={() => setMenuOpen(false)}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}

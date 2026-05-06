@@ -7,13 +7,16 @@ import { liveVideos } from '@/lib/videos';
 
 export default function Galeria() {
   return (
-    <section id="galeria" className="relative bg-blanco py-24 lg:py-32">
+    <section id="galeria" className="relative bg-blanco py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="06" label="Mira y escucha" />
 
-        <h2 className="mb-16 max-w-3xl font-display text-4xl font-bold text-negro leading-tight lg:text-5xl">
-          Mejor ver que contar
+        <h2 className="mb-4 max-w-3xl font-display text-4xl font-bold text-negro leading-[1.05] lg:text-6xl">
+          Mejor <span className="italic text-rojo">ver</span> que contar.
         </h2>
+        <p className="mb-16 max-w-2xl font-body text-lg text-negro/70">
+          Vídeos de directos. Sin pistas pregrabadas, 100% interacción.
+        </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {liveVideos.map((video, i) => (
@@ -35,19 +38,19 @@ export default function Galeria() {
         </div>
 
         <motion.p
-          className="mt-10 text-center font-body text-gris"
+          className="mt-10 text-center font-body text-negro/70"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           Síguenos en{' '}
           <a
-            href="https://instagram.com/ladyjarana"
+            href="https://instagram.com/lady.jarana"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-azul underline hover:text-azul-oscuro"
+            className="text-rojo underline font-bold hover:text-rojo-oscuro"
           >
-            Instagram
+            @lady.jarana
           </a>{' '}
           para ver más →
         </motion.p>

@@ -10,27 +10,26 @@ export interface Formato {
 
 export const formatos: Formato[] = [
   {
-    nombre: 'Dúo acústico',
-    musicos: 'Voz + guitarra española + teclado o segunda guitarra',
-    ideal: 'Ceremonias, cócteles, restaurantes, eventos íntimos',
-    volumen: 'Bajo-medio',
+    nombre: 'Dúo Acústico',
+    musicos: 'Voz + guitarra española & teclado o guitarra',
+    ideal: 'Cócteles, restaurantes, eventos íntimos',
+    volumen: 'Íntimo, acústico, relajado pero alegre',
     duracion: 'Hasta 2h',
   },
   {
     nombre: 'Trío',
-    musicos: 'Tres músicos en formato semi-acústico',
-    ideal: 'Bares, terrazas, bodas pequeñas, eventos privados',
-    volumen: 'Medio',
+    musicos: 'Voz/guitarra + eléctrica + teclado/bajo',
+    ideal: 'Bares, terrazas, bodas pequeñas',
+    volumen: 'Energía media, sonido orgánico y cercano',
     duracion: '90-120 min',
   },
   {
     nombre: 'Cuarteto',
-    musicos:
-      'Banda completa: voz, guitarra española, guitarra eléctrica, teclado/bajo, batería',
-    ideal: 'Bodas, fiestas mayores, conciertos, eventos con escenario',
-    volumen: 'Pleno',
-    duracion: '90-120 min + posibles extras',
+    musicos: 'Banda completa (Víctor, Alejo, Iván, Diego)',
+    ideal: 'Fiestas mayores, bodas grandes, eventos con escenario',
+    volumen: 'Máxima energía, verbena total, sonido completo',
+    duracion: '120 min + extras',
     destacado: true,
-    etiqueta: 'El más popular',
+    etiqueta: 'Formato Principal',
   },
 ];

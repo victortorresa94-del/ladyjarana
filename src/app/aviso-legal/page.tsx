@@ -11,7 +11,7 @@ export default function AvisoLegal() {
   return (
     <>
       <Navbar />
-      <main className="bg-azul-claro pt-28 pb-16 min-h-screen">
+      <main className="bg-crema pt-28 pb-16 min-h-screen">
         <div className="mx-auto max-w-3xl px-6">
           <h1 className="mb-8 font-display text-4xl font-bold text-negro">
             Aviso Legal
@@ -28,7 +28,7 @@ export default function AvisoLegal() {
             <ul className="list-disc pl-6 space-y-1">
               <li>Denominación: Lady Jarana (proyecto de 94 Music)</li>
               <li>Domicilio: Barcelona, España</li>
-              <li>Email: info@ladyjarana.com</li>
+              <li>Email: ladyjaranamusic@gmail.com</li>
             </ul>
             <h2 className="font-display text-2xl font-bold text-negro">
               Condiciones de uso

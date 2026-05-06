@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# user-supplied assets (kept locally only)
+/CARPETA VICTOR/
+
+# generated sitemaps (regenerated on build)
+/public/robots.txt
+/public/sitemap*.xml

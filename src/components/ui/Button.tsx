@@ -17,11 +17,11 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-blanco text-azul hover:bg-blanco/90 shadow-lg shadow-blanco/25',
+    'bg-rojo text-blanco hover:bg-rojo-oscuro shadow-[4px_4px_0_var(--negro)] hover:shadow-[2px_2px_0_var(--negro)] hover:translate-x-[2px] hover:translate-y-[2px]',
   secondary:
-    'bg-azul text-blanco hover:bg-azul-oscuro shadow-lg shadow-azul/25',
+    'bg-sol text-negro hover:bg-naranja shadow-[4px_4px_0_var(--negro)] hover:shadow-[2px_2px_0_var(--negro)] hover:translate-x-[2px] hover:translate-y-[2px]',
   outline:
-    'bg-transparent border-2 border-blanco text-blanco hover:bg-blanco/10',
+    'bg-transparent border-2 border-negro text-negro hover:bg-negro hover:text-crema',
 };
 
 export default function Button({
@@ -34,12 +34,11 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-body font-semibold text-base tracking-wide transition-colors duration-200 cursor-pointer';
+    'inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-body font-bold text-base tracking-wide transition-all duration-150 cursor-pointer';
 
   const content = (
     <motion.span
       className={`${baseStyles} ${variantStyles[variant]} ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
-      whileHover={disabled ? {} : { scale: 1.03 }}
       whileTap={disabled ? {} : { scale: 0.97 }}
     >
       {children}

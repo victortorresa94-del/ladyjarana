@@ -2,36 +2,41 @@ export interface Integrante {
   nombre: string;
   rol: string;
   descripcion: string;
-  imagen: string;
+  emoji: string;
+  color: 'sol' | 'naranja' | 'rojo' | 'azul';
 }
 
 export const integrantes: Integrante[] = [
   {
     nombre: 'Víctor Torres',
-    rol: 'Voz & Guitarra española',
+    rol: 'Voz + Guitarra española',
     descripcion:
-      'Frontman, alma rumbera y la voz que enciende el público. Si la banda tiene un capitán, es él. Y la guitarra española es su brújula.',
-    imagen: '/images/victor.jpg',
+      'El frontman. Dirección del show, conexión rumbera y el encargado de la interacción constante con el público.',
+    emoji: '🎤',
+    color: 'rojo',
   },
   {
     nombre: 'Alejo Finger',
     rol: 'Guitarra eléctrica',
     descripcion:
-      'El que pone los riffs, los solos y la fuerza rock. Cuando suena Fito, suena por él.',
-    imagen: '/images/alejo.jpg',
+      'La fuerza rock. Aporta la energía, los riffs reconocibles y los solos que levantan el concierto.',
+    emoji: '🎸',
+    color: 'naranja',
   },
   {
     nombre: 'Iván Cortés',
-    rol: 'Teclado & Bajo',
+    rol: 'Teclado / Bajo',
     descripcion:
-      'El multitarea oficial. Bajo y teclado al mismo tiempo. La banda suena el doble de grande gracias a él.',
-    imagen: '/images/ivan.jpg',
+      'El motor armónico. Doble rol para dar profundidad rítmica, groove y capas de sonido masivas (pianos, pads).',
+    emoji: '🎹',
+    color: 'sol',
   },
   {
     nombre: 'Diego Aquino',
     rol: 'Batería',
     descripcion:
-      'El motor. El que marca el groove, los cortes, las subidas y los finales explosivos. Sin él, no hay fiesta.',
-    imagen: '/images/diego.jpg',
+      'El latido. Define la energía del concierto, domina los cortes y dirige los finales explosivos.',
+    emoji: '🥁',
+    color: 'azul',
   },
 ];

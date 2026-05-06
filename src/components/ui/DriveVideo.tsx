@@ -23,9 +23,9 @@ export default function DriveVideo({
   return (
     <>
       <motion.button
-        className="group relative aspect-video w-full overflow-hidden rounded-2xl bg-negro/10 cursor-pointer"
+        className="group relative aspect-video w-full overflow-hidden rounded-2xl border-4 border-negro bg-sol shadow-[6px_6px_0_var(--negro)] cursor-pointer"
         onClick={() => !isPlaceholder && setIsOpen(true)}
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.02, rotate: -1 }}
         aria-label={`Reproducir vídeo: ${title}`}
       >
         {thumbnail && !isPlaceholder ? (
@@ -35,9 +35,9 @@ export default function DriveVideo({
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-azul/20 to-azul/5">
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sol via-naranja to-rojo">
             <svg
-              className="h-16 w-16 text-azul/40"
+              className="h-16 w-16 text-blanco drop-shadow-lg"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -45,19 +45,19 @@ export default function DriveVideo({
             </svg>
           </div>
         )}
-        <div className="absolute inset-0 flex items-center justify-center bg-negro/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-azul shadow-xl">
-            <svg className="h-7 w-7 text-negro ml-1" fill="currentColor" viewBox="0 0 24 24">
+        <div className="absolute inset-0 flex items-center justify-center bg-negro/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-rojo border-4 border-blanco shadow-xl">
+            <svg className="h-7 w-7 text-blanco ml-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-negro/80 to-transparent p-4">
-          <p className="font-display text-sm font-semibold text-blanco">
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-negro to-transparent p-4 text-left">
+          <p className="font-display text-base font-bold italic text-blanco">
             {title}
           </p>
           {description && (
-            <p className="text-xs text-blanco/70">{description}</p>
+            <p className="font-body text-xs text-blanco/80">{description}</p>
           )}
         </div>
       </motion.button>
@@ -79,13 +79,13 @@ export default function DriveVideo({
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute -top-12 right-0 text-blanco/80 hover:text-blanco text-3xl cursor-pointer"
+                className="absolute -top-12 right-0 text-blanco/80 hover:text-sol text-3xl cursor-pointer"
                 onClick={() => setIsOpen(false)}
                 aria-label="Cerrar vídeo"
               >
                 ✕
               </button>
-              <div className="aspect-video w-full overflow-hidden rounded-2xl bg-negro">
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border-4 border-sol bg-negro">
                 <iframe
                   src={`https://drive.google.com/file/d/${fileId}/preview`}
                   className="h-full w-full"
@@ -94,7 +94,7 @@ export default function DriveVideo({
                   title={title}
                 />
               </div>
-              <p className="mt-3 text-center text-blanco/70 text-sm">
+              <p className="mt-3 text-center font-display italic text-blanco/80 text-sm">
                 {title}
                 {description ? ` — ${description}` : ''}
               </p>

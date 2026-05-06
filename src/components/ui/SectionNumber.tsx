@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 interface SectionNumberProps {
   number: string;
   label: string;
+  inverted?: boolean;
 }
 
-export default function SectionNumber({ number, label }: SectionNumberProps) {
+export default function SectionNumber({ number, label, inverted = false }: SectionNumberProps) {
   return (
     <motion.div
       className="mb-8 flex items-baseline gap-4"
@@ -16,11 +17,11 @@ export default function SectionNumber({ number, label }: SectionNumberProps) {
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.5 }}
     >
-      <span className="font-display text-6xl font-bold text-azul/10 leading-none lg:text-8xl">
+      <span className={`font-display text-6xl font-bold leading-none italic lg:text-8xl ${inverted ? 'text-sol/30' : 'text-rojo/20'}`}>
         {number}
       </span>
-      <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-azul">
-        {label}
+      <span className={`font-body text-sm font-bold uppercase tracking-[0.25em] ${inverted ? 'text-sol' : 'text-rojo'}`}>
+        ✦ {label}
       </span>
     </motion.div>
   );

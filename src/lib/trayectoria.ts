@@ -3,53 +3,49 @@ export interface Hito {
   tipo: 'concierto' | 'fiesta-mayor' | 'boda' | 'sala';
   lugar: string;
   descripcion: string;
-  imagen?: string;
 }
 
 export const trayectoria: Hito[] = [
   {
     fecha: 'Primavera 2025',
     tipo: 'concierto',
-    lugar: 'Puerto de la Barceloneta, Barcelona',
+    lugar: 'Puerto de la Barceloneta',
     descripcion:
-      'El bautizo en directo. Primer concierto, mucho público, mar de fondo.',
-    imagen: '/images/barceloneta.jpg',
+      'El Bautizo. Primer bolo acústico ante una audiencia numerosa. El nacimiento oficial de la jarana.',
   },
   {
     fecha: 'Primavera 2025',
     tipo: 'sala',
     lugar: 'Centro Asturiano de Barcelona',
-    descripcion: 'Sala cultural. Concierto íntimo, formato cuarteto.',
-    imagen: '/images/centro-asturiano.jpg',
+    descripcion:
+      'Intimidad cultural. Formato sala, conexión cercana con el público local.',
   },
   {
     fecha: 'Verano 2025',
     tipo: 'fiesta-mayor',
     lugar: 'Fiesta Mayor de Barberà del Vallès',
-    descripcion: 'Primera fiesta mayor municipal. Plaza llena.',
-    imagen: '/images/barbera.jpg',
+    descripcion:
+      'El Salto a la Plaza. Primera prueba de fuego en el circuito municipal.',
   },
   {
     fecha: 'Septiembre 2025',
     tipo: 'fiesta-mayor',
     lugar: 'Fiesta Mayor de Sant Adrià de Besòs',
     descripcion:
-      'Formato ampliado, escenario grande, producción completa.',
-    imagen: '/images/sant-adria.jpg',
+      'Formato XXL. Escenario principal, producción ampliada, sonido gigante.',
   },
   {
     fecha: 'Diciembre 2025',
     tipo: 'boda',
-    lugar: 'Boda — Cangavarró',
+    lugar: 'Boda — Cangabarró',
     descripcion:
-      'Primera boda. Celebración privada con público entregado.',
-    imagen: '/images/boda-cangavarro.jpg',
+      'Circuito Privado. Consolidación en eventos corporativos y nupciales de alto nivel.',
   },
   {
-    fecha: 'Enero 2026',
+    fecha: '2026',
     tipo: 'boda',
-    lugar: 'Boda privada',
-    descripcion: 'Confirmando el formato bodas como mercado clave.',
-    imagen: '/images/boda-privada.jpg',
+    lugar: 'Temporada en expansión',
+    descripcion:
+      'Una banda en plena expansión, lista para los escenarios de 2026.',
   },
 ];

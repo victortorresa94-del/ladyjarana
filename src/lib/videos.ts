@@ -6,47 +6,30 @@ export interface LiveVideo {
   aspectRatio?: string;
 }
 
+// Real Google Drive video IDs from victortorresa94@gmail.com Drive
 export const liveVideos: LiveVideo[] = [
   {
-    id: 'TU_ID_DE_GOOGLE_DRIVE_1',
-    title: 'Fiesta Mayor de Sant Adrià de Besòs',
-    description: 'Formato ampliado · Septiembre 2025',
-    thumbnail: '/thumbnails/sant-adria.jpg',
+    id: '10ECkr7cIsqqtDwNwoQ6OslLUoF01_jyn',
+    title: 'BDNBOX Live!',
+    description: 'Fiesta Mayor — directo completo',
     aspectRatio: '16:9',
   },
   {
-    id: 'TU_ID_DE_GOOGLE_DRIVE_2',
-    title: 'Fiesta Mayor de Barberà del Vallès',
-    description: 'Cuarteto · Verano 2025',
-    thumbnail: '/thumbnails/barbera.jpg',
-    aspectRatio: '16:9',
-  },
-  {
-    id: 'TU_ID_DE_GOOGLE_DRIVE_3',
-    title: 'Puerto de la Barceloneta',
-    description: 'Primer concierto · Primavera 2025',
-    thumbnail: '/thumbnails/barceloneta.jpg',
-    aspectRatio: '16:9',
-  },
-  {
-    id: 'TU_ID_DE_GOOGLE_DRIVE_4',
-    title: 'Boda en Cangavarró',
+    id: '13ZVGJMCheAPBGzvkonWfz9ozQMaOnnzh',
+    title: 'Cangabarró',
     description: 'Boda privada · Diciembre 2025',
-    thumbnail: '/thumbnails/boda-cangavarro.jpg',
     aspectRatio: '16:9',
   },
   {
-    id: 'TU_ID_DE_GOOGLE_DRIVE_5',
-    title: 'Centro Asturiano de Barcelona',
-    description: 'Sala cultural · 2025',
-    thumbnail: '/thumbnails/centro-asturiano.jpg',
-    aspectRatio: '16:9',
+    id: '1nHwRXsaIggwBfNpxSmVNFibef8350FKs',
+    title: 'Orgullo',
+    description: 'Versión Lady Jarana',
+    aspectRatio: '9:16',
   },
   {
-    id: 'TU_ID_DE_GOOGLE_DRIVE_6',
-    title: 'Ensayo en directo',
-    description: 'Sesión de estudio',
-    thumbnail: '/thumbnails/ensayo.jpg',
+    id: '1QZuyM263BBwLeSWw9S9TpBXGKuGHrEPs',
+    title: 'Presentación',
+    description: 'La banda en pocos minutos',
     aspectRatio: '16:9',
   },
 ];
