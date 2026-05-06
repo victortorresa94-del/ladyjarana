@@ -9,7 +9,7 @@ export default function ProximosEventosBanner() {
 
   return (
     <motion.aside
-      className="fixed bottom-4 right-4 z-30 max-w-xs rounded-2xl bg-rojo border-4 border-negro shadow-[6px_6px_0_var(--negro)] p-4 sm:max-w-sm"
+      className="hidden fixed bottom-4 right-4 z-30 max-w-xs rounded-2xl bg-rojo border-4 border-negro shadow-[6px_6px_0_var(--negro)] p-4 sm:block sm:max-w-sm"
       initial={{ opacity: 0, y: 40, x: 40 }}
       animate={{ opacity: 1, y: 0, x: 0 }}
       transition={{ duration: 0.5, delay: 1.5 }}

@@ -28,7 +28,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
         <motion.p
-          className="mb-3 text-[10px] font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg sm:text-xs lg:mb-4"
+          className="mb-1 text-[10px] font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg sm:text-xs"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,7 +37,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="relative mx-auto mb-6 w-full max-w-md sm:max-w-lg lg:mb-8 lg:max-w-2xl"
+          className="relative mx-auto -mt-6 mb-2 w-full max-w-md sm:max-w-lg lg:-mt-10 lg:mb-3 lg:max-w-2xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -57,14 +57,14 @@ export default function Hero() {
         </h1>
 
         <motion.p
-          className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-crema font-medium drop-shadow-md sm:text-base lg:mb-10 lg:text-lg lg:max-w-3xl"
+          className="mx-auto -mt-4 mb-8 max-w-sm text-[10px] font-light leading-relaxed text-crema/70 drop-shadow-md sm:text-xs lg:-mt-6 lg:mb-10 lg:max-w-md lg:text-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          Banda en directo para <strong className="text-sol">bodas</strong>,{' '}
-          <strong className="text-sol">fiestas mayores</strong> y eventos privados en{' '}
-          <strong className="text-sol">Barcelona y toda Cataluña</strong>. Pop-rock, rumba y latineo en formato cuarteto.
+          Banda en directo para <strong className="font-semibold">bodas</strong>,{' '}
+          <strong className="font-semibold">fiestas mayores</strong> y eventos privados en{' '}
+          <strong className="font-semibold">Barcelona y toda Cataluña</strong>. Pop-rock, rumba y latineo en formato cuarteto.
         </motion.p>
 
         <motion.div
