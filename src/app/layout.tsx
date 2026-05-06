@@ -1,21 +1,22 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Bricolage_Grotesque } from 'next/font/google';
+import { Inter, Instrument_Serif } from 'next/font/google';
 import { siteMetadata, jsonLdMusicGroup, jsonLdLocalBusiness } from '@/lib/metadata';
 import './globals.css';
 
-const playfair = Playfair_Display({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-inter',
   display: 'swap',
-  weight: ['400', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
-const bricolage = Bricolage_Grotesque({
+// Instrument Serif: Didone-style display with beautiful italic — matches the Lady Jarana wordmark
+const instrument = Instrument_Serif({
   subsets: ['latin'],
-  variable: '--font-bricolage',
+  variable: '--font-display',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
 });
 
 export const metadata: Metadata = siteMetadata;
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${bricolage.variable} h-full antialiased`}
+      className={`${inter.variable} ${instrument.variable} h-full antialiased`}
     >
       <head>
         <script

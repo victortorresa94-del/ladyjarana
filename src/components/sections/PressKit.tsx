@@ -26,7 +26,7 @@ export default function PressKit() {
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/dossier" variant="secondary">
+              <Button href="/dossier-lady-jarana.pdf" variant="secondary">
                 Descargar dossier (PDF) ↓
               </Button>
               <Button href="/contratar?asunto=rider" variant="primary">

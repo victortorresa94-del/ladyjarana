@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Formatos', href: '/#formatos' },
   { label: 'Galería', href: '/#galeria' },
   { label: 'Contratar', href: '/contratar' },
-  { label: 'Dossier', href: '/dossier' },
+  { label: 'Dossier', href: '/dossier-lady-jarana.pdf' },
 ];
 
 const socialLinks = [

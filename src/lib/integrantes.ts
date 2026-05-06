@@ -3,7 +3,8 @@ export interface Integrante {
   rol: string;
   descripcion: string;
   emoji: string;
-  color: 'sol' | 'naranja' | 'rojo' | 'azul';
+  imagen: string;
+  color: 'sol' | 'naranja' | 'rojo' | 'azul' | 'verde';
 }
 
 export const integrantes: Integrante[] = [
@@ -13,6 +14,7 @@ export const integrantes: Integrante[] = [
     descripcion:
       'El frontman. Dirección del show, conexión rumbera y el encargado de la interacción constante con el público.',
     emoji: '🎤',
+    imagen: '/integrantes/victor.png',
     color: 'rojo',
   },
   {
@@ -21,14 +23,16 @@ export const integrantes: Integrante[] = [
     descripcion:
       'La fuerza rock. Aporta la energía, los riffs reconocibles y los solos que levantan el concierto.',
     emoji: '🎸',
+    imagen: '/integrantes/alejo.png',
     color: 'naranja',
   },
   {
     nombre: 'Iván Cortés',
     rol: 'Teclado / Bajo',
     descripcion:
-      'El motor armónico. Doble rol para dar profundidad rítmica, groove y capas de sonido masivas (pianos, pads).',
+      'El motor armónico. Doble rol para dar profundidad rítmica, groove y capas de sonido masivas.',
     emoji: '🎹',
+    imagen: '/integrantes/ivan.png',
     color: 'sol',
   },
   {
@@ -37,6 +41,16 @@ export const integrantes: Integrante[] = [
     descripcion:
       'El latido. Define la energía del concierto, domina los cortes y dirige los finales explosivos.',
     emoji: '🥁',
+    imagen: '/integrantes/diego.png',
     color: 'azul',
+  },
+  {
+    nombre: 'Antonio',
+    rol: 'Trompeta',
+    descripcion:
+      'El brillo metálico. Su trompeta corona los temas, abre las cumbias y pone los remates sobre la rumba.',
+    emoji: '🎺',
+    imagen: '/integrantes/antonio.png',
+    color: 'verde',
   },
 ];
