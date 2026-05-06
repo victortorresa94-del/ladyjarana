@@ -48,14 +48,12 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center" aria-label="Lady Jarana — inicio">
             <Image
-              src="/logo/lady-jarana-blanco.png"
+              src="/generated/palm-left.png"
               alt="Lady Jarana"
-              width={140}
-              height={70}
+              width={120}
+              height={120}
               priority
-              className={`h-10 w-auto transition-[filter] duration-300 ${
-                scrolled ? '[filter:brightness(0)_saturate(100%)_invert(31%)_sepia(28%)_saturate(2014%)_hue-rotate(173deg)]' : '[filter:brightness(0)_saturate(100%)_invert(94%)_sepia(54%)_saturate(525%)_hue-rotate(338deg)]'
-              }`}
+              className="h-14 w-auto"
             />
           </Link>
 

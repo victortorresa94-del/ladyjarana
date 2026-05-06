@@ -31,7 +31,7 @@ type FormData = z.infer<typeof schema>;
 
 function FormContent() {
   const searchParams = useSearchParams();
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'success'>('idle');
 
   const defaultEvento = searchParams.get('evento') || '';
   const defaultFormato = searchParams.get('formato') || '';
@@ -55,19 +55,28 @@ function FormContent() {
     },
   });
 
-  const onSubmit = async (data: FormData) => {
-    setStatus('loading');
-    try {
-      const res = await fetch('/api/contratar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error();
-      setStatus('success');
-    } catch {
-      setStatus('error');
-    }
+  const onSubmit = (data: FormData) => {
+    const lines = [
+      `Nombre: ${data.nombre}`,
+      `Email: ${data.email}`,
+      `Teléfono: ${data.telefono}`,
+      `Tipo de evento: ${data.tipoEvento}`,
+      data.fecha && `Fecha: ${data.fecha}`,
+      data.hora && `Hora: ${data.hora}`,
+      data.localizacion && `Localización: ${data.localizacion}`,
+      data.provincia && `Provincia: ${data.provincia}`,
+      data.aforo && `Aforo: ${data.aforo}`,
+      data.formato && `Formato: ${data.formato}`,
+      data.sonido && `Equipo de sonido: ${data.sonido}`,
+      data.comoNosConociste && `Cómo nos conoció: ${data.comoNosConociste}`,
+      data.mensaje && `\nMensaje:\n${data.mensaje}`,
+    ].filter(Boolean).join('\n');
+
+    const subject = `Contratación · ${data.tipoEvento} · ${data.nombre}`;
+    const mailto = `mailto:ladyjaranamusic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+
+    window.location.href = mailto;
+    setStatus('success');
   };
 
   if (status === 'success') {
@@ -75,11 +84,20 @@ function FormContent() {
       <div className="py-12 text-center">
         <span className="mb-4 block text-5xl">🎉</span>
         <h3 className="mb-2 font-display text-2xl font-bold text-negro">
-          ¡Recibido!
+          ¡Listo! Revisa tu correo
         </h3>
         <p className="font-body text-negro/70">
-          Te respondemos en menos de 24h. Mientras, aquí va un tema para abrir
-          boca.
+          Se ha abierto tu cliente de email con el mensaje preparado. Sólo dale
+          a enviar.
+        </p>
+        <p className="mt-4 font-body text-sm text-negro/60">
+          ¿No se abrió? Escríbenos directamente a{' '}
+          <a
+            href="mailto:ladyjaranamusic@gmail.com"
+            className="text-rojo underline font-bold"
+          >
+            ladyjaranamusic@gmail.com
+          </a>
         </p>
       </div>
     );
@@ -279,18 +297,9 @@ function FormContent() {
         type="submit"
         variant="primary"
         className="w-full justify-center text-lg"
-        disabled={status === 'loading'}
       >
-        {status === 'loading'
-          ? 'Calentando motores...'
-          : 'Mandar mensaje a Lady Jarana →'}
+        Mandar mensaje a Lady Jarana →
       </Button>
-
-      {status === 'error' && (
-        <p className="text-center font-body text-sm text-red-500">
-          Algo se ha desafinado, prueba de nuevo.
-        </p>
-      )}
     </form>
   );
 }

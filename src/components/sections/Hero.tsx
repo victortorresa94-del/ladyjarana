@@ -28,25 +28,9 @@ export default function Hero() {
         }}
       />
 
-      {/* Bombillas animadas */}
-      <div className="absolute top-20 left-0 right-0 flex items-center justify-center gap-3 px-4">
-        {[...Array(15)].map((_, i) => (
-          <motion.span
-            key={i}
-            className="h-2 w-2 rounded-full"
-            style={{
-              backgroundColor: i % 3 === 0 ? '#F47A1F' : i % 3 === 1 ? '#F5B73C' : '#FBF1DC',
-              boxShadow: '0 0 14px currentColor',
-            }}
-            animate={{ opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 2, repeat: Infinity, delay: i * 0.15 }}
-          />
-        ))}
-      </div>
-
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <motion.p
-          className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg"
+          className="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg sm:text-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -55,7 +39,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="relative mx-auto mb-6 w-full max-w-3xl"
+          className="relative mx-auto mb-8 w-full max-w-md lg:max-w-lg"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
