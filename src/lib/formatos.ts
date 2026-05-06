@@ -10,26 +10,26 @@ export interface Formato {
 
 export const formatos: Formato[] = [
   {
-    nombre: 'Dúo Acústico',
-    musicos: 'Voz + guitarra española & teclado o guitarra',
-    ideal: 'Cócteles, restaurantes, eventos íntimos',
-    volumen: 'Íntimo, acústico, relajado pero alegre',
-    duracion: 'Hasta 2h',
-  },
-  {
-    nombre: 'Trío',
-    musicos: 'Voz/guitarra + eléctrica + teclado/bajo',
-    ideal: 'Bares, terrazas, bodas pequeñas',
-    volumen: 'Energía media, sonido orgánico y cercano',
-    duracion: '90-120 min',
-  },
-  {
     nombre: 'Cuarteto',
-    musicos: 'Banda completa (Víctor, Alejo, Iván, Diego)',
+    musicos: 'Víctor (voz/guitarra), Alejo (eléctrica), Iván (teclado/bajo), Diego (batería)',
+    ideal: 'Bodas, salas y eventos privados con banda en directo',
+    volumen: 'Energía completa, sonido pleno de banda',
+    duracion: '120 min',
+  },
+  {
+    nombre: 'Quinteto',
+    musicos: 'Cuarteto + Antonio (trompeta)',
     ideal: 'Fiestas mayores, bodas grandes, eventos con escenario',
-    volumen: 'Máxima energía, verbena total, sonido completo',
+    volumen: 'Máxima energía con vientos — verbena total',
     duracion: '120 min + extras',
     destacado: true,
     etiqueta: 'Formato Principal',
+  },
+  {
+    nombre: 'Banda Completa',
+    musicos: 'Quinteto + bajista, percusión menor, saxo y guitarra adicional',
+    ideal: 'Producciones grandes, festivales, escenarios XXL',
+    volumen: 'Sonido orquestal, despliegue máximo en escena',
+    duracion: '120 min + bises',
   },
 ];

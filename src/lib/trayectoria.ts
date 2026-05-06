@@ -42,10 +42,53 @@ export const trayectoria: Hito[] = [
       'Circuito Privado. Consolidación en eventos corporativos y nupciales de alto nivel.',
   },
   {
-    fecha: '2026',
-    tipo: 'boda',
-    lugar: 'Temporada en expansión',
+    fecha: 'Abril 2026',
+    tipo: 'concierto',
+    lugar: 'Puerto de la Barceloneta',
     descripcion:
-      'Una banda en plena expansión, lista para los escenarios de 2026.',
+      'Apertura de la nueva temporada. Volvemos al lugar que nos vio nacer.',
+  },
+  {
+    fecha: '31 Mayo 2026',
+    tipo: 'concierto',
+    lugar: 'Puerto de la Barceloneta',
+    descripcion:
+      'Segundo concierto en la Barceloneta. Ya es nuestro escenario de cabecera.',
+  },
+  {
+    fecha: '23 Junio 2026',
+    tipo: 'concierto',
+    lugar: 'Arco de Triunfo, Barcelona',
+    descripcion:
+      'Verbena de Sant Joan. 23:00. Concierto especial en el corazón de la ciudad.',
+  },
+];
+
+// Próximos eventos (futuros) — mostrados en el banner de TOP NEWS
+export interface ProximoEvento {
+  fecha: string;
+  fechaCorta: string;
+  lugar: string;
+  hora?: string;
+  destacado?: boolean;
+}
+
+export const proximosEventos: ProximoEvento[] = [
+  {
+    fecha: '23 de Junio 2026',
+    fechaCorta: '23 jun',
+    lugar: 'Arco de Triunfo, Barcelona',
+    hora: '23:00',
+    destacado: true,
+  },
+  {
+    fecha: '31 de Mayo 2026',
+    fechaCorta: '31 may',
+    lugar: 'Puerto de la Barceloneta',
+  },
+  {
+    fecha: 'Abril 2026',
+    fechaCorta: 'abr',
+    lugar: 'Puerto de la Barceloneta — apertura temporada',
   },
 ];

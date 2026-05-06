@@ -1,5 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
+import ProximosEventos from '@/components/sections/ProximosEventos';
+import ProximosEventosBanner from '@/components/ProximosEventosBanner';
 import Bio from '@/components/sections/Bio';
 import Estilo from '@/components/sections/Estilo';
 import Integrantes from '@/components/sections/Integrantes';
@@ -18,6 +20,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ProximosEventos />
         <Bio />
         <Estilo />
         <Integrantes />
@@ -30,6 +33,7 @@ export default function Home() {
         <CTAFinal />
       </main>
       <Footer />
+      <ProximosEventosBanner />
     </>
   );
 }
