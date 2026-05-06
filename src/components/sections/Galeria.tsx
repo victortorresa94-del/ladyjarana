@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import SectionNumber from '../ui/SectionNumber';
 import DriveVideo from '../ui/DriveVideo';
+import InstagramReel from '../ui/InstagramReel';
 import { liveVideos } from '@/lib/videos';
 
 export default function Galeria() {
@@ -21,18 +22,26 @@ export default function Galeria() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {liveVideos.map((video, i) => (
             <motion.div
-              key={video.id}
+              key={`${video.source}-${video.id}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <DriveVideo
-                fileId={video.id}
-                title={video.title}
-                description={video.description}
-                thumbnail={video.thumbnail}
-              />
+              {video.source === 'instagram' ? (
+                <InstagramReel
+                  reelId={video.id}
+                  title={video.title}
+                  description={video.description}
+                />
+              ) : (
+                <DriveVideo
+                  fileId={video.id}
+                  title={video.title}
+                  description={video.description}
+                  thumbnail={video.thumbnail}
+                />
+              )}
             </motion.div>
           ))}
         </div>
