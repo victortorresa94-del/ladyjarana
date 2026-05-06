@@ -11,7 +11,7 @@ export default function PressKit() {
         <SectionNumber number="09" label="Press Kit" />
 
         <motion.div
-          className="rounded-3xl bg-azul p-10 text-center text-blanco noise-overlay relative overflow-hidden lg:p-16"
+          className="rounded-3xl bg-azul p-10 text-center text-blanco relative overflow-hidden lg:p-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

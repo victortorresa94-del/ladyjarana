@@ -13,7 +13,7 @@ const bullets = [
 
 export default function Bio() {
   return (
-    <section id="banda" className="relative bg-crema py-24 lg:py-32">
+    <section id="banda" className="relative bg-blanco py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="01" label="La banda" />
 
@@ -25,11 +25,11 @@ export default function Bio() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7 }}
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-azul/10 rotate-[-2deg] shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-azul/20 to-azul/5">
-                <span className="font-display text-6xl text-azul/20">LJ</span>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-azul-claro shadow-2xl">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="font-display text-8xl text-azul/10 italic">LJ</span>
               </div>
-              {/* Replace with: <Image src="/images/banda-completa.jpg" ... /> */}
+              {/* Replace with: <Image src="/images/banda-completa.jpg" alt="Lady Jarana" fill className="object-cover" /> */}
             </div>
           </motion.div>
 
@@ -43,7 +43,7 @@ export default function Bio() {
               Hacemos que la gente cante, baile y se quede sin voz.
             </h2>
 
-            <p className="mb-8 font-body text-lg text-negro/70 leading-relaxed">
+            <p className="mb-8 font-body text-lg text-gris leading-relaxed">
               Lady Jarana nace en Barcelona en la primavera de 2025 con una idea
               clara: rescatar la música con la que crecimos, cargarla de groove
               rumbero y devolvérsela al público en directo. Cuatro músicos, una
@@ -57,7 +57,7 @@ export default function Bio() {
                 <Sticker
                   key={i}
                   rotation={i % 2 === 0 ? -2 : 2}
-                  color={i % 2 === 0 ? 'amarillo' : 'azul'}
+                  color={i % 2 === 0 ? 'azul-claro' : 'azul'}
                 >
                   {b.icon} {b.text}
                 </Sticker>

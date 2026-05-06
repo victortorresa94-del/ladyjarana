@@ -41,12 +41,12 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-negro text-blanco">
+    <footer className="bg-azul text-blanco">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="font-display text-3xl font-bold">
+            <span className="font-display text-3xl font-bold italic">
               Lady Jarana
             </span>
             <p className="mt-4 max-w-sm font-body text-blanco/60 leading-relaxed">
@@ -60,7 +60,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blanco/60 transition-colors hover:text-amarillo"
+                  className="text-blanco/60 transition-colors hover:text-blanco"
                   aria-label={s.label}
                 >
                   {s.icon}
@@ -79,7 +79,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-blanco/60 hover:text-amarillo transition-colors"
+                    className="font-body text-sm text-blanco/60 hover:text-blanco transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@ladyjarana.com"
-                  className="hover:text-amarillo transition-colors"
+                  className="hover:text-blanco transition-colors"
                 >
                   info@ladyjarana.com
                 </a>
@@ -105,7 +105,7 @@ export default function Footer() {
               <li>
                 <a
                   href="https://wa.me/34XXXXXXXXX"
-                  className="hover:text-amarillo transition-colors"
+                  className="hover:text-blanco transition-colors"
                 >
                   WhatsApp
                 </a>

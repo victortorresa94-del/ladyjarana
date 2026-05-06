@@ -45,7 +45,7 @@ const servicios = [
 
 export default function Servicios() {
   return (
-    <section className="relative bg-blanco py-24 lg:py-32">
+    <section className="relative bg-azul-claro py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="07" label="Tu evento, nuestra fiesta" />
 
@@ -64,16 +64,16 @@ export default function Servicios() {
             >
               <Link
                 href={`/contratar?evento=${encodeURIComponent(s.param)}`}
-                className="group block rounded-3xl bg-crema p-8 transition-all duration-300 hover:bg-azul hover:shadow-xl hover:shadow-azul/20"
+                className="group block rounded-3xl bg-blanco p-8 transition-all duration-300 hover:bg-azul hover:shadow-xl hover:shadow-azul/20"
               >
                 <span className="mb-4 block text-4xl">{s.icon}</span>
                 <h3 className="mb-2 font-display text-xl font-bold text-negro group-hover:text-blanco">
                   {s.titulo}
                 </h3>
-                <p className="font-body text-sm text-negro/60 group-hover:text-blanco/80">
+                <p className="font-body text-sm text-gris group-hover:text-blanco/80">
                   {s.descripcion}
                 </p>
-                <span className="mt-4 inline-block font-body text-sm font-semibold text-azul group-hover:text-amarillo">
+                <span className="mt-4 inline-block font-body text-sm font-semibold text-azul group-hover:text-blanco">
                   Pedir presupuesto →
                 </span>
               </Link>

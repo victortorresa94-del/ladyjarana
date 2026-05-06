@@ -6,14 +6,14 @@ import { trayectoria } from '@/lib/trayectoria';
 
 const tipoColors: Record<string, string> = {
   concierto: 'bg-azul text-blanco',
-  'fiesta-mayor': 'bg-coral text-blanco',
-  boda: 'bg-amarillo text-negro',
+  'fiesta-mayor': 'bg-azul-oscuro text-blanco',
+  boda: 'bg-blanco text-azul',
   sala: 'bg-negro text-blanco',
 };
 
 export default function Trayectoria() {
   return (
-    <section id="eventos" className="relative bg-negro py-24 lg:py-32">
+    <section id="eventos" className="relative bg-azul py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="05" label="Dónde hemos tocado" />
 
@@ -23,16 +23,16 @@ export default function Trayectoria() {
 
         {/* Desktop: horizontal scroll */}
         <div className="hidden lg:block">
-          <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-thin">
+          <div className="flex gap-6 overflow-x-auto pb-6">
             {trayectoria.map((hito, i) => (
               <motion.div
                 key={i}
-                className="min-w-[320px] flex-shrink-0 rounded-3xl bg-blanco/5 backdrop-blur-sm border border-blanco/10 p-8"
+                className="min-w-[320px] flex-shrink-0 rounded-3xl bg-blanco/10 backdrop-blur-sm border border-blanco/20 p-8"
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ y: -5, borderColor: 'rgba(255,210,63,0.3)' }}
+                whileHover={{ y: -5, backgroundColor: 'rgba(255,255,255,0.15)' }}
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span className="font-body text-sm text-blanco/50">
@@ -60,7 +60,7 @@ export default function Trayectoria() {
           {trayectoria.map((hito, i) => (
             <motion.div
               key={i}
-              className="relative rounded-2xl bg-blanco/5 backdrop-blur-sm border border-blanco/10 p-6"
+              className="relative rounded-2xl bg-blanco/10 backdrop-blur-sm border border-blanco/20 p-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -87,7 +87,7 @@ export default function Trayectoria() {
         </div>
 
         <motion.p
-          className="mt-12 text-center font-display text-2xl font-bold text-amarillo"
+          className="mt-12 text-center font-display text-2xl font-bold text-blanco/90 italic"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

@@ -37,7 +37,7 @@ export default function Navbar() {
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-negro/80 backdrop-blur-xl shadow-lg'
+            ? 'bg-azul/95 backdrop-blur-xl shadow-lg'
             : 'bg-transparent'
         }`}
         initial={{ y: -100 }}
@@ -46,7 +46,7 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-display text-2xl font-bold text-blanco">
+            <span className="font-display text-2xl font-bold text-blanco italic">
               Lady Jarana
             </span>
           </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-body text-sm font-medium text-blanco/80 transition-colors hover:text-amarillo"
+                className="font-body text-sm font-medium text-blanco/80 transition-colors hover:text-blanco"
               >
                 {link.label}
               </a>
@@ -94,7 +94,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-negro"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-azul"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -105,7 +105,7 @@ export default function Navbar() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className="font-display text-4xl font-bold text-blanco hover:text-amarillo transition-colors"
+                  className="font-display text-4xl font-bold text-blanco hover:text-blanco/80 transition-colors italic"
                   onClick={() => setMenuOpen(false)}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}

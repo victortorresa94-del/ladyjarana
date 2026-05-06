@@ -7,7 +7,7 @@ import { liveVideos } from '@/lib/videos';
 
 export default function Galeria() {
   return (
-    <section id="galeria" className="relative bg-crema py-24 lg:py-32">
+    <section id="galeria" className="relative bg-blanco py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="06" label="Mira y escucha" />
 
@@ -35,7 +35,7 @@ export default function Galeria() {
         </div>
 
         <motion.p
-          className="mt-10 text-center font-body text-negro/60"
+          className="mt-10 text-center font-body text-gris"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -45,7 +45,7 @@ export default function Galeria() {
             href="https://instagram.com/ladyjarana"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-azul underline hover:text-coral"
+            className="text-azul underline hover:text-azul-oscuro"
           >
             Instagram
           </a>{' '}

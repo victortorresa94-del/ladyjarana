@@ -6,25 +6,24 @@ interface StickerProps {
   children: React.ReactNode;
   rotation?: number;
   className?: string;
-  color?: 'amarillo' | 'coral' | 'azul' | 'blanco';
+  color?: 'azul' | 'blanco' | 'azul-claro';
 }
 
 const colorMap = {
-  amarillo: 'bg-amarillo text-negro',
-  coral: 'bg-coral text-blanco',
   azul: 'bg-azul text-blanco',
-  blanco: 'bg-blanco text-negro',
+  blanco: 'bg-blanco text-azul border border-azul/10',
+  'azul-claro': 'bg-azul-claro text-azul-oscuro',
 };
 
 export default function Sticker({
   children,
   rotation = -3,
   className = '',
-  color = 'amarillo',
+  color = 'azul-claro',
 }: StickerProps) {
   return (
     <motion.span
-      className={`inline-block rounded-lg px-4 py-1.5 font-body font-semibold text-sm shadow-md ${colorMap[color]} ${className}`}
+      className={`inline-block rounded-lg px-4 py-1.5 font-body font-semibold text-sm shadow-sm ${colorMap[color]} ${className}`}
       style={{ rotate: `${rotation}deg` }}
       whileHover={{ scale: 1.05, rotate: 0 }}
       animate={{ y: [0, -5, 0] }}

@@ -2,39 +2,30 @@
 
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
-import Sticker from '../ui/Sticker';
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-negro noise-overlay">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-azul/30 via-negro/60 to-negro" />
-
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 opacity-10 lg:opacity-20">
-        <svg width="200" height="300" viewBox="0 0 200 300" fill="none" className="text-amarillo">
-          <path
-            d="M100 0c-20 40-60 60-80 120s20 100 80 160c60-60 100-100 80-160S120 40 100 0z"
-            fill="currentColor"
-          />
-          <line x1="100" y1="120" x2="100" y2="300" stroke="currentColor" strokeWidth="4" />
-          <line x1="100" y1="180" x2="140" y2="140" stroke="currentColor" strokeWidth="3" />
-          <line x1="100" y1="200" x2="60" y2="160" stroke="currentColor" strokeWidth="3" />
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-azul">
+      {/* Decorative palm tree */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.08] lg:opacity-[0.12]">
+        <svg width="400" height="600" viewBox="0 0 400 600" fill="none" className="text-blanco">
+          <path d="M220 250c-15-60-80-120-120-140 40 10 100 50 130 100-30-70-100-130-160-140 50 5 130 60 170 120-20-80-90-150-150-170 60 10 140 80 165 155-10-50-50-120-100-160 50 20 110 100 115 170l5 30c2 20 3 40 2 60l-5 80c-2 30-3 60-5 90l-3 60c-1 15-2 30-4 45h-20c2-15 3-30 5-45l3-60c2-30 3-60 5-90l5-80c1-15 0-30-2-45" fill="currentColor"/>
+          <path d="M195 280c5 40 2 80-5 120l-8 60c-3 20-5 40-8 60l-5 45c-2 15-3 30-5 35h-15c2-10 4-25 6-40l5-45c3-20 5-40 8-60l8-60c7-35 10-70 8-105" fill="currentColor" opacity="0.5"/>
         </svg>
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <motion.p
-          className="mb-6 font-body text-sm font-semibold uppercase tracking-[0.3em] text-amarillo"
+          className="mb-6 font-body text-sm font-semibold uppercase tracking-[0.3em] text-blanco/70"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Rumba & Rock Band · Barcelona · 2025
+          Rumba & Rock Band · Barcelona
         </motion.p>
 
         <motion.h1
-          className="mb-6 font-display text-7xl font-bold text-blanco sm:text-8xl lg:text-[10rem] leading-[0.85]"
+          className="mb-6 font-display text-7xl font-bold text-blanco italic sm:text-8xl lg:text-[10rem] leading-[0.85]"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -67,17 +58,6 @@ export default function Hero() {
           <Button href="#galeria" variant="outline">
             Ver vídeo en directo
           </Button>
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-24 right-8 hidden lg:block"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 1.2 }}
-        >
-          <Sticker rotation={-6} color="amarillo">
-            🌴 Disponible para 2026
-          </Sticker>
         </motion.div>
       </div>
 

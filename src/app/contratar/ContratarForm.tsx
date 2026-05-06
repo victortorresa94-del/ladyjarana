@@ -86,9 +86,9 @@ function FormContent() {
   }
 
   const inputStyles =
-    'w-full rounded-xl border border-negro/10 bg-crema/50 px-4 py-3 font-body text-negro placeholder:text-negro/40 focus:border-azul focus:outline-none focus:ring-2 focus:ring-azul/20 transition-colors';
+    'w-full rounded-xl border border-negro/10 bg-azul-claro/50 px-4 py-3 font-body text-negro placeholder:text-negro/40 focus:border-azul focus:outline-none focus:ring-2 focus:ring-azul/20 transition-colors';
   const labelStyles = 'block mb-1.5 font-body text-sm font-semibold text-negro';
-  const errorStyles = 'mt-1 font-body text-xs text-coral';
+  const errorStyles = 'mt-1 font-body text-xs text-red-500';
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
@@ -287,7 +287,7 @@ function FormContent() {
       </Button>
 
       {status === 'error' && (
-        <p className="text-center font-body text-sm text-coral">
+        <p className="text-center font-body text-sm text-red-500">
           Algo se ha desafinado, prueba de nuevo.
         </p>
       )}

@@ -16,7 +16,7 @@ export default function SectionNumber({ number, label }: SectionNumberProps) {
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.5 }}
     >
-      <span className="font-display text-6xl font-bold text-azul/15 leading-none lg:text-8xl">
+      <span className="font-display text-6xl font-bold text-azul/10 leading-none lg:text-8xl">
         {number}
       </span>
       <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-azul">

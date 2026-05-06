@@ -6,7 +6,7 @@ import { integrantes } from '@/lib/integrantes';
 
 export default function Integrantes() {
   return (
-    <section className="relative bg-crema py-24 lg:py-32">
+    <section className="relative bg-blanco py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="03" label="La gente" />
 
@@ -18,30 +18,29 @@ export default function Integrantes() {
           {integrantes.map((m, i) => (
             <motion.div
               key={m.nombre}
-              className="group relative overflow-hidden rounded-3xl bg-blanco shadow-lg"
+              className="group relative overflow-hidden rounded-3xl bg-azul-claro"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              whileHover={{ rotate: -1, scale: 1.02 }}
+              whileHover={{ scale: 1.02 }}
             >
-              <div className="aspect-[4/3] overflow-hidden bg-gradient-to-br from-azul/10 to-azul/5">
+              <div className="aspect-[4/3] overflow-hidden bg-azul/5">
                 <div className="flex h-full items-center justify-center">
-                  <span className="font-display text-7xl text-azul/15">
+                  <span className="font-display text-7xl text-azul/10 italic">
                     {m.nombre.split(' ')[0][0]}
                     {m.nombre.split(' ')[1]?.[0]}
                   </span>
                 </div>
-                {/* Replace with: <Image src={m.imagen} alt={m.nombre} fill className="object-cover" /> */}
               </div>
               <div className="p-6 lg:p-8">
-                <span className="mb-2 inline-block rounded-full bg-amarillo px-3 py-1 font-body text-xs font-semibold text-negro">
+                <span className="mb-2 inline-block rounded-full bg-azul px-3 py-1 font-body text-xs font-semibold text-blanco">
                   {m.rol}
                 </span>
                 <h3 className="mb-2 font-display text-2xl font-bold text-negro lg:text-3xl">
                   {m.nombre}
                 </h3>
-                <p className="font-body text-negro/70 leading-relaxed">
+                <p className="font-body text-gris leading-relaxed">
                   {m.descripcion}
                 </p>
               </div>

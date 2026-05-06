@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
-import { Fraunces, Bricolage_Grotesque } from 'next/font/google';
+import { Playfair_Display, Bricolage_Grotesque } from 'next/font/google';
 import { siteMetadata, jsonLdMusicGroup, jsonLdLocalBusiness } from '@/lib/metadata';
 import './globals.css';
 
-const fraunces = Fraunces({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-fraunces',
+  variable: '--font-playfair',
   display: 'swap',
   weight: ['400', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
 });
 
 const bricolage = Bricolage_Grotesque({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${fraunces.variable} ${bricolage.variable} h-full antialiased`}
+      className={`${playfair.variable} ${bricolage.variable} h-full antialiased`}
     >
       <head>
         <script

@@ -9,21 +9,18 @@ const pilares = [
     titulo: 'El soundtrack de una generación',
     texto:
       'Jarabe de Palo, Pignoise, El Canto del Loco, Fito & Fitipaldis. Las canciones que se saben de memoria, tocadas con la energía con la que se merecen.',
-    color: 'from-azul/20 to-azul/5',
     icon: '🎸',
   },
   {
     titulo: 'El sello Lady Jarana',
     texto:
       'Estopa, Melendi, Los Delinqüentes, El Barrio. La rumba es nuestro ingrediente diferencial: groove, palmas, guitarra española y mucha mucha fiesta.',
-    color: 'from-coral/20 to-coral/5',
     icon: '🌴',
   },
   {
     titulo: 'Para que baile todo el mundo',
     texto:
       'Manuel Turizo, Sebastián Yatra y los hits del momento. Pero a nuestra manera: más acústicos, más rumberos, más nuestros.',
-    color: 'from-amarillo/20 to-amarillo/5',
     icon: '💃',
   },
 ];
@@ -43,7 +40,7 @@ const artistas = [
 
 export default function Estilo() {
   return (
-    <section id="musica" className="relative bg-blanco py-24 lg:py-32">
+    <section id="musica" className="relative bg-azul-claro py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="02" label="Nuestro sonido" />
 
@@ -55,7 +52,7 @@ export default function Estilo() {
           {pilares.map((pilar, i) => (
             <motion.div
               key={i}
-              className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${pilar.color} p-8 lg:p-10`}
+              className="group relative overflow-hidden rounded-3xl bg-blanco p-8 shadow-sm hover:shadow-lg transition-shadow lg:p-10"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
@@ -66,7 +63,7 @@ export default function Estilo() {
               <h3 className="mb-3 font-display text-2xl font-bold text-negro">
                 {pilar.titulo}
               </h3>
-              <p className="font-body text-negro/70 leading-relaxed">
+              <p className="font-body text-gris leading-relaxed">
                 {pilar.texto}
               </p>
             </motion.div>
@@ -74,10 +71,10 @@ export default function Estilo() {
         </div>
       </div>
 
-      <div className="mt-16 border-y border-negro/10 py-5 bg-negro text-blanco">
+      <div className="mt-16 py-5 bg-azul text-blanco">
         <Marquee
           items={artistas}
-          className="font-display text-2xl font-bold opacity-60 lg:text-3xl"
+          className="font-display text-2xl font-bold opacity-80 lg:text-3xl"
         />
       </div>
     </section>

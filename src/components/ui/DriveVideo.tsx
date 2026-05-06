@@ -46,7 +46,7 @@ export default function DriveVideo({
           </div>
         )}
         <div className="absolute inset-0 flex items-center justify-center bg-negro/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-amarillo shadow-xl">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-azul shadow-xl">
             <svg className="h-7 w-7 text-negro ml-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>

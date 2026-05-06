@@ -5,21 +5,17 @@ import Button from '../ui/Button';
 
 export default function CTAFinal() {
   return (
-    <section className="relative overflow-hidden bg-amarillo py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-azul py-24 lg:py-32">
       {/* Decorative palm */}
-      <div className="absolute -right-20 -top-10 opacity-10">
-        <svg width="300" height="400" viewBox="0 0 200 300" fill="none" className="text-negro">
-          <path
-            d="M100 0c-20 40-60 60-80 120s20 100 80 160c60-60 100-100 80-160S120 40 100 0z"
-            fill="currentColor"
-          />
-          <line x1="100" y1="120" x2="100" y2="300" stroke="currentColor" strokeWidth="4" />
+      <div className="absolute -right-20 -top-10 opacity-[0.06]">
+        <svg width="400" height="600" viewBox="0 0 400 600" fill="none" className="text-blanco">
+          <path d="M220 250c-15-60-80-120-120-140 40 10 100 50 130 100-30-70-100-130-160-140 50 5 130 60 170 120-20-80-90-150-150-170 60 10 140 80 165 155-10-50-50-120-100-160 50 20 110 100 115 170l5 30c2 20 3 40 2 60l-5 80c-2 30-3 60-5 90l-3 60c-1 15-2 30-4 45h-20c2-15 3-30 5-45l3-60c2-30 3-60 5-90l5-80c1-15 0-30-2-45" fill="currentColor"/>
         </svg>
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <motion.h2
-          className="mb-6 font-display text-5xl font-bold text-negro leading-tight lg:text-7xl"
+          className="mb-6 font-display text-5xl font-bold text-blanco leading-tight italic lg:text-7xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -31,7 +27,7 @@ export default function CTAFinal() {
         </motion.h2>
 
         <motion.p
-          className="mx-auto mb-10 max-w-2xl font-body text-lg text-negro/70 leading-relaxed"
+          className="mx-auto mb-10 max-w-2xl font-body text-lg text-blanco/70 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -49,7 +45,7 @@ export default function CTAFinal() {
         >
           <Button
             href="/contratar"
-            className="text-xl px-12 py-5 bg-negro text-blanco hover:bg-negro/80 shadow-2xl shadow-negro/30"
+            className="text-xl px-12 py-5 bg-blanco text-azul hover:bg-blanco/90 shadow-2xl"
           >
             Contratar la banda →
           </Button>
