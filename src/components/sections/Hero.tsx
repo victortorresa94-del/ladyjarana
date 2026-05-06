@@ -7,7 +7,7 @@ import Button from '../ui/Button';
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-negro">
-      {/* Real footage from a Lady Jarana event */}
+      {/* Real footage from Lady Jarana directo */}
       <video
         autoPlay
         loop
@@ -24,13 +24,29 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(180deg, rgba(31,26,24,0.50) 0%, rgba(214,59,54,0.25) 60%, rgba(31,26,24,0.85) 100%)',
+            'linear-gradient(180deg, rgba(31,26,24,0.55) 0%, rgba(31,26,24,0.35) 40%, rgba(214,59,54,0.25) 70%, rgba(31,26,24,0.85) 100%)',
         }}
       />
 
-      {/* Bombillas animadas */}
-      <div className="absolute top-20 left-0 right-0 flex items-center justify-center gap-3 px-4">
-        {[...Array(15)].map((_, i) => (
+      {/* Palm icon decoration top-right */}
+      <motion.div
+        className="absolute top-24 right-6 z-20 hidden md:block lg:right-12 lg:top-28"
+        initial={{ opacity: 0, x: 30, rotate: -15 }}
+        animate={{ opacity: 1, x: 0, rotate: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
+        <Image
+          src="/logo/palmera-melon.png"
+          alt=""
+          width={140}
+          height={140}
+          className="h-24 w-auto opacity-80 drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)] lg:h-32 animate-sway"
+        />
+      </motion.div>
+
+      {/* Bombillas */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 flex items-center justify-center gap-3 px-4 max-w-[60%]">
+        {[...Array(13)].map((_, i) => (
           <motion.span
             key={i}
             className="h-2 w-2 rounded-full"
@@ -44,9 +60,9 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
         <motion.p
-          className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg"
+          className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-sol drop-shadow-lg sm:text-xs lg:mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -55,7 +71,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="relative mx-auto mb-6 w-full max-w-3xl"
+          className="relative mx-auto mb-4 w-full max-w-lg sm:max-w-xl lg:mb-6 lg:max-w-3xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -70,16 +86,12 @@ export default function Hero() {
           />
         </motion.div>
 
-        <motion.h1
-          className="sr-only"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
+        <h1 className="sr-only">
           Lady Jarana — Banda en directo de pop-rock español, rumba y latineo en Barcelona
-        </motion.h1>
+        </h1>
 
         <motion.p
-          className="mx-auto mb-10 max-w-3xl text-lg text-crema leading-relaxed lg:text-2xl font-medium drop-shadow-md"
+          className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-crema font-medium drop-shadow-md sm:text-base lg:mb-10 lg:text-lg lg:max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -90,7 +102,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
@@ -105,7 +117,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
