@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lady Jarana — Web Oficial
 
-## Getting Started
+Web oficial de **Lady Jarana**, banda de Rumba & Rock de Barcelona.
 
-First, run the development server:
+**Stack:** Next.js 14+ · TypeScript · Tailwind CSS · Framer Motion · Resend
+
+---
+
+## 1. Arrancar el proyecto
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 2. Cambiar contenido
 
-## Learn More
+### Textos
+Los textos principales de cada seccion estan en `src/components/sections/`. Cada seccion tiene su propio archivo:
+- `Hero.tsx` — cabecera principal
+- `Bio.tsx` — sobre la banda
+- `Estilo.tsx` — estilos musicales
+- `Integrantes.tsx` — miembros (datos en `src/lib/integrantes.ts`)
+- `Formatos.tsx` — duo/trio/cuarteto (datos en `src/lib/formatos.ts`)
+- `Trayectoria.tsx` — timeline de eventos (datos en `src/lib/trayectoria.ts`)
 
-To learn more about Next.js, take a look at the following resources:
+### Imagenes
+Coloca las fotos en `public/images/` con estos nombres:
+- `victor.jpg`, `alejo.jpg`, `ivan.jpg`, `diego.jpg` — fotos individuales
+- `banda-completa.jpg` — foto grupal para la seccion Bio
+- `barceloneta.jpg`, `centro-asturiano.jpg`, `barbera.jpg`, `sant-adria.jpg`, `boda-cangavarro.jpg`, `boda-privada.jpg` — fotos de eventos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para las miniaturas de video, usa `public/thumbnails/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 3. Anadir un evento nuevo a la trayectoria
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Abre `src/lib/trayectoria.ts` y anade un nuevo objeto al array:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+{
+  fecha: 'Marzo 2026',
+  tipo: 'fiesta-mayor',  // opciones: 'concierto' | 'fiesta-mayor' | 'boda' | 'sala'
+  lugar: 'Nombre del lugar',
+  descripcion: 'Descripcion corta del evento.',
+  imagen: '/images/nombre-imagen.jpg',
+}
+```
+
+---
+
+## 4. Anadir un video de Google Drive
+
+1. Sube el video a Google Drive
+2. Click derecho > **Compartir** > Cambia a **"Cualquier persona con el enlace puede ver"**
+3. Copia el enlace. El ID del archivo es la parte entre `/d/` y `/view`:
+   `https://drive.google.com/file/d/ESTE_ES_EL_ID/view`
+4. Abre `src/lib/videos.ts` y anade:
+
+```ts
+{
+  id: 'PEGA_EL_ID_AQUI',
+  title: 'Nombre del video',
+  description: 'Descripcion corta',
+  thumbnail: '/thumbnails/nombre.jpg',
+  aspectRatio: '16:9',
+}
+```
+
+> **Tip:** si los videos de Drive van lentos, considera subirlos a YouTube como "no listados" y usar embeds de YouTube. Es mas rapido y fiable.
+
+---
+
+## 5. Cambiar el dossier PDF
+
+Reemplaza el archivo `public/dossier-lady-jarana.pdf` con la nueva version. El nombre debe ser exactamente ese.
+
+---
+
+## 6. Desplegar en Vercel
+
+1. Sube el codigo a GitHub (ya esta en el repo)
+2. Ve a [vercel.com](https://vercel.com) e importa el repositorio
+3. En **Settings > Environment Variables**, anade:
+   - `RESEND_API_KEY` — tu API key de Resend
+   - `RESEND_FROM_EMAIL` — email verificado en Resend
+   - `CONTACT_EMAIL` — email donde quieres recibir las solicitudes
+4. Click en **Deploy**
+
+---
+
+## 7. Configurar el formulario de contratacion
+
+1. Crea una cuenta en [resend.com](https://resend.com)
+2. Verifica tu dominio (ladyjarana.com) o usa el dominio de prueba
+3. Copia tu API key
+4. Anade las variables de entorno (ver `.env.example`)
+
+Sin configurar Resend, el formulario sigue funcionando pero los datos solo aparecen en los logs del servidor.
+
+---
+
+## 8. SEO checklist post-lanzamiento
+
+- [ ] Dar de alta en [Google Search Console](https://search.google.com/search-console)
+- [ ] Verificar propiedad del dominio
+- [ ] Enviar sitemap: `https://ladyjarana.com/sitemap.xml`
+- [ ] Verificar metadatos con [metatags.io](https://metatags.io)
+- [ ] Probar Open Graph con [opengraph.xyz](https://opengraph.xyz)
+- [ ] Crear perfil de Google My Business
+- [ ] Conectar Google Analytics (opcional)
+
+---
+
+## Estructura del proyecto
+
+```
+src/
+  app/                    -- Paginas (Next.js App Router)
+    page.tsx              -- Home
+    contratar/            -- Formulario de contratacion
+    galeria/              -- Galeria de videos
+    dossier/              -- Descarga del dossier
+    aviso-legal/
+    politica-privacidad/
+    politica-cookies/
+    api/contratar/        -- API del formulario
+  components/
+    sections/             -- Secciones del home
+    ui/                   -- Componentes reutilizables
+    Navbar.tsx
+    Footer.tsx
+  lib/                    -- Datos y configuracion
+    videos.ts             -- IDs de videos de Google Drive
+    integrantes.ts
+    formatos.ts
+    trayectoria.ts
+    testimonios.ts        -- Activar cuando haya testimonios
+    metadata.ts           -- SEO y Schema.org
+public/
+  images/                 -- Fotos de la banda y eventos
+  thumbnails/             -- Miniaturas de videos
+  logo/                   -- Logo de Lady Jarana
+  dossier-lady-jarana.pdf -- Dossier descargable
+```
+
+---
+
+**Lady Jarana** — Fiesta mayor desde Barcelona

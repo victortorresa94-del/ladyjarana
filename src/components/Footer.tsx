@@ -1,0 +1,141 @@
+import Link from 'next/link';
+
+const navLinks = [
+  { label: 'Banda', href: '/#banda' },
+  { label: 'Música', href: '/#musica' },
+  { label: 'Formatos', href: '/#formatos' },
+  { label: 'Galería', href: '/#galeria' },
+  { label: 'Contratar', href: '/contratar' },
+  { label: 'Dossier', href: '/dossier' },
+];
+
+const socialLinks = [
+  {
+    label: 'Instagram',
+    href: 'https://instagram.com/ladyjarana',
+    icon: (
+      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'TikTok',
+    href: 'https://tiktok.com/@ladyjarana',
+    icon: (
+      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'YouTube',
+    href: 'https://youtube.com/@ladyjarana',
+    icon: (
+      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+      </svg>
+    ),
+  },
+];
+
+export default function Footer() {
+  return (
+    <footer className="bg-negro text-blanco">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+        <div className="grid gap-12 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <span className="font-display text-3xl font-bold">
+              Lady Jarana
+            </span>
+            <p className="mt-4 max-w-sm font-body text-blanco/60 leading-relaxed">
+              Rumba & Rock en directo. La banda que convierte tu evento en
+              fiesta mayor. Barcelona, 2025.
+            </p>
+            <div className="mt-6 flex gap-4">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blanco/60 transition-colors hover:text-amarillo"
+                  aria-label={s.label}
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Nav */}
+          <div>
+            <h4 className="mb-4 font-body text-sm font-semibold uppercase tracking-widest text-blanco/40">
+              Navegación
+            </h4>
+            <ul className="space-y-2">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-body text-sm text-blanco/60 hover:text-amarillo transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="mb-4 font-body text-sm font-semibold uppercase tracking-widest text-blanco/40">
+              Contacto
+            </h4>
+            <ul className="space-y-2 font-body text-sm text-blanco/60">
+              <li>
+                <a
+                  href="mailto:info@ladyjarana.com"
+                  className="hover:text-amarillo transition-colors"
+                >
+                  info@ladyjarana.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/34XXXXXXXXX"
+                  className="hover:text-amarillo transition-colors"
+                >
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
+            <p className="mt-6 font-body text-xs text-blanco/40">
+              Lady Jarana es un proyecto de{' '}
+              <span className="font-semibold text-blanco/60">94 Music</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-blanco/10 pt-8 sm:flex-row">
+          <div className="flex flex-wrap gap-4 font-body text-xs text-blanco/40">
+            <Link href="/aviso-legal" className="hover:text-blanco/60">
+              Aviso legal
+            </Link>
+            <Link href="/politica-privacidad" className="hover:text-blanco/60">
+              Política de privacidad
+            </Link>
+            <Link href="/politica-cookies" className="hover:text-blanco/60">
+              Cookies
+            </Link>
+          </div>
+          <p className="font-body text-xs text-blanco/40">
+            © {new Date().getFullYear()} Lady Jarana. Fiesta mayor desde
+            Barcelona 🌴
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
