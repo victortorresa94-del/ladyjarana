@@ -50,9 +50,9 @@ export default function Footer() {
             <Image
               src="/logo/lady-jarana-melon.png"
               alt="Lady Jarana"
-              width={300}
-              height={150}
-              className="h-16 w-auto"
+              width={535}
+              height={355}
+              className="h-14 w-auto"
             />
             <p className="mt-4 max-w-sm font-body text-crema/80 leading-relaxed">
               Pop-rock español, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor. Barcelona, 2025.

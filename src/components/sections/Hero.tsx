@@ -36,7 +36,7 @@ export default function Hero() {
           ✦ Rumba & Rock Band ✦ Barcelona ✦
         </motion.p>
 
-        <div className="mb-1 flex items-center justify-center gap-2">
+        <div className="mb-3 flex items-center justify-center gap-2">
           {[...Array(11)].map((_, i) => (
             <motion.span
               key={i}
@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
 
         <motion.div
-          className="relative mx-auto -mt-10 mb-0 w-full max-w-md sm:max-w-lg lg:-mt-14 lg:mb-1 lg:max-w-2xl"
+          className="relative mx-auto mb-4 w-full max-w-xs sm:max-w-sm lg:mb-6 lg:max-w-md"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -60,8 +60,8 @@ export default function Hero() {
           <Image
             src="/logo/lady-jarana-melon.png"
             alt="Lady Jarana"
-            width={1024}
-            height={1024}
+            width={535}
+            height={355}
             priority
             className="mx-auto h-auto w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)]"
           />
@@ -72,7 +72,7 @@ export default function Hero() {
         </h1>
 
         <motion.p
-          className="mx-auto -mt-8 mb-8 max-w-sm text-[10px] font-light leading-relaxed text-crema/70 drop-shadow-md sm:text-xs lg:-mt-12 lg:mb-10 lg:max-w-md lg:text-sm"
+          className="mx-auto mb-8 max-w-sm text-[10px] font-light leading-relaxed text-crema/70 drop-shadow-md sm:text-xs lg:mb-10 lg:max-w-md lg:text-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
