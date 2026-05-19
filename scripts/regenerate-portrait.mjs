@@ -26,48 +26,54 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY || envLocal.OPENAI_API_KEY;
 const FAL_API_KEY = process.env.FAL_API_KEY || envLocal.FAL_API_KEY;
 
 const STYLE =
-  'cartoon illustration, vibrant flat colors, clean bold lines, comic book style, ' +
-  'character portrait, head and torso, friendly festive mediterranean band vibe';
+  'colorful cartoon illustration, retro American comic book style, clean bold ' +
+  'outlines, vibrant flat colors, solid bright single-color background, ' +
+  'half body character, slightly exaggerated but recognizable proportions. ' +
+  'No hats, no berets, no caps, no head accessories unless explicitly stated';
 
 const MEMBERS = {
   victor: {
     bg: 'solid red',
     prompt:
-      `${STYLE}, solid red background, holding a Spanish classical guitar. ` +
-      `Resembles a Hispanic man around 40 years old, short dark hair, short 3-day ` +
-      `stubble beard with a few grey hairs, oval face, Mediterranean tanned skin, ` +
-      `medium build, wide warm smile, often wearing orange-yellow tinted sunglasses, ` +
-      `modern casual urban style. NOT a man bun, NOT a long hipster beard.`,
+      `${STYLE}. Solid red background. A man around 40 years old, Mediterranean ` +
+      `tanned skin, LONG BLACK HAIR down to the shoulders (curly/wavy, loose), ` +
+      `short dark few-days stubble beard, elongated oval face, slim build, ` +
+      `modern casual urban style, holding a Spanish flamenco guitar. ` +
+      `NO glasses, NO hat, NO beret, NO hipster man bun.`,
   },
   alejo: {
     bg: 'solid orange',
     prompt:
-      `${STYLE}, solid orange background, holding a red-orange Fender Stratocaster ` +
-      `electric guitar. Resembles a young man around 27 years old, straight ` +
-      `medium-long dark hair, long face, fair skin, slim build, big bright smile, ` +
-      `relaxed rocker style.`,
+      `${STYLE}. Solid orange background. A man around 38 years old, light ` +
+      `Mediterranean skin, LONG DARK CURLY WAVY HAIR down to the shoulders with ` +
+      `natural volume, thin few-days beard, elongated face with prominent ` +
+      `cheekbones and a sharp nose, slim build, big smile, casual rocker style, ` +
+      `holding a red Fender Stratocaster electric guitar. NO beret, NO hat.`,
   },
   ivan: {
     bg: 'solid golden yellow',
     prompt:
-      `${STYLE}, solid golden yellow background, sitting at a red synthesizer keyboard. ` +
-      `Resembles a Latino man around 33 years old, round full face, short dark hair, ` +
-      `short trimmed beard, dark brown skin, robust sturdy build, calm easy smile.`,
+      `${STYLE}. Solid golden yellow background. A man around 33 years old, ` +
+      `dark Latin American brown skin, very short almost shaved black hair, ` +
+      `round full face, robust sturdy build, no beard or very short stubble, ` +
+      `black-framed eyeglasses, friendly calm expression, sitting at a red ` +
+      `keyboard. NO mexican hat, NO sombrero, NO floral shirt.`,
   },
   diego: {
     bg: 'solid blue',
     prompt:
-      `${STYLE}, solid blue background, behind a drum kit holding drumsticks. ` +
-      `Resembles a man around 32 years old, dark brown hair, medium face, light ` +
-      `Mediterranean skin, medium-slim build, sometimes wearing a white baseball cap, ` +
-      `youthful energetic look.`,
+      `${STYLE}. Solid blue background. A young man around 26 years old, ` +
+      `white Mediterranean skin, short straight black hair, oval face, slim ` +
+      `athletic build, very modern urban streetwear style, dark rectangular ` +
+      `sunglasses, holding drum sticks. Young cool guy look. NO cap, NO hat.`,
   },
   antonio: {
     bg: 'solid green',
     prompt:
-      `${STYLE}, solid green background, playing a shiny golden trumpet. ` +
-      `Resembles a man around 31 years old, very short almost shaved dark hair, ` +
-      `round face, dark brown skin, medium build, festive smiling expression.`,
+      `${STYLE}. Solid green background. A man around 30 years old, white ` +
+      `European fair skin, BIG THICK BUSHY DARK-BROWN BEARD, short-medium ` +
+      `brown curly wavy hair, rounded face, prominent nose, normal build, ` +
+      `casual rocker style, playing a golden trumpet. NOT black skin, NO hat.`,
   },
 };
 
