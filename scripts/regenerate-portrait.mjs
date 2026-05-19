@@ -72,19 +72,37 @@ const MEMBERS = {
 };
 
 async function genOpenAI(prompt) {
-  const res = await fetch('https://api.openai.com/v1/images/generations', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({ model: 'dall-e-3', prompt, n: 1, size: '1024x1024', quality: 'standard' }),
-  });
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
-  const data = await res.json();
-  const url = data.data?.[0]?.url;
-  if (!url) throw new Error('OpenAI: no image url');
-  return Buffer.from(await (await fetch(url)).arrayBuffer());
+  // Try newest → oldest; project keys may restrict which models are allowed.
+  const attempts = [
+    { model: 'gpt-image-1', size: '1024x1024', quality: 'high' },
+    { model: 'dall-e-3', size: '1024x1024', quality: 'standard' },
+    { model: 'dall-e-2', size: '1024x1024' },
+  ];
+  let lastErr;
+  for (const cfg of attempts) {
+    try {
+      const res = await fetch('https://api.openai.com/v1/images/generations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+        },
+        body: JSON.stringify({ ...cfg, prompt, n: 1 }),
+      });
+      if (!res.ok) {
+        lastErr = new Error(`OpenAI ${cfg.model} ${res.status}: ${await res.text()}`);
+        console.log(`  ${cfg.model} no disponible, probando siguiente...`);
+        continue;
+      }
+      const item = (await res.json()).data?.[0];
+      if (item?.b64_json) return Buffer.from(item.b64_json, 'base64');
+      if (item?.url) return Buffer.from(await (await fetch(item.url)).arrayBuffer());
+      lastErr = new Error(`OpenAI ${cfg.model}: respuesta sin imagen`);
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr;
 }
 
 async function genFal(prompt) {
