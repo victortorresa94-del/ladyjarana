@@ -13,10 +13,10 @@ export default function Galeria() {
         <SectionNumber number="06" label="Mira y escucha" />
 
         <h2 className="mb-4 max-w-3xl font-display text-4xl font-bold text-negro leading-[1.05] lg:text-6xl">
-          Mejor <span className="italic text-rojo">ver</span> que contar.
+          Así suena <span className="italic text-rojo">en directo</span>.
         </h2>
         <p className="mb-16 max-w-2xl font-body text-lg text-negro/70">
-          Vídeos de directos. Sin pistas pregrabadas, 100% interacción.
+          Vídeos de eventos reales. Sin pistas pregrabadas, 100% interacción.
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

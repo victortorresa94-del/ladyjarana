@@ -10,16 +10,37 @@ export interface LiveVideo {
 export const liveVideos: LiveVideo[] = [
   {
     source: 'instagram',
-    id: 'DPquEqBDKp8',
+    id: 'DWn3wnqjO5c',
     title: '@lady.jarana',
-    description: 'Reel · En directo',
+    description: 'Barceloneta al atardecer',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'instagram',
+    id: 'DOniq2XjBRE',
+    title: '@lady.jarana',
+    description: 'Directo · pura energía',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'instagram',
+    id: 'DMYftoWMhK_',
+    title: '@lady.jarana',
+    description: 'FM Sant Adrià',
     aspectRatio: '9:16',
   },
   {
     source: 'instagram',
     id: 'DOeQihBDPfm',
     title: '@lady.jarana',
-    description: 'Reel · Última noche de verano',
+    description: 'Última noche de verano',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'instagram',
+    id: 'DPquEqBDKp8',
+    title: '@lady.jarana',
+    description: 'Reel · En directo',
     aspectRatio: '9:16',
   },
   {

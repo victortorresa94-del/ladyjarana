@@ -24,9 +24,9 @@ export default function Home() {
         <Bio />
         <Estilo />
         <Integrantes />
+        <Galeria />
         <Formatos />
         <Trayectoria />
-        <Galeria />
         <Servicios />
         <Testimonios />
         <PressKit />

@@ -1,5 +1,30 @@
 'use client';
 
+import { useEffect } from 'react';
+
+declare global {
+  interface Window {
+    instgrm?: { Embeds: { process: () => void } };
+  }
+}
+
+let scriptInjected = false;
+
+function ensureInstagramEmbed() {
+  if (typeof window === 'undefined') return;
+  if (window.instgrm) {
+    window.instgrm.Embeds.process();
+    return;
+  }
+  if (scriptInjected) return;
+  scriptInjected = true;
+  const script = document.createElement('script');
+  script.src = 'https://www.instagram.com/embed.js';
+  script.async = true;
+  script.onload = () => window.instgrm?.Embeds.process();
+  document.body.appendChild(script);
+}
+
 interface InstagramReelProps {
   reelId: string;
   title: string;
@@ -7,18 +32,25 @@ interface InstagramReelProps {
 }
 
 export default function InstagramReel({ reelId, title, description }: InstagramReelProps) {
+  useEffect(() => {
+    ensureInstagramEmbed();
+  }, [reelId]);
+
   return (
     <div className="group">
-      <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl border-4 border-negro bg-negro shadow-[6px_6px_0_var(--negro)] transition-transform group-hover:-translate-y-1">
-        <iframe
-          src={`https://www.instagram.com/reel/${reelId}/embed/`}
-          className="absolute left-0 w-full"
-          style={{ top: '-58px', height: 'calc(100% + 178px)' }}
-          loading="lazy"
-          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-          allowFullScreen
-          title={title}
-          scrolling="no"
+      <div className="overflow-hidden rounded-2xl border-4 border-negro bg-blanco shadow-[6px_6px_0_var(--negro)] transition-transform group-hover:-translate-y-1">
+        <blockquote
+          className="instagram-media"
+          data-instgrm-permalink={`https://www.instagram.com/reel/${reelId}/`}
+          data-instgrm-version="14"
+          style={{
+            background: '#FFF',
+            border: 0,
+            margin: 0,
+            padding: 0,
+            width: '100%',
+            minWidth: 0,
+          }}
         />
       </div>
       <div className="mt-3 px-1 text-left">
