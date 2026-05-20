@@ -15,7 +15,6 @@ export async function GET() {
         pathname: b.pathname,
         size: b.size,
         uploadedAt: b.uploadedAt,
-        contentType: b.contentType,
       })),
     });
   } catch (e) {
