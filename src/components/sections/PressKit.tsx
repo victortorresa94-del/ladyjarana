@@ -22,15 +22,16 @@ export default function PressKit() {
               ¿Eres organizador <br />de eventos?
             </h2>
             <p className="mb-8 mx-auto max-w-lg font-body text-blanco/90 leading-relaxed">
-              Descárgate el dossier completo con bio, fotos en alta resolución y rider técnico.
+              Logos, fotos, vídeo promocional, ilustraciones y dossier completo
+              para anunciar tu bolo o publicarnos en prensa.
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/dossier-lady-jarana.pdf" variant="secondary">
-                Descargar dossier (PDF) ↓
+              <Button href="/material" variant="secondary">
+                Material gráfico ↓
               </Button>
-              <Button href="/contratar?asunto=rider" variant="primary">
-                Solicitar rider →
+              <Button href="/dossier-lady-jarana.pdf" variant="primary">
+                Dossier PDF →
               </Button>
             </div>
           </div>
