@@ -1,13 +1,28 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useMemo, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import SectionNumber from '../ui/SectionNumber';
 import DriveVideo from '../ui/DriveVideo';
-import InstagramReel from '../ui/InstagramReel';
 import NativeVideo from '../ui/NativeVideo';
+import ReelCard from '../ui/ReelCard';
+import ReelsFeed from '../ui/ReelsFeed';
 import { liveVideos } from '@/lib/videos';
 
 export default function Galeria() {
+  const [feedIndex, setFeedIndex] = useState<number | null>(null);
+
+  const reels = useMemo(
+    () => liveVideos.filter((v) => v.aspectRatio === '9:16'),
+    [],
+  );
+  const reelKey = (idx: number) => {
+    const r = reels[idx];
+    return r ? `${r.source}-${r.id}` : '';
+  };
+  const findReelIndex = (source: string, id: string) =>
+    reels.findIndex((r) => r.source === source && r.id === id);
+
   return (
     <section id="galeria" className="relative bg-blanco py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
@@ -27,21 +42,20 @@ export default function Galeria() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
             >
-              {video.source === 'native' ? (
+              {video.aspectRatio === '9:16' ? (
+                <ReelCard
+                  reel={video}
+                  onClick={() => setFeedIndex(findReelIndex(video.source, video.id))}
+                />
+              ) : video.source === 'native' ? (
                 <NativeVideo
                   src={video.id}
                   title={video.title}
                   description={video.description}
                   poster={video.thumbnail}
-                  aspectRatio={(video.aspectRatio as '9:16' | '16:9' | '1:1') ?? '9:16'}
-                />
-              ) : video.source === 'instagram' ? (
-                <InstagramReel
-                  reelId={video.id}
-                  title={video.title}
-                  description={video.description}
+                  aspectRatio={(video.aspectRatio as '9:16' | '16:9' | '1:1') ?? '16:9'}
                 />
               ) : (
                 <DriveVideo
@@ -74,6 +88,17 @@ export default function Galeria() {
           para ver más →
         </motion.p>
       </div>
+
+      <AnimatePresence>
+        {feedIndex !== null && (
+          <ReelsFeed
+            key={reelKey(feedIndex)}
+            reels={reels}
+            initialIndex={feedIndex}
+            onClose={() => setFeedIndex(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

@@ -14,6 +14,7 @@ export const liveVideos: LiveVideo[] = [
     id: '1T_0UldpZwxqIRLsTa1eAj-enzVYotCoD',
     title: 'FM Sant Adrià',
     description: 'Directo · festival',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1T_0UldpZwxqIRLsTa1eAj-enzVYotCoD&sz=w800',
     aspectRatio: '9:16',
   },
   {
