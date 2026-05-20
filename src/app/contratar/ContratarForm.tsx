@@ -46,7 +46,7 @@ function FormContent() {
       tipoEvento: defaultEvento === 'boda' ? 'Boda'
         : defaultEvento === 'fiesta-mayor' ? 'Fiesta mayor'
         : defaultEvento === 'empresa' ? 'Evento de empresa'
-        : defaultEvento === 'cumpleaños' ? 'Cumpleaños'
+        : defaultEvento === 'privado' ? 'Evento privado'
         : '',
       formato: defaultFormato === 'dúo acústico' ? 'Dúo'
         : defaultFormato === 'trío' ? 'Trío'
@@ -160,8 +160,8 @@ function FormContent() {
             <option value="">Seleccionar...</option>
             <option value="Boda">Boda</option>
             <option value="Fiesta mayor">Fiesta mayor</option>
+            <option value="Evento privado">Evento privado</option>
             <option value="Evento de empresa">Evento de empresa</option>
-            <option value="Cumpleaños">Cumpleaños</option>
             <option value="Otro">Otro</option>
           </select>
           {errors.tipoEvento && (
