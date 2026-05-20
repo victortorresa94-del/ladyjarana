@@ -27,6 +27,15 @@ export default function ReelCard({ reel, onClick }: ReelCardProps) {
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
+        ) : reel.source === 'native' ? (
+          <video
+            // #t=0.1 forces browsers (Chrome, Safari iOS) to display first frame as poster
+            src={`${reel.id}#t=0.1`}
+            muted
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         ) : (
           <div
             className="absolute inset-0"

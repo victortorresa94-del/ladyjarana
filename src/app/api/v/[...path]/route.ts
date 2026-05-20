@@ -20,7 +20,12 @@ export async function GET(
   }
 
   const range = req.headers.get('range');
-  const upstream = await fetch(blob.url, range ? { headers: { Range: range } } : {});
+  const upstreamHeaders: Record<string, string> = {};
+  if (range) upstreamHeaders['Range'] = range;
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    upstreamHeaders['Authorization'] = `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`;
+  }
+  const upstream = await fetch(blob.url, { headers: upstreamHeaders });
 
   const headers = new Headers();
   headers.set('Content-Type', blob.contentType || 'application/octet-stream');
