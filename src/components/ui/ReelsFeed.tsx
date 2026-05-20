@@ -37,7 +37,7 @@ function AutoPlayReel({ src, poster, title }: { src: string; poster?: string; ti
       loop
       preload="metadata"
       title={title}
-      className="absolute inset-0 h-full w-full object-cover"
+      className="absolute inset-0 h-full w-full object-contain"
     />
   );
 }
