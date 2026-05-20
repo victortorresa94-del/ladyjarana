@@ -1,5 +1,6 @@
 export interface LiveVideo {
-  source: 'drive' | 'instagram';
+  source: 'drive' | 'instagram' | 'native';
+  // Drive ID, IG reel shortcode, or public path like "/videos/reels/foo.mp4"
   id: string;
   title: string;
   description: string;

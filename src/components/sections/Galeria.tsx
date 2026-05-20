@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import SectionNumber from '../ui/SectionNumber';
 import DriveVideo from '../ui/DriveVideo';
 import InstagramReel from '../ui/InstagramReel';
+import NativeVideo from '../ui/NativeVideo';
 import { liveVideos } from '@/lib/videos';
 
 export default function Galeria() {
@@ -28,7 +29,15 @@ export default function Galeria() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              {video.source === 'instagram' ? (
+              {video.source === 'native' ? (
+                <NativeVideo
+                  src={video.id}
+                  title={video.title}
+                  description={video.description}
+                  poster={video.thumbnail}
+                  aspectRatio={(video.aspectRatio as '9:16' | '16:9' | '1:1') ?? '9:16'}
+                />
+              ) : video.source === 'instagram' ? (
                 <InstagramReel
                   reelId={video.id}
                   title={video.title}
