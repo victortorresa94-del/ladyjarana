@@ -20,12 +20,8 @@ export async function GET(
   }
 
   const range = req.headers.get('range');
-  const upstreamHeaders: Record<string, string> = {};
-  if (range) upstreamHeaders['Range'] = range;
-  if (process.env.BLOB_READ_WRITE_TOKEN) {
-    upstreamHeaders['Authorization'] = `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`;
-  }
-  const upstream = await fetch(blob.url, { headers: upstreamHeaders });
+  // For private stores blob.url is unauthorised; blob.downloadUrl is signed.
+  const upstream = await fetch(blob.downloadUrl, range ? { headers: { Range: range } } : {});
 
   const headers = new Headers();
   headers.set('Content-Type', blob.contentType || 'application/octet-stream');
