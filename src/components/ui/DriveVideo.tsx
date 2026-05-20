@@ -8,13 +8,27 @@ interface DriveVideoProps {
   title: string;
   description?: string;
   thumbnail?: string;
+  aspectRatio?: '9:16' | '16:9' | '1:1';
 }
+
+const cardAspect: Record<NonNullable<DriveVideoProps['aspectRatio']>, string> = {
+  '9:16': 'aspect-[9/16]',
+  '16:9': 'aspect-video',
+  '1:1': 'aspect-square',
+};
+
+const modalAspect: Record<NonNullable<DriveVideoProps['aspectRatio']>, string> = {
+  '9:16': 'aspect-[9/16] max-w-[400px]',
+  '16:9': 'aspect-video max-w-4xl',
+  '1:1': 'aspect-square max-w-xl',
+};
 
 export default function DriveVideo({
   fileId,
   title,
   description,
   thumbnail,
+  aspectRatio = '16:9',
 }: DriveVideoProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +37,7 @@ export default function DriveVideo({
   return (
     <>
       <motion.button
-        className="group relative aspect-video w-full overflow-hidden rounded-2xl border-4 border-negro bg-sol shadow-[6px_6px_0_var(--negro)] cursor-pointer"
+        className={`group relative ${cardAspect[aspectRatio]} w-full overflow-hidden rounded-2xl border-4 border-negro bg-sol shadow-[6px_6px_0_var(--negro)] cursor-pointer`}
         onClick={() => !isPlaceholder && setIsOpen(true)}
         whileHover={{ scale: 1.02, rotate: -1 }}
         aria-label={`Reproducir vídeo: ${title}`}
@@ -72,11 +86,12 @@ export default function DriveVideo({
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              className="relative w-full max-w-4xl"
+              className="relative w-full"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
+              style={{ maxWidth: aspectRatio === '9:16' ? 400 : aspectRatio === '1:1' ? 576 : 896 }}
             >
               <button
                 className="absolute -top-12 right-0 text-blanco/80 hover:text-sol text-3xl cursor-pointer"
@@ -85,7 +100,7 @@ export default function DriveVideo({
               >
                 ✕
               </button>
-              <div className="aspect-video w-full overflow-hidden rounded-2xl border-4 border-sol bg-negro">
+              <div className={`${modalAspect[aspectRatio]} w-full overflow-hidden rounded-2xl border-4 border-sol bg-negro mx-auto`}>
                 <iframe
                   src={`https://drive.google.com/file/d/${fileId}/preview`}
                   className="h-full w-full"

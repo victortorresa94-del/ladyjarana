@@ -49,6 +49,7 @@ export default function Galeria() {
                   title={video.title}
                   description={video.description}
                   thumbnail={video.thumbnail}
+                  aspectRatio={(video.aspectRatio as '9:16' | '16:9' | '1:1') ?? '16:9'}
                 />
               )}
             </motion.div>
