@@ -37,13 +37,15 @@ log(`|---|---|`);
 log(`| Store del token | \`${storeId}\` |`);
 log(`| Store esperado (web) | \`${EXPECTED_STORE}\` |`);
 log(``);
-if (storeId !== EXPECTED_STORE) {
+// El ID del store no distingue mayúsculas/minúsculas
+if (storeId.toLowerCase() !== EXPECTED_STORE.toLowerCase()) {
   log(`> ❌ **El token NO es del store público de la web.**`);
   log(`> Cambia el secret \`LADYJARANA_READ_WRITE_TOKEN\` por el token que`);
   log(`> empieza por \`vercel_blob_rw_${EXPECTED_STORE}_\`.`);
   await flush();
   process.exit(1);
 }
+log(`> ✅ Token correcto. Empezando…`);
 
 const { blobs } = await list({ token });
 log(`### Contenido del store (${blobs.length} archivos)`);
