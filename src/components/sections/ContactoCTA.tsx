@@ -20,6 +20,17 @@ export default function ContactoCTA() {
         <Image src="/generated/palm-right.png" alt="" width={300} height={500} />
       </div>
 
+      {/* Palmera Jaranera — mascota saludando desde abajo a la izquierda */}
+      <div className="pointer-events-none absolute -left-6 bottom-0 z-[1] hidden w-44 md:block lg:-left-4 lg:w-60">
+        <Image
+          src="/personajes/palmera-jaranera.png"
+          alt=""
+          width={512}
+          height={512}
+          className="h-auto w-full"
+        />
+      </div>
+
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <div className="mb-6 flex justify-center">
           <SectionNumber number="07" label="Hablemos" inverted />
