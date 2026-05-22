@@ -1,0 +1,39 @@
+name: Trim video
+
+on:
+  # Botón manual en la pestaña Actions
+  workflow_dispatch:
+  # Se ejecuta solo cuando cambia el script o este workflow
+  push:
+    branches:
+      - claude/resume-lady-jarana-JP1L9
+    paths:
+      - .github/workflows/trim-video.yml
+      - scripts/trim-video.mjs
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  trim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+
+      - name: Trim and re-upload
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.LADYJARANA_READ_WRITE_TOKEN }}
+        run: node scripts/trim-video.mjs
