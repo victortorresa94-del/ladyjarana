@@ -3,10 +3,11 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod/v4';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Button from '@/components/ui/Button';
+import { EMAIL, WHATSAPP_URL } from '@/lib/contact';
 
 const schema = z.object({
   nombre: z.string().min(2, 'Introduce tu nombre'),
@@ -14,14 +15,7 @@ const schema = z.object({
   telefono: z.string().min(6, 'Introduce tu teléfono'),
   tipoEvento: z.string().min(1, 'Selecciona un tipo de evento'),
   fecha: z.string().optional(),
-  localizacion: z.string().optional(),
-  provincia: z.string().optional(),
-  aforo: z.string().optional(),
-  formato: z.string().optional(),
-  hora: z.string().optional(),
-  sonido: z.string().optional(),
   mensaje: z.string().optional(),
-  comoNosConociste: z.string().optional(),
   privacidad: z.literal(true, {
     error: 'Debes aceptar la política de privacidad',
   }),
@@ -34,7 +28,6 @@ function FormContent() {
   const [status, setStatus] = useState<'idle' | 'success'>('idle');
 
   const defaultEvento = searchParams.get('evento') || '';
-  const defaultFormato = searchParams.get('formato') || '';
 
   const {
     register,
@@ -43,15 +36,16 @@ function FormContent() {
   } = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: {
-      tipoEvento: defaultEvento === 'boda' ? 'Boda'
-        : defaultEvento === 'fiesta-mayor' ? 'Fiesta mayor'
-        : defaultEvento === 'empresa' ? 'Evento de empresa'
-        : defaultEvento === 'privado' ? 'Evento privado'
-        : '',
-      formato: defaultFormato === 'dúo acústico' ? 'Dúo'
-        : defaultFormato === 'trío' ? 'Trío'
-        : defaultFormato === 'cuarteto' ? 'Cuarteto'
-        : '',
+      tipoEvento:
+        defaultEvento === 'boda'
+          ? 'Boda'
+          : defaultEvento === 'fiesta-mayor'
+            ? 'Fiesta mayor'
+            : defaultEvento === 'empresa'
+              ? 'Evento de empresa'
+              : defaultEvento === 'privado'
+                ? 'Evento privado'
+                : '',
     },
   });
 
@@ -62,18 +56,13 @@ function FormContent() {
       `Teléfono: ${data.telefono}`,
       `Tipo de evento: ${data.tipoEvento}`,
       data.fecha && `Fecha: ${data.fecha}`,
-      data.hora && `Hora: ${data.hora}`,
-      data.localizacion && `Localización: ${data.localizacion}`,
-      data.provincia && `Provincia: ${data.provincia}`,
-      data.aforo && `Aforo: ${data.aforo}`,
-      data.formato && `Formato: ${data.formato}`,
-      data.sonido && `Equipo de sonido: ${data.sonido}`,
-      data.comoNosConociste && `Cómo nos conoció: ${data.comoNosConociste}`,
       data.mensaje && `\nMensaje:\n${data.mensaje}`,
-    ].filter(Boolean).join('\n');
+    ]
+      .filter(Boolean)
+      .join('\n');
 
     const subject = `Contratación · ${data.tipoEvento} · ${data.nombre}`;
-    const mailto = `mailto:ladyjaranamusic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
 
     window.location.href = mailto;
     setStatus('success');
@@ -91,13 +80,23 @@ function FormContent() {
           a enviar.
         </p>
         <p className="mt-4 font-body text-sm text-negro/60">
-          ¿No se abrió? Escríbenos directamente a{' '}
+          ¿No se abrió? Escríbenos a{' '}
           <a
-            href="mailto:ladyjaranamusic@gmail.com"
+            href={`mailto:${EMAIL}`}
             className="text-rojo underline font-bold"
           >
-            ladyjaranamusic@gmail.com
+            {EMAIL}
+          </a>{' '}
+          o por{' '}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-rojo underline font-bold"
+          >
+            WhatsApp
           </a>
+          .
         </p>
       </div>
     );
@@ -105,16 +104,15 @@ function FormContent() {
 
   const inputStyles =
     'w-full rounded-xl border border-negro/10 bg-azul-claro/50 px-4 py-3 font-body text-negro placeholder:text-negro/40 focus:border-azul focus:outline-none focus:ring-2 focus:ring-azul/20 transition-colors';
-  const labelStyles = 'block mb-1.5 font-body text-sm font-semibold text-negro';
+  const labelStyles =
+    'block mb-1.5 font-body text-sm font-semibold text-negro';
   const errorStyles = 'mt-1 font-body text-xs text-red-500';
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelStyles}>
-            Nombre y apellidos *
-          </label>
+          <label className={labelStyles}>Nombre *</label>
           <input
             {...register('nombre')}
             className={inputStyles}
@@ -125,37 +123,7 @@ function FormContent() {
           )}
         </div>
         <div>
-          <label className={labelStyles}>Email *</label>
-          <input
-            {...register('email')}
-            type="email"
-            className={inputStyles}
-            placeholder="tu@email.com"
-          />
-          {errors.email && (
-            <p className={errorStyles}>{errors.email.message}</p>
-          )}
-        </div>
-      </div>
-
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label className={labelStyles}>
-            Teléfono / WhatsApp *
-          </label>
-          <input
-            {...register('telefono')}
-            className={inputStyles}
-            placeholder="+34 600 000 000"
-          />
-          {errors.telefono && (
-            <p className={errorStyles}>{errors.telefono.message}</p>
-          )}
-        </div>
-        <div>
-          <label className={labelStyles}>
-            Tipo de evento *
-          </label>
+          <label className={labelStyles}>Tipo de evento *</label>
           <select {...register('tipoEvento')} className={inputStyles}>
             <option value="">Seleccionar...</option>
             <option value="Boda">Boda</option>
@@ -172,102 +140,41 @@ function FormContent() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelStyles}>
-            Fecha del evento
-          </label>
+          <label className={labelStyles}>Email *</label>
           <input
-            {...register('fecha')}
-            type="date"
+            {...register('email')}
+            type="email"
             className={inputStyles}
+            placeholder="tu@email.com"
           />
+          {errors.email && (
+            <p className={errorStyles}>{errors.email.message}</p>
+          )}
         </div>
         <div>
-          <label className={labelStyles}>
-            Hora de actuación
-          </label>
+          <label className={labelStyles}>Teléfono / WhatsApp *</label>
           <input
-            {...register('hora')}
-            type="time"
+            {...register('telefono')}
             className={inputStyles}
+            placeholder="+34 600 000 000"
           />
+          {errors.telefono && (
+            <p className={errorStyles}>{errors.telefono.message}</p>
+          )}
         </div>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label className={labelStyles}>Localización</label>
-          <input
-            {...register('localizacion')}
-            className={inputStyles}
-            placeholder="Nombre del venue o dirección"
-          />
-        </div>
-        <div>
-          <label className={labelStyles}>Provincia</label>
-          <select {...register('provincia')} className={inputStyles}>
-            <option value="">Seleccionar...</option>
-            <option value="Barcelona">Barcelona</option>
-            <option value="Girona">Girona</option>
-            <option value="Lleida">Lleida</option>
-            <option value="Tarragona">Tarragona</option>
-            <option value="Otra">Otra provincia</option>
-          </select>
-        </div>
-      </div>
-
-      <div className="grid gap-5 sm:grid-cols-3">
-        <div>
-          <label className={labelStyles}>
-            Aforo aproximado
-          </label>
-          <input
-            {...register('aforo')}
-            className={inputStyles}
-            placeholder="ej. 100"
-          />
-        </div>
-        <div>
-          <label className={labelStyles}>
-            Formato deseado
-          </label>
-          <select {...register('formato')} className={inputStyles}>
-            <option value="">Seleccionar...</option>
-            <option value="Dúo">Dúo acústico</option>
-            <option value="Trío">Trío</option>
-            <option value="Cuarteto">Cuarteto</option>
-            <option value="No estoy seguro">No estoy seguro</option>
-          </select>
-        </div>
-        <div>
-          <label className={labelStyles}>
-            ¿Equipo de sonido?
-          </label>
-          <select {...register('sonido')} className={inputStyles}>
-            <option value="">Seleccionar...</option>
-            <option value="Sí">Sí, lo necesito</option>
-            <option value="No">No, tengo equipo</option>
-            <option value="No lo sé">No lo sé</option>
-          </select>
-        </div>
+      <div>
+        <label className={labelStyles}>Fecha del evento (si la sabes)</label>
+        <input {...register('fecha')} type="date" className={inputStyles} />
       </div>
 
       <div>
         <label className={labelStyles}>Mensaje</label>
         <textarea
           {...register('mensaje')}
-          className={`${inputStyles} min-h-[100px] resize-y`}
-          placeholder="Cuéntanos más sobre tu evento..."
-        />
-      </div>
-
-      <div>
-        <label className={labelStyles}>
-          ¿Cómo nos has conocido?
-        </label>
-        <input
-          {...register('comoNosConociste')}
-          className={inputStyles}
-          placeholder="Instagram, Google, un amigo..."
+          className={`${inputStyles} min-h-[90px] resize-y`}
+          placeholder="Localización, aforo aproximado, lo que quieras contarnos..."
         />
       </div>
 
@@ -300,13 +207,32 @@ function FormContent() {
       >
         Mandar mensaje a Lady Jarana →
       </Button>
+
+      <p className="pt-2 text-center font-body text-xs text-negro/60">
+        O escríbenos directamente por{' '}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-rojo underline font-bold"
+        >
+          WhatsApp
+        </a>{' '}
+        — es lo más rápido.
+      </p>
     </form>
   );
 }
 
 export default function ContratarForm() {
   return (
-    <Suspense fallback={<div className="py-12 text-center font-body text-negro/50">Cargando formulario...</div>}>
+    <Suspense
+      fallback={
+        <div className="py-12 text-center font-body text-negro/50">
+          Cargando formulario...
+        </div>
+      }
+    >
       <FormContent />
     </Suspense>
   );

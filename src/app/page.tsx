@@ -8,10 +8,10 @@ import Integrantes from '@/components/sections/Integrantes';
 import Formatos from '@/components/sections/Formatos';
 import Trayectoria from '@/components/sections/Trayectoria';
 import Galeria from '@/components/sections/Galeria';
-import Servicios from '@/components/sections/Servicios';
+import ContactoCTA from '@/components/sections/ContactoCTA';
 import Testimonios from '@/components/sections/Testimonios';
 import PressKit from '@/components/sections/PressKit';
-import CTAFinal from '@/components/sections/CTAFinal';
+import TiposEventos from '@/components/sections/TiposEventos';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -27,10 +27,10 @@ export default function Home() {
         <Galeria />
         <Formatos />
         <Trayectoria />
-        <Servicios />
+        <ContactoCTA />
         <Testimonios />
         <PressKit />
-        <CTAFinal />
+        <TiposEventos />
       </main>
       <Footer />
       <ProximosEventosBanner />
