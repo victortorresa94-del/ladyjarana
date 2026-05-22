@@ -98,31 +98,40 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
         ✕
       </button>
 
-      <button
-        className="absolute left-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-negro/70 text-blanco backdrop-blur border border-blanco/20 cursor-pointer"
-        onClick={() => setMuted((m) => !m)}
-        aria-label={muted ? 'Activar sonido' : 'Silenciar'}
-      >
-        {muted ? (
-          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.6 7-8.8s-3-7.8-7-8.8z" opacity="0.35" />
-            <path d="M4 4l16 16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-          </svg>
-        ) : (
-          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.6 7-8.8s-3-7.8-7-8.8z" />
-          </svg>
-        )}
-      </button>
-
-      {muted && (
+      <div className="absolute left-4 top-4 z-20 flex items-center gap-2">
         <button
-          onClick={() => setMuted(false)}
-          className="absolute left-1/2 top-20 z-20 -translate-x-1/2 rounded-full bg-blanco/95 px-4 py-2 text-xs font-bold text-negro shadow-[3px_3px_0_var(--negro)] border-2 border-negro cursor-pointer"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-negro/70 text-blanco backdrop-blur border border-blanco/20 cursor-pointer"
+          onClick={() => setMuted((m) => !m)}
+          aria-label={muted ? 'Activar sonido' : 'Silenciar'}
         >
-          🔊 Toca para activar sonido
+          {muted ? (
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.6 7-8.8s-3-7.8-7-8.8z" opacity="0.35" />
+              <path d="M4 4l16 16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+            </svg>
+          ) : (
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.6 7-8.8s-3-7.8-7-8.8z" />
+            </svg>
+          )}
         </button>
-      )}
+
+        {muted && (
+          <motion.button
+            onClick={() => setMuted(false)}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0, scale: [1, 1.06, 1] }}
+            transition={{
+              opacity: { duration: 0.3 },
+              x: { duration: 0.3 },
+              scale: { duration: 1.4, repeat: Infinity, ease: 'easeInOut' },
+            }}
+            className="flex items-center gap-1 rounded-full bg-blanco px-3 py-2 text-xs font-bold text-negro shadow-[3px_3px_0_var(--negro)] border-2 border-negro cursor-pointer whitespace-nowrap"
+          >
+            <span aria-hidden>←</span> Activa el sonido
+          </motion.button>
+        )}
+      </div>
 
       <div
         ref={containerRef}
