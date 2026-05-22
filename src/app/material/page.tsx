@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Button from '@/components/ui/Button';
+import { whatsappUrl } from '@/lib/contact';
 
 interface Asset {
   src: string;
@@ -189,8 +190,13 @@ export default function MaterialPage() {
           <p className="mb-6 font-body text-negro/70">
             ¿Necesitas algún formato concreto, otra foto o una idea de cartel a medida?
           </p>
-          <Button href="/contratar?asunto=material" variant="primary">
-            Escríbenos →
+          <Button
+            href={whatsappUrl(
+              '¡Hola Lady Jarana! Necesito un formato/foto/cartel a medida.',
+            )}
+            variant="primary"
+          >
+            Escríbenos por WhatsApp →
           </Button>
         </section>
       </main>

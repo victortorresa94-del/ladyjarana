@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Button from '../ui/Button';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 export default function Hero() {
   return (
@@ -88,8 +89,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
         >
-          <Button href="/contratar" variant="primary">
-            Contratar la banda →
+          <Button href={WHATSAPP_URL} variant="primary">
+            Hablemos por WhatsApp →
           </Button>
           <Button href="#galeria" variant="secondary">
             Ver vídeo en directo

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { proximosEventos } from '@/lib/trayectoria';
+import { whatsappUrl } from '@/lib/contact';
 
 export default function ProximosEventos() {
   return (
@@ -30,7 +31,11 @@ export default function ProximosEventos() {
         <div className="grid gap-4 md:grid-cols-3">
           {proximosEventos.map((ev, i) => (
             <motion.a
-              href="/contratar?asunto=evento"
+              href={whatsappUrl(
+                `¡Hola Lady Jarana! Quería saber más sobre el bolo en ${ev.lugar} (${ev.fecha}).`,
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
               key={i}
               className={`group relative flex items-center gap-4 rounded-2xl border-4 border-negro p-5 shadow-[6px_6px_0_var(--negro)] transition-transform ${
                 ev.destacado ? 'bg-sol text-negro lg:scale-[1.03]' : 'bg-crema text-negro'

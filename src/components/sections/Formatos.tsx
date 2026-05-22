@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import SectionNumber from '../ui/SectionNumber';
 import Button from '../ui/Button';
 import { formatos } from '@/lib/formatos';
+import { whatsappUrl } from '@/lib/contact';
 
 export default function Formatos() {
   return (
@@ -83,7 +84,9 @@ export default function Formatos() {
               </div>
 
               <Button
-                href={`/contratar?formato=${encodeURIComponent(f.nombre.toLowerCase())}`}
+                href={whatsappUrl(
+                  `¡Hola Lady Jarana! Me interesa el formato ${f.nombre} y me gustaría pedir presupuesto.`,
+                )}
                 variant={f.destacado ? 'primary' : 'secondary'}
               >
                 Pedir presupuesto →
@@ -100,7 +103,14 @@ export default function Formatos() {
         >
           ¿Necesitas otro formato? Tenemos opción de banda ampliada con
           percusión adicional.{' '}
-          <a href="/contratar" className="text-sol underline font-bold hover:text-blanco">
+          <a
+            href={whatsappUrl(
+              '¡Hola Lady Jarana! Quería preguntaros por un formato distinto.',
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sol underline font-bold hover:text-blanco"
+          >
             Pregúntanos
           </a>
           .

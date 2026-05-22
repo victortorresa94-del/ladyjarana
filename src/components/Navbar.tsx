@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from './ui/Button';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 const links = [
   { label: 'Banda', href: '#banda' },
@@ -69,7 +70,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href="/contratar" variant="primary">
+            <Button href={WHATSAPP_URL} variant="primary">
               Contratar
             </Button>
           </div>
@@ -128,7 +129,7 @@ export default function Navbar() {
                 transition={{ delay: links.length * 0.08 }}
               >
                 <Button
-                  href="/contratar"
+                  href={WHATSAPP_URL}
                   variant="primary"
                   className="text-xl px-10 py-4"
                 >

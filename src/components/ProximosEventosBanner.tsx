@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { proximosEventos } from '@/lib/trayectoria';
+import { whatsappUrl } from '@/lib/contact';
 
 export default function ProximosEventosBanner() {
   const top = proximosEventos.find((e) => e.destacado) ?? proximosEventos[0];
@@ -38,7 +39,11 @@ export default function ProximosEventosBanner() {
         </div>
       </div>
       <a
-        href="/contratar?asunto=arco-de-triunfo"
+        href={whatsappUrl(
+          `¡Hola Lady Jarana! Me gustaría saber más sobre el bolo en ${top.lugar}.`,
+        )}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-3 block text-center text-xs font-bold text-sol underline hover:text-blanco"
       >
         Más info →
