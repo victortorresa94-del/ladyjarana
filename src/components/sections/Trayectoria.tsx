@@ -22,7 +22,7 @@ export default function Trayectoria() {
   return (
     <section id="eventos" className="relative bg-crema py-24 lg:py-32 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6">
-        <SectionNumber number="05" label="Trayectoria" />
+        <SectionNumber number="06" label="Trayectoria" />
 
         <h2 className="mb-4 max-w-3xl font-display text-4xl font-bold text-negro leading-[1.05] lg:text-6xl">
           De la <span className="italic text-rojo">playa</span> a las <span className="italic text-naranja">fiestas mayores</span>.

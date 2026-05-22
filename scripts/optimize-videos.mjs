@@ -36,9 +36,10 @@ for (const blob of videos) {
     'ffmpeg',
     [
       '-y', '-i', inPath,
-      '-c:v', 'libx264', '-preset', 'medium', '-crf', '23',
+      '-c:v', 'libx264', '-preset', 'medium', '-crf', '24',
       '-pix_fmt', 'yuv420p',
-      '-vf', 'scale=trunc(iw/2)*2:trunc(ih/2)*2',
+      // Cap width at 1080px (iPhone 4K source is overkill for web reels)
+      '-vf', "scale='min(1080,iw)':-2",
       '-c:a', 'aac', '-b:a', '128k',
       '-movflags', '+faststart',
       outPath,

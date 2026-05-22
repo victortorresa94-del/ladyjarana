@@ -1,42 +1,52 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import type { LiveVideo } from '@/lib/videos';
 
-function AutoPlayReel({ src, poster, title }: { src: string; poster?: string; title: string }) {
+function ReelSlide({ reel, muted }: { reel: LiveVideo; muted: boolean }) {
   const ref = useRef<HTMLVideoElement>(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-            el.play().catch(() => {});
-          } else {
-            el.pause();
-          }
-        });
+        const e = entries[0];
+        if (e.isIntersecting && e.intersectionRatio > 0.6) {
+          setLoaded(true);
+          el.play().catch(() => {});
+        } else {
+          el.pause();
+        }
       },
-      { threshold: [0, 0.5, 1] },
+      { threshold: [0, 0.6, 1] },
     );
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
 
+  // Apply mute state via ref (React's muted prop is unreliable on updates)
+  useEffect(() => {
+    if (ref.current) ref.current.muted = muted;
+  }, [muted, loaded]);
+
+  // Start playback once the src has actually been applied
+  useEffect(() => {
+    if (loaded) ref.current?.play().catch(() => {});
+  }, [loaded]);
+
   return (
     <video
       ref={ref}
-      src={src}
-      poster={poster}
-      controls
+      src={loaded ? reel.id : undefined}
+      poster={reel.thumbnail}
       playsInline
-      muted
       loop
-      preload="metadata"
-      title={title}
+      controls
+      muted
+      preload="none"
       className="absolute inset-0 h-full w-full object-contain"
     />
   );
@@ -48,32 +58,9 @@ interface ReelsFeedProps {
   onClose: () => void;
 }
 
-declare global {
-  interface Window {
-    instgrm?: { Embeds: { process: () => void } };
-  }
-}
-
-let igScriptInjected = false;
-
-function ensureInstagramEmbed() {
-  if (typeof window === 'undefined') return;
-  if (window.instgrm) {
-    window.instgrm.Embeds.process();
-    return;
-  }
-  if (!igScriptInjected) {
-    igScriptInjected = true;
-    const s = document.createElement('script');
-    s.src = 'https://www.instagram.com/embed.js';
-    s.async = true;
-    s.onload = () => window.instgrm?.Embeds.process();
-    document.body.appendChild(s);
-  }
-}
-
 export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [muted, setMuted] = useState(true);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -83,8 +70,6 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
       const slide = c?.children[initialIndex] as HTMLElement | undefined;
       if (c && slide) c.scrollTop = slide.offsetTop;
     });
-
-    if (reels.some((r) => r.source === 'instagram')) ensureInstagramEmbed();
 
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -96,7 +81,7 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
       cancelAnimationFrame(id);
       window.removeEventListener('keydown', onKey);
     };
-  }, [initialIndex, reels, onClose]);
+  }, [initialIndex, onClose]);
 
   return (
     <motion.div
@@ -113,6 +98,32 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
         ✕
       </button>
 
+      <button
+        className="absolute left-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-negro/70 text-blanco backdrop-blur border border-blanco/20 cursor-pointer"
+        onClick={() => setMuted((m) => !m)}
+        aria-label={muted ? 'Activar sonido' : 'Silenciar'}
+      >
+        {muted ? (
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.6 7-8.8s-3-7.8-7-8.8z" opacity="0.35" />
+            <path d="M4 4l16 16" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+          </svg>
+        ) : (
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.6 7-8.8s-3-7.8-7-8.8z" />
+          </svg>
+        )}
+      </button>
+
+      {muted && (
+        <button
+          onClick={() => setMuted(false)}
+          className="absolute left-1/2 top-20 z-20 -translate-x-1/2 rounded-full bg-blanco/95 px-4 py-2 text-xs font-bold text-negro shadow-[3px_3px_0_var(--negro)] border-2 border-negro cursor-pointer"
+        >
+          🔊 Toca para activar sonido
+        </button>
+      )}
+
       <div
         ref={containerRef}
         className="h-[100dvh] overflow-y-scroll snap-y snap-mandatory"
@@ -127,26 +138,7 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
               className="relative mx-auto h-full max-h-[100dvh] max-w-full overflow-hidden rounded-xl bg-negro"
               style={{ aspectRatio: '9 / 16' }}
             >
-              {reel.source === 'drive' ? (
-                <iframe
-                  src={`https://drive.google.com/file/d/${reel.id}/preview`}
-                  className="absolute inset-0 h-full w-full"
-                  allow="autoplay; fullscreen"
-                  allowFullScreen
-                  title={reel.title}
-                />
-              ) : reel.source === 'native' ? (
-                <AutoPlayReel src={reel.id} poster={reel.thumbnail} title={reel.title} />
-              ) : reel.source === 'instagram' ? (
-                <div className="absolute inset-0 overflow-y-auto bg-blanco">
-                  <blockquote
-                    className="instagram-media"
-                    data-instgrm-permalink={`https://www.instagram.com/reel/${reel.id}/`}
-                    data-instgrm-version="14"
-                    style={{ background: '#FFF', border: 0, margin: 0, padding: 0, width: '100%', minWidth: 0 }}
-                  />
-                </div>
-              ) : null}
+              <ReelSlide reel={reel} muted={muted} />
             </div>
 
             <div className="pointer-events-none absolute inset-x-0 bottom-6 px-6 text-center">

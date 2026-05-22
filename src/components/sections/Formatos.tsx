@@ -20,7 +20,7 @@ export default function Formatos() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <SectionNumber number="04" label="Formatos de Actuación" />
+        <SectionNumber number="05" label="Formatos de Actuación" />
 
         <h2 className="mb-4 max-w-3xl font-display text-4xl font-bold text-blanco leading-[1.05] lg:text-6xl">
           Adaptabilidad <span className="italic text-sol">total.</span>

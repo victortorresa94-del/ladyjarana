@@ -26,7 +26,7 @@ export default function Galeria() {
   return (
     <section id="galeria" className="relative bg-blanco py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionNumber number="06" label="Mira y escucha" />
+        <SectionNumber number="04" label="Mira y escucha" />
 
         <h2 className="mb-4 max-w-3xl font-display text-4xl font-bold text-negro leading-[1.05] lg:text-6xl">
           Así suena <span className="italic text-rojo">en directo</span>.
