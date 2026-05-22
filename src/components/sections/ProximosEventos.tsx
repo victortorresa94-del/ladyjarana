@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { proximosEventos } from '@/lib/trayectoria';
-import { whatsappUrl } from '@/lib/contact';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 export default function ProximosEventos() {
   return (
@@ -31,9 +31,7 @@ export default function ProximosEventos() {
         <div className="grid gap-4 md:grid-cols-3">
           {proximosEventos.map((ev, i) => (
             <motion.a
-              href={whatsappUrl(
-                `¡Hola Lady Jarana! Quería saber más sobre el bolo en ${ev.lugar} (${ev.fecha}).`,
-              )}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               key={i}

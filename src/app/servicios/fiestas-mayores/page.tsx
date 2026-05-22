@@ -13,7 +13,6 @@ export default function FiestasMayoresPage() {
     <ServicioStub
       titulo="Banda para fiestas mayores"
       intro="La banda que la plaza estaba esperando. Energía en directo para fiestas mayores en pueblos y ciudades de toda Cataluña."
-      mensajeWhatsapp="¡Hola Lady Jarana! Me interesa contrataros para una fiesta mayor."
     />
   );
 }

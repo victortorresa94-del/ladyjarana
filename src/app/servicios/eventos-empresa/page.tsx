@@ -13,7 +13,6 @@ export default function EventosEmpresaPage() {
     <ServicioStub
       titulo="Banda para eventos de empresa"
       intro="Cenas, inauguraciones, fiestas corporativas y eventos de equipo. La energía en directo que diferencia un evento de empresa de cualquier otro."
-      mensajeWhatsapp="¡Hola Lady Jarana! Quería contrataros para un evento de empresa."
     />
   );
 }

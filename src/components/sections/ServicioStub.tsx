@@ -1,19 +1,17 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Button from '@/components/ui/Button';
-import { whatsappUrl } from '@/lib/contact';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 interface ServicioStubProps {
   titulo: string;
   intro: string;
-  mensajeWhatsapp: string;
   eyebrow?: string;
 }
 
 export default function ServicioStub({
   titulo,
   intro,
-  mensajeWhatsapp,
   eyebrow = 'Tipo de evento',
 }: ServicioStubProps) {
   return (
@@ -33,7 +31,7 @@ export default function ServicioStub({
           <p className="mb-10 font-body text-base italic text-negro/60 leading-relaxed">
             Próximamente: más información, repertorio, fotos y testimonios reales.
           </p>
-          <Button href={whatsappUrl(mensajeWhatsapp)} variant="primary">
+          <Button href={WHATSAPP_URL} variant="primary">
             Pedir presupuesto por WhatsApp →
           </Button>
           <p className="mt-6 font-body text-sm text-negro/60">

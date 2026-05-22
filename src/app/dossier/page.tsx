@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Button from '@/components/ui/Button';
-import { whatsappUrl } from '@/lib/contact';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 export const metadata: Metadata = {
   title: 'Dossier — Lady Jarana Press Kit',
@@ -35,9 +35,7 @@ export default function DossierPage() {
           <p className="mt-6 font-body text-sm text-blanco/50">
             ¿Necesitas más material?{' '}
             <a
-              href={whatsappUrl(
-                '¡Hola Lady Jarana! Necesito más material/dossier de la banda.',
-              )}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-amarillo underline"

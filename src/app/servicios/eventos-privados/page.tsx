@@ -13,7 +13,6 @@ export default function EventosPrivadosPage() {
     <ServicioStub
       titulo="Banda para eventos privados"
       intro="Cumpleaños, aniversarios, despedidas o cualquier celebración que merezca banda en directo. Adaptamos el formato al espacio y al aforo."
-      mensajeWhatsapp="¡Hola Lady Jarana! Quería contrataros para un evento privado."
     />
   );
 }

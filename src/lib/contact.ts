@@ -3,7 +3,7 @@
 
 const NUMBER = '34627281459';
 const DEFAULT_MSG =
-  '¡Hola Lady Jarana! Me gustaría saber más sobre contratar la banda.';
+  'Hola Jaraneros! Acabo de ver vuestra web y me gustaría tener más info.';
 
 export const WHATSAPP_NUMBER = NUMBER;
 export const PHONE_DISPLAY = '+34 627 281 459';
