@@ -56,7 +56,7 @@ export default function Estilo() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <SectionNumber number="02" label="El ADN musical" inverted />
+        <SectionNumber number="03" label="El ADN musical" inverted />
 
         <h2 className="mb-4 max-w-3xl font-display text-4xl font-bold text-crema leading-[1.05] lg:text-6xl">
           Tres pilares, <span className="italic text-sol">una sola jarana.</span>

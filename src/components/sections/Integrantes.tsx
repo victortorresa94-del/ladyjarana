@@ -23,7 +23,7 @@ export default function Integrantes() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <SectionNumber number="03" label="Los Arquitectos de la Fiesta" />
+        <SectionNumber number="02" label="Los Arquitectos de la Fiesta" />
 
         <h2 className="mb-16 max-w-3xl font-display text-4xl text-negro leading-[1.05] lg:text-7xl">
           Cinco músicos, una sola <em className="text-rojo">misión</em>: que no pare la fiesta.

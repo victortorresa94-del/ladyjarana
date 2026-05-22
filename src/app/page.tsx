@@ -22,8 +22,8 @@ export default function Home() {
         <Hero />
         <ProximosEventos />
         <Bio />
-        <Estilo />
         <Integrantes />
+        <Estilo />
         <Galeria />
         <Formatos />
         <Trayectoria />
