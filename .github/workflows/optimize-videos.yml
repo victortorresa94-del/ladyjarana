@@ -1,7 +1,19 @@
 name: Optimize blob videos
 
 on:
+  # Botón manual en la pestaña Actions
   workflow_dispatch:
+  # Se ejecuta solo cuando cambia el script o este workflow
+  push:
+    branches:
+      - claude/resume-lady-jarana-JP1L9
+    paths:
+      - .github/workflows/optimize-videos.yml
+      - scripts/optimize-videos.mjs
+
+# Evita el aviso de deprecación de Node 20 en las actions
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   optimize:
