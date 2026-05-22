@@ -13,30 +13,9 @@ const BLOB = 'https://f8gfdg48kikp71xk.public.blob.vercel-storage.com';
 export const liveVideos: LiveVideo[] = [
   {
     source: 'native',
-    id: `${BLOB}/Bamboleo.MP4`,
-    title: 'Bamboleo',
-    description: 'Versión Lady Jarana',
-    aspectRatio: '9:16',
-  },
-  {
-    source: 'native',
-    id: `${BLOB}/El%20chipiron.MP4`,
-    title: 'El chipirón',
-    description: 'Versión Lady Jarana',
-    aspectRatio: '9:16',
-  },
-  {
-    source: 'native',
-    id: `${BLOB}/No%20puedo%20vivir%20sin%20ti.MP4`,
-    title: 'No puedo vivir sin ti',
-    description: 'Versión Lady Jarana',
-    aspectRatio: '9:16',
-  },
-  {
-    source: 'native',
-    id: `${BLOB}/Volare.MOV`,
-    title: 'Volare',
-    description: 'Versión Lady Jarana',
+    id: `${BLOB}/Presentacion%20Lady%20Jarana.mp4`,
+    title: 'Presentación',
+    description: 'Lady Jarana en pocos minutos',
     aspectRatio: '9:16',
   },
   {
@@ -55,9 +34,30 @@ export const liveVideos: LiveVideo[] = [
   },
   {
     source: 'native',
-    id: `${BLOB}/Presentacion%20Lady%20Jarana.mp4`,
-    title: 'Presentación',
-    description: 'Lady Jarana en pocos minutos',
+    id: `${BLOB}/No%20puedo%20vivir%20sin%20ti.MP4`,
+    title: 'No puedo vivir sin ti',
+    description: 'Versión Lady Jarana',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'native',
+    id: `${BLOB}/Volare.MOV`,
+    title: 'Volare',
+    description: 'Versión Lady Jarana',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'native',
+    id: `${BLOB}/Bamboleo.MP4`,
+    title: 'Bamboleo',
+    description: 'Versión Lady Jarana',
+    aspectRatio: '9:16',
+  },
+  {
+    source: 'native',
+    id: `${BLOB}/El%20chipiron.MP4`,
+    title: 'El chipirón',
+    description: 'Versión Lady Jarana',
     aspectRatio: '9:16',
   },
 ];
