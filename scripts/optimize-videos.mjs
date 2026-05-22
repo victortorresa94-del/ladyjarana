@@ -94,10 +94,16 @@ for (const blob of videos) {
       '-movflags', '+faststart',
       outPath,
     ],
-    { stdio: 'inherit' },
+    { encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 },
   );
   if (ff.status !== 0) {
+    const errText = (ff.stderr || ff.error?.message || '(sin salida)').toString();
+    console.error(errText);
+    const tail = errText.trim().split('\n').slice(-10).join('\n');
     log(`- ❌ \`${blob.pathname}\`: ffmpeg falló`);
+    log('```');
+    log(tail);
+    log('```');
     failCount++;
     continue;
   }

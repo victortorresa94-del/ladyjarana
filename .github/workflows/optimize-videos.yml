@@ -29,8 +29,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify ffmpeg
-        run: ffmpeg -version | head -1
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+
+      - name: Verify ffmpeg has libx264
+        run: |
+          ffmpeg -version | head -1
+          ffmpeg -hide_banner -encoders | grep -i 'libx264\|aac' || true
 
       - name: Transcode and re-upload
         env:
