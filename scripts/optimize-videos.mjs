@@ -14,8 +14,20 @@ if (!process.env.BLOB_READ_WRITE_TOKEN) {
 }
 
 const { blobs } = await list({ token: process.env.BLOB_READ_WRITE_TOKEN });
+console.log(`Store returned ${blobs.length} blob(s) total:`);
+for (const b of blobs) {
+  console.log(`  - ${b.pathname} (${(b.size / 1024 / 1024).toFixed(1)} MB)`);
+}
 const videos = blobs.filter((b) => /\.(mp4|mov|m4v)$/i.test(b.pathname));
-console.log(`Found ${videos.length} videos.\n`);
+if (videos.length === 0) {
+  console.error(
+    '\n✗ NO se encontraron vídeos en el store de este token.\n' +
+      '  El secret LADYJARANA_READ_WRITE_TOKEN debe ser el del store PÚBLICO\n' +
+      '  que contiene los 7 MP4 (el que usa la web).',
+  );
+  process.exit(1);
+}
+console.log(`\n${videos.length} vídeo(s) a optimizar.\n`);
 
 const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'optimize-videos-'));
 
