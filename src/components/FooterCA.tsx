@@ -5,10 +5,11 @@ const navLinks = [
   { label: 'La banda', href: '/ca/#banda' },
   { label: 'Música', href: '/ca/#musica' },
   { label: 'Repertori', href: '/ca/repertori' },
-  { label: 'Formats', href: '/ca/#formatos' },
+  { label: 'Esdeveniments', href: '/ca/esdeveniments' },
   { label: 'Galeria', href: '/ca/#galeria' },
-  { label: 'Contractar', href: '/ca/contractar' },
   { label: 'Preus', href: '/ca/preus' },
+  { label: 'FAQ', href: '/ca/faq' },
+  { label: 'Contractar', href: '/ca/contractar' },
 ];
 
 const socialLinks = [

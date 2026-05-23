@@ -82,64 +82,183 @@ export const siteMetadata: Metadata = {
   },
 };
 
+// IDs estables para referencias cruzadas entre nodos del Knowledge Graph
+const MUSICGROUP_ID = `${BASE_URL}/#musicgroup`;
+const LOCALBUSINESS_ID = `${BASE_URL}/#business`;
+const WEBSITE_ID = `${BASE_URL}/#website`;
+
+const knowsAboutLanding = [
+  'Música en directe',
+  'Rumba catalana',
+  'Pop-rock español',
+  'Pop-rock catalán',
+  'Flamenco-pop',
+  'Latineo',
+  'Bodas en Barcelona',
+  'Festes majors Catalunya',
+  'Verbenes',
+];
+
+const members = [
+  {
+    '@type': 'Person',
+    '@id': `${BASE_URL}/#victor-torres`,
+    name: 'Víctor Torres',
+    roleName: 'Voz y guitarra española',
+    image: `${BASE_URL}/integrantes/victor-v4.png`,
+    nationality: { '@type': 'Country', name: 'España' },
+    knowsAbout: ['Guitarra española', 'Voz principal', 'Rumba catalana', 'Pop-rock español'],
+    memberOf: { '@id': MUSICGROUP_ID },
+  },
+  {
+    '@type': 'Person',
+    '@id': `${BASE_URL}/#alejo-finger`,
+    name: 'Alejo Finger',
+    roleName: 'Guitarra eléctrica',
+    image: `${BASE_URL}/integrantes/alejo-v4.png`,
+    knowsAbout: ['Guitarra eléctrica', 'Rock', 'Riffs y solos'],
+    memberOf: { '@id': MUSICGROUP_ID },
+  },
+  {
+    '@type': 'Person',
+    '@id': `${BASE_URL}/#ivan-cortes`,
+    name: 'Iván Cortés',
+    roleName: 'Teclado y bajo',
+    image: `${BASE_URL}/integrantes/ivan-v4.png`,
+    knowsAbout: ['Teclado', 'Bajo eléctrico', 'Producción musical'],
+    memberOf: { '@id': MUSICGROUP_ID },
+  },
+  {
+    '@type': 'Person',
+    '@id': `${BASE_URL}/#diego-aquino`,
+    name: 'Diego Aquino',
+    roleName: 'Batería',
+    image: `${BASE_URL}/integrantes/diego-v4.png`,
+    knowsAbout: ['Batería', 'Percusión', 'Ritmo latino'],
+    memberOf: { '@id': MUSICGROUP_ID },
+  },
+  {
+    '@type': 'Person',
+    '@id': `${BASE_URL}/#antonio`,
+    name: 'Antonio',
+    roleName: 'Trompeta',
+    image: `${BASE_URL}/integrantes/antonio-v4.png`,
+    knowsAbout: ['Trompeta', 'Vientos', 'Música latina'],
+    memberOf: { '@id': MUSICGROUP_ID },
+  },
+];
+
 export const jsonLdMusicGroup = {
   '@context': 'https://schema.org',
   '@type': 'MusicGroup',
+  '@id': MUSICGROUP_ID,
   name: 'Lady Jarana',
-  alternateName: 'Lady Jarana Rumba & Rock Band',
+  alternateName: ['Lady Jarana Rumba & Rock Band', 'LadyJarana'],
   url: BASE_URL,
   logo: `${BASE_URL}/logo/logo-lady-jarana.png`,
-  image: `${BASE_URL}/og-image.jpg`,
+  image: [
+    `${BASE_URL}/og-image.jpg`,
+    `${BASE_URL}/fotos/grupo-publico.jpg`,
+  ],
   description:
-    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe español + catalán.',
+    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe español + catalán. Cuarteto desde 1000 €.',
+  slogan: 'Rumba & Rock Band',
   foundingDate: '2025',
-  foundingLocation: 'Barcelona, España',
-  genre: ['Rumba catalana', 'Pop-rock español', 'Pop-rock catalán', 'Latineo', 'Rock'],
-  member: [
-    {
-      '@type': 'Person',
-      name: 'Víctor Torres',
-      roleName: 'Voz y guitarra española',
-    },
-    {
-      '@type': 'Person',
-      name: 'Alejo Finger',
-      roleName: 'Guitarra eléctrica',
-    },
-    {
-      '@type': 'Person',
-      name: 'Iván Cortés',
-      roleName: 'Teclado y bajo',
-    },
-    {
-      '@type': 'Person',
-      name: 'Diego Aquino',
-      roleName: 'Batería',
-    },
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Barcelona, Catalunya, España',
+  },
+  genre: [
+    'Rumba catalana',
+    'Pop-rock español',
+    'Pop-rock catalán',
+    'Flamenco-pop',
+    'Latineo',
+    'Rock',
+  ],
+  knowsAbout: knowsAboutLanding,
+  brand: { '@type': 'Brand', name: 'Lady Jarana' },
+  numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Barcelona' },
+    { '@type': 'AdministrativeArea', name: 'Catalunya' },
+    { '@type': 'Country', name: 'España' },
+  ],
+  member: members,
+  subjectOf: [
+    { '@id': `${BASE_URL}/sobre-lady-jarana` },
+    { '@id': `${BASE_URL}/ca/sobre-lady-jarana` },
   ],
   sameAs: [
-    'https://instagram.com/ladyjarana',
-    'https://tiktok.com/@ladyjarana',
+    'https://instagram.com/lady.jarana',
+    'https://tiktok.com/@LadyJaranaOficial',
     'https://youtube.com/@ladyjarana',
+    'https://open.spotify.com/playlist/16vDugJ1aVlRRlEKY8wECC',
   ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+34627281459',
+    email: 'ladyjaranamusic@gmail.com',
+    contactType: 'booking',
+    availableLanguage: ['Spanish', 'Catalan', 'es', 'ca'],
+    areaServed: ['ES'],
+  },
 };
 
 export const jsonLdLocalBusiness = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': LOCALBUSINESS_ID,
   name: 'Lady Jarana',
   description:
-    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Show bilingüe ES/CA.',
-  areaServed: ['Barcelona', 'Catalunya', 'Cataluña', 'España'],
+    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Show bilingüe ES/CA. Cuarteto desde 1000 €.',
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Barcelona' },
+    { '@type': 'AdministrativeArea', name: 'Catalunya' },
+    { '@type': 'Country', name: 'España' },
+  ],
   priceRange: '€€',
-  telephone: '+34 627 281 459',
+  telephone: '+34627281459',
   email: 'ladyjaranamusic@gmail.com',
   url: BASE_URL,
   image: `${BASE_URL}/og-image.jpg`,
+  logo: `${BASE_URL}/logo/logo-lady-jarana.png`,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Barcelona',
     addressRegion: 'Catalunya',
     addressCountry: 'ES',
+  },
+  makesOffer: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'EUR',
+    lowPrice: 1000,
+    highPrice: 2000,
+    offerCount: 3,
+    availability: 'https://schema.org/InStock',
+    seller: { '@id': MUSICGROUP_ID },
+    eligibleRegion: { '@type': 'AdministrativeArea', name: 'Catalunya' },
+  },
+  sameAs: [
+    'https://instagram.com/lady.jarana',
+    'https://tiktok.com/@LadyJaranaOficial',
+    'https://youtube.com/@ladyjarana',
+  ],
+};
+
+export const jsonLdWebSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': WEBSITE_ID,
+  name: 'Lady Jarana',
+  alternateName: 'Lady Jarana — Banda en directo Barcelona y Catalunya',
+  url: BASE_URL,
+  inLanguage: ['es-ES', 'ca-ES'],
+  publisher: { '@id': MUSICGROUP_ID },
+  about: { '@id': MUSICGROUP_ID },
+  potentialAction: {
+    '@type': 'ContactAction',
+    name: 'Contratar Lady Jarana por WhatsApp',
+    target: 'https://wa.me/34627281459',
   },
 };

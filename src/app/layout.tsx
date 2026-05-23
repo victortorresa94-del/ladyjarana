@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Instrument_Serif } from 'next/font/google';
-import { siteMetadata, jsonLdMusicGroup, jsonLdLocalBusiness } from '@/lib/metadata';
+import {
+  siteMetadata,
+  jsonLdMusicGroup,
+  jsonLdLocalBusiness,
+  jsonLdWebSite,
+} from '@/lib/metadata';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -47,6 +52,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLdLocalBusiness),
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
       </head>
       <body className="min-h-full flex flex-col font-body bg-background text-foreground">

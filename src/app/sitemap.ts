@@ -40,6 +40,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${BASE}/faq`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+      alternates: {
+        languages: {
+          es: `${BASE}/faq`,
+          ca: `${BASE}/ca/faq`,
+          'x-default': `${BASE}/faq`,
+        },
+      },
+    },
     { url: `${BASE}/eventos`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/repertorio`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/galeria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -54,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ca`, lastModified: now, changeFrequency: 'weekly', priority: 0.98 },
     { url: `${BASE}/ca/preus`, lastModified: now, changeFrequency: 'monthly', priority: 0.93 },
     { url: `${BASE}/ca/contractar`, lastModified: now, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${BASE}/ca/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/ca/repertori`, lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
     { url: `${BASE}/ca/esdeveniments`, lastModified: now, changeFrequency: 'weekly', priority: 0.83 },
     { url: `${BASE}/ca/serveis/casaments`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },

@@ -15,15 +15,15 @@ const linksByLocale: Record<Locale, { label: string; href: string }[]> = {
     { label: 'Banda', href: '/#banda' },
     { label: 'Repertorio', href: '/repertorio' },
     { label: 'Eventos', href: '/eventos' },
-    { label: 'Galería', href: '/#galeria' },
     { label: 'Precios', href: '/precios' },
+    { label: 'FAQ', href: '/faq' },
   ],
   ca: [
     { label: 'La banda', href: '/ca/#banda' },
     { label: 'Repertori', href: '/ca/repertori' },
     { label: 'Esdeveniments', href: '/ca/esdeveniments' },
-    { label: 'Galeria', href: '/ca/#galeria' },
     { label: 'Preus', href: '/ca/preus' },
+    { label: 'FAQ', href: '/ca/faq' },
   ],
 };
 
@@ -40,6 +40,7 @@ const routeMap: Record<string, { es: string; ca: string }> = {
   '/repertorio': { es: '/repertorio', ca: '/ca/repertori' },
   '/eventos': { es: '/eventos', ca: '/ca/esdeveniments' },
   '/galeria': { es: '/galeria', ca: '/ca/galeria' },
+  '/faq': { es: '/faq', ca: '/ca/faq' },
 };
 
 function detectLocale(pathname: string): Locale {
@@ -64,6 +65,7 @@ function languageSwitchHref(pathname: string, currentLocale: Locale): string {
       '/repertori': '/repertorio',
       '/esdeveniments': '/eventos',
       '/galeria': '/galeria',
+      '/faq': '/faq',
       '/': '/',
     };
     return map[cleanPath] ?? '/';

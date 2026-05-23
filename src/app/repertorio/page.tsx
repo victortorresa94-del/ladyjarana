@@ -34,10 +34,48 @@ export const metadata: Metadata = {
 export default function RepertorioPage() {
   const totalBloques = REPERTORIO.length;
 
+  const allTracks = REPERTORIO.flatMap((b) => b.canciones);
+  const playlistJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MusicPlaylist',
+    name: 'Repertorio Lady Jarana',
+    description:
+      'Repertorio oficial de Lady Jarana: pop-rock español y catalán, rumba catalana, latineo y verbeneras. 37 canciones bilingües ES/CA tocadas en directo.',
+    url: 'https://ladyjarana.com/repertorio',
+    numTracks: TOTAL_CANCIONES,
+    inLanguage: ['es-ES', 'ca-ES'],
+    creator: { '@id': 'https://ladyjarana.com/#musicgroup' },
+    track: allTracks.map((c, i) => ({
+      '@type': 'MusicRecording',
+      position: i + 1,
+      name: c.titulo,
+      ...(c.artista
+        ? { byArtist: { '@type': 'MusicGroup', name: c.artista } }
+        : {}),
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Repertorio', item: 'https://ladyjarana.com/repertorio' },
+    ],
+  };
+
   return (
     <>
       <Navbar />
       <main className="bg-crema pt-20">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(playlistJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
         {/* ============ HERO ============ */}
         <section className="relative overflow-hidden bg-naranja pb-20 pt-16 lg:pb-28 lg:pt-24">
           <div className="absolute inset-0 opacity-20 pointer-events-none">
