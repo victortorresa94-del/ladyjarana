@@ -22,9 +22,9 @@ export type BloqueRepertorio = {
 export const REPERTORIO: BloqueRepertorio[] = [
   {
     id: 'pop-rock-espanol',
-    titulo: 'Pop-rock español',
+    titulo: 'Pop-rock español y catalán',
     descripcion:
-      'Los himnos en castellano que canta todo el mundo sin darse cuenta. El esqueleto del show.',
+      'Los himnos en castellano y catalán que canta todo el mundo sin darse cuenta. El esqueleto del show.',
     emoji: '🎸',
     canciones: [
       { titulo: 'Mucho mejor', artista: 'Los Rodríguez ft. Coque Malla' },
@@ -32,7 +32,6 @@ export const REPERTORIO: BloqueRepertorio[] = [
       { titulo: 'No puedo vivir sin ti', artista: 'Los Ronaldos' },
       { titulo: 'La madre de José', artista: 'El Canto del Loco' },
       { titulo: 'Sin documentos', artista: 'Los Rodríguez' },
-      { titulo: 'Corazón partío', artista: 'Alejandro Sanz' },
       { titulo: 'Caminando por la vida', artista: 'Melendi' },
       { titulo: 'Por la boca vive el pez', artista: 'Fito & Fitipaldis' },
       { titulo: 'La casa por el tejado', artista: 'Fito & Fitipaldis' },
@@ -43,6 +42,8 @@ export const REPERTORIO: BloqueRepertorio[] = [
       { titulo: 'Nada que perder', artista: 'Pignoise' },
       { titulo: 'Física o química', artista: 'Despistaos' },
       { titulo: 'Nada fue un error', artista: 'Coti & Andrés Calamaro' },
+      { titulo: 'Jennifer', artista: 'Els Catarres' },
+      { titulo: "L'Empordà", artista: 'Sopa de Cabra' },
     ],
   },
   {
