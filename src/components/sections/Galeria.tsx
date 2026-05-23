@@ -17,6 +17,7 @@ import { INSTAGRAM_URL } from '@/lib/contact';
 const INSTAGRAM_REELS = [
   { id: 'DWn3wnqjO5c', title: 'Tenemos un fondo flamenco…', description: 'Reel · Instagram' },
   { id: 'DOniq2XjBRE', title: 'Boda Lady Jarana', description: 'Reel · Instagram' },
+  { id: 'DTdt3oqjEjn', title: 'Reel destacado', description: 'Reel · Instagram' },
 ] as const;
 
 export default function Galeria() {

@@ -9,6 +9,7 @@ import Formatos from '@/components/sections/Formatos';
 import Trayectoria from '@/components/sections/Trayectoria';
 import Galeria from '@/components/sections/Galeria';
 import ContactoCTA from '@/components/sections/ContactoCTA';
+import SpotifyCTA from '@/components/sections/SpotifyCTA';
 import Testimonios from '@/components/sections/Testimonios';
 import PressKit from '@/components/sections/PressKit';
 import TiposEventos from '@/components/sections/TiposEventos';
@@ -28,6 +29,7 @@ export default function Home() {
         <Formatos />
         <Trayectoria />
         <ContactoCTA />
+        <SpotifyCTA />
         <Testimonios />
         <PressKit />
         <TiposEventos />
