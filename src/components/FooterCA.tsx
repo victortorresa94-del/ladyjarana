@@ -2,14 +2,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const navLinks = [
-  { label: 'La banda', href: '/ca/#banda' },
-  { label: 'Música', href: '/ca/#musica' },
+  { label: 'Sobre Lady Jarana', href: '/ca/sobre-lady-jarana' },
   { label: 'Repertori', href: '/ca/repertori' },
   { label: 'Esdeveniments', href: '/ca/esdeveniments' },
   { label: 'Galeria', href: '/ca/#galeria' },
   { label: 'Preus', href: '/ca/preus' },
   { label: 'FAQ', href: '/ca/faq' },
   { label: 'Contractar', href: '/ca/contractar' },
+];
+
+const cityLinks = [
+  { label: 'Barcelona', href: '/ca/grup-musica-barcelona' },
+  { label: 'Girona', href: '/ca/grup-musica-girona' },
+  { label: 'Tarragona', href: '/ca/grup-musica-tarragona' },
+  { label: 'Lleida', href: '/ca/grup-musica-lleida' },
 ];
 
 const socialLinks = [
@@ -46,7 +52,7 @@ export default function FooterCA() {
   return (
     <footer className="bg-negro text-crema border-t-4 border-rojo">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-4">
+        <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Image
               src="/logo/lady-jarana-melon.png"
@@ -95,6 +101,27 @@ export default function FooterCA() {
           </div>
 
           <div>
+            <h4 className="mb-4 font-body text-xs font-bold uppercase tracking-widest text-sol">
+              On toquem
+            </h4>
+            <ul className="space-y-2">
+              {cityLinks.map((c) => (
+                <li key={c.href}>
+                  <Link
+                    href={c.href}
+                    className="font-body text-sm text-crema/70 hover:text-sol transition-colors"
+                  >
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 font-body text-xs text-crema/50">
+              I tota Catalunya sense recàrrec.
+            </p>
+          </div>
+
+          <div className="lg:col-span-2">
             <h4 className="mb-4 font-body text-xs font-bold uppercase tracking-widest text-sol">
               Booking & Mgmt
             </h4>

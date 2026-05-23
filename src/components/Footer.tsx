@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const navLinks = [
-  { label: 'Banda', href: '/#banda' },
-  { label: 'Música', href: '/#musica' },
+  { label: 'Sobre Lady Jarana', href: '/sobre-lady-jarana' },
   { label: 'Repertorio', href: '/repertorio' },
   { label: 'Eventos', href: '/eventos' },
   { label: 'Galería', href: '/#galeria' },
@@ -11,6 +10,13 @@ const navLinks = [
   { label: 'FAQ', href: '/faq' },
   { label: 'Contratar', href: '/contratar' },
   { label: 'Dossier', href: '/dossier-lady-jarana.pdf' },
+];
+
+const cityLinks = [
+  { label: 'Barcelona', href: '/banda-musica-barcelona' },
+  { label: 'Girona', href: '/banda-musica-girona' },
+  { label: 'Tarragona', href: '/banda-musica-tarragona' },
+  { label: 'Lleida', href: '/banda-musica-lleida' },
 ];
 
 const socialLinks = [
@@ -47,7 +53,7 @@ export default function Footer() {
   return (
     <footer className="bg-negro text-crema border-t-4 border-rojo">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-4">
+        <div className="grid gap-12 lg:grid-cols-5">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Image
@@ -95,8 +101,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Dónde tocamos */}
           <div>
+            <h4 className="mb-4 font-body text-xs font-bold uppercase tracking-widest text-sol">
+              Dónde tocamos
+            </h4>
+            <ul className="space-y-2">
+              {cityLinks.map((c) => (
+                <li key={c.href}>
+                  <Link
+                    href={c.href}
+                    className="font-body text-sm text-crema/70 hover:text-sol transition-colors"
+                  >
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 font-body text-xs text-crema/50">
+              Y toda Catalunya sin recargo.
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div className="lg:col-span-2">
             <h4 className="mb-4 font-body text-xs font-bold uppercase tracking-widest text-sol">
               Booking & Mgmt
             </h4>
