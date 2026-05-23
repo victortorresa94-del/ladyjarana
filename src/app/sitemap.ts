@@ -72,6 +72,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.78,
     },
+    { url: `${BASE}/banda-musica-barcelona`, lastModified: now, changeFrequency: 'monthly', priority: 0.8, alternates: { languages: { es: `${BASE}/banda-musica-barcelona`, ca: `${BASE}/ca/grup-musica-barcelona` } } },
+    { url: `${BASE}/banda-musica-girona`, lastModified: now, changeFrequency: 'monthly', priority: 0.75, alternates: { languages: { es: `${BASE}/banda-musica-girona`, ca: `${BASE}/ca/grup-musica-girona` } } },
+    { url: `${BASE}/banda-musica-tarragona`, lastModified: now, changeFrequency: 'monthly', priority: 0.75, alternates: { languages: { es: `${BASE}/banda-musica-tarragona`, ca: `${BASE}/ca/grup-musica-tarragona` } } },
+    { url: `${BASE}/banda-musica-lleida`, lastModified: now, changeFrequency: 'monthly', priority: 0.75, alternates: { languages: { es: `${BASE}/banda-musica-lleida`, ca: `${BASE}/ca/grup-musica-lleida` } } },
     { url: `${BASE}/eventos`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/repertorio`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/galeria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -97,6 +101,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ca/galeria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/ca/dossier`, lastModified: now, changeFrequency: 'monthly', priority: 0.55 },
     { url: `${BASE}/ca/material`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE}/ca/grup-musica-barcelona`, lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
+    { url: `${BASE}/ca/grup-musica-girona`, lastModified: now, changeFrequency: 'monthly', priority: 0.73 },
+    { url: `${BASE}/ca/grup-musica-tarragona`, lastModified: now, changeFrequency: 'monthly', priority: 0.73 },
+    { url: `${BASE}/ca/grup-musica-lleida`, lastModified: now, changeFrequency: 'monthly', priority: 0.73 },
   ];
 
   return [...esRoutes, ...caRoutes];
