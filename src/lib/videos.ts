@@ -56,11 +56,12 @@ export const liveVideos: LiveVideo[] = [
     description: 'Versión Lady Jarana',
     aspectRatio: '9:16',
   },
-  // 7 — vídeo nuevo subido al Blob ("Centro Astur"). Si el filename real
-  // difiere, ajustar aquí y el optimizador volverá a procesarlo.
+  // 7 — Centro Asturiano. El archivo original en Drive es .mov (quicktime,
+  // ID 1THGgChoIoiO9Ex7ZJsqGV8kr6w_Z8qao). El filename en Blob mantiene
+  // mayúsculas .MOV siguiendo el patrón de Volare.
   {
     source: 'native',
-    id: `${BLOB}/Centro%20Astur.mp4`,
+    id: `${BLOB}/Centro%20Astur.MOV`,
     title: 'Centro Asturiano',
     description: 'Verbena · directo',
     aspectRatio: '9:16',
