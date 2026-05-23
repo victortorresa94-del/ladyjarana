@@ -2,6 +2,10 @@ export interface LiveVideo {
   source: 'drive' | 'instagram' | 'native';
   // Drive ID, IG reel shortcode, or full public URL for native sources
   id: string;
+  /** Sources alternativas (mismo archivo, distinta extensión / fallback).
+   *  Útil cuando no sabemos la extensión exacta del Blob. El browser
+   *  prueba en orden y carga el primero que resuelva 2xx. */
+  sources?: string[];
   title: string;
   description: string;
   thumbnail?: string;
@@ -56,12 +60,23 @@ export const liveVideos: LiveVideo[] = [
     description: 'Versión Lady Jarana',
     aspectRatio: '9:16',
   },
-  // 7 — Centro Asturiano. El archivo original en Drive es .mov (quicktime,
-  // ID 1THGgChoIoiO9Ex7ZJsqGV8kr6w_Z8qao). El filename en Blob mantiene
-  // mayúsculas .MOV siguiendo el patrón de Volare.
+  // 7 — Centro Asturiano. Archivo original en Drive es quicktime .mov
+  // (ID 1THGgChoIoiO9Ex7ZJsqGV8kr6w_Z8qao). No sabemos la extensión exacta
+  // del Blob, así que listamos múltiples sources; el <video> usará la
+  // primera que cargue.
   {
     source: 'native',
     id: `${BLOB}/Centro%20Astur.MOV`,
+    sources: [
+      `${BLOB}/Centro%20Astur.MOV`,
+      `${BLOB}/Centro%20Astur.mov`,
+      `${BLOB}/Centro%20Astur.mp4`,
+      `${BLOB}/Centro%20Astur.MP4`,
+      `${BLOB}/Centro%20Asturiano.mov`,
+      `${BLOB}/Centro%20Asturiano.MOV`,
+      `${BLOB}/Centro%20Asturiano.mp4`,
+      `${BLOB}/Centro%20Asturiano.MP4`,
+    ],
     title: 'Centro Asturiano',
     description: 'Verbena · directo',
     aspectRatio: '9:16',
