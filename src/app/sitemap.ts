@@ -53,6 +53,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${BASE}/sobre-lady-jarana`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.82,
+      alternates: {
+        languages: {
+          es: `${BASE}/sobre-lady-jarana`,
+          ca: `${BASE}/ca/sobre-lady-jarana`,
+          'x-default': `${BASE}/sobre-lady-jarana`,
+        },
+      },
+    },
     { url: `${BASE}/eventos`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/repertorio`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/galeria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -68,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ca/preus`, lastModified: now, changeFrequency: 'monthly', priority: 0.93 },
     { url: `${BASE}/ca/contractar`, lastModified: now, changeFrequency: 'monthly', priority: 0.88 },
     { url: `${BASE}/ca/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/ca/sobre-lady-jarana`, lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
     { url: `${BASE}/ca/repertori`, lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
     { url: `${BASE}/ca/esdeveniments`, lastModified: now, changeFrequency: 'weekly', priority: 0.83 },
     { url: `${BASE}/ca/serveis/casaments`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
