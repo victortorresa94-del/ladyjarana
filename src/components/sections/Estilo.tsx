@@ -6,23 +6,23 @@ import Marquee from '../ui/Marquee';
 
 const pilares = [
   {
-    titulo: 'Pop-Rock Español 2000s',
+    titulo: 'Pop-Rock 2000s (ES + CA)',
     texto:
-      'El núcleo del concepto. Canciones que conectan con varias generaciones. El Canto del Loco, Fito & Fitipaldis, Jarabe de Palo, Pignoise.',
+      'El núcleo del concepto. Canciones en castellano y catalán que conectan con varias generaciones. El Canto del Loco, Fito & Fitipaldis, Jarabe de Palo, Sopa de Cabra, Els Catarres.',
     icon: '🎸',
     color: 'sol',
   },
   {
-    titulo: 'Rumba / Flamenco Pop',
+    titulo: 'Rumba catalana y Flamenco-pop',
     texto:
-      'El motor del baile. Arreglos orgánicos con guitarra española, palmas y mucho groove. Estopa, Los Delinqüentes, El Barrio.',
+      'El motor del baile. Arreglos orgánicos con guitarra española, palmas y mucho groove. Estopa, Los Delinqüentes, El Barrio, Manu Chao.',
     icon: '🌴',
     color: 'naranja',
   },
   {
     titulo: 'Pop Latino Actual',
     texto:
-      'El toque moderno. Adaptados a nuestro estilo propio, más acústicos y rumberos. Manuel Turizo, Sebastián Yatra.',
+      'El toque moderno. Adaptados a nuestro estilo propio, más acústicos y rumberos. Manuel Turizo, Sebastián Yatra, The Tyets.',
     icon: '💃',
     color: 'rojo',
   },
@@ -37,12 +37,12 @@ const colorClasses: Record<string, { bg: string; text: string }> = {
 const artistas = [
   '★ Jarabe de Palo',
   '★ Estopa',
-  '★ Pignoise',
+  '★ Sopa de Cabra',
   '★ Melendi',
   '★ El Canto del Loco',
-  '★ Los Delinqüentes',
+  '★ Els Catarres',
   '★ Fito & Fitipaldis',
-  '★ El Barrio',
+  '★ The Tyets',
   '★ Manuel Turizo',
   '★ Sebastián Yatra',
 ];
@@ -62,7 +62,7 @@ export default function Estilo() {
           Tres pilares, <span className="italic text-sol">una sola jarana.</span>
         </h2>
         <p className="mb-16 max-w-2xl font-body text-lg text-crema/70">
-          El sonido Lady Jarana es <strong className="text-sol">fiesta mediterránea</strong> en directo: pop-rock español, rumba flamenca y latineo actual fusionados en un único show.
+          El sonido Lady Jarana es <strong className="text-sol">fiesta mediterránea</strong> en directo: pop-rock español y catalán, rumba flamenca y latineo actual fusionados en un único show bilingüe ES/CA.
         </p>
 
         <div className="grid gap-6 md:grid-cols-3">

@@ -69,7 +69,7 @@ export default function Hero() {
         </motion.div>
 
         <h1 className="sr-only">
-          Lady Jarana — Banda en directo de pop-rock español, rumba y latineo en Barcelona
+          Lady Jarana — Banda en directo de pop-rock español y catalán, rumba y latineo en Barcelona y toda Cataluña
         </h1>
 
         <motion.p
@@ -80,7 +80,7 @@ export default function Hero() {
         >
           Banda en directo para <strong className="font-semibold">bodas</strong>,{' '}
           <strong className="font-semibold">fiestas mayores</strong> y eventos privados en{' '}
-          <strong className="font-semibold">Barcelona y toda Cataluña</strong>. Pop-rock, rumba y latineo en formato cuarteto.
+          <strong className="font-semibold">Barcelona y toda Cataluña</strong>. Pop-rock español y catalán, rumba y latineo. Show bilingüe ES/CA.
         </motion.p>
 
         <motion.div
