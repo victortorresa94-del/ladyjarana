@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: 'Contractar Lady Jarana — Grup en directe per al teu esdeveniment | Catalunya',
   description:
-    'Contracta Lady Jarana per al teu casament, festa major o esdeveniment privat a Catalunya. Quartet 1.000–1.300 €, quintet 1.200–1.500 €. Resposta en minuts per WhatsApp.',
+    'Contracta Lady Jarana per al teu casament, festa major o esdeveniment privat a Catalunya. Quartet 800–1.000 €, quintet 1.000–1.300 €. Resposta en minuts per WhatsApp.',
   alternates: {
     canonical: 'https://ladyjarana.es/ca/contractar',
     languages: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Quant costa contractar la banda?',
-    a: 'Quartet 1.000–1.300 €, quintet 1.200–1.500 €, banda completa des de 1.400 €. El preu dins de cada rang varia per data, lloc i extres. No fem duo ni trio. Tens els preus complets a /ca/preus.',
+    a: 'Quartet 800–1.000 €, quintet 1.000–1.300 €, banda completa des de 1.400 €. El preu dins de cada rang varia per data, lloc i extres. No fem duo ni trio. Tens els preus complets a /ca/preus.',
   },
   {
     q: 'Porteu equip de so?',
@@ -127,7 +127,7 @@ export default function ContractarPage() {
                 🎸 Quartet, quintet o banda completa
               </p>
               <p className="mt-1 font-body text-sm text-negro/75">
-                Quartet 1.000–1.300 €. Quintet 1.200–1.500 €. Banda completa des de 1.400 €. No fem duo ni
+                Quartet 800–1.000 €. Quintet 1.000–1.300 €. Banda completa des de 1.400 €. No fem duo ni
                 trio.
               </p>
             </div>

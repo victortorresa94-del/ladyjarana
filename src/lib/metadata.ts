@@ -10,7 +10,7 @@ export const siteMetadata: Metadata = {
     template: '%s | Lady Jarana',
   },
   description:
-    'Banda en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Pop-rock español y catalán, rumba y latineo. Cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €, banda completa desde 1.400 €. Show bilingüe ES/CA.',
+    'Banda en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Pop-rock español y catalán, rumba y latineo. Cuarteto 800–1.000 €, quinteto 1.000–1.300 €, banda completa desde 1.400 €. Show bilingüe ES/CA.',
   keywords: [
     'banda para bodas Barcelona',
     'banda en directo Catalunya',
@@ -35,7 +35,7 @@ export const siteMetadata: Metadata = {
     title:
       'Lady Jarana — Banda en directo de pop-rock, rumba y latineo | Barcelona y Catalunya',
     description:
-      'Banda en directo para bodas, fiestas mayores y eventos privados en toda Catalunya. Pop-rock ES/CA, rumba y latineo. Cuarteto desde 1.000 €.',
+      'Banda en directo para bodas, fiestas mayores y eventos privados en toda Catalunya. Pop-rock ES/CA, rumba y latineo. Cuarteto desde 800 €.',
     images: [
       {
         url: '/og-image.jpg',
@@ -49,7 +49,7 @@ export const siteMetadata: Metadata = {
     card: 'summary_large_image',
     title: 'Lady Jarana — Banda en directo · Barcelona y Catalunya',
     description:
-      'Pop-rock ES/CA, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor. Cuarteto desde 1.000 €.',
+      'Pop-rock ES/CA, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor. Cuarteto desde 800 €.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -161,7 +161,7 @@ export const jsonLdMusicGroup = {
     `${BASE_URL}/fotos/grupo-publico.jpg`,
   ],
   description:
-    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe español + catalán. Cuarteto desde 1.000 €.',
+    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe español + catalán. Cuarteto desde 800 €.',
   slogan: 'Rumba & Rock Band',
   foundingDate: '2025',
   foundingLocation: {
@@ -211,7 +211,7 @@ export const jsonLdLocalBusiness = {
   '@id': LOCALBUSINESS_ID,
   name: 'Lady Jarana',
   description:
-    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Show bilingüe ES/CA. Cuarteto desde 1.000 €.',
+    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Show bilingüe ES/CA. Cuarteto desde 800 €.',
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Barcelona' },
     { '@type': 'AdministrativeArea', name: 'Catalunya' },
@@ -232,7 +232,7 @@ export const jsonLdLocalBusiness = {
   makesOffer: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',
-    lowPrice: 1000,
+    lowPrice: 800,
     highPrice: 2000,
     offerCount: 3,
     availability: 'https://schema.org/InStock',

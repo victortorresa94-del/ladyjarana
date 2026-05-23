@@ -66,7 +66,7 @@ export function ServicioRichCAFull({ content }: { content: ServicioContent }) {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'EUR',
-      lowPrice: 1000,
+      lowPrice: 800,
       highPrice: 2000,
       offerCount: 3,
       availability: 'https://schema.org/InStock',

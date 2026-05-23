@@ -33,7 +33,7 @@ export const serviciosES: Record<string, ServicioContent> = {
     slugAlt: 'casaments',
     titulo: 'Banda en directo para bodas en Barcelona y Catalunya',
     intro:
-      'Lady Jarana es la banda en directo para bodas que convierte una recepción en fiesta mayor. Cuatro músicos profesionales, repertorio bilingüe ES/CA y un show 100% en directo que cubre desde el cóctel hasta la barra libre. Cuarteto desde 1.000 €, ideal para bodas en finca, masía, hotel o restaurante en toda Catalunya.',
+      'Lady Jarana es la banda en directo para bodas que convierte una recepción en fiesta mayor. Cuatro músicos profesionales, repertorio bilingüe ES/CA y un show 100% en directo que cubre desde el cóctel hasta la barra libre. Cuarteto desde 800 €, ideal para bodas en finca, masía, hotel o restaurante en toda Catalunya.',
     eyebrow: 'Bodas',
     hero: { foto: '/fotos/bodas.jpg', objectPosition: 'center 30%' },
     queHacemos: [
@@ -51,11 +51,11 @@ export const serviciosES: Record<string, ServicioContent> = {
     casoReal:
       'Diciembre 2025 — boda en Cangabarró. Show de 120 minutos para cien invitados, sonido propio + 2 técnicos, personalización del primer baile con versión rumbera a medida.',
     formatoRecomendado:
-      'Cuarteto (1.000–1.300 €) para bodas íntimas o medianas. Quinteto con trompeta (1.200–1.500 €) si quieres añadir vientos a los temas de rumba.',
+      'Cuarteto (800–1.000 €) para bodas íntimas o medianas. Quinteto con trompeta (1.000–1.300 €) si quieres añadir vientos a los temas de rumba.',
     faqs: [
       {
         q: '¿Cuánto cuesta contratar una banda para una boda en Barcelona?',
-        a: 'Lady Jarana en formato cuarteto cuesta 1.000–1.300 €. Quinteto 1.200–1.500 €. Banda completa desde 1.400 €. Sonido propio + 2 técnicos desde 600 € si el venue no tiene PA. Toda Catalunya sin recargo.',
+        a: 'Lady Jarana en formato cuarteto cuesta 800–1.000 €. Quinteto 1.000–1.300 €. Banda completa desde 1.400 €. Sonido propio + 2 técnicos desde 600 € si el venue no tiene PA. Toda Catalunya sin recargo.',
       },
       {
         q: '¿Tocáis durante la ceremonia?',
@@ -83,7 +83,7 @@ export const serviciosES: Record<string, ServicioContent> = {
     slugAlt: 'festes-majors',
     titulo: 'Banda para festes majors en Catalunya',
     intro:
-      'Lady Jarana es la banda que la plaça estaba esperando. Pop-rock, rumba catalana, latineo y verbeneras en directo para festes majors municipales en toda Catalunya. Formato quinteto con trompeta o banda completa para escenarios XXL. Cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €, banda completa desde 1.400 €.',
+      'Lady Jarana es la banda que la plaça estaba esperando. Pop-rock, rumba catalana, latineo y verbeneras en directo para festes majors municipales en toda Catalunya. Formato quinteto con trompeta o banda completa para escenarios XXL. Cuarteto 800–1.000 €, quinteto 1.000–1.300 €, banda completa desde 1.400 €.',
     eyebrow: 'Festes Majors',
     hero: { foto: '/fotos/fiestas-mayores.jpg', objectPosition: 'center 40%' },
     queHacemos: [
@@ -101,11 +101,11 @@ export const serviciosES: Record<string, ServicioContent> = {
     casoReal:
       'Festa Major de Sant Adrià de Besòs (septiembre 2025): escenario principal, formato XXL, producción ampliada. Festa Major de Barberà del Vallès (verano 2025): primer bolo en circuito municipal. Rumba Beach Festival × 2 ediciones (organizado por la AAVV Barceloneta).',
     formatoRecomendado:
-      'Quinteto (1.200–1.500 €) — formato principal y el más demandado para festes majors. La trompeta marca diferencia en plaza grande. Banda completa (desde 1.400 €) para escenarios XXL.',
+      'Quinteto (1.000–1.300 €) — formato principal y el más demandado para festes majors. La trompeta marca diferencia en plaza grande. Banda completa (desde 1.400 €) para escenarios XXL.',
     faqs: [
       {
         q: '¿Cuánto cobráis para una festa major?',
-        a: 'Quinteto 1.200–1.500 €. Cuarteto 1.000–1.300 € (suficiente para fiestas menores). Banda completa desde 1.400 € para escenarios grandes. Sonido del venue suele estar incluido en festes municipales.',
+        a: 'Quinteto 1.000–1.300 €. Cuarteto 800–1.000 € (suficiente para fiestas menores). Banda completa desde 1.400 € para escenarios grandes. Sonido del venue suele estar incluido en festes municipales.',
       },
       {
         q: '¿Trabajáis con ayuntamientos?',
@@ -133,7 +133,7 @@ export const serviciosES: Record<string, ServicioContent> = {
     slugAlt: 'esdeveniments-privats',
     titulo: 'Banda en directo para eventos privados en Barcelona y Catalunya',
     intro:
-      'Lady Jarana para aniversarios, cumpleaños grandes, fiestas en finca, fiestas de barrio, celebraciones familiares o cualquier evento privado que merezca banda en directo. Formato flexible desde cuarteto (1.000–1.300 €), sonido propio opcional si el espacio no tiene equipo. Toda Catalunya sin recargo.',
+      'Lady Jarana para aniversarios, cumpleaños grandes, fiestas en finca, fiestas de barrio, celebraciones familiares o cualquier evento privado que merezca banda en directo. Formato flexible desde cuarteto (800–1.000 €), sonido propio opcional si el espacio no tiene equipo. Toda Catalunya sin recargo.',
     eyebrow: 'Eventos privados',
     hero: { foto: '/fotos/eventos-privados.jpg', objectPosition: 'center 30%' },
     queHacemos: [
@@ -148,11 +148,11 @@ export const serviciosES: Record<string, ServicioContent> = {
     repertorio:
       'Mezcla equilibrada de pop-rock español y catalán, rumba catalana, latineo y verbeneras. Para eventos privados solemos cargar más en hits universales que en clásicos catalanes (a menos que el cliente lo pida explícitamente).',
     formatoRecomendado:
-      'Cuarteto (1.000–1.300 €) cubre la mayoría de eventos privados. Quinteto con trompeta (1.200–1.500 €) si quieres añadir el toque festivo de los vientos.',
+      'Cuarteto (800–1.000 €) cubre la mayoría de eventos privados. Quinteto con trompeta (1.000–1.300 €) si quieres añadir el toque festivo de los vientos.',
     faqs: [
       {
         q: '¿Cuánto cuesta una banda para una fiesta privada?',
-        a: 'Cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €. Si el espacio no tiene equipo de sonido, sumamos PA propio + 2 técnicos desde 600 €. Sin desplazamiento dentro de Catalunya.',
+        a: 'Cuarteto 800–1.000 €, quinteto 1.000–1.300 €. Si el espacio no tiene equipo de sonido, sumamos PA propio + 2 técnicos desde 600 €. Sin desplazamiento dentro de Catalunya.',
       },
       {
         q: '¿Tocáis en fincas y espacios al aire libre?',
@@ -180,7 +180,7 @@ export const serviciosES: Record<string, ServicioContent> = {
     slugAlt: 'esdeveniments-empresa',
     titulo: 'Banda en directo para eventos de empresa en Barcelona',
     intro:
-      'Lady Jarana para cenas corporativas, fin de año, team buildings, inauguraciones, presentaciones de producto y fiestas de empresa en Barcelona y Catalunya. Formato escalable, repertorio adaptable al tono corporativo, profesionalidad para evento de empresa. Cuarteto desde 1.000 €.',
+      'Lady Jarana para cenas corporativas, fin de año, team buildings, inauguraciones, presentaciones de producto y fiestas de empresa en Barcelona y Catalunya. Formato escalable, repertorio adaptable al tono corporativo, profesionalidad para evento de empresa. Cuarteto desde 800 €.',
     eyebrow: 'Eventos de empresa',
     hero: { foto: '/fotos/eventos-empresa.jpg', objectPosition: 'center 50%' },
     queHacemos: [
@@ -195,11 +195,11 @@ export const serviciosES: Record<string, ServicioContent> = {
     repertorio:
       'Para empresa solemos cargar repertorio más universal (clásicos del pop-rock español + algo de pop latino) y menos verbenera, salvo que la empresa quiera ambiente más festivo. Ajustamos según briefing.',
     formatoRecomendado:
-      'Cuarteto (1.000–1.300 €) para cenas y eventos medianos. Quinteto (1.200–1.500 €) para fiestas grandes de fin de año.',
+      'Cuarteto (800–1.000 €) para cenas y eventos medianos. Quinteto (1.000–1.300 €) para fiestas grandes de fin de año.',
     faqs: [
       {
         q: '¿Cuánto cuesta contratar una banda para un evento de empresa?',
-        a: 'Cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €, banda completa desde 1.400 €. Sonido propio + técnicos desde 600 € si el espacio no tiene PA. Factura con IVA emitida por 94 Music.',
+        a: 'Cuarteto 800–1.000 €, quinteto 1.000–1.300 €, banda completa desde 1.400 €. Sonido propio + técnicos desde 600 € si el espacio no tiene PA. Factura con IVA emitida por 94 Music.',
       },
       {
         q: '¿Tocáis en cenas corporativas?',
@@ -230,7 +230,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
     slugAlt: 'bodas',
     titulo: 'Grup en directe per a casaments a Barcelona i Catalunya',
     intro:
-      'Lady Jarana és el grup en directe per a casaments que converteix una recepció en festa major. Quatre músics professionals, repertori bilingüe ES/CA i un xou 100% en directe que cobreix des del còctel fins a la barra lliure. Quartet des de 1.000 €, ideal per a casaments a finca, masia, hotel o restaurant a tota Catalunya.',
+      'Lady Jarana és el grup en directe per a casaments que converteix una recepció en festa major. Quatre músics professionals, repertori bilingüe ES/CA i un xou 100% en directe que cobreix des del còctel fins a la barra lliure. Quartet des de 800 €, ideal per a casaments a finca, masia, hotel o restaurant a tota Catalunya.',
     eyebrow: 'Casaments',
     hero: { foto: '/fotos/bodas.jpg', objectPosition: 'center 30%' },
     queHacemos: [
@@ -248,11 +248,11 @@ export const serviciosCA: Record<string, ServicioContent> = {
     casoReal:
       'Desembre 2025 — casament a Cangabarró. Xou de 120 minuts per a cent convidats, so propi + 2 tècnics, personalització del primer ball amb versió rumbera a mida.',
     formatoRecomendado:
-      'Quartet (1.000–1.300 €) per a casaments íntims o mitjans. Quintet amb trompeta (1.200–1.500 €) si vols afegir vents als temes de rumba.',
+      'Quartet (800–1.000 €) per a casaments íntims o mitjans. Quintet amb trompeta (1.000–1.300 €) si vols afegir vents als temes de rumba.',
     faqs: [
       {
         q: 'Quant costa contractar un grup per a un casament a Barcelona?',
-        a: 'Lady Jarana en format quartet costa 1.000–1.300 €. Quintet 1.200–1.500 €. Banda completa des de 1.400 €. So propi + 2 tècnics des de 600 € si el venue no té PA. Tota Catalunya sense recàrrec.',
+        a: 'Lady Jarana en format quartet costa 800–1.000 €. Quintet 1.000–1.300 €. Banda completa des de 1.400 €. So propi + 2 tècnics des de 600 € si el venue no té PA. Tota Catalunya sense recàrrec.',
       },
       {
         q: 'Toqueu durant la cerimònia?',
@@ -280,7 +280,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
     slugAlt: 'fiestas-mayores',
     titulo: 'Grup per a festes majors a Catalunya',
     intro:
-      'Lady Jarana és el grup que la plaça estava esperant. Pop-rock, rumba catalana, latineig i revetlleres en directe per a festes majors municipals a tota Catalunya. Format quintet amb trompeta o banda completa per a escenaris XXL. Quartet 1.000–1.300 €, quintet 1.200–1.500 €, banda completa des de 1.400 €.',
+      'Lady Jarana és el grup que la plaça estava esperant. Pop-rock, rumba catalana, latineig i revetlleres en directe per a festes majors municipals a tota Catalunya. Format quintet amb trompeta o banda completa per a escenaris XXL. Quartet 800–1.000 €, quintet 1.000–1.300 €, banda completa des de 1.400 €.',
     eyebrow: 'Festes majors',
     hero: { foto: '/fotos/fiestas-mayores.jpg', objectPosition: 'center 40%' },
     queHacemos: [
@@ -298,11 +298,11 @@ export const serviciosCA: Record<string, ServicioContent> = {
     casoReal:
       'Festa Major de Sant Adrià de Besòs (setembre 2025): escenari principal, format XXL, producció ampliada. Festa Major de Barberà del Vallès (estiu 2025): primer bolo en circuit municipal. Rumba Beach Festival × 2 edicions (AAVV Barceloneta).',
     formatoRecomendado:
-      'Quintet (1.200–1.500 €) — format principal i el més demanat per a festes majors. La trompeta marca diferència en plaça gran. Banda completa (des de 1.400 €) per a escenaris XXL.',
+      'Quintet (1.000–1.300 €) — format principal i el més demanat per a festes majors. La trompeta marca diferència en plaça gran. Banda completa (des de 1.400 €) per a escenaris XXL.',
     faqs: [
       {
         q: 'Quant cobreu per a una festa major?',
-        a: 'Quintet 1.200–1.500 €. Quartet 1.000–1.300 €. Banda completa des de 1.400 €. El so del venue sol estar inclòs en festes municipals.',
+        a: 'Quintet 1.000–1.300 €. Quartet 800–1.000 €. Banda completa des de 1.400 €. El so del venue sol estar inclòs en festes municipals.',
       },
       {
         q: 'Treballeu amb ajuntaments?',
@@ -330,7 +330,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
     slugAlt: 'eventos-privados',
     titulo: 'Grup en directe per a esdeveniments privats a Barcelona i Catalunya',
     intro:
-      'Lady Jarana per a aniversaris, festes a finca, festes de barri, celebracions familiars o qualsevol esdeveniment privat que mereixi banda en directe. Format flexible des de quartet (1.000–1.300 €), so propi opcional si l\'espai no té equip. Tota Catalunya sense recàrrec.',
+      'Lady Jarana per a aniversaris, festes a finca, festes de barri, celebracions familiars o qualsevol esdeveniment privat que mereixi banda en directe. Format flexible des de quartet (800–1.000 €), so propi opcional si l\'espai no té equip. Tota Catalunya sense recàrrec.',
     eyebrow: 'Esdeveniments privats',
     hero: { foto: '/fotos/eventos-privados.jpg', objectPosition: 'center 30%' },
     queHacemos: [
@@ -345,11 +345,11 @@ export const serviciosCA: Record<string, ServicioContent> = {
     repertorio:
       'Barreja equilibrada de pop-rock català i espanyol, rumba catalana, latineig i revetlleres. Per a esdeveniments privats solem carregar més en hits universals que en clàssics catalans (tret que el client ho demani explícitament).',
     formatoRecomendado:
-      'Quartet (1.000–1.300 €) cobreix la majoria d\'esdeveniments privats. Quintet amb trompeta (1.200–1.500 €) si vols afegir el toc festiu dels vents.',
+      'Quartet (800–1.000 €) cobreix la majoria d\'esdeveniments privats. Quintet amb trompeta (1.000–1.300 €) si vols afegir el toc festiu dels vents.',
     faqs: [
       {
         q: 'Quant costa un grup per a una festa privada?',
-        a: 'Quartet 1.000–1.300 €, quintet 1.200–1.500 €. Si l\'espai no té equip de so, sumem PA propi + 2 tècnics des de 600 €. Sense desplaçament dins de Catalunya.',
+        a: 'Quartet 800–1.000 €, quintet 1.000–1.300 €. Si l\'espai no té equip de so, sumem PA propi + 2 tècnics des de 600 €. Sense desplaçament dins de Catalunya.',
       },
       {
         q: 'Toqueu en finques i espais a l\'aire lliure?',
@@ -377,7 +377,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
     slugAlt: 'eventos-empresa',
     titulo: "Grup en directe per a esdeveniments d'empresa a Barcelona",
     intro:
-      'Lady Jarana per a sopars corporatius, cap d\'any, team buildings, inauguracions, presentacions de producte i festes d\'empresa a Barcelona i Catalunya. Format escalable, repertori adaptable al to corporatiu, professionalitat per a esdeveniment d\'empresa. Quartet des de 1.000 €.',
+      'Lady Jarana per a sopars corporatius, cap d\'any, team buildings, inauguracions, presentacions de producte i festes d\'empresa a Barcelona i Catalunya. Format escalable, repertori adaptable al to corporatiu, professionalitat per a esdeveniment d\'empresa. Quartet des de 800 €.',
     eyebrow: 'Esdeveniments d\'empresa',
     hero: { foto: '/fotos/eventos-empresa.jpg', objectPosition: 'center 50%' },
     queHacemos: [
@@ -392,11 +392,11 @@ export const serviciosCA: Record<string, ServicioContent> = {
     repertorio:
       'Per a empresa solem carregar repertori més universal (clàssics del pop-rock espanyol + alguna cosa de pop llatí) i menys revetllera, tret que l\'empresa vulgui ambient més festiu.',
     formatoRecomendado:
-      'Quartet (1.000–1.300 €) per a sopars i esdeveniments mitjans. Quintet (1.200–1.500 €) per a festes grans de cap d\'any.',
+      'Quartet (800–1.000 €) per a sopars i esdeveniments mitjans. Quintet (1.000–1.300 €) per a festes grans de cap d\'any.',
     faqs: [
       {
         q: 'Quant costa contractar un grup per a un esdeveniment d\'empresa?',
-        a: 'Quartet 1.000–1.300 €, quintet 1.200–1.500 €, banda completa des de 1.400 €. So propi + tècnics des de 600 € si l\'espai no té PA. Factura amb IVA emesa per 94 Music.',
+        a: 'Quartet 800–1.000 €, quintet 1.000–1.300 €, banda completa des de 1.400 €. So propi + tècnics des de 600 € si l\'espai no té PA. Factura amb IVA emesa per 94 Music.',
       },
       {
         q: 'Toqueu en sopars corporatius?',

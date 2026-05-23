@@ -11,7 +11,7 @@ export const faqsES: FAQ[] = [
   {
     cat: 'precios',
     q: '¿Cuánto cuesta contratar Lady Jarana?',
-    a: 'Cuarteto 1.000–1.300 €. Quinteto 1.200–1.500 €. Banda completa desde 1.400 €. El precio dentro de cada rango depende de la fecha, el sitio y los extras. No hacemos dúo ni trío. Incluye 120 minutos de show, repertorio personalizable y coordinación previa con tu wedding planner o programador.',
+    a: 'Cuarteto 800–1.000 €. Quinteto 1.000–1.300 €. Banda completa desde 1.400 €. El precio dentro de cada rango depende de la fecha, el sitio y los extras. No hacemos dúo ni trío. Incluye 120 minutos de show, repertorio personalizable y coordinación previa con tu wedding planner o programador.',
   },
   {
     cat: 'precios',
@@ -163,7 +163,7 @@ export const faqsCA: FAQ[] = [
   {
     cat: 'precios',
     q: 'Quant costa contractar Lady Jarana?',
-    a: 'Quartet 1.000–1.300 €. Quintet 1.200–1.500 €. Banda completa des de 1.400 €. El preu dins de cada rang depèn de la data, el lloc i els extres. No fem duo ni trio. Inclou 120 minuts de xou, repertori personalitzable i coordinació prèvia amb el teu wedding planner o programador.',
+    a: 'Quartet 800–1.000 €. Quintet 1.000–1.300 €. Banda completa des de 1.400 €. El preu dins de cada rang depèn de la data, el lloc i els extres. No fem duo ni trio. Inclou 120 minuts de xou, repertori personalitzable i coordinació prèvia amb el teu wedding planner o programador.',
   },
   {
     cat: 'precios',

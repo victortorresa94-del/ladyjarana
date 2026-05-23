@@ -10,7 +10,7 @@ export default function OG() {
     eyebrow: '· Grup en directe · Barcelona',
     title: 'Lady Jarana',
     subtitle:
-      'Pop-rock, rumba i latineig per a casaments, festes majors i esdeveniments privats a tota Catalunya. Quartet des de 1.000 €.',
+      'Pop-rock, rumba i latineig per a casaments, festes majors i esdeveniments privats a tota Catalunya. Quartet des de 800 €.',
     accent: 'sol',
   });
 }

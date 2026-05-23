@@ -10,7 +10,7 @@ export default function OG() {
     eyebrow: '· Banda en directo · Barcelona',
     title: 'Lady Jarana',
     subtitle:
-      'Pop-rock, rumba y latineo para bodas, fiestas mayores y eventos privados en toda Catalunya. Cuarteto desde 1.000 €. Show bilingüe ES/CA.',
+      'Pop-rock, rumba y latineo para bodas, fiestas mayores y eventos privados en toda Catalunya. Cuarteto desde 800 €. Show bilingüe ES/CA.',
     accent: 'sol',
   });
 }
