@@ -134,6 +134,9 @@ export default function Footer() {
             <Link href="/politica-cookies" className="hover:text-sol">
               Cookies
             </Link>
+            <Link href="/ca" className="hover:text-sol">
+              CA · Català
+            </Link>
           </div>
           <p className="font-body text-xs text-crema/50 italic">
             Nos vemos en la próxima jarana 🌴

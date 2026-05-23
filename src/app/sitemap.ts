@@ -60,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ca/serveis/festes-majors`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/ca/serveis/esdeveniments-privats`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/ca/serveis/esdeveniments-empresa`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/ca/galeria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
   ];
 
   return [...esRoutes, ...caRoutes];
