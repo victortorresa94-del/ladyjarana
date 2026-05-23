@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import FooterCA from '@/components/FooterCA';
 
 export const metadata: Metadata = {
   title: 'Política de Cookies',
   robots: { index: false },
   alternates: {
-    canonical: '/politica-cookies',
+    canonical: '/ca/politica-cookies',
     languages: {
       es: 'https://ladyjarana.com/politica-cookies',
       ca: 'https://ladyjarana.com/ca/politica-cookies',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PoliticaCookies() {
+export default function PoliticaCookiesCA() {
   return (
     <>
       <Navbar />
@@ -25,41 +25,42 @@ export default function PoliticaCookies() {
           </h1>
           <div className="prose prose-lg font-body text-negro/80 space-y-6">
             <p>
-              Este sitio web utiliza cookies propias y de terceros para mejorar tu
-              experiencia de navegación.
+              Aquest lloc web utilitza cookies pròpies i de tercers per
+              millorar la teva experiència de navegació.
             </p>
             <h2 className="font-display text-2xl font-bold text-negro">
-              ¿Qué son las cookies?
+              Què són les cookies?
             </h2>
             <p>
-              Las cookies son pequeños archivos de texto que se almacenan en tu
-              dispositivo al visitar un sitio web. Permiten que el sitio recuerde
-              tus acciones y preferencias.
+              Les cookies són petits arxius de text que s&apos;emmagatzemen al
+              teu dispositiu en visitar un lloc web. Permeten que el lloc
+              recordi les teves accions i preferències.
             </p>
             <h2 className="font-display text-2xl font-bold text-negro">
-              Cookies que utilizamos
+              Cookies que fem servir
             </h2>
             <ul className="list-disc pl-6 space-y-1">
               <li>
-                <strong>Cookies técnicas:</strong> necesarias para el
-                funcionamiento del sitio.
+                <strong>Cookies tècniques:</strong> necessàries per al
+                funcionament del lloc.
               </li>
               <li>
-                <strong>Cookies analíticas:</strong> para entender cómo los
-                usuarios interactúan con el sitio (si se activa Google Analytics).
+                <strong>Cookies analítiques:</strong> per entendre com els
+                usuaris interactuen amb el lloc (si s&apos;activa Google
+                Analytics).
               </li>
             </ul>
             <h2 className="font-display text-2xl font-bold text-negro">
-              Gestión de cookies
+              Gestió de cookies
             </h2>
             <p>
-              Puedes configurar tu navegador para rechazar cookies o para que te
-              avise cuando un sitio web intente colocar una cookie.
+              Pots configurar el teu navegador per rebutjar cookies o perquè
+              t&apos;avisi quan un lloc web intenti col·locar una cookie.
             </p>
           </div>
         </div>
       </main>
-      <Footer />
+      <FooterCA />
     </>
   );
 }

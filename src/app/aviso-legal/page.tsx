@@ -5,6 +5,13 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Aviso Legal',
   robots: { index: false },
+  alternates: {
+    canonical: '/aviso-legal',
+    languages: {
+      es: 'https://ladyjarana.com/aviso-legal',
+      ca: 'https://ladyjarana.com/ca/avis-legal',
+    },
+  },
 };
 
 export default function AvisoLegal() {

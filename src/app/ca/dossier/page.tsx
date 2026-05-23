@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import FooterCA from '@/components/FooterCA';
 import Button from '@/components/ui/Button';
 import { WHATSAPP_URL } from '@/lib/contact';
 
 export const metadata: Metadata = {
   title: 'Dossier — Lady Jarana Press Kit',
   description:
-    'Descarga el dossier completo de Lady Jarana con bio, fotos en alta resolución y rider técnico.',
+    'Descarrega el dossier complet de Lady Jarana amb bio, fotos en alta resolució i rider tècnic.',
   alternates: {
-    canonical: '/dossier',
+    canonical: '/ca/dossier',
     languages: {
       es: 'https://ladyjarana.com/dossier',
       ca: 'https://ladyjarana.com/ca/dossier',
@@ -29,30 +29,30 @@ export default function DossierPage() {
             Dossier Lady Jarana
           </h1>
           <p className="mb-8 font-body text-blanco/80 leading-relaxed">
-            Bio completa, fotos en alta resolución, rider técnico y toda la
-            información que necesitas para programarnos en tu evento.
+            Bio completa, fotos en alta resolució, rider tècnic i tota la
+            informació que necessites per programar-nos al teu esdeveniment.
           </p>
           <Button
             href="/dossier-lady-jarana.pdf"
             variant="primary"
             className="text-lg"
           >
-            Descargar dossier (PDF) ↓
+            Descarregar dossier (PDF) ↓
           </Button>
           <p className="mt-6 font-body text-sm text-blanco/50">
-            ¿Necesitas más material?{' '}
+            Necessites més material?{' '}
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-amarillo underline"
             >
-              Escríbenos por WhatsApp
+              Escriu-nos per WhatsApp
             </a>
           </p>
         </div>
       </main>
-      <Footer />
+      <FooterCA />
     </>
   );
 }

@@ -124,17 +124,17 @@ export default function FooterCA() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-crema/10 pt-8 sm:flex-row">
           <div className="flex flex-wrap gap-4 font-body text-xs text-crema/50">
-            <Link href="/aviso-legal" className="hover:text-sol">
+            <Link href="/ca/avis-legal" className="hover:text-sol">
               Avís legal
             </Link>
-            <Link href="/politica-privacidad" className="hover:text-sol">
+            <Link href="/ca/politica-privacitat" className="hover:text-sol">
               Privacitat
             </Link>
-            <Link href="/politica-cookies" className="hover:text-sol">
+            <Link href="/ca/politica-cookies" className="hover:text-sol">
               Cookies
             </Link>
             <Link href="/" className="hover:text-sol">
-              ES
+              ES · Castellano
             </Link>
           </div>
           <p className="font-body text-xs text-crema/50 italic">

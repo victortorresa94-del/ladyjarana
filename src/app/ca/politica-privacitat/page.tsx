@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import FooterCA from '@/components/FooterCA';
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidad',
+  title: 'Política de Privacitat',
   robots: { index: false },
   alternates: {
-    canonical: '/politica-privacidad',
+    canonical: '/ca/politica-privacitat',
     languages: {
       es: 'https://ladyjarana.com/politica-privacidad',
       ca: 'https://ladyjarana.com/ca/politica-privacitat',
@@ -14,63 +14,64 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PoliticaPrivacidad() {
+export default function PoliticaPrivacitat() {
   return (
     <>
       <Navbar />
       <main className="bg-crema pt-28 pb-16 min-h-screen">
         <div className="mx-auto max-w-3xl px-6">
           <h1 className="mb-8 font-display text-4xl font-bold text-negro">
-            Política de Privacidad
+            Política de Privacitat
           </h1>
           <div className="prose prose-lg font-body text-negro/80 space-y-6">
             <p>
-              En cumplimiento del Reglamento General de Protección de Datos (RGPD)
-              y la Ley Orgánica 3/2018 de Protección de Datos Personales, te
-              informamos sobre el tratamiento de tus datos personales.
+              En compliment del Reglament General de Protecció de Dades (RGPD)
+              i la Llei Orgànica 3/2018 de Protecció de Dades Personals, et
+              informem sobre el tractament de les teves dades personals.
             </p>
             <h2 className="font-display text-2xl font-bold text-negro">
-              Responsable del tratamiento
+              Responsable del tractament
             </h2>
             <ul className="list-disc pl-6 space-y-1">
               <li>Responsable: Lady Jarana / 94 Music</li>
               <li>Email: ladyjaranamusic@gmail.com</li>
-              <li>Finalidad: gestión de solicitudes de contratación</li>
+              <li>Finalitat: gestió de sol·licituds de contractació</li>
             </ul>
             <h2 className="font-display text-2xl font-bold text-negro">
-              Datos que recopilamos
+              Dades que recopilem
             </h2>
             <p>
-              A través del formulario de contacto recopilamos: nombre, email,
-              teléfono, y los datos del evento que nos proporcionas
-              voluntariamente.
+              A través del formulari de contacte recopilem: nom, email,
+              telèfon, i les dades de l&apos;esdeveniment que ens proporciones
+              voluntàriament.
             </p>
             <h2 className="font-display text-2xl font-bold text-negro">
-              Finalidad
+              Finalitat
             </h2>
             <p>
-              Los datos se utilizan exclusivamente para responder a tu solicitud de
-              contratación y enviarte un presupuesto personalizado.
+              Les dades s&apos;utilitzen exclusivament per respondre a la
+              teva sol·licitud de contractació i enviar-te un pressupost
+              personalitzat.
             </p>
             <h2 className="font-display text-2xl font-bold text-negro">
-              Conservación
+              Conservació
             </h2>
             <p>
-              Los datos se conservarán mientras exista un interés mutuo y durante
-              los plazos legalmente establecidos.
+              Les dades es conservaran mentre existeixi un interès mutu i
+              durant els terminis legalment establerts.
             </p>
             <h2 className="font-display text-2xl font-bold text-negro">
-              Derechos
+              Drets
             </h2>
             <p>
-              Puedes ejercer tus derechos de acceso, rectificación, supresión,
-              portabilidad, limitación y oposición escribiendo a
+              Pots exercir els teus drets d&apos;accés, rectificació,
+              supressió, portabilitat, limitació i oposició escrivint a
               ladyjaranamusic@gmail.com.
             </p>
           </div>
         </div>
       </main>
-      <Footer />
+      <FooterCA />
     </>
   );
 }
