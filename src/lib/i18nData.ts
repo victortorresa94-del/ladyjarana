@@ -179,7 +179,7 @@ export const clientesCA = [
 // ─── Tipus d'esdeveniments ────────────────────────────────────────────────
 export const tiposEventosCA = [
   {
-    slug: 'bodas',
+    slug: 'casaments',
     titulo: 'Casaments',
     descripcion:
       'Cerimònia, vermut, banquet i barra lliure. Tres formats.',
@@ -188,7 +188,7 @@ export const tiposEventosCA = [
     objectPosition: 'center 30%',
   },
   {
-    slug: 'fiestas-mayores',
+    slug: 'festes-majors',
     titulo: 'Festes majors',
     descripcion:
       'Concerts a l\'aire lliure, places i revetlles. Fitxa tècnica inclosa.',
@@ -197,7 +197,7 @@ export const tiposEventosCA = [
     objectPosition: 'center 40%',
   },
   {
-    slug: 'eventos-privados',
+    slug: 'esdeveniments-privats',
     titulo: 'Esdeveniments privats',
     descripcion:
       'Aniversaris, festes de barri o de finca. El que faci falta.',
@@ -206,7 +206,7 @@ export const tiposEventosCA = [
     objectPosition: 'center 30%',
   },
   {
-    slug: 'eventos-empresa',
+    slug: 'esdeveniments-empresa',
     titulo: 'Esdeveniments d\'empresa',
     descripcion:
       'Cap d\'any, team buildings, presentacions. Professionals amb jarana.',

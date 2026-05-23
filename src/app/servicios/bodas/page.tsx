@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Banda en directo para bodas en Barcelona — Lady Jarana',
   description:
     'Lady Jarana, banda en directo para bodas en Barcelona y Cataluña. Pop-rock, rumba y latineo para ceremonia, cóctel y fiesta.',
-  alternates: { canonical: '/servicios/bodas' },
+  alternates: {
+    canonical: '/servicios/bodas',
+    languages: {
+      es: 'https://ladyjarana.com/servicios/bodas',
+      ca: 'https://ladyjarana.com/ca/serveis/casaments',
+      'x-default': 'https://ladyjarana.com/servicios/bodas',
+    },
+  },
 };
 
 export default function BodasPage() {

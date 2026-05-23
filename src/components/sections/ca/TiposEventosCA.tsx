@@ -29,7 +29,7 @@ export default function TiposEventosCA() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
             >
               <Link
-                href={`/servicios/${t.slug}`}
+                href={`/ca/serveis/${t.slug}`}
                 className="group relative block aspect-[3/4] overflow-hidden rounded-2xl border-4 border-negro shadow-[6px_6px_0_var(--negro)] transition-all duration-150 hover:shadow-[3px_3px_0_var(--negro)] hover:translate-x-[3px] hover:translate-y-[3px]"
               >
                 <Image

@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Banda para fiestas mayores en Cataluña — Lady Jarana',
   description:
     'Lady Jarana, banda en directo para fiestas mayores en Cataluña. Pop-rock, rumba y latineo para llenar la plaza.',
-  alternates: { canonical: '/servicios/fiestas-mayores' },
+  alternates: {
+    canonical: '/servicios/fiestas-mayores',
+    languages: {
+      es: 'https://ladyjarana.com/servicios/fiestas-mayores',
+      ca: 'https://ladyjarana.com/ca/serveis/festes-majors',
+      'x-default': 'https://ladyjarana.com/servicios/fiestas-mayores',
+    },
+  },
 };
 
 export default function FiestasMayoresPage() {

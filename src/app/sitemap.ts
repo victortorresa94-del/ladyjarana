@@ -56,6 +56,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ca/contractar`, lastModified: now, changeFrequency: 'monthly', priority: 0.88 },
     { url: `${BASE}/ca/repertori`, lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
     { url: `${BASE}/ca/esdeveniments`, lastModified: now, changeFrequency: 'weekly', priority: 0.83 },
+    { url: `${BASE}/ca/serveis/casaments`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/ca/serveis/festes-majors`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/ca/serveis/esdeveniments-privats`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/ca/serveis/esdeveniments-empresa`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
   ];
 
   return [...esRoutes, ...caRoutes];

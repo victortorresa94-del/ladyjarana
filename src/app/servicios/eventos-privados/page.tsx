@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Banda para eventos privados en Barcelona — Lady Jarana',
   description:
     'Lady Jarana, banda en directo para eventos privados, cumpleaños y celebraciones en Barcelona y Cataluña.',
-  alternates: { canonical: '/servicios/eventos-privados' },
+  alternates: {
+    canonical: '/servicios/eventos-privados',
+    languages: {
+      es: 'https://ladyjarana.com/servicios/eventos-privados',
+      ca: 'https://ladyjarana.com/ca/serveis/esdeveniments-privats',
+      'x-default': 'https://ladyjarana.com/servicios/eventos-privados',
+    },
+  },
 };
 
 export default function EventosPrivadosPage() {

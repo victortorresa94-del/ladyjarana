@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Banda para eventos de empresa en Barcelona — Lady Jarana',
   description:
     'Lady Jarana, banda en directo para cenas, inauguraciones y fiestas corporativas en Barcelona y Cataluña.',
-  alternates: { canonical: '/servicios/eventos-empresa' },
+  alternates: {
+    canonical: '/servicios/eventos-empresa',
+    languages: {
+      es: 'https://ladyjarana.com/servicios/eventos-empresa',
+      ca: 'https://ladyjarana.com/ca/serveis/esdeveniments-empresa',
+      'x-default': 'https://ladyjarana.com/servicios/eventos-empresa',
+    },
+  },
 };
 
 export default function EventosEmpresaPage() {
