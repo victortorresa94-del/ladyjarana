@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "repertorio:pdf": "node scripts/build-repertorio-pdf.mjs"
   },
   "dependencies": {
     "@fal-ai/client": "^1.10.1",
@@ -28,10 +29,12 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pdfkit": "^0.17.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.5",
+    "pdfkit": "^0.18.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

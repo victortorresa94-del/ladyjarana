@@ -8,11 +8,12 @@ import Button from './ui/Button';
 import { WHATSAPP_URL } from '@/lib/contact';
 
 const links = [
-  { label: 'Banda', href: '#banda' },
-  { label: 'Música', href: '#musica' },
-  { label: 'Formatos', href: '#formatos' },
-  { label: 'Eventos', href: '#eventos' },
-  { label: 'Galería', href: '#galeria' },
+  { label: 'Banda', href: '/#banda' },
+  { label: 'Música', href: '/#musica' },
+  { label: 'Repertorio', href: '/repertorio' },
+  { label: 'Formatos', href: '/#formatos' },
+  { label: 'Eventos', href: '/#eventos' },
+  { label: 'Galería', href: '/#galeria' },
 ];
 
 export default function Navbar() {

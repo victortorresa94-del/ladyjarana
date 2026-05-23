@@ -4,6 +4,7 @@ import Link from 'next/link';
 const navLinks = [
   { label: 'Banda', href: '/#banda' },
   { label: 'Música', href: '/#musica' },
+  { label: 'Repertorio', href: '/repertorio' },
   { label: 'Formatos', href: '/#formatos' },
   { label: 'Galería', href: '/#galeria' },
   { label: 'Contratar', href: '/contratar' },
