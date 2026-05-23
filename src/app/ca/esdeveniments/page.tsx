@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import FooterCA from '@/components/FooterCA';
 import Button from '@/components/ui/Button';
-import { proximosEventos, trayectoria } from '@/lib/trayectoria';
+import { proximosEventosCA, trayectoriaCA } from '@/lib/i18nData';
 import { WHATSAPP_URL } from '@/lib/contact';
 
 export const metadata: Metadata = {
-  title: 'Eventos · Lady Jarana en directo — bodas, verbenas y fiestas',
+  title: 'Esdeveniments · Lady Jarana en directe — casaments, revetlles i festes',
   description:
-    'Próximos conciertos de Lady Jarana en Barcelona y alrededores + trayectoria con todos los bolos: bodas, fiestas mayores, salas y eventos privados.',
+    'Pròxims concerts de Lady Jarana a Barcelona i rodalies + trajectòria amb tots els bolos: casaments, festes majors, sales i esdeveniments privats.',
   alternates: {
-    canonical: 'https://ladyjarana.com/eventos',
+    canonical: 'https://ladyjarana.com/ca/esdeveniments',
     languages: {
       es: 'https://ladyjarana.com/eventos',
       ca: 'https://ladyjarana.com/ca/esdeveniments',
@@ -19,19 +19,20 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Eventos · Lady Jarana',
+    title: 'Esdeveniments · Lady Jarana',
     description:
-      'Próximos conciertos en Barcelona y todos los bolos que hemos hecho: bodas, fiestas mayores, salas, eventos privados.',
-    url: 'https://ladyjarana.com/eventos',
+      'Pròxims concerts a Barcelona i tots els bolos que hem fet: casaments, festes majors, sales, esdeveniments privats.',
+    url: 'https://ladyjarana.com/ca/esdeveniments',
     type: 'website',
+    locale: 'ca_ES',
     images: ['/fotos/fiestas-mayores.jpg'],
   },
 };
 
 const tipoLabel: Record<string, string> = {
-  concierto: 'Concierto',
-  'fiesta-mayor': 'Fiesta mayor',
-  boda: 'Boda',
+  concierto: 'Concert',
+  'fiesta-mayor': 'Festa major',
+  boda: 'Casament',
   sala: 'Sala',
 };
 
@@ -42,12 +43,11 @@ const tipoColor: Record<string, string> = {
   sala: 'bg-rojo text-blanco',
 };
 
-export default function EventosPage() {
-  // JSON-LD para Google: lista de eventos con datos estructurados
+export default function EsdevenimentsPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      ...proximosEventos.map((ev) => ({
+      ...proximosEventosCA.map((ev) => ({
         '@type': 'MusicEvent',
         name: `Lady Jarana — ${ev.lugar}`,
         startDate: ev.fecha,
@@ -55,6 +55,7 @@ export default function EventosPage() {
         performer: { '@type': 'MusicGroup', name: 'Lady Jarana' },
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        inLanguage: 'ca-ES',
       })),
     ],
   };
@@ -63,13 +64,11 @@ export default function EventosPage() {
     <>
       <Navbar />
       <main className="bg-crema">
-        {/* JSON-LD para SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* ============ HERO ============ */}
         <section className="relative overflow-hidden bg-rojo pt-32 pb-20 lg:pt-40 lg:pb-28">
           <div className="absolute inset-0 opacity-25 mix-blend-overlay">
             <Image
@@ -83,38 +82,37 @@ export default function EventosPage() {
           </div>
           <div className="relative mx-auto max-w-5xl px-6 text-center">
             <p className="mb-3 font-body text-xs font-bold uppercase tracking-[0.3em] text-sol">
-              ✦ Calendario en directo
+              ✦ Calendari en directe
             </p>
             <h1 className="mb-5 font-display text-4xl font-bold italic leading-[1.02] text-blanco sm:text-5xl lg:text-7xl">
-              Todos los eventos <br />
+              Tots els esdeveniments <br />
               <span className="text-sol">de Lady Jarana.</span>
             </h1>
             <p className="mx-auto max-w-2xl font-body text-base text-blanco/90 lg:text-lg">
-              Lo que viene y lo que ya hemos tocado. De salas íntimas a fiestas
-              mayores con escenario gigante.
+              El que ve i el que ja hem tocat. De sales íntimes a festes majors
+              amb escenari gegant.
             </p>
           </div>
         </section>
 
-        {/* ============ PRÓXIMOS ============ */}
         <section className="relative bg-crema py-16 lg:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-8 flex items-end justify-between gap-4">
               <div>
                 <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-rojo">
-                  ✦ Próximos bolos
+                  ✦ Pròxims bolos
                 </p>
                 <h2 className="mt-1 font-display text-3xl font-bold italic text-negro sm:text-4xl lg:text-5xl">
-                  Cuándo y dónde.
+                  Quan i on.
                 </h2>
               </div>
               <p className="hidden font-body text-sm text-negro/60 sm:block">
-                {proximosEventos.length} confirmados
+                {proximosEventosCA.length} confirmats
               </p>
             </div>
 
             <div className="grid gap-4 md:grid-cols-3">
-              {proximosEventos.map((ev, i) => (
+              {proximosEventosCA.map((ev, i) => (
                 <a
                   key={i}
                   href={WHATSAPP_URL}
@@ -155,24 +153,23 @@ export default function EventosPage() {
           </div>
         </section>
 
-        {/* ============ TRAYECTORIA ============ */}
         <section className="relative bg-negro py-16 lg:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-10">
               <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-sol">
-                ✦ Trayectoria
+                ✦ Trajectòria
               </p>
               <h2 className="mt-1 font-display text-3xl font-bold italic text-crema sm:text-4xl lg:text-5xl">
-                Lo que ya hemos <span className="text-sol">tocado.</span>
+                El que ja hem <span className="text-sol">tocat.</span>
               </h2>
               <p className="mt-3 max-w-2xl font-body text-sm text-crema/70 lg:text-base">
-                Desde el bautismo en el Puerto de la Barceloneta hasta fiestas
-                mayores y bodas: estos son los bolos por los que hemos pasado.
+                Des del bateig al Port de la Barceloneta fins a festes majors
+                i casaments: aquests són els bolos pels quals hem passat.
               </p>
             </div>
 
             <ol className="relative space-y-5 border-l-2 border-sol/40 pl-6 sm:pl-8">
-              {[...trayectoria].reverse().map((h, i) => (
+              {[...trayectoriaCA].reverse().map((h, i) => (
                 <li key={i} className="relative">
                   <span className="absolute -left-[34px] top-2 h-4 w-4 rounded-full border-2 border-negro bg-sol sm:-left-[42px]" />
                   <div className="rounded-2xl border-2 border-crema/15 bg-negro/40 p-5 backdrop-blur-sm transition-colors hover:border-sol/40">
@@ -199,24 +196,23 @@ export default function EventosPage() {
           </div>
         </section>
 
-        {/* ============ CTA FINAL ============ */}
         <section className="relative bg-sol py-16 lg:py-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <h2 className="mb-4 font-display text-3xl font-bold italic leading-tight text-negro sm:text-4xl lg:text-5xl">
-              ¿Quieres ver tu evento <br />
-              <span className="text-rojo">en esta lista?</span>
+              Vols veure el teu esdeveniment <br />
+              <span className="text-rojo">en aquesta llista?</span>
             </h2>
             <p className="mx-auto mb-8 max-w-xl font-body text-base text-negro/80">
-              Cuéntanos fecha, lugar y formato. Te decimos sí en minutos por
+              Explica&apos;ns data, lloc i format. Et diem sí en minuts per
               WhatsApp.
             </p>
             <Button href={WHATSAPP_URL} variant="primary">
-              Reservar fecha por WhatsApp →
+              Reservar data per WhatsApp →
             </Button>
           </div>
         </section>
       </main>
-      <Footer />
+      <FooterCA />
     </>
   );
 }

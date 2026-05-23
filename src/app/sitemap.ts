@@ -54,6 +54,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ca`, lastModified: now, changeFrequency: 'weekly', priority: 0.98 },
     { url: `${BASE}/ca/preus`, lastModified: now, changeFrequency: 'monthly', priority: 0.93 },
     { url: `${BASE}/ca/contractar`, lastModified: now, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${BASE}/ca/repertori`, lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
+    { url: `${BASE}/ca/esdeveniments`, lastModified: now, changeFrequency: 'weekly', priority: 0.83 },
   ];
 
   return [...esRoutes, ...caRoutes];
