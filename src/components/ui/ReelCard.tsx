@@ -8,8 +8,17 @@ interface ReelCardProps {
   onClick: () => void;
 }
 
+function mimeFor(url: string): string {
+  const lower = url.toLowerCase();
+  if (lower.endsWith('.mov') || lower.endsWith('.m4v')) return 'video/quicktime';
+  return 'video/mp4';
+}
+
 export default function ReelCard({ reel, onClick }: ReelCardProps) {
   const hasThumbnail = !!reel.thumbnail;
+  const allSources = [reel.id, ...(reel.sources ?? [])].filter(
+    (u, i, arr) => u && arr.indexOf(u) === i,
+  );
 
   return (
     <div className="group">
@@ -28,14 +37,23 @@ export default function ReelCard({ reel, onClick }: ReelCardProps) {
             loading="lazy"
           />
         ) : reel.source === 'native' ? (
+          // #t=0.1 fuerza al browser a mostrar el primer frame como poster.
+          // Cuando hay múltiples sources, el browser prueba en orden y usa
+          // el primer frame del primer source que cargue.
           <video
-            // #t=0.1 forces browsers (Chrome, Safari iOS) to display first frame as poster
-            src={`${reel.id}#t=0.1`}
             muted
             playsInline
             preload="metadata"
             className="absolute inset-0 h-full w-full object-cover"
-          />
+          >
+            {allSources.map((url) => (
+              <source
+                key={url}
+                src={`${url}#t=0.1`}
+                type={mimeFor(url)}
+              />
+            ))}
+          </video>
         ) : (
           <div
             className="absolute inset-0"

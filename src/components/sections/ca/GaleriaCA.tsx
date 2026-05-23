@@ -69,6 +69,7 @@ export default function GaleriaCA() {
               ) : video.source === 'native' ? (
                 <NativeVideo
                   src={video.id}
+                  sources={video.sources}
                   title={video.title}
                   description={video.description}
                   poster={video.thumbnail}

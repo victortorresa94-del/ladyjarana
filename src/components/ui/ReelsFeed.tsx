@@ -4,9 +4,20 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import type { LiveVideo } from '@/lib/videos';
 
+function mimeFor(url: string): string {
+  const lower = url.toLowerCase();
+  if (lower.endsWith('.mov') || lower.endsWith('.m4v')) return 'video/quicktime';
+  return 'video/mp4';
+}
+
 function ReelSlide({ reel, muted }: { reel: LiveVideo; muted: boolean }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [loaded, setLoaded] = useState(false);
+
+  // src primario + alternativas, sin duplicados
+  const allSources = [reel.id, ...(reel.sources ?? [])].filter(
+    (u, i, arr) => u && arr.indexOf(u) === i,
+  );
 
   useEffect(() => {
     const el = ref.current;
@@ -40,7 +51,6 @@ function ReelSlide({ reel, muted }: { reel: LiveVideo; muted: boolean }) {
   return (
     <video
       ref={ref}
-      src={loaded ? reel.id : undefined}
       poster={reel.thumbnail}
       playsInline
       loop
@@ -48,7 +58,12 @@ function ReelSlide({ reel, muted }: { reel: LiveVideo; muted: boolean }) {
       muted
       preload="none"
       className="absolute inset-0 h-full w-full object-contain"
-    />
+    >
+      {loaded &&
+        allSources.map((url) => (
+          <source key={url} src={url} type={mimeFor(url)} />
+        ))}
+    </video>
   );
 }
 

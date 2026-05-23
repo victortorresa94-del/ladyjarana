@@ -2,6 +2,9 @@
 
 interface NativeVideoProps {
   src: string;
+  /** Fuentes alternativas para fallback automático del browser. Si están
+   *  definidas, se renderizan como <source> adicionales después de `src`. */
+  sources?: string[];
   title: string;
   description?: string;
   poster?: string;
@@ -14,7 +17,18 @@ const aspectClass: Record<NonNullable<NativeVideoProps['aspectRatio']>, string> 
   '1:1': 'aspect-square',
 };
 
-export default function NativeVideo({ src, title, description, poster, aspectRatio = '9:16' }: NativeVideoProps) {
+function mimeFor(url: string): string {
+  const lower = url.toLowerCase();
+  if (lower.endsWith('.mov') || lower.endsWith('.m4v')) return 'video/quicktime';
+  return 'video/mp4';
+}
+
+export default function NativeVideo({ src, sources, title, description, poster, aspectRatio = '9:16' }: NativeVideoProps) {
+  // Lista única: src primero + sources extras filtrados sin duplicados.
+  const allSources = [src, ...(sources ?? [])].filter(
+    (u, i, arr) => u && arr.indexOf(u) === i,
+  );
+
   return (
     <div className="group">
       <div className={`relative ${aspectClass[aspectRatio]} w-full overflow-hidden rounded-2xl border-4 border-negro bg-negro shadow-[6px_6px_0_var(--negro)]`}>
@@ -25,7 +39,9 @@ export default function NativeVideo({ src, title, description, poster, aspectRat
           poster={poster}
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src={src} type="video/mp4" />
+          {allSources.map((url) => (
+            <source key={url} src={url} type={mimeFor(url)} />
+          ))}
         </video>
       </div>
       <div className="mt-3 px-1 text-left">
