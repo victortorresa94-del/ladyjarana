@@ -8,7 +8,7 @@ import { WHATSAPP_URL } from '@/lib/contact';
 export const metadata: Metadata = {
   title: 'Cuánto cuesta contratar una banda para boda en Barcelona (2026)',
   description:
-    'Guía honesta de precios de banda en directo para boda en Barcelona y Catalunya: tarifas reales 2026, qué entra, qué no, comparativa banda vs DJ, cuándo cuarteto y cuándo quinteto. Lady Jarana desde 1000 €.',
+    'Guía honesta de precios de banda en directo para boda en Barcelona y Catalunya: tarifas reales 2026, qué entra, qué no, comparativa banda vs DJ, cuándo cuarteto y cuándo quinteto. Lady Jarana desde 1.000 €.',
   alternates: {
     canonical: 'https://ladyjarana.es/cuanto-cuesta-banda-boda-barcelona',
     languages: {
@@ -54,7 +54,7 @@ export default function CuantoCuestaPage() {
         name: '¿Cuánto cuesta una banda en directo para boda en Barcelona?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'En 2026, una banda profesional para boda en Barcelona cuesta entre 1000 € (cuarteto) y 2000 € (banda completa con 7 músicos). Lady Jarana sale a 1000 € cuarteto, 1200 € quinteto, desde 1400 € banda completa. Cada músico adicional sobre el cuarteto suma unos 200 €.',
+          text: 'En 2026, una banda profesional para boda en Barcelona cuesta entre 1.000 € (cuarteto) y 2.000 € (banda completa con 7 músicos). Lady Jarana: cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €, banda completa desde 1.400 €. El precio dentro de cada rango depende de fecha, sitio y extras.',
         },
       },
       {
@@ -62,7 +62,7 @@ export default function CuantoCuestaPage() {
         name: '¿Qué es más caro, banda o DJ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Un DJ de boda en Barcelona cuesta entre 600 y 1500 € (según experiencia y equipo). Una banda en directo arranca en 1000 € (cuarteto). La banda da experiencia única, energía sostenida y momento foto inolvidable; el DJ da catálogo infinito y pista todo el rato. Muchas bodas combinan: banda 2h + DJ continúa.',
+          text: 'Un DJ de boda en Barcelona cuesta entre 600 y 1.500 € (según experiencia y equipo). Una banda en directo arranca en 1.000 € (cuarteto). La banda da experiencia única, energía sostenida y momento foto inolvidable; el DJ da catálogo infinito y pista todo el rato. Muchas bodas combinan: banda 2h + DJ continúa.',
         },
       },
       {
@@ -106,9 +106,9 @@ export default function CuantoCuestaPage() {
               Resumen rápido: una banda en directo profesional para boda en
               Barcelona y Catalunya cuesta entre <strong>1.000 € y 2.000 €</strong>{' '}
               en 2026, según formato (cuarteto, quinteto, banda completa) y
-              extras de sonido. Lady Jarana arranca en <strong>1.000 € el
-              cuarteto</strong>. Esta guía explica por qué, qué entra, qué no, y
-              cuándo conviene cada formato.
+              extras de sonido. Lady Jarana: <strong>cuarteto 1.000–1.300 €</strong>,
+              quinteto 1.200–1.500 €, banda completa desde 1.400 €. Esta guía
+              explica por qué, qué entra, qué no, y cuándo conviene cada formato.
             </p>
           </header>
 
@@ -150,12 +150,12 @@ export default function CuantoCuestaPage() {
                   <tr className="border-b border-negro/15 bg-blanco">
                     <td className="p-3 font-body text-negro">Cuarteto</td>
                     <td className="p-3 font-body text-negro">4</td>
-                    <td className="p-3 font-body font-bold text-rojo">1.000 €</td>
+                    <td className="p-3 font-body font-bold text-rojo">1.000–1.300 €</td>
                   </tr>
                   <tr className="border-b border-negro/15 bg-sol/30">
                     <td className="p-3 font-body text-negro">Quinteto (más demandado)</td>
                     <td className="p-3 font-body text-negro">5</td>
-                    <td className="p-3 font-body font-bold text-rojo">1.200 €</td>
+                    <td className="p-3 font-body font-bold text-rojo">1.200–1.500 €</td>
                   </tr>
                   <tr className="bg-blanco">
                     <td className="p-3 font-body text-negro">Banda completa</td>
@@ -166,9 +166,10 @@ export default function CuantoCuestaPage() {
               </table>
             </div>
             <p className="font-body text-sm text-negro/70 italic">
-              Regla simple: cuarteto = 1.000 €, cada músico adicional +200 €.
-              No hay tarifa por dúo o trío — no lo ofrecemos porque consideramos
-              que no entrega la energía del show.
+              El rango dentro de cada formato se afina por fecha, distancia,
+              aforo y extras (versión a medida del primer baile, segundo set,
+              etc.). Anticipo del 30% bloquea fecha. No hay tarifa por dúo o
+              trío.
             </p>
           </section>
 
@@ -241,12 +242,12 @@ export default function CuantoCuestaPage() {
             </p>
             <ul className="mb-4 space-y-3 font-body text-base text-negro/80">
               <li>
-                <strong>Cuarteto (1.000 €)</strong> — bodas íntimas, hasta 100
-                invitados, salones interiores. Sonido pleno de banda sin
+                <strong>Cuarteto (1.000–1.300 €)</strong> — bodas íntimas, hasta
+                100 invitados, salones interiores. Sonido pleno de banda sin
                 vientos, mejor cuando el evento es contenido.
               </li>
               <li>
-                <strong>Quinteto (1.200 €)</strong> — la opción más demandada.
+                <strong>Quinteto (1.200–1.500 €)</strong> — la opción más demandada.
                 Cuarteto + trompeta. La trompeta marca diferencia en rumbas y
                 temas festivos. Ideal para bodas de 100-200 invitados o
                 espacios al aire libre.
@@ -281,8 +282,8 @@ export default function CuantoCuestaPage() {
                 <tbody className="bg-blanco">
                   <tr className="border-b border-negro/15">
                     <td className="p-3 font-body font-bold text-negro">Precio</td>
-                    <td className="p-3 font-body text-negro/80">1.000-2.000 €</td>
-                    <td className="p-3 font-body text-negro/80">600-1.500 €</td>
+                    <td className="p-3 font-body text-negro/80">1.000–2.000 €</td>
+                    <td className="p-3 font-body text-negro/80">600–1.500 €</td>
                     <td className="p-3 font-body text-negro/80">400-800 €</td>
                   </tr>
                   <tr className="border-b border-negro/15">

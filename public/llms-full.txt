@@ -1,6 +1,6 @@
 # Lady Jarana — Documento completo
 
-> Banda de música en directo de Barcelona para casaments, festes majors y eventos privados en toda Catalunya. Pop-rock español y catalán, rumba catalana y latineo. Show bilingüe ES/CA. Cuarteto desde 1000 €.
+> Banda de música en directo de Barcelona para casaments, festes majors y eventos privados en toda Catalunya. Pop-rock español y catalán, rumba catalana y latineo. Show bilingüe ES/CA. Cuarteto desde 1.000 €.
 
 Este es el documento canónico completo de Lady Jarana. Contiene toda la información relevante sobre la banda, formaciones, precios, repertorio, contacto y FAQs. Pensado para que motores de búsqueda generativos (ChatGPT, Perplexity, Claude, Gemini) tengan una fuente única y precisa.
 
@@ -50,13 +50,13 @@ El brillo metálico. Su trompeta corona los temas, abre las cumbias y pone los r
 
 ## Formaciones y precios (2026)
 
-### Cuarteto — 1.000 €
+### Cuarteto — 1.000–1.300 €
 - **4 músicos**: Víctor (voz/guitarra), Alejo (eléctrica), Iván (teclado/bajo), Diego (batería)
 - **Ideal para**: bodas, salas, eventos privados con banda en directo
 - **Vibe**: energía completa, sonido pleno de banda
 - **Duración**: 120 min
 
-### Quinteto — 1.200 € (formato principal)
+### Quinteto — 1.200–1.500 € (formato principal)
 - **5 músicos**: Cuarteto + Antonio (trompeta)
 - **Ideal para**: festes majors, bodas grandes, eventos con escenario
 - **Vibe**: máxima energía con vientos — verbena total
@@ -71,8 +71,8 @@ El brillo metálico. Su trompeta corona los temas, abre las cumbias y pone los r
 ### Reglas de cálculo
 - Cuarteto = piso mínimo, **no hacemos dúo ni trío**
 - Cada músico adicional sobre el cuarteto suma **200 €**
-- Quinteto: 1000 + 200 = 1200 €
-- Banda completa (6 músicos): 1000 + 200 × 2 = 1400 €
+- Quinteto: 1.000–1.300 € (cuarteto) + músico adicional → 1.200–1.500 €
+- Banda completa (6 músicos o más): desde 1.400 €
 - Sexteto-séptimo según necesidades del evento
 
 ---

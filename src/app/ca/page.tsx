@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title:
     'Lady Jarana — Grup en directe de pop-rock, rumba i latineig | Barcelona i Catalunya',
   description:
-    'Grup de música en directe per a casaments, festes majors i esdeveniments privats a Barcelona i tota Catalunya. Pop-rock català i espanyol, rumba i latineig. Quartet des de 1000 €. Xou bilingüe ES/CA.',
+    'Grup de música en directe per a casaments, festes majors i esdeveniments privats a Barcelona i tota Catalunya. Pop-rock català i espanyol, rumba i latineig. Quartet des de 1.000 €. Xou bilingüe ES/CA.',
   alternates: {
     canonical: 'https://ladyjarana.es/ca',
     languages: {

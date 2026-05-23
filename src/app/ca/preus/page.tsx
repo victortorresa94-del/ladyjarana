@@ -7,9 +7,9 @@ import { WHATSAPP_URL } from '@/lib/contact';
 
 export const metadata: Metadata = {
   title:
-    'Preus · Grup en directe Lady Jarana — Quartet des de 1000 € | Catalunya',
+    'Preus · Grup en directe Lady Jarana — Quartet des de 1.000 € | Catalunya',
   description:
-    'Preus clars de Lady Jarana per a casaments, festes majors i esdeveniments privats a Catalunya. Quartet des de 1000 €, so propi opcional, pressupost en minuts per WhatsApp.',
+    'Preus clars de Lady Jarana per a casaments, festes majors i esdeveniments privats a Catalunya. Quartet 1.000–1.300 €, quintet 1.200–1.500 €, banda completa des de 1.400 €. So propi opcional, pressupost en minuts per WhatsApp.',
   alternates: {
     canonical: 'https://ladyjarana.es/ca/preus',
     languages: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Preus · Lady Jarana',
     description:
-      'Quartet des de 1000 €. +200 € per músic extra. So propi opcional amb 2 tècnics. Tota Catalunya.',
+      'Quartet 1.000–1.300 €. Quintet 1.200–1.500 €. Banda completa des de 1.400 €. So propi opcional amb 2 tècnics. Tota Catalunya.',
     url: 'https://ladyjarana.es/ca/preus',
     type: 'website',
     locale: 'ca_ES',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const tiers = [
   {
     nombre: 'Quartet',
-    precio: '1.000 €',
+    precio: '1.000–1.300 €',
     musicos: '4 músics',
     descripcion:
       'Format base. Veu/guitarra, elèctrica, teclat/baix i bateria. Pop-rock, rumba i latineig en directe.',
@@ -41,7 +41,7 @@ const tiers = [
   },
   {
     nombre: 'Quintet',
-    precio: '1.200 €',
+    precio: '1.200–1.500 €',
     musicos: '5 músics',
     descripcion:
       'Quartet + trompeta. Vents per a revetlles grans i moments de màxima energia.',

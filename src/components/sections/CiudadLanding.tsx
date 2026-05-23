@@ -190,8 +190,8 @@ export default function CiudadLanding({ content, locale }: Props) {
                 <h3 className="mt-1 font-display text-xl font-bold italic text-negro">
                   {t.cuarteto}
                 </h3>
-                <p className="mt-2 font-display text-3xl font-bold italic text-negro">
-                  1.000 €
+                <p className="mt-2 font-display text-2xl font-bold italic text-negro">
+                  1.000–1.300 €
                 </p>
               </div>
               <div className="rounded-2xl border-4 border-negro bg-sol p-5 shadow-[4px_4px_0_var(--negro)]">
@@ -201,8 +201,8 @@ export default function CiudadLanding({ content, locale }: Props) {
                 <h3 className="mt-1 font-display text-xl font-bold italic text-negro">
                   {t.quinteto}
                 </h3>
-                <p className="mt-2 font-display text-3xl font-bold italic text-negro">
-                  1.200 €
+                <p className="mt-2 font-display text-2xl font-bold italic text-negro">
+                  1.200–1.500 €
                 </p>
               </div>
               <div className="rounded-2xl border-4 border-negro bg-crema p-5 shadow-[4px_4px_0_var(--negro)]">
@@ -212,8 +212,8 @@ export default function CiudadLanding({ content, locale }: Props) {
                 <h3 className="mt-1 font-display text-xl font-bold italic text-negro">
                   {t.bandaCompleta}
                 </h3>
-                <p className="mt-2 font-display text-3xl font-bold italic text-negro">
-                  +1.400 €
+                <p className="mt-2 font-display text-2xl font-bold italic text-negro">
+                  desde 1.400 €
                 </p>
               </div>
             </div>

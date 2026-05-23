@@ -6,9 +6,9 @@ import Button from '@/components/ui/Button';
 import { WHATSAPP_URL } from '@/lib/contact';
 
 export const metadata: Metadata = {
-  title: 'Precios · Banda en directo Lady Jarana — Cuarteto desde 1000 €',
+  title: 'Precios · Banda en directo Lady Jarana — Cuarteto desde 1.000 €',
   description:
-    'Precios claros de Lady Jarana para bodas, fiestas mayores y eventos privados en Catalunya. Cuarteto desde 1000 €, sonido propio opcional, presupuesto en minutos por WhatsApp.',
+    'Precios claros de Lady Jarana para bodas, fiestas mayores y eventos privados en Catalunya. Cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €, banda completa desde 1.400 €. Sonido propio opcional, presupuesto en minutos por WhatsApp.',
   alternates: {
     canonical: 'https://ladyjarana.es/precios',
     languages: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Precios · Lady Jarana',
     description:
-      'Cuarteto desde 1000 €. +200 € por músico extra (quinteto, sexteto). Sonido propio opcional con 2 técnicos. Toda Catalunya.',
+      'Cuarteto 1.000–1.300 €. Quinteto 1.200–1.500 €. Banda completa desde 1.400 €. Sonido propio opcional con 2 técnicos. Toda Catalunya.',
     url: 'https://ladyjarana.es/precios',
     type: 'website',
     images: ['/fotos/eventos-empresa.jpg'],
@@ -30,7 +30,9 @@ export const metadata: Metadata = {
 const tiers = [
   {
     nombre: 'Cuarteto',
-    precio: '1.000 €',
+    precio: '1.000–1.300 €',
+    priceMin: '1000',
+    priceMax: '1300',
     musicos: '4 músicos',
     descripcion:
       'Formato base. Voz/guitarra, eléctrica, teclado/bajo y batería. Pop-rock, rumba y latineo en directo.',
@@ -39,7 +41,9 @@ const tiers = [
   },
   {
     nombre: 'Quinteto',
-    precio: '1.200 €',
+    precio: '1.200–1.500 €',
+    priceMin: '1200',
+    priceMax: '1500',
     musicos: '5 músicos',
     descripcion:
       'Cuarteto + trompeta. Vientos para verbenas grandes y momentos de máxima energía.',
@@ -48,6 +52,8 @@ const tiers = [
   {
     nombre: 'Banda completa',
     precio: 'desde 1.400 €',
+    priceMin: '1400',
+    priceMax: '2000',
     musicos: '6 músicos o más',
     descripcion:
       'Quinteto + bajista, percusión, guitarra o saxo adicional. Sonido orquestal en escenarios XXL.',
@@ -88,13 +94,25 @@ export default function PreciosPage() {
       url: 'https://ladyjarana.es',
     },
     areaServed: { '@type': 'AdministrativeArea', name: 'Catalunya, España' },
-    offers: tiers.map((t) => ({
-      '@type': 'Offer',
-      name: `Banda en directo — ${t.nombre}`,
-      price: t.precio.replace(/[^\d]/g, ''),
+    offers: {
+      '@type': 'AggregateOffer',
       priceCurrency: 'EUR',
-      description: t.descripcion,
-    })),
+      lowPrice: 1000,
+      highPrice: 2000,
+      offerCount: 3,
+      availability: 'https://schema.org/InStock',
+      offers: tiers.map((t) => ({
+        '@type': 'Offer',
+        name: `Banda en directo — ${t.nombre}`,
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: Number(t.priceMin),
+          maxPrice: Number(t.priceMax),
+          priceCurrency: 'EUR',
+        },
+        description: t.descripcion,
+      })),
+    },
   };
 
   return (

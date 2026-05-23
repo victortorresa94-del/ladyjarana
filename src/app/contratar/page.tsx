@@ -7,7 +7,7 @@ import { WHATSAPP_URL, PHONE_DISPLAY, EMAIL } from '@/lib/contact';
 export const metadata: Metadata = {
   title: 'Contratar Lady Jarana — Banda en directo para tu evento | Barcelona',
   description:
-    'Contrata Lady Jarana para tu boda, fiesta mayor o evento privado en Catalunya. Cuarteto desde 1000 €, +200 € por músico extra. Respuesta en minutos por WhatsApp.',
+    'Contrata Lady Jarana para tu boda, fiesta mayor o evento privado en Catalunya. Cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €. Respuesta en minutos por WhatsApp.',
   alternates: {
     canonical: '/contratar',
     languages: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: '¿Cuánto cuesta contratar la banda?',
-    a: 'Cuarteto desde 1000 €. Cada músico adicional sobre el cuarteto suma 200 € (quinteto 1200 €, banda completa desde 1400 €). No hacemos dúo ni trío. Ver precios completos en /precios.',
+    a: 'Cuarteto 1.000–1.300 €, quinteto 1.200–1.500 €, banda completa desde 1.400 €. El precio dentro de cada rango varía por fecha, sitio y extras. No hacemos dúo ni trío. Ver precios completos en /precios.',
   },
   {
     q: '¿Traéis equipo de sonido?',
@@ -132,7 +132,7 @@ export default function ContratarPage() {
                       Cuarteto, quinteto o banda completa
                     </p>
                     <p className="font-body text-sm text-negro/60">
-                      Cuarteto desde 1000 €. +200 € por músico extra. No hacemos dúo ni trío.
+                      Cuarteto 1.000–1.300 €. Quinteto 1.200–1.500 €. Banda completa desde 1.400 €. No hacemos dúo ni trío.
                     </p>
                   </div>
                 </div>
