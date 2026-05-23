@@ -10,15 +10,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/ca/serveis/casaments',
     languages: {
-      es: 'https://ladyjarana.com/servicios/bodas',
-      ca: 'https://ladyjarana.com/ca/serveis/casaments',
-      'x-default': 'https://ladyjarana.com/servicios/bodas',
+      es: 'https://ladyjarana.es/servicios/bodas',
+      ca: 'https://ladyjarana.es/ca/serveis/casaments',
+      'x-default': 'https://ladyjarana.es/servicios/bodas',
     },
   },
   openGraph: {
     title: content.titulo,
     description: content.intro,
-    url: 'https://ladyjarana.com/ca/serveis/casaments',
+    url: 'https://ladyjarana.es/ca/serveis/casaments',
     type: 'website',
     locale: 'ca_ES',
     images: [content.hero.foto],

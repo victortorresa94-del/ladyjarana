@@ -10,18 +10,18 @@ export const metadata: Metadata = {
   description:
     'Precios claros de Lady Jarana para bodas, fiestas mayores y eventos privados en Catalunya. Cuarteto desde 1000 €, sonido propio opcional, presupuesto en minutos por WhatsApp.',
   alternates: {
-    canonical: 'https://ladyjarana.com/precios',
+    canonical: 'https://ladyjarana.es/precios',
     languages: {
-      es: 'https://ladyjarana.com/precios',
-      ca: 'https://ladyjarana.com/ca/preus',
-      'x-default': 'https://ladyjarana.com/precios',
+      es: 'https://ladyjarana.es/precios',
+      ca: 'https://ladyjarana.es/ca/preus',
+      'x-default': 'https://ladyjarana.es/precios',
     },
   },
   openGraph: {
     title: 'Precios · Lady Jarana',
     description:
       'Cuarteto desde 1000 €. +200 € por músico extra (quinteto, sexteto). Sonido propio opcional con 2 técnicos. Toda Catalunya.',
-    url: 'https://ladyjarana.com/precios',
+    url: 'https://ladyjarana.es/precios',
     type: 'website',
     images: ['/fotos/eventos-empresa.jpg'],
   },
@@ -85,7 +85,7 @@ export default function PreciosPage() {
     provider: {
       '@type': 'MusicGroup',
       name: 'Lady Jarana',
-      url: 'https://ladyjarana.com',
+      url: 'https://ladyjarana.es',
     },
     areaServed: { '@type': 'AdministrativeArea', name: 'Catalunya, España' },
     offers: tiers.map((t) => ({

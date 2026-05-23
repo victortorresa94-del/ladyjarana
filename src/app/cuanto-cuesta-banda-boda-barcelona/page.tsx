@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description:
     'Guía honesta de precios de banda en directo para boda en Barcelona y Catalunya: tarifas reales 2026, qué entra, qué no, comparativa banda vs DJ, cuándo cuarteto y cuándo quinteto. Lady Jarana desde 1000 €.',
   alternates: {
-    canonical: 'https://ladyjarana.com/cuanto-cuesta-banda-boda-barcelona',
+    canonical: 'https://ladyjarana.es/cuanto-cuesta-banda-boda-barcelona',
     languages: {
-      es: 'https://ladyjarana.com/cuanto-cuesta-banda-boda-barcelona',
-      ca: 'https://ladyjarana.com/ca/quant-costa-grup-casament-barcelona',
-      'x-default': 'https://ladyjarana.com/cuanto-cuesta-banda-boda-barcelona',
+      es: 'https://ladyjarana.es/cuanto-cuesta-banda-boda-barcelona',
+      ca: 'https://ladyjarana.es/ca/quant-costa-grup-casament-barcelona',
+      'x-default': 'https://ladyjarana.es/cuanto-cuesta-banda-boda-barcelona',
     },
   },
   openGraph: {
@@ -33,11 +33,11 @@ export default function CuantoCuestaPage() {
     headline: 'Cuánto cuesta contratar una banda para boda en Barcelona (2026)',
     description:
       'Guía completa de precios para contratar banda en directo en una boda en Barcelona y Catalunya: tarifas, formatos, sonido, comparativa con DJ.',
-    author: { '@id': 'https://ladyjarana.com/#musicgroup' },
-    publisher: { '@id': 'https://ladyjarana.com/#musicgroup' },
+    author: { '@id': 'https://ladyjarana.es/#musicgroup' },
+    publisher: { '@id': 'https://ladyjarana.es/#musicgroup' },
     datePublished: '2026-01-15',
     dateModified: '2026-05-23',
-    mainEntityOfPage: 'https://ladyjarana.com/cuanto-cuesta-banda-boda-barcelona',
+    mainEntityOfPage: 'https://ladyjarana.es/cuanto-cuesta-banda-boda-barcelona',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', 'h2', '.lead'],
@@ -80,8 +80,8 @@ export default function CuantoCuestaPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Cuánto cuesta una banda para boda', item: 'https://ladyjarana.com/cuanto-cuesta-banda-boda-barcelona' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.es/' },
+      { '@type': 'ListItem', position: 2, name: 'Cuánto cuesta una banda para boda', item: 'https://ladyjarana.es/cuanto-cuesta-banda-boda-barcelona' },
     ],
   };
 

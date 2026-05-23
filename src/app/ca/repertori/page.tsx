@@ -16,17 +16,17 @@ export const metadata: Metadata = {
   title: 'Repertori — Lady Jarana | Cançons per a casaments, revetlles i festes',
   description: `Més de ${TOTAL_CANCIONES} cançons en directe: pop-rock català i espanyol, rumba, latineig i revetlleres. Escolta la playlist de Spotify i descarrega el repertori en PDF.`,
   alternates: {
-    canonical: 'https://ladyjarana.com/ca/repertori',
+    canonical: 'https://ladyjarana.es/ca/repertori',
     languages: {
-      es: 'https://ladyjarana.com/repertorio',
-      ca: 'https://ladyjarana.com/ca/repertori',
-      'x-default': 'https://ladyjarana.com/repertorio',
+      es: 'https://ladyjarana.es/repertorio',
+      ca: 'https://ladyjarana.es/ca/repertori',
+      'x-default': 'https://ladyjarana.es/repertorio',
     },
   },
   openGraph: {
     title: 'Repertori Lady Jarana — playlist Spotify + PDF',
     description: `${TOTAL_CANCIONES} cançons organitzades per estil. Pop-rock, rumba, latineig i revetlleres.`,
-    url: 'https://ladyjarana.com/ca/repertori',
+    url: 'https://ladyjarana.es/ca/repertori',
     type: 'website',
     locale: 'ca_ES',
   },
@@ -66,10 +66,10 @@ export default function RepertoriPage() {
     name: 'Repertori Lady Jarana',
     description:
       'Repertori oficial de Lady Jarana: pop-rock català i espanyol, rumba catalana, latineig i revetlleres. 37 cançons bilingües ES/CA tocades en directe.',
-    url: 'https://ladyjarana.com/ca/repertori',
+    url: 'https://ladyjarana.es/ca/repertori',
     numTracks: TOTAL_CANCIONES,
     inLanguage: ['ca-ES', 'es-ES'],
-    creator: { '@id': 'https://ladyjarana.com/#musicgroup' },
+    creator: { '@id': 'https://ladyjarana.es/#musicgroup' },
     track: allTracks.map((c, i) => ({
       '@type': 'MusicRecording',
       position: i + 1,
@@ -84,8 +84,8 @@ export default function RepertoriPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inici', item: 'https://ladyjarana.com/ca' },
-      { '@type': 'ListItem', position: 2, name: 'Repertori', item: 'https://ladyjarana.com/ca/repertori' },
+      { '@type': 'ListItem', position: 1, name: 'Inici', item: 'https://ladyjarana.es/ca' },
+      { '@type': 'ListItem', position: 2, name: 'Repertori', item: 'https://ladyjarana.es/ca/repertori' },
     ],
   };
 

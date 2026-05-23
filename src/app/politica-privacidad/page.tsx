@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/politica-privacidad',
     languages: {
-      es: 'https://ladyjarana.com/politica-privacidad',
-      ca: 'https://ladyjarana.com/ca/politica-privacitat',
+      es: 'https://ladyjarana.es/politica-privacidad',
+      ca: 'https://ladyjarana.es/ca/politica-privacitat',
     },
   },
 };

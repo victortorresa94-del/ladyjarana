@@ -10,15 +10,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/servicios/fiestas-mayores',
     languages: {
-      es: 'https://ladyjarana.com/servicios/fiestas-mayores',
-      ca: 'https://ladyjarana.com/ca/serveis/festes-majors',
-      'x-default': 'https://ladyjarana.com/servicios/fiestas-mayores',
+      es: 'https://ladyjarana.es/servicios/fiestas-mayores',
+      ca: 'https://ladyjarana.es/ca/serveis/festes-majors',
+      'x-default': 'https://ladyjarana.es/servicios/fiestas-mayores',
     },
   },
   openGraph: {
     title: content.titulo,
     description: content.intro,
-    url: 'https://ladyjarana.com/servicios/fiestas-mayores',
+    url: 'https://ladyjarana.es/servicios/fiestas-mayores',
     type: 'website',
     images: [content.hero.foto],
   },

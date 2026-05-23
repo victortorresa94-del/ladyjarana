@@ -48,7 +48,7 @@ const labels = {
 
 export default function ServicioRich({ content, locale }: Props) {
   const t = labels[locale];
-  const baseUrl = 'https://ladyjarana.com';
+  const baseUrl = 'https://ladyjarana.es';
   const servicePath =
     locale === 'es'
       ? `/servicios/${content.slug}`

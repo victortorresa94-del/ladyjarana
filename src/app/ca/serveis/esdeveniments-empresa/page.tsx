@@ -10,15 +10,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/ca/serveis/esdeveniments-empresa',
     languages: {
-      es: 'https://ladyjarana.com/servicios/eventos-empresa',
-      ca: 'https://ladyjarana.com/ca/serveis/esdeveniments-empresa',
-      'x-default': 'https://ladyjarana.com/servicios/eventos-empresa',
+      es: 'https://ladyjarana.es/servicios/eventos-empresa',
+      ca: 'https://ladyjarana.es/ca/serveis/esdeveniments-empresa',
+      'x-default': 'https://ladyjarana.es/servicios/eventos-empresa',
     },
   },
   openGraph: {
     title: content.titulo,
     description: content.intro,
-    url: 'https://ladyjarana.com/ca/serveis/esdeveniments-empresa',
+    url: 'https://ladyjarana.es/ca/serveis/esdeveniments-empresa',
     type: 'website',
     locale: 'ca_ES',
     images: [content.hero.foto],

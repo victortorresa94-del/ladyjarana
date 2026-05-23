@@ -12,18 +12,18 @@ export const metadata: Metadata = {
   description:
     'Lady Jarana es una banda de pop-rock, rumba y latineo formada en Barcelona en 2025. Cinco músicos profesionales, repertorio bilingüe ES/CA, especializados en bodas, festes majors y eventos privados en toda Catalunya.',
   alternates: {
-    canonical: 'https://ladyjarana.com/sobre-lady-jarana',
+    canonical: 'https://ladyjarana.es/sobre-lady-jarana',
     languages: {
-      es: 'https://ladyjarana.com/sobre-lady-jarana',
-      ca: 'https://ladyjarana.com/ca/sobre-lady-jarana',
-      'x-default': 'https://ladyjarana.com/sobre-lady-jarana',
+      es: 'https://ladyjarana.es/sobre-lady-jarana',
+      ca: 'https://ladyjarana.es/ca/sobre-lady-jarana',
+      'x-default': 'https://ladyjarana.es/sobre-lady-jarana',
     },
   },
   openGraph: {
     title: 'Sobre Lady Jarana — banda en directo Barcelona y Catalunya',
     description:
       'Historia, miembros, géneros musicales y trayectoria de Lady Jarana. Cinco músicos, dos idiomas, una sola jarana.',
-    url: 'https://ladyjarana.com/sobre-lady-jarana',
+    url: 'https://ladyjarana.es/sobre-lady-jarana',
     type: 'profile',
     images: ['/og-image.jpg'],
   },
@@ -70,21 +70,21 @@ export default function SobrePage() {
     '@type': 'AboutPage',
     inLanguage: 'es-ES',
     name: 'Sobre Lady Jarana',
-    url: 'https://ladyjarana.com/sobre-lady-jarana',
+    url: 'https://ladyjarana.es/sobre-lady-jarana',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', 'h2', '.lead'],
     },
-    about: { '@id': 'https://ladyjarana.com/#musicgroup' },
-    mainEntity: { '@id': 'https://ladyjarana.com/#musicgroup' },
+    about: { '@id': 'https://ladyjarana.es/#musicgroup' },
+    mainEntity: { '@id': 'https://ladyjarana.es/#musicgroup' },
   };
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Sobre Lady Jarana', item: 'https://ladyjarana.com/sobre-lady-jarana' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.es/' },
+      { '@type': 'ListItem', position: 2, name: 'Sobre Lady Jarana', item: 'https://ladyjarana.es/sobre-lady-jarana' },
     ],
   };
 

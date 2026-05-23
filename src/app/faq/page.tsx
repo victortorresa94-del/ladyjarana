@@ -10,18 +10,18 @@ export const metadata: Metadata = {
   description:
     'Todo lo que hay que saber para contratar Lady Jarana: precios, formatos, sonido, zona de actuación, repertorio bilingüe ES/CA, reserva y contrato. 27 preguntas reales con respuesta directa.',
   alternates: {
-    canonical: 'https://ladyjarana.com/faq',
+    canonical: 'https://ladyjarana.es/faq',
     languages: {
-      es: 'https://ladyjarana.com/faq',
-      ca: 'https://ladyjarana.com/ca/faq',
-      'x-default': 'https://ladyjarana.com/faq',
+      es: 'https://ladyjarana.es/faq',
+      ca: 'https://ladyjarana.es/ca/faq',
+      'x-default': 'https://ladyjarana.es/faq',
     },
   },
   openGraph: {
     title: 'FAQ Lady Jarana — preguntas frecuentes',
     description:
       'Precios, formatos, sonido, zona, repertorio y reserva. Las respuestas que nos hacéis una y otra vez.',
-    url: 'https://ladyjarana.com/faq',
+    url: 'https://ladyjarana.es/faq',
     type: 'website',
   },
 };
@@ -57,8 +57,8 @@ export default function FaqPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.com/' },
-      { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://ladyjarana.com/faq' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.es/' },
+      { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://ladyjarana.es/faq' },
     ],
   };
 

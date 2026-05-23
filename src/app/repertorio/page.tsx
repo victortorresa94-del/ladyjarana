@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/repertorio',
     languages: {
-      es: 'https://ladyjarana.com/repertorio',
-      ca: 'https://ladyjarana.com/ca/repertori',
-      'x-default': 'https://ladyjarana.com/repertorio',
+      es: 'https://ladyjarana.es/repertorio',
+      ca: 'https://ladyjarana.es/ca/repertori',
+      'x-default': 'https://ladyjarana.es/repertorio',
     },
   },
   openGraph: {
@@ -41,10 +41,10 @@ export default function RepertorioPage() {
     name: 'Repertorio Lady Jarana',
     description:
       'Repertorio oficial de Lady Jarana: pop-rock español y catalán, rumba catalana, latineo y verbeneras. 37 canciones bilingües ES/CA tocadas en directo.',
-    url: 'https://ladyjarana.com/repertorio',
+    url: 'https://ladyjarana.es/repertorio',
     numTracks: TOTAL_CANCIONES,
     inLanguage: ['es-ES', 'ca-ES'],
-    creator: { '@id': 'https://ladyjarana.com/#musicgroup' },
+    creator: { '@id': 'https://ladyjarana.es/#musicgroup' },
     track: allTracks.map((c, i) => ({
       '@type': 'MusicRecording',
       position: i + 1,
@@ -59,8 +59,8 @@ export default function RepertorioPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Repertorio', item: 'https://ladyjarana.com/repertorio' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ladyjarana.es/' },
+      { '@type': 'ListItem', position: 2, name: 'Repertorio', item: 'https://ladyjarana.es/repertorio' },
     ],
   };
 

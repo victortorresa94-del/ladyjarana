@@ -11,18 +11,18 @@ export const metadata: Metadata = {
   description:
     'Pròxims concerts de Lady Jarana a Barcelona i rodalies + trajectòria amb tots els bolos: casaments, festes majors, sales i esdeveniments privats.',
   alternates: {
-    canonical: 'https://ladyjarana.com/ca/esdeveniments',
+    canonical: 'https://ladyjarana.es/ca/esdeveniments',
     languages: {
-      es: 'https://ladyjarana.com/eventos',
-      ca: 'https://ladyjarana.com/ca/esdeveniments',
-      'x-default': 'https://ladyjarana.com/eventos',
+      es: 'https://ladyjarana.es/eventos',
+      ca: 'https://ladyjarana.es/ca/esdeveniments',
+      'x-default': 'https://ladyjarana.es/eventos',
     },
   },
   openGraph: {
     title: 'Esdeveniments · Lady Jarana',
     description:
       'Pròxims concerts a Barcelona i tots els bolos que hem fet: casaments, festes majors, sales, esdeveniments privats.',
-    url: 'https://ladyjarana.com/ca/esdeveniments',
+    url: 'https://ladyjarana.es/ca/esdeveniments',
     type: 'website',
     locale: 'ca_ES',
     images: ['/fotos/fiestas-mayores.jpg'],

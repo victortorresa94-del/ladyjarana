@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/ca/dossier',
     languages: {
-      es: 'https://ladyjarana.com/dossier',
-      ca: 'https://ladyjarana.com/ca/dossier',
-      'x-default': 'https://ladyjarana.com/dossier',
+      es: 'https://ladyjarana.es/dossier',
+      ca: 'https://ladyjarana.es/ca/dossier',
+      'x-default': 'https://ladyjarana.es/dossier',
     },
   },
 };

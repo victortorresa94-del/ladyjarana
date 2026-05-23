@@ -30,7 +30,7 @@ export default function ServicioRichCAWrapper({
 // El wrapper anterior devuelve ServicioRich con Footer ES.
 // Para que CA tenga FooterCA, exporto una versión "completa" que rehace el shell:
 export function ServicioRichCAFull({ content }: { content: ServicioContent }) {
-  const baseUrl = 'https://ladyjarana.com';
+  const baseUrl = 'https://ladyjarana.es';
   const servicePath = `/ca/serveis/${content.slug}`;
   const homePath = '/ca';
   const preciosPath = '/ca/preus';

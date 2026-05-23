@@ -11,18 +11,18 @@ export const metadata: Metadata = {
   description:
     'Preus clars de Lady Jarana per a casaments, festes majors i esdeveniments privats a Catalunya. Quartet des de 1000 €, so propi opcional, pressupost en minuts per WhatsApp.',
   alternates: {
-    canonical: 'https://ladyjarana.com/ca/preus',
+    canonical: 'https://ladyjarana.es/ca/preus',
     languages: {
-      es: 'https://ladyjarana.com/precios',
-      ca: 'https://ladyjarana.com/ca/preus',
-      'x-default': 'https://ladyjarana.com/precios',
+      es: 'https://ladyjarana.es/precios',
+      ca: 'https://ladyjarana.es/ca/preus',
+      'x-default': 'https://ladyjarana.es/precios',
     },
   },
   openGraph: {
     title: 'Preus · Lady Jarana',
     description:
       'Quartet des de 1000 €. +200 € per músic extra. So propi opcional amb 2 tècnics. Tota Catalunya.',
-    url: 'https://ladyjarana.com/ca/preus',
+    url: 'https://ladyjarana.es/ca/preus',
     type: 'website',
     locale: 'ca_ES',
     images: ['/fotos/eventos-empresa.jpg'],
@@ -87,7 +87,7 @@ export default function PreusPage() {
     provider: {
       '@type': 'MusicGroup',
       name: 'Lady Jarana',
-      url: 'https://ladyjarana.com',
+      url: 'https://ladyjarana.es',
     },
     areaServed: { '@type': 'AdministrativeArea', name: 'Catalunya, Espanya' },
     offers: tiers.map((t) => ({

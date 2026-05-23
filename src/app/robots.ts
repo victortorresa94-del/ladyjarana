@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'CCBot', allow: '/' },
       { userAgent: 'anthropic-ai', allow: '/' },
     ],
-    sitemap: 'https://ladyjarana.com/sitemap.xml',
-    host: 'https://ladyjarana.com',
+    sitemap: 'https://ladyjarana.es/sitemap.xml',
+    host: 'https://ladyjarana.es',
   };
 }

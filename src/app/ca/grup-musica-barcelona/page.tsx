@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `/ca/${content.slugCA}`,
     languages: {
-      es: `https://ladyjarana.com/${content.slugES}`,
-      ca: `https://ladyjarana.com/ca/${content.slugCA}`,
-      'x-default': `https://ladyjarana.com/${content.slugES}`,
+      es: `https://ladyjarana.es/${content.slugES}`,
+      ca: `https://ladyjarana.es/ca/${content.slugCA}`,
+      'x-default': `https://ladyjarana.es/${content.slugES}`,
     },
   },
 };

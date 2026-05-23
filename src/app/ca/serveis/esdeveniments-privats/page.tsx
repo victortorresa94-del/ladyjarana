@@ -10,15 +10,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/ca/serveis/esdeveniments-privats',
     languages: {
-      es: 'https://ladyjarana.com/servicios/eventos-privados',
-      ca: 'https://ladyjarana.com/ca/serveis/esdeveniments-privats',
-      'x-default': 'https://ladyjarana.com/servicios/eventos-privados',
+      es: 'https://ladyjarana.es/servicios/eventos-privados',
+      ca: 'https://ladyjarana.es/ca/serveis/esdeveniments-privats',
+      'x-default': 'https://ladyjarana.es/servicios/eventos-privados',
     },
   },
   openGraph: {
     title: content.titulo,
     description: content.intro,
-    url: 'https://ladyjarana.com/ca/serveis/esdeveniments-privats',
+    url: 'https://ladyjarana.es/ca/serveis/esdeveniments-privats',
     type: 'website',
     locale: 'ca_ES',
     images: [content.hero.foto],

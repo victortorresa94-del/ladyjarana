@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const BASE_URL = 'https://ladyjarana.com';
+const BASE_URL = 'https://ladyjarana.es';
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),

@@ -10,18 +10,18 @@ export const metadata: Metadata = {
   description:
     'Tot el que cal saber per contractar Lady Jarana: preus, formats, so, zona d\'actuació, repertori bilingüe ES/CA, reserva i contracte. 27 preguntes reals amb resposta directa.',
   alternates: {
-    canonical: 'https://ladyjarana.com/ca/faq',
+    canonical: 'https://ladyjarana.es/ca/faq',
     languages: {
-      es: 'https://ladyjarana.com/faq',
-      ca: 'https://ladyjarana.com/ca/faq',
-      'x-default': 'https://ladyjarana.com/faq',
+      es: 'https://ladyjarana.es/faq',
+      ca: 'https://ladyjarana.es/ca/faq',
+      'x-default': 'https://ladyjarana.es/faq',
     },
   },
   openGraph: {
     title: 'FAQ Lady Jarana — preguntes freqüents',
     description:
       'Preus, formats, so, zona, repertori i reserva. Les respostes que ens feu una vegada i una altra.',
-    url: 'https://ladyjarana.com/ca/faq',
+    url: 'https://ladyjarana.es/ca/faq',
     type: 'website',
     locale: 'ca_ES',
   },
@@ -58,8 +58,8 @@ export default function FaqCAPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inici', item: 'https://ladyjarana.com/ca' },
-      { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://ladyjarana.com/ca/faq' },
+      { '@type': 'ListItem', position: 1, name: 'Inici', item: 'https://ladyjarana.es/ca' },
+      { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://ladyjarana.es/ca/faq' },
     ],
   };
 

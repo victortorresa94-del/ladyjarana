@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/contratar',
     languages: {
-      es: 'https://ladyjarana.com/contratar',
-      ca: 'https://ladyjarana.com/ca/contractar',
-      'x-default': 'https://ladyjarana.com/contratar',
+      es: 'https://ladyjarana.es/contratar',
+      ca: 'https://ladyjarana.es/ca/contractar',
+      'x-default': 'https://ladyjarana.es/contratar',
     },
   },
 };

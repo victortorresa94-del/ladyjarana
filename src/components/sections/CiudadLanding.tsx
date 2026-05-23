@@ -55,7 +55,7 @@ const labels = {
 
 export default function CiudadLanding({ content, locale }: Props) {
   const t = labels[locale];
-  const baseUrl = 'https://ladyjarana.com';
+  const baseUrl = 'https://ladyjarana.es';
   const slug = locale === 'es' ? content.slugES : content.slugCA;
   const altSlug = locale === 'es' ? content.slugCA : content.slugES;
   const path = `/${slug}`;

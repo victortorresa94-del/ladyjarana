@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description:
     'Contracta Lady Jarana per al teu casament, festa major o esdeveniment privat a Catalunya. Quartet des de 1000 €, +200 € per músic extra. Resposta en minuts per WhatsApp.',
   alternates: {
-    canonical: 'https://ladyjarana.com/ca/contractar',
+    canonical: 'https://ladyjarana.es/ca/contractar',
     languages: {
-      es: 'https://ladyjarana.com/contratar',
-      ca: 'https://ladyjarana.com/ca/contractar',
-      'x-default': 'https://ladyjarana.com/contratar',
+      es: 'https://ladyjarana.es/contratar',
+      ca: 'https://ladyjarana.es/ca/contractar',
+      'x-default': 'https://ladyjarana.es/contratar',
     },
   },
 };

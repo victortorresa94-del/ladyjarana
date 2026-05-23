@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/ca/avis-legal',
     languages: {
-      es: 'https://ladyjarana.com/aviso-legal',
-      ca: 'https://ladyjarana.com/ca/avis-legal',
+      es: 'https://ladyjarana.es/aviso-legal',
+      ca: 'https://ladyjarana.es/ca/avis-legal',
     },
   },
 };
