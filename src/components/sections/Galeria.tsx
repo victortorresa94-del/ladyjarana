@@ -15,7 +15,7 @@ import { INSTAGRAM_URL } from '@/lib/contact';
 // y "atractivo" en el commit 5f652a2). No están entre los vídeos del Blob,
 // así que no duplican los nativos de arriba.
 const INSTAGRAM_REELS = [
-  { id: 'DWn3wnqjO5c', title: 'Lady Jarana en directo', description: 'Reel · Instagram' },
+  { id: 'DWn3wnqjO5c', title: 'Tenemos un fondo flamenco…', description: 'Reel · Instagram' },
   { id: 'DOniq2XjBRE', title: 'Boda Lady Jarana', description: 'Reel · Instagram' },
 ] as const;
 
