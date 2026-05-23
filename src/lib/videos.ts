@@ -81,20 +81,21 @@ export const liveVideos: LiveVideo[] = [
     description: 'Verbena · directo',
     aspectRatio: '9:16',
   },
-  // 8 — único reel de Instagram, sirve de CTA "síguenos en @lady.jarana"
-  {
-    source: 'instagram',
-    id: 'DOniq2XjBRE',
-    title: 'Más en Instagram',
-    description: 'Síguenos en @lady.jarana →',
-    aspectRatio: '9:16',
-  },
-  // 9 — El chipirón conservado al final
+  // 8 — El chipirón
   {
     source: 'native',
     id: `${BLOB}/El%20chipiron.MP4`,
     title: 'El chipirón',
     description: 'Versión Lady Jarana',
+    aspectRatio: '9:16',
+  },
+  // 9 — único reel de Instagram, cierra la galería como CTA
+  // "síguenos en @lady.jarana"
+  {
+    source: 'instagram',
+    id: 'DOniq2XjBRE',
+    title: 'Más en Instagram',
+    description: 'Síguenos en @lady.jarana →',
     aspectRatio: '9:16',
   },
 ];
