@@ -6,22 +6,24 @@ export const siteMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      'Lady Jarana — Banda de Rumba & Rock para bodas y eventos | Barcelona',
+      'Lady Jarana — Banda en directo de pop-rock, rumba y latineo | Barcelona y Catalunya',
     template: '%s | Lady Jarana',
   },
   description:
-    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona. Pop-rock español, rumba y latineo. Cuarteto, trío y dúo acústico. Reserva 2026.',
+    'Banda en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Pop-rock español y catalán, rumba y latineo. Cuarteto desde 1000 €. Show bilingüe ES/CA.',
   keywords: [
     'banda para bodas Barcelona',
+    'banda en directo Catalunya',
     'grupo música en vivo Barcelona',
-    'banda para fiesta mayor',
-    'grupo versiones bodas',
+    'banda para fiesta mayor Catalunya',
+    'grupo versiones bodas catalán',
     'contratar banda en directo Barcelona',
     'banda rumba Barcelona',
+    'banda pop rock catalán bodas',
     'música en directo bodas Cataluña',
+    'banda fiesta mayor ayuntamiento',
     'Lady Jarana',
-    'banda pop rock español bodas',
-    'grupo rumba bodas Cataluña',
+    'grupo verbena Catalunya',
   ],
   authors: [{ name: 'Lady Jarana' }],
   creator: 'Lady Jarana',
@@ -31,9 +33,9 @@ export const siteMetadata: Metadata = {
     url: BASE_URL,
     siteName: 'Lady Jarana',
     title:
-      'Lady Jarana — Banda de Rumba & Rock para bodas y eventos | Barcelona',
+      'Lady Jarana — Banda en directo de pop-rock, rumba y latineo | Barcelona y Catalunya',
     description:
-      'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona. Pop-rock español, rumba y latineo.',
+      'Banda en directo para bodas, fiestas mayores y eventos privados en toda Catalunya. Pop-rock ES/CA, rumba y latineo. Cuarteto desde 1000 €.',
     images: [
       {
         url: '/og-image.jpg',
@@ -45,9 +47,9 @@ export const siteMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lady Jarana — Rumba & Rock Band | Barcelona',
+    title: 'Lady Jarana — Banda en directo · Barcelona y Catalunya',
     description:
-      'Pop-rock español, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor.',
+      'Pop-rock ES/CA, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor. Cuarteto desde 1000 €.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -84,10 +86,10 @@ export const jsonLdMusicGroup = {
   logo: `${BASE_URL}/logo/logo-lady-jarana.png`,
   image: `${BASE_URL}/og-image.jpg`,
   description:
-    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados.',
+    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe español + catalán.',
   foundingDate: '2025',
   foundingLocation: 'Barcelona, España',
-  genre: ['Rumba', 'Rock', 'Pop español', 'Pop latino'],
+  genre: ['Rumba catalana', 'Pop-rock español', 'Pop-rock catalán', 'Latineo', 'Rock'],
   member: [
     {
       '@type': 'Person',
@@ -122,13 +124,17 @@ export const jsonLdLocalBusiness = {
   '@type': 'LocalBusiness',
   name: 'Lady Jarana',
   description:
-    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona.',
-  areaServed: ['Barcelona', 'Cataluña', 'España'],
+    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Show bilingüe ES/CA.',
+  areaServed: ['Barcelona', 'Catalunya', 'Cataluña', 'España'],
   priceRange: '€€',
-  telephone: '+34 XXX XXX XXX',
+  telephone: '+34 627 281 459',
+  email: 'ladyjaranamusic@gmail.com',
+  url: BASE_URL,
+  image: `${BASE_URL}/og-image.jpg`,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Barcelona',
+    addressRegion: 'Catalunya',
     addressCountry: 'ES',
   },
 };

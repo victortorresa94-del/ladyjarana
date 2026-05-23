@@ -39,10 +39,24 @@ const faqs = [
 ];
 
 export default function ContratarPage() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <>
       <Navbar />
       <main className="pt-24 pb-16 bg-crema min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
         <div className="mx-auto max-w-7xl px-6">
           {/* CTA rápido WhatsApp — la vía recomendada */}
           <a
@@ -108,10 +122,10 @@ export default function ContratarPage() {
                   <span className="mt-1 text-rojo text-xl">🎸</span>
                   <div>
                     <p className="font-body font-semibold text-negro">
-                      Formatos flexibles
+                      Cuarteto, quinteto o banda completa
                     </p>
                     <p className="font-body text-sm text-negro/60">
-                      Dúo, trío o cuarteto. Nos adaptamos a tu evento.
+                      Cuarteto desde 1000 €. +200 € por músico extra. No hacemos dúo ni trío.
                     </p>
                   </div>
                 </div>
@@ -119,10 +133,10 @@ export default function ContratarPage() {
                   <span className="mt-1 text-rojo text-xl">📍</span>
                   <div>
                     <p className="font-body font-semibold text-negro">
-                      Barcelona y desplazamientos
+                      Toda Catalunya
                     </p>
                     <p className="font-body text-sm text-negro/60">
-                      Tocamos en toda Cataluña y resto de España.
+                      Sin recargo en Catalunya. Fuera consultamos desplazamiento. Show bilingüe ES/CA.
                     </p>
                   </div>
                 </div>
