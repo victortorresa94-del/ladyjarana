@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import ServicioStub from '@/components/sections/ServicioStub';
+import ServicioRich from '@/components/sections/ServicioRich';
+import { serviciosES } from '@/lib/serviciosContent';
+
+const content = serviciosES['eventos-empresa'];
 
 export const metadata: Metadata = {
-  title: 'Banda para eventos de empresa en Barcelona — Lady Jarana',
-  description:
-    'Lady Jarana, banda en directo para cenas, inauguraciones y fiestas corporativas en Barcelona y Cataluña.',
+  title: `${content.titulo} | Lady Jarana`,
+  description: content.intro,
   alternates: {
     canonical: '/servicios/eventos-empresa',
     languages: {
@@ -13,13 +15,15 @@ export const metadata: Metadata = {
       'x-default': 'https://ladyjarana.com/servicios/eventos-empresa',
     },
   },
+  openGraph: {
+    title: content.titulo,
+    description: content.intro,
+    url: 'https://ladyjarana.com/servicios/eventos-empresa',
+    type: 'website',
+    images: [content.hero.foto],
+  },
 };
 
 export default function EventosEmpresaPage() {
-  return (
-    <ServicioStub
-      titulo="Banda para eventos de empresa"
-      intro="Cenas, inauguraciones, fiestas corporativas y eventos de equipo. La energía en directo que diferencia un evento de empresa de cualquier otro."
-    />
-  );
+  return <ServicioRich content={content} locale="es" />;
 }

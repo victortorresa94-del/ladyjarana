@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import ServicioStubCA from '@/components/sections/ServicioStubCA';
+import { ServicioRichCAFull } from '@/components/sections/ServicioRichCA';
+import { serviciosCA } from '@/lib/serviciosContent';
+
+const content = serviciosCA.casaments;
 
 export const metadata: Metadata = {
-  title: 'Grup en directe per a casaments a Barcelona i Catalunya — Lady Jarana',
-  description:
-    'Lady Jarana, grup en directe per a casaments a Barcelona i Catalunya. Pop-rock, rumba i latineig per a cerimònia, còctel i festa. Quartet des de 1000 €.',
+  title: `${content.titulo} | Lady Jarana`,
+  description: content.intro,
   alternates: {
     canonical: '/ca/serveis/casaments',
     languages: {
@@ -13,13 +15,16 @@ export const metadata: Metadata = {
       'x-default': 'https://ladyjarana.com/servicios/bodas',
     },
   },
+  openGraph: {
+    title: content.titulo,
+    description: content.intro,
+    url: 'https://ladyjarana.com/ca/serveis/casaments',
+    type: 'website',
+    locale: 'ca_ES',
+    images: [content.hero.foto],
+  },
 };
 
 export default function CasamentsPage() {
-  return (
-    <ServicioStubCA
-      titulo="Grup en directe per a casaments"
-      intro="Cerimònia, còctel i festa. Lady Jarana adapta el seu format per acompanyar cada moment del casament amb pop-rock, rumba i latineig en directe — 100 % banda, 0 % pista pregravada. Xou bilingüe ES/CA."
-    />
-  );
+  return <ServicioRichCAFull content={content} />;
 }

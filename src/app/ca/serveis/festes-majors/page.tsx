@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import ServicioStubCA from '@/components/sections/ServicioStubCA';
+import { ServicioRichCAFull } from '@/components/sections/ServicioRichCA';
+import { serviciosCA } from '@/lib/serviciosContent';
+
+const content = serviciosCA['festes-majors'];
 
 export const metadata: Metadata = {
-  title: 'Grup per a festes majors a Catalunya — Lady Jarana',
-  description:
-    'Banda en directe per a festes majors d\'ajuntament a Catalunya. Pop-rock, rumba catalana i latineig per a la revetlla. Quintet i banda completa disponibles.',
+  title: `${content.titulo} | Lady Jarana`,
+  description: content.intro,
   alternates: {
     canonical: '/ca/serveis/festes-majors',
     languages: {
@@ -13,13 +15,16 @@ export const metadata: Metadata = {
       'x-default': 'https://ladyjarana.com/servicios/fiestas-mayores',
     },
   },
+  openGraph: {
+    title: content.titulo,
+    description: content.intro,
+    url: 'https://ladyjarana.com/ca/serveis/festes-majors',
+    type: 'website',
+    locale: 'ca_ES',
+    images: [content.hero.foto],
+  },
 };
 
 export default function FestesMajorsPage() {
-  return (
-    <ServicioStubCA
-      titulo="Grup per a festes majors"
-      intro="Plaça plena, escenari gran, revetlla fins tard. Lady Jarana ja ha tocat a Sant Adrià de Besòs, Barberà del Vallès i Rumba Beach Festival. Format quintet o banda completa amb vents, ideal per a escenaris XXL. Show bilingüe ES/CA."
-    />
-  );
+  return <ServicioRichCAFull content={content} />;
 }

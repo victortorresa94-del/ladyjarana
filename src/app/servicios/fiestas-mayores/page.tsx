@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import ServicioStub from '@/components/sections/ServicioStub';
+import ServicioRich from '@/components/sections/ServicioRich';
+import { serviciosES } from '@/lib/serviciosContent';
+
+const content = serviciosES['fiestas-mayores'];
 
 export const metadata: Metadata = {
-  title: 'Banda para fiestas mayores en Cataluña — Lady Jarana',
-  description:
-    'Lady Jarana, banda en directo para fiestas mayores en Cataluña. Pop-rock, rumba y latineo para llenar la plaza.',
+  title: `${content.titulo} | Lady Jarana`,
+  description: content.intro,
   alternates: {
     canonical: '/servicios/fiestas-mayores',
     languages: {
@@ -13,13 +15,15 @@ export const metadata: Metadata = {
       'x-default': 'https://ladyjarana.com/servicios/fiestas-mayores',
     },
   },
+  openGraph: {
+    title: content.titulo,
+    description: content.intro,
+    url: 'https://ladyjarana.com/servicios/fiestas-mayores',
+    type: 'website',
+    images: [content.hero.foto],
+  },
 };
 
 export default function FiestasMayoresPage() {
-  return (
-    <ServicioStub
-      titulo="Banda para fiestas mayores"
-      intro="La banda que la plaza estaba esperando. Energía en directo para fiestas mayores en pueblos y ciudades de toda Cataluña."
-    />
-  );
+  return <ServicioRich content={content} locale="es" />;
 }

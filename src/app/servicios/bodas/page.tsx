@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import ServicioStub from '@/components/sections/ServicioStub';
+import ServicioRich from '@/components/sections/ServicioRich';
+import { serviciosES } from '@/lib/serviciosContent';
+
+const content = serviciosES.bodas;
 
 export const metadata: Metadata = {
-  title: 'Banda en directo para bodas en Barcelona — Lady Jarana',
-  description:
-    'Lady Jarana, banda en directo para bodas en Barcelona y Cataluña. Pop-rock, rumba y latineo para ceremonia, cóctel y fiesta.',
+  title: `${content.titulo} | Lady Jarana`,
+  description: content.intro,
   alternates: {
     canonical: '/servicios/bodas',
     languages: {
@@ -13,13 +15,15 @@ export const metadata: Metadata = {
       'x-default': 'https://ladyjarana.com/servicios/bodas',
     },
   },
+  openGraph: {
+    title: content.titulo,
+    description: content.intro,
+    url: 'https://ladyjarana.com/servicios/bodas',
+    type: 'website',
+    images: [content.hero.foto],
+  },
 };
 
 export default function BodasPage() {
-  return (
-    <ServicioStub
-      titulo="Banda en directo para bodas"
-      intro="Ceremonia, cóctel y fiesta. Lady Jarana adapta su formato para acompañar cada momento de la boda con pop-rock, rumba y latineo en directo — 100% banda, 0% pista pregrabada."
-    />
-  );
+  return <ServicioRich content={content} locale="es" />;
 }

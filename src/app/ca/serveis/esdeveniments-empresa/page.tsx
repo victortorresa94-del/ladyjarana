@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import ServicioStubCA from '@/components/sections/ServicioStubCA';
+import { ServicioRichCAFull } from '@/components/sections/ServicioRichCA';
+import { serviciosCA } from '@/lib/serviciosContent';
+
+const content = serviciosCA['esdeveniments-empresa'];
 
 export const metadata: Metadata = {
-  title: "Grup per a esdeveniments d'empresa a Barcelona — Lady Jarana",
-  description:
-    'Banda en directe per a celebracions corporatives, festes de fi d\'any, team buildings i presentacions a Barcelona i Catalunya. Professionals amb jarana.',
+  title: `${content.titulo} | Lady Jarana`,
+  description: content.intro,
   alternates: {
     canonical: '/ca/serveis/esdeveniments-empresa',
     languages: {
@@ -13,13 +15,16 @@ export const metadata: Metadata = {
       'x-default': 'https://ladyjarana.com/servicios/eventos-empresa',
     },
   },
+  openGraph: {
+    title: content.titulo,
+    description: content.intro,
+    url: 'https://ladyjarana.com/ca/serveis/esdeveniments-empresa',
+    type: 'website',
+    locale: 'ca_ES',
+    images: [content.hero.foto],
+  },
 };
 
 export default function EsdevenimentsEmpresaPage() {
-  return (
-    <ServicioStubCA
-      titulo="Grup per a esdeveniments d'empresa"
-      intro="Fi d'any corporatiu, presentacions de producte, team buildings o sopars d'equip: Lady Jarana posa el ritme i la festa. Format escalable des de quartet acústic fins a banda completa amb vents. Repertori en català i castellà."
-    />
-  );
+  return <ServicioRichCAFull content={content} />;
 }
