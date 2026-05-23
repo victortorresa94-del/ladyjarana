@@ -7,7 +7,7 @@ import { WHATSAPP_URL } from '@/lib/contact';
 
 export default function ContactoCTA() {
   return (
-    <section className="relative overflow-hidden bg-rojo py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-rojo py-24 lg:min-h-[640px] lg:py-32">
       <div className="absolute inset-0 opacity-25 pointer-events-none">
         <Image
           src="/generated/hero-bg.png"
@@ -21,7 +21,7 @@ export default function ContactoCTA() {
       </div>
 
       {/* Palmera Jaranera — mascota saludando desde abajo a la izquierda */}
-      <div className="pointer-events-none absolute -left-6 bottom-0 z-[1] hidden w-44 md:block lg:-left-4 lg:w-60">
+      <div className="pointer-events-none absolute -left-4 bottom-0 z-[1] hidden w-40 md:block lg:-left-2 lg:w-52 xl:w-56">
         <Image
           src="/personajes/palmera-jaranera.png"
           alt=""
