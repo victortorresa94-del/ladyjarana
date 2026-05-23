@@ -180,7 +180,7 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
               ¿Te quedas con ganas?
             </h3>
             <p className="mb-8 text-blanco/80 font-body">
-              Subimos directos, ensayos y backstage casi cada semana. Sigue la fiesta en Instagram.
+              Más directos, bodas y backstage en Instagram. Lo nuevo se cuelga ahí primero.
             </p>
             <a
               href="https://instagram.com/lady.jarana"

@@ -7,8 +7,17 @@ import DriveVideo from '../ui/DriveVideo';
 import NativeVideo from '../ui/NativeVideo';
 import ReelCard from '../ui/ReelCard';
 import ReelsFeed from '../ui/ReelsFeed';
+import InstagramReel from '../ui/InstagramReel';
 import { liveVideos } from '@/lib/videos';
 import { INSTAGRAM_URL } from '@/lib/contact';
+
+// Reels de Instagram curados — IDs históricos del repo (curados por views
+// y "atractivo" en el commit 5f652a2). No están entre los vídeos del Blob,
+// así que no duplican los nativos de arriba.
+const INSTAGRAM_REELS = [
+  { id: 'DWn3wnqjO5c', title: 'Lady Jarana en directo', description: 'Reel · Instagram' },
+  { id: 'DOniq2XjBRE', title: 'Boda Lady Jarana', description: 'Reel · Instagram' },
+] as const;
 
 export default function Galeria() {
   const [feedIndex, setFeedIndex] = useState<number | null>(null);
@@ -70,20 +79,9 @@ export default function Galeria() {
             </motion.div>
           ))}
 
-          {/* Chapuza: 2 placeholders Instagram para rellenar la cuadrícula
-              en PC mientras llegan 2 reels reales más. Sustituir añadiendo
-              entradas a liveVideos. */}
-          {['placeholder-ig-1', 'placeholder-ig-2'].map((key, idx) => (
-            <motion.a
-              key={key}
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block aspect-[9/16] overflow-hidden rounded-2xl border-4 border-negro shadow-[6px_6px_0_var(--negro)] transition-all duration-150 hover:shadow-[3px_3px_0_var(--negro)] hover:translate-x-[3px] hover:translate-y-[3px]"
-              style={{
-                background:
-                  'linear-gradient(135deg, #F5B73C 0%, #F47A1F 30%, #D63B36 65%, #C13584 100%)',
-              }}
+          {INSTAGRAM_REELS.map((reel, idx) => (
+            <motion.div
+              key={reel.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
@@ -92,25 +90,12 @@ export default function Galeria() {
                 delay: (liveVideos.length + idx) * 0.05,
               }}
             >
-              <div className="flex h-full w-full flex-col items-center justify-center gap-4 p-6 text-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-2xl border-2 border-blanco/40 bg-blanco/10">
-                  <svg
-                    className="h-9 w-9 text-blanco"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden
-                  >
-                    <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.7.32-.43.16-.74.36-1.06.68-.32.32-.52.63-.68 1.06-.13.32-.28.8-.32 1.7-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.38.32 1.7.16.43.36.74.68 1.06.32.32.63.52 1.06.68.32.13.8.28 1.7.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.7-.32.43-.16.74-.36 1.06-.68.32-.32.52-.63.68-1.06.13-.32.28-.8.32-1.7.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.7a2.85 2.85 0 0 0-.68-1.06 2.85 2.85 0 0 0-1.06-.68c-.32-.13-.8-.28-1.7-.32-1.24-.06-1.59-.07-4.74-.07zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0z" />
-                  </svg>
-                </span>
-                <p className="font-display text-2xl font-bold italic text-blanco">
-                  {idx === 0 ? 'Más reels' : 'Mira más'}
-                </p>
-                <p className="font-body text-sm font-bold text-blanco/90">
-                  @lady.jarana →
-                </p>
-              </div>
-            </motion.a>
+              <InstagramReel
+                reelId={reel.id}
+                title={reel.title}
+                description={reel.description}
+              />
+            </motion.div>
           ))}
         </div>
 
@@ -143,7 +128,7 @@ export default function Galeria() {
               ¿Quieres más? Síguenos en Instagram
             </p>
             <p className="font-body text-xs text-blanco/90 sm:text-sm">
-              Directos, ensayos y backstage casi cada semana.
+              Directos, bodas y backstage. Lo último en @lady.jarana.
             </p>
           </div>
           <span className="hidden shrink-0 rounded-full border-2 border-negro bg-blanco px-4 py-2 font-body text-sm font-bold text-negro shadow-[3px_3px_0_var(--negro)] sm:inline-block">
