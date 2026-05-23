@@ -8,7 +8,14 @@ export const metadata: Metadata = {
   title: 'Contratar Lady Jarana — Banda en directo para tu evento | Barcelona',
   description:
     'Contrata Lady Jarana para tu boda, fiesta mayor o evento privado en Catalunya. Cuarteto desde 1000 €, +200 € por músico extra. Respuesta en minutos por WhatsApp.',
-  alternates: { canonical: '/contratar' },
+  alternates: {
+    canonical: '/contratar',
+    languages: {
+      es: 'https://ladyjarana.com/contratar',
+      ca: 'https://ladyjarana.com/ca/contractar',
+      'x-default': 'https://ladyjarana.com/contratar',
+    },
+  },
 };
 
 const faqs = [

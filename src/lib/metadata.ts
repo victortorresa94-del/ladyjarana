@@ -65,6 +65,11 @@ export const siteMetadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      es: `${BASE_URL}/`,
+      ca: `${BASE_URL}/ca`,
+      'x-default': `${BASE_URL}/`,
+    },
   },
   icons: {
     icon: [

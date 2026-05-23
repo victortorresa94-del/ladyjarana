@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import FooterCA from '@/components/FooterCA';
 import Button from '@/components/ui/Button';
 import { WHATSAPP_URL } from '@/lib/contact';
 
 export const metadata: Metadata = {
-  title: 'Precios · Banda en directo Lady Jarana — Cuarteto desde 1000 €',
+  title:
+    'Preus · Grup en directe Lady Jarana — Quartet des de 1000 € | Catalunya',
   description:
-    'Precios claros de Lady Jarana para bodas, fiestas mayores y eventos privados en Catalunya. Cuarteto desde 1000 €, sonido propio opcional, presupuesto en minutos por WhatsApp.',
+    'Preus clars de Lady Jarana per a casaments, festes majors i esdeveniments privats a Catalunya. Quartet des de 1000 €, so propi opcional, pressupost en minuts per WhatsApp.',
   alternates: {
-    canonical: 'https://ladyjarana.com/precios',
+    canonical: 'https://ladyjarana.com/ca/preus',
     languages: {
       es: 'https://ladyjarana.com/precios',
       ca: 'https://ladyjarana.com/ca/preus',
@@ -18,79 +19,80 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Precios · Lady Jarana',
+    title: 'Preus · Lady Jarana',
     description:
-      'Cuarteto desde 1000 €. +200 € por músico extra (quinteto, sexteto). Sonido propio opcional con 2 técnicos. Toda Catalunya.',
-    url: 'https://ladyjarana.com/precios',
+      'Quartet des de 1000 €. +200 € per músic extra. So propi opcional amb 2 tècnics. Tota Catalunya.',
+    url: 'https://ladyjarana.com/ca/preus',
     type: 'website',
+    locale: 'ca_ES',
     images: ['/fotos/eventos-empresa.jpg'],
   },
 };
 
 const tiers = [
   {
-    nombre: 'Cuarteto',
+    nombre: 'Quartet',
     precio: '1.000 €',
-    musicos: '4 músicos',
+    musicos: '4 músics',
     descripcion:
-      'Formato base. Voz/guitarra, eléctrica, teclado/bajo y batería. Pop-rock, rumba y latineo en directo.',
-    ideal: 'Bodas, eventos privados, salas',
+      'Format base. Veu/guitarra, elèctrica, teclat/baix i bateria. Pop-rock, rumba i latineig en directe.',
+    ideal: 'Casaments, esdeveniments privats, sales',
     destacado: true,
   },
   {
-    nombre: 'Quinteto',
+    nombre: 'Quintet',
     precio: '1.200 €',
-    musicos: '5 músicos',
+    musicos: '5 músics',
     descripcion:
-      'Cuarteto + trompeta. Vientos para verbenas grandes y momentos de máxima energía.',
-    ideal: 'Fiestas mayores, bodas grandes',
+      'Quartet + trompeta. Vents per a revetlles grans i moments de màxima energia.',
+    ideal: 'Festes majors, casaments grans',
   },
   {
     nombre: 'Banda completa',
-    precio: 'desde 1.400 €',
-    musicos: '6 músicos o más',
+    precio: 'des de 1.400 €',
+    musicos: '6 músics o més',
     descripcion:
-      'Quinteto + bajista, percusión, guitarra o saxo adicional. Sonido orquestal en escenarios XXL.',
-    ideal: 'Festivales, escenarios grandes',
+      'Quintet + baixista, percussió, guitarra o saxo addicional. So orquestral a escenaris XXL.',
+    ideal: 'Festivals, escenaris grans',
   },
 ];
 
 const incluye = [
-  'Show en directo de 120 min (extras a pactar)',
-  'Repertorio bilingüe ES/CA — pop-rock, rumba catalana, latineo y verbeneras',
-  'Cuatro músicos con experiencia tocando en bodas, salas y fiestas mayores',
-  'Personalización de canción clave (entrada, primer baile, momento especial)',
-  'Coordinación previa con vuestro wedding planner o programador',
+  'Xou en directe de 120 min (extres a pactar)',
+  'Repertori bilingüe ES/CA — pop-rock, rumba catalana, latineig i revetlleres',
+  'Quatre músics amb experiència en casaments, sales i festes majors',
+  'Personalització de cançó clau (entrada, primer ball, moment especial)',
+  'Coordinació prèvia amb el vostre wedding planner o programador',
 ];
 
 const noIncluye = [
-  'Sonido y técnico (ver bloque abajo)',
-  'Backline en venues sin instalación',
-  'Desplazamientos largos fuera de Catalunya (presupuesto aparte)',
+  'So i tècnic (mira el bloc de sota)',
+  'Backline en espais sense instal·lació',
+  'Desplaçaments llargs fora de Catalunya (pressupost a part)',
 ];
 
 const clientes = [
-  'Ayuntamiento de Sant Adrià de Besòs',
-  'Ayuntamiento de Barberà del Vallès',
+  'Ajuntament de Sant Adrià de Besòs',
+  'Ajuntament de Barberà del Vallès',
   'Centro Asturiano de Barcelona',
-  'Asociación de Vecinos de la Barceloneta · Rumba Beach Festival (× 2)',
-  'Asociación de Vecinos del Arc de Triomf',
+  'Associació de Veïns de la Barceloneta · Rumba Beach Festival (× 2)',
+  "Associació de Veïns de l'Arc de Triomf",
 ];
 
-export default function PreciosPage() {
+export default function PreusPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: 'Banda de música en directo',
+    serviceType: 'Banda de música en directe',
     provider: {
       '@type': 'MusicGroup',
       name: 'Lady Jarana',
       url: 'https://ladyjarana.com',
     },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Catalunya, España' },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Catalunya, Espanya' },
     offers: tiers.map((t) => ({
       '@type': 'Offer',
-      name: `Banda en directo — ${t.nombre}`,
+      name: `Grup en directe — ${t.nombre}`,
       price: t.precio.replace(/[^\d]/g, ''),
       priceCurrency: 'EUR',
       description: t.descripcion,
@@ -106,7 +108,6 @@ export default function PreciosPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* HERO */}
         <section className="relative overflow-hidden bg-azul pt-32 pb-16 lg:pt-40 lg:pb-24">
           <div className="absolute inset-0 opacity-20 mix-blend-overlay">
             <Image
@@ -120,20 +121,19 @@ export default function PreciosPage() {
           </div>
           <div className="relative mx-auto max-w-5xl px-6 text-center">
             <p className="mb-3 font-body text-xs font-bold uppercase tracking-[0.3em] text-sol">
-              ✦ Precios sin sorpresas
+              ✦ Preus sense sorpreses
             </p>
             <h1 className="mb-5 font-display text-4xl font-bold italic leading-[1.02] text-crema sm:text-5xl lg:text-7xl">
-              Cuánto cuesta <br />
-              <span className="text-sol">contratar la jarana.</span>
+              Quant costa <br />
+              <span className="text-sol">contractar la jarana.</span>
             </h1>
             <p className="mx-auto max-w-2xl font-body text-base text-crema/90 lg:text-lg">
-              Sin tarifas crípticas ni "depende". Aquí los números base. Lo
-              afinamos contigo según fecha, sitio y formato por WhatsApp.
+              Sense tarifes críptiques ni &quot;depèn&quot;. Aquí els números
+              base. Els afinem amb tu segons data, lloc i format per WhatsApp.
             </p>
           </div>
         </section>
 
-        {/* TIERS */}
         <section className="bg-crema py-16 lg:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <div className="grid gap-6 md:grid-cols-3">
@@ -146,7 +146,7 @@ export default function PreciosPage() {
                 >
                   {t.destacado && (
                     <span className="absolute -top-4 left-6 rounded-full border-2 border-negro bg-rojo px-3 py-1 font-body text-[10px] font-bold uppercase tracking-wider text-blanco shadow-[2px_2px_0_var(--negro)]">
-                      ★ El más pedido
+                      ★ El més demanat
                     </span>
                   )}
 
@@ -169,66 +169,70 @@ export default function PreciosPage() {
                     href={WHATSAPP_URL}
                     variant={t.destacado ? 'primary' : 'secondary'}
                   >
-                    Pedir presupuesto →
+                    Demanar pressupost →
                   </Button>
                 </div>
               ))}
             </div>
 
             <p className="mt-8 text-center font-body text-sm text-negro/70">
-              <strong className="text-negro">A partir de cuarteto.</strong>{' '}
-              Cada músico adicional sobre el cuarteto suma 200 €. No hacemos
-              dúo ni trío.
+              <strong className="text-negro">A partir de quartet.</strong> Cada
+              músic addicional sobre el quartet suma 200 €. No fem duo ni trio.
             </p>
           </div>
         </section>
 
-        {/* SONIDO */}
         <section className="bg-negro py-16 lg:py-24">
           <div className="mx-auto max-w-5xl px-6">
             <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-sol">
-              ✦ Equipo de sonido
+              ✦ Equip de so
             </p>
             <h2 className="mt-1 mb-6 font-display text-3xl font-bold italic text-crema sm:text-4xl lg:text-5xl">
-              Lo ponemos nosotros <br />
-              <span className="text-sol">o lo pones tú.</span>
+              El posem nosaltres <br />
+              <span className="text-sol">o el poses tu.</span>
             </h2>
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-2xl border-2 border-crema/15 bg-negro/40 p-6">
                 <p className="font-body text-xs font-bold uppercase tracking-wider text-sol">
-                  Opción A · recomendada
+                  Opció A · recomanada
                 </p>
                 <h3 className="mt-1 mb-3 font-display text-2xl font-bold italic text-crema">
-                  Sonido del venue
+                  So del venue
                 </h3>
                 <p className="font-body text-sm text-crema/80 leading-relaxed">
-                  Si tu boda, sala o ayuntamiento ya tiene PA y técnico, perfecto. Mandamos rider y nos coordinamos con su técnico. Ahorras coste y simplificas logística.
+                  Si el teu casament, sala o ajuntament ja té PA i tècnic,
+                  perfecte. Enviem rider i ens coordinem amb el seu tècnic.
+                  Estalvies cost i simplifiques logística.
                 </p>
               </div>
 
               <div className="rounded-2xl border-2 border-sol/40 bg-negro p-6">
                 <p className="font-body text-xs font-bold uppercase tracking-wider text-sol">
-                  Opción B
+                  Opció B
                 </p>
                 <h3 className="mt-1 mb-3 font-display text-2xl font-bold italic text-crema">
-                  Sonido propio · desde 600 €
+                  So propi · des de 600 €
                 </h3>
                 <p className="mb-3 font-body text-sm text-crema/80 leading-relaxed">
-                  PA y monitores propios + 2 técnicos. Ideal para fiestas privadas, espacios sin equipo y bodas en finca.
+                  PA i monitors propis + 2 tècnics. Ideal per a festes
+                  privades, espais sense equip i casaments a finca.
                 </p>
                 <p className="font-body text-xs text-crema/60">
-                  Precio según aforo y necesidad de potencia. Ajustamos por WhatsApp.
+                  Preu segons aforament i necessitat de potència. Afinem per
+                  WhatsApp.
                 </p>
               </div>
             </div>
 
             <div className="mt-8 rounded-2xl border-2 border-sol/30 bg-sol/10 p-5">
               <p className="font-body text-sm text-crema">
-                <strong className="text-sol">¿Necesitas el rider técnico?</strong>{' '}
+                <strong className="text-sol">
+                  Necessites el rider tècnic?
+                </strong>{' '}
                 <span className="text-crema/80">
-                  Te lo pasamos al momento. Micros, monitores, plano de
-                  escenario y PA mínimo según aforo —{' '}
+                  Te&apos;l passem al moment. Micros, monitors, plànol
+                  d&apos;escenari i PA mínim segons aforament —{' '}
                 </span>
                 <a
                   href={WHATSAPP_URL}
@@ -236,23 +240,22 @@ export default function PreciosPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  pídenoslo por WhatsApp →
+                  demana&apos;l per WhatsApp →
                 </a>
               </p>
             </div>
           </div>
         </section>
 
-        {/* INCLUYE / NO INCLUYE */}
         <section className="bg-crema py-16 lg:py-24">
           <div className="mx-auto max-w-5xl px-6">
             <h2 className="mb-8 font-display text-3xl font-bold italic text-negro sm:text-4xl">
-              Qué entra <span className="text-rojo">y qué no.</span>
+              Què entra <span className="text-rojo">i què no.</span>
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-2xl border-4 border-negro bg-blanco p-6 shadow-[6px_6px_0_var(--negro)]">
                 <h3 className="mb-4 font-display text-xl font-bold italic text-negro">
-                  ✓ Incluido en el precio
+                  ✓ Inclòs en el preu
                 </h3>
                 <ul className="space-y-2">
                   {incluye.map((i) => (
@@ -268,7 +271,7 @@ export default function PreciosPage() {
               </div>
               <div className="rounded-2xl border-4 border-negro bg-blanco p-6 shadow-[6px_6px_0_var(--negro)]">
                 <h3 className="mb-4 font-display text-xl font-bold italic text-negro">
-                  ✗ Va aparte
+                  ✗ Va a part
                 </h3>
                 <ul className="space-y-2">
                   {noIncluye.map((i) => (
@@ -286,34 +289,32 @@ export default function PreciosPage() {
           </div>
         </section>
 
-        {/* ZONA */}
         <section className="bg-naranja py-16 lg:py-20">
           <div className="mx-auto max-w-5xl px-6 text-center">
             <p className="mb-3 font-body text-xs font-bold uppercase tracking-[0.3em] text-blanco">
-              ✦ Dónde tocamos
+              ✦ On toquem
             </p>
             <h2 className="mb-4 font-display text-3xl font-bold italic text-blanco sm:text-4xl lg:text-5xl">
-              Toda <span className="text-sol">Catalunya.</span>
+              Tota <span className="text-sol">Catalunya.</span>
             </h2>
             <p className="mx-auto max-w-2xl font-body text-base text-blanco/90">
-              Sin recargo en Barcelona ciudad, área metropolitana, costa
-              catalana y comarcas. Fuera de Catalunya consultamos
-              desplazamiento — <strong>no cerramos puertas</strong>.
+              Sense recàrrec a Barcelona ciutat, àrea metropolitana, costa
+              catalana i comarques. Fora de Catalunya consultem desplaçament —{' '}
+              <strong>no tanquem portes</strong>.
             </p>
             <p className="mt-3 font-body text-sm text-blanco/75">
-              Show bilingüe español + catalán. El público manda.
+              Xou bilingüe català + espanyol. Mana el públic.
             </p>
           </div>
         </section>
 
-        {/* CLIENTES */}
         <section className="bg-blanco py-16 lg:py-20">
           <div className="mx-auto max-w-5xl px-6">
             <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-rojo">
-              ✦ Han confiado
+              ✦ Han confiat
             </p>
             <h2 className="mt-1 mb-8 font-display text-3xl font-bold italic text-negro sm:text-4xl">
-              Quién <span className="text-rojo">nos contrata.</span>
+              Qui <span className="text-rojo">ens contracta.</span>
             </h2>
             <ul className="grid gap-3 sm:grid-cols-2">
               {clientes.map((c) => (
@@ -328,24 +329,23 @@ export default function PreciosPage() {
           </div>
         </section>
 
-        {/* CTA FINAL */}
         <section className="bg-rojo py-16 lg:py-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <h2 className="mb-4 font-display text-3xl font-bold italic leading-tight text-blanco sm:text-4xl lg:text-5xl">
-              ¿Te encajan los números? <br />
-              <span className="text-sol">Cuéntanos tu fiesta.</span>
+              T&apos;encaixen els números? <br />
+              <span className="text-sol">Explica&apos;ns la teva festa.</span>
             </h2>
             <p className="mx-auto mb-8 max-w-xl font-body text-base text-blanco/90">
-              Fecha, sitio y formato. Te decimos sí en minutos con presupuesto
-              cerrado. Sin formularios.
+              Data, lloc i format. Et diem sí en minuts amb pressupost tancat.
+              Sense formularis.
             </p>
             <Button href={WHATSAPP_URL} variant="secondary">
-              Hablemos por WhatsApp →
+              Parlem per WhatsApp →
             </Button>
           </div>
         </section>
       </main>
-      <Footer />
+      <FooterCA />
     </>
   );
 }

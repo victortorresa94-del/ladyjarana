@@ -4,10 +4,42 @@ const BASE = 'https://ladyjarana.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return [
-    { url: `${BASE}/`, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${BASE}/precios`, lastModified: now, changeFrequency: 'monthly', priority: 0.95 },
-    { url: `${BASE}/contratar`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+  const esRoutes: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 1,
+      alternates: {
+        languages: { es: `${BASE}/`, ca: `${BASE}/ca`, 'x-default': `${BASE}/` },
+      },
+    },
+    {
+      url: `${BASE}/precios`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+      alternates: {
+        languages: {
+          es: `${BASE}/precios`,
+          ca: `${BASE}/ca/preus`,
+          'x-default': `${BASE}/precios`,
+        },
+      },
+    },
+    {
+      url: `${BASE}/contratar`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+      alternates: {
+        languages: {
+          es: `${BASE}/contratar`,
+          ca: `${BASE}/ca/contractar`,
+          'x-default': `${BASE}/contratar`,
+        },
+      },
+    },
     { url: `${BASE}/eventos`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/repertorio`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/galeria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -17,4 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/politica-privacidad`, lastModified: now, changeFrequency: 'yearly', priority: 0.2 },
     { url: `${BASE}/politica-cookies`, lastModified: now, changeFrequency: 'yearly', priority: 0.2 },
   ];
+
+  const caRoutes: MetadataRoute.Sitemap = [
+    { url: `${BASE}/ca`, lastModified: now, changeFrequency: 'weekly', priority: 0.98 },
+    { url: `${BASE}/ca/preus`, lastModified: now, changeFrequency: 'monthly', priority: 0.93 },
+    { url: `${BASE}/ca/contractar`, lastModified: now, changeFrequency: 'monthly', priority: 0.88 },
+  ];
+
+  return [...esRoutes, ...caRoutes];
 }
