@@ -61,6 +61,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ca/serveis/esdeveniments-privats`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/ca/serveis/esdeveniments-empresa`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/ca/galeria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/ca/dossier`, lastModified: now, changeFrequency: 'monthly', priority: 0.55 },
+    { url: `${BASE}/ca/material`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   return [...esRoutes, ...caRoutes];
