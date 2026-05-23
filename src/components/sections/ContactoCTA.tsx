@@ -43,8 +43,8 @@ export default function ContactoCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Para que nadie <br />
-          <span className="text-sol">se quede sentado.</span>
+          Pásanos la fecha. <br />
+          <span className="text-sol">Montamos el fiestón.</span>
         </motion.h2>
 
         <motion.p
