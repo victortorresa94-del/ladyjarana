@@ -218,18 +218,19 @@ export default function PreciosPage() {
 
             <div className="mt-8 rounded-2xl border-2 border-sol/30 bg-sol/10 p-5">
               <p className="font-body text-sm text-crema">
-                <strong className="text-sol">¿Quieres el rider técnico?</strong>{' '}
+                <strong className="text-sol">¿Necesitas el rider técnico?</strong>{' '}
+                <span className="text-crema/80">
+                  Te lo pasamos al momento. Micros, monitores, plano de
+                  escenario y PA mínimo según aforo —{' '}
+                </span>
                 <a
-                  href="/rider-lady-jarana.pdf"
+                  href={WHATSAPP_URL}
                   className="font-bold text-sol underline hover:text-blanco"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Descárgalo en PDF →
-                </a>{' '}
-                <span className="text-crema/70">
-                  (necesidades por músico, plano de escenario, sistema de PA mínimo).
-                </span>
+                  pídenoslo por WhatsApp →
+                </a>
               </p>
             </div>
           </div>
