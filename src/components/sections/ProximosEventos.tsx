@@ -1,14 +1,25 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { proximosEventos } from '@/lib/trayectoria';
 import { WHATSAPP_URL } from '@/lib/contact';
 
 export default function ProximosEventos() {
   return (
     <section className="relative bg-rojo py-10 lg:py-14 overflow-hidden border-y-4 border-negro">
-      {/* dotted background */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Foto banda como textura de fondo */}
+      <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none">
+        <Image
+          src="/fotos/grupo-publico.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+      {/* dotted overlay */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div
           className="absolute inset-0"
           style={{
