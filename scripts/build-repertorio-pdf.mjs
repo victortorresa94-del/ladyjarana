@@ -346,21 +346,23 @@ doc
     PAGE.height - 38,
     { width: PAGE.width - MARGIN * 2, align: 'center' },
   );
+const footerText =
+  'ESCÚCHALO ENTERO EN SPOTIFY · ' +
+  SPOTIFY_PLAYLIST_URL.replace('https://', '');
+const footerY = PAGE.height - 24;
 doc
   .fillColor(COLORS.rojo)
   .font('Helvetica-Bold')
   .fontSize(8)
-  .text(
-    'ESCÚCHALO ENTERO EN SPOTIFY · ' + SPOTIFY_PLAYLIST_URL.replace('https://', ''),
-    MARGIN,
-    PAGE.height - 24,
-    {
-      width: PAGE.width - MARGIN * 2,
-      align: 'center',
-      characterSpacing: 1,
-      link: SPOTIFY_PLAYLIST_URL,
-    },
-  );
+  .text(footerText, MARGIN, footerY, {
+    width: PAGE.width - MARGIN * 2,
+    align: 'center',
+    characterSpacing: 1,
+    link: SPOTIFY_PLAYLIST_URL,
+    underline: true,
+  });
+// Anotación explícita para máxima compat. móvil
+doc.link(MARGIN, footerY - 2, PAGE.width - MARGIN * 2, 12, SPOTIFY_PLAYLIST_URL);
 
 // ============== PÁGINA 3 · CONTRAPORTADA ==============
 doc.addPage();
@@ -425,28 +427,32 @@ doc
   .fillColor(COLORS.crema)
   .font('Helvetica')
   .fontSize(11)
-  .text('Instagram  @lady.jarana', MARGIN + 20, ctaY + 105);
-doc
-  .fillColor(COLORS.crema)
-  .font('Helvetica')
-  .fontSize(11)
-  .text('TikTok  @LadyJaranaOficial', MARGIN + 20, ctaY + 125);
-doc
-  .fillColor(COLORS.crema)
-  .font('Helvetica')
-  .fontSize(11)
-  .text('YouTube  @ladyjarana', MARGIN + 20, ctaY + 145);
+  .text('Instagram  @lady.jarana', MARGIN + 20, ctaY + 105, {
+    link: 'https://instagram.com/lady.jarana',
+  });
 
 doc
   .fillColor(COLORS.sol)
   .font('Helvetica-Bold')
   .fontSize(10)
   .text('PLAYLIST OFICIAL EN SPOTIFY', MARGIN, 650, { characterSpacing: 3 });
+
+// Texto del link visible
+const spotifyX = MARGIN;
+const spotifyY = 668;
+const spotifyW = 380;
+const spotifyH = 14;
 doc
   .fillColor(COLORS.crema)
   .font('Helvetica')
   .fontSize(10)
-  .text(SPOTIFY_PLAYLIST_URL, MARGIN, 668, { link: SPOTIFY_PLAYLIST_URL });
+  .text(SPOTIFY_PLAYLIST_URL, spotifyX, spotifyY, {
+    link: SPOTIFY_PLAYLIST_URL,
+    underline: true,
+  });
+// Anotación explícita por encima del texto para que los visores móviles
+// (Apple Books, Drive, etc) la reconozcan sí o sí.
+doc.link(spotifyX, spotifyY - 2, spotifyW, spotifyH, SPOTIFY_PLAYLIST_URL);
 
 doc
   .fillColor(COLORS.crema)

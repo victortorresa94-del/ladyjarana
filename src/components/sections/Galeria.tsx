@@ -11,20 +11,16 @@ import InstagramReel from '../ui/InstagramReel';
 import { liveVideos } from '@/lib/videos';
 import { INSTAGRAM_URL } from '@/lib/contact';
 
-// Reels de Instagram curados — IDs históricos del repo (curados por views
-// y "atractivo" en el commit 5f652a2). No están entre los vídeos del Blob,
-// así que no duplican los nativos de arriba.
-const INSTAGRAM_REELS = [
-  { id: 'DWn3wnqjO5c', title: 'Tenemos un fondo flamenco…', description: 'Reel · Instagram' },
-  { id: 'DOniq2XjBRE', title: 'Boda Lady Jarana', description: 'Reel · Instagram' },
-  { id: 'DTdt3oqjEjn', title: 'Reel destacado', description: 'Reel · Instagram' },
-] as const;
-
 export default function Galeria() {
   const [feedIndex, setFeedIndex] = useState<number | null>(null);
 
+  // Sólo los vídeos nativos / drive del Blob entran en el feed vertical
+  // (los reels de Instagram se abren en su modal propio, no en el feed).
   const reels = useMemo(
-    () => liveVideos.filter((v) => v.aspectRatio === '9:16'),
+    () =>
+      liveVideos.filter(
+        (v) => v.aspectRatio === '9:16' && v.source !== 'instagram',
+      ),
     [],
   );
   const reelKey = (idx: number) => {
@@ -55,7 +51,13 @@ export default function Galeria() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
             >
-              {video.aspectRatio === '9:16' ? (
+              {video.source === 'instagram' ? (
+                <InstagramReel
+                  reelId={video.id}
+                  title={video.title}
+                  description={video.description}
+                />
+              ) : video.aspectRatio === '9:16' ? (
                 <ReelCard
                   reel={video}
                   onClick={() => setFeedIndex(findReelIndex(video.source, video.id))}
@@ -77,25 +79,6 @@ export default function Galeria() {
                   aspectRatio={(video.aspectRatio as '9:16' | '16:9' | '1:1') ?? '16:9'}
                 />
               )}
-            </motion.div>
-          ))}
-
-          {INSTAGRAM_REELS.map((reel, idx) => (
-            <motion.div
-              key={reel.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{
-                duration: 0.5,
-                delay: (liveVideos.length + idx) * 0.05,
-              }}
-            >
-              <InstagramReel
-                reelId={reel.id}
-                title={reel.title}
-                description={reel.description}
-              />
             </motion.div>
           ))}
         </div>

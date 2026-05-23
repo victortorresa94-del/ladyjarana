@@ -32,10 +32,8 @@ export const REPERTORIO: BloqueRepertorio[] = [
       { titulo: 'No puedo vivir sin ti', artista: 'Los Ronaldos' },
       { titulo: 'La madre de José', artista: 'El Canto del Loco' },
       { titulo: 'Sin documentos', artista: 'Los Rodríguez' },
-      { titulo: 'Caminando por la vida', artista: 'Melendi' },
       { titulo: 'Por la boca vive el pez', artista: 'Fito & Fitipaldis' },
       { titulo: 'La casa por el tejado', artista: 'Fito & Fitipaldis' },
-      { titulo: '¡Salta!', artista: 'Tequila' },
       { titulo: 'Zapatillas', artista: 'El Canto del Loco' },
       { titulo: 'La camisa negra', artista: 'Juanes' },
       { titulo: 'Carolina', artista: 'M-Clan' },
@@ -48,7 +46,7 @@ export const REPERTORIO: BloqueRepertorio[] = [
   },
   {
     id: 'rumba-flamenquito',
-    titulo: 'Rumba, flamenquito y copla',
+    titulo: 'Rumba y flamenquito',
     descripcion:
       'Palmas arriba. Estopa, Fondo Flamenco, El Barrio y Gipsy Kings poniendo la sandunga.',
     emoji: '💃',
@@ -59,6 +57,9 @@ export const REPERTORIO: BloqueRepertorio[] = [
       { titulo: 'Mi estrella blanca', artista: 'Fondo Flamenco' },
       { titulo: 'El toro y la luna (Taburete edit)', artista: 'Taburete' },
       { titulo: 'Orgullo', artista: 'El Barrio' },
+      { titulo: 'Caminando por la vida', artista: 'Melendi' },
+      { titulo: 'Amigos para siempre', artista: 'Los Manolos' },
+      { titulo: 'El muerto vivo', artista: 'Peret' },
     ],
   },
   {
@@ -83,8 +84,7 @@ export const REPERTORIO: BloqueRepertorio[] = [
       'La sección sinvergüenza. Cuando la gente ya no se acuerda ni de cómo se llama, suena esto.',
     emoji: '🎊',
     canciones: [
-      { titulo: 'El muerto vivo', artista: 'Peret' },
-      { titulo: 'Amigos para siempre', artista: 'Los Manolos' },
+      { titulo: '¡Salta!', artista: 'Tequila' },
       { titulo: 'La Marina sta morena', artista: 'Figa Flawas' },
       { titulo: 'Coti x Coti', artista: 'The Tyets' },
       { titulo: 'Todos los días sale el sol', artista: 'Bongo Botrako' },

@@ -10,6 +10,9 @@ export interface LiveVideo {
 
 const BLOB = 'https://f8gfdg48kikp71xk.public.blob.vercel-storage.com';
 
+// Orden visible en la galería (sm=2 cols, lg=3 cols).
+// Posiciones 7 y 8 elegidas por Víctor: 7 = Centro Asturiano (nuevo),
+// 8 = reel de Instagram (único que enlaza al perfil, estrategia "síguenos").
 export const liveVideos: LiveVideo[] = [
   {
     source: 'native',
@@ -53,6 +56,24 @@ export const liveVideos: LiveVideo[] = [
     description: 'Versión Lady Jarana',
     aspectRatio: '9:16',
   },
+  // 7 — vídeo nuevo subido al Blob ("Centro Astur"). Si el filename real
+  // difiere, ajustar aquí y el optimizador volverá a procesarlo.
+  {
+    source: 'native',
+    id: `${BLOB}/Centro%20Astur.mp4`,
+    title: 'Centro Asturiano',
+    description: 'Verbena · directo',
+    aspectRatio: '9:16',
+  },
+  // 8 — único reel de Instagram, sirve de CTA "síguenos en @lady.jarana"
+  {
+    source: 'instagram',
+    id: 'DOniq2XjBRE',
+    title: 'Más en Instagram',
+    description: 'Síguenos en @lady.jarana →',
+    aspectRatio: '9:16',
+  },
+  // 9 — El chipirón conservado al final
   {
     source: 'native',
     id: `${BLOB}/El%20chipiron.MP4`,
