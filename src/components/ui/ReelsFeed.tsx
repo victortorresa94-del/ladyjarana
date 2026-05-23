@@ -104,19 +104,35 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      // Tap en cualquier zona del overlay desmutea si está muted —
+      // failsafe para Android donde los botones de la cabecera pueden
+      // quedar tapados por la barra dinámica del browser.
+      onClick={() => {
+        if (muted) setMuted(false);
+      }}
     >
       <button
-        className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-negro/70 text-2xl text-blanco backdrop-blur border border-blanco/20 cursor-pointer"
-        onClick={onClose}
+        className="absolute right-4 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-negro/70 text-2xl text-blanco backdrop-blur border border-blanco/20 cursor-pointer"
+        style={{ top: 'max(env(safe-area-inset-top), 1rem)' }}
+        onClick={(e) => {
+          e.stopPropagation();
+          onClose();
+        }}
         aria-label="Cerrar"
       >
         ✕
       </button>
 
-      <div className="absolute left-4 top-4 z-20 flex items-center gap-2">
+      <div
+        className="absolute left-4 z-30 flex items-center gap-2"
+        style={{ top: 'max(env(safe-area-inset-top), 1rem)' }}
+      >
         <button
           className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-negro/70 text-blanco backdrop-blur border border-blanco/20 cursor-pointer"
-          onClick={() => setMuted((m) => !m)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setMuted((m) => !m);
+          }}
           aria-label={muted ? 'Activar sonido' : 'Silenciar'}
         >
           {muted ? (
@@ -130,23 +146,38 @@ export default function ReelsFeed({ reels, initialIndex, onClose }: ReelsFeedPro
             </svg>
           )}
         </button>
-
-        {muted && (
-          <motion.button
-            onClick={() => setMuted(false)}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0, scale: [1, 1.06, 1] }}
-            transition={{
-              opacity: { duration: 0.3 },
-              x: { duration: 0.3 },
-              scale: { duration: 1.4, repeat: Infinity, ease: 'easeInOut' },
-            }}
-            className="flex items-center gap-1 rounded-full bg-blanco px-3 py-2 text-xs font-bold text-negro shadow-[3px_3px_0_var(--negro)] border-2 border-negro cursor-pointer whitespace-nowrap"
-          >
-            <span aria-hidden>←</span> Activa el sonido
-          </motion.button>
-        )}
       </div>
+
+      {/* Overlay grande SIEMPRE visible mientras esté muted — Android
+          friendly. Aparece centrado en la pantalla, sin depender de
+          que la cabecera del browser esté visible. */}
+      {muted && (
+        <motion.button
+          onClick={(e) => {
+            e.stopPropagation();
+            setMuted(false);
+          }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: [1, 1.04, 1] }}
+          transition={{
+            opacity: { duration: 0.3 },
+            scale: { duration: 1.8, repeat: Infinity, ease: 'easeInOut' },
+          }}
+          className="absolute left-1/2 z-30 -translate-x-1/2 flex items-center gap-3 rounded-full border-4 border-negro bg-blanco px-6 py-3.5 font-display text-base font-bold italic text-negro shadow-[5px_5px_0_var(--negro)] cursor-pointer whitespace-nowrap sm:text-lg"
+          style={{ bottom: 'max(env(safe-area-inset-bottom), 5.5rem)' }}
+          aria-label="Activar sonido"
+        >
+          <svg
+            className="h-6 w-6 text-rojo"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden
+          >
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.6 7-8.8s-3-7.8-7-8.8z" />
+          </svg>
+          Toca para activar el sonido
+        </motion.button>
+      )}
 
       <div
         ref={containerRef}
