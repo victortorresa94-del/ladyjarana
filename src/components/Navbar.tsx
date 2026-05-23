@@ -12,7 +12,7 @@ const links = [
   { label: 'Música', href: '/#musica' },
   { label: 'Repertorio', href: '/repertorio' },
   { label: 'Formatos', href: '/#formatos' },
-  { label: 'Eventos', href: '/#eventos' },
+  { label: 'Eventos', href: '/eventos' },
   { label: 'Galería', href: '/#galeria' },
 ];
 
@@ -50,12 +50,12 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center" aria-label="Lady Jarana — inicio">
             <Image
-              src="/personajes/palmera-jaranera.png"
+              src="/logo/palmera-melon.png"
               alt="Lady Jarana"
-              width={140}
-              height={140}
+              width={120}
+              height={120}
               priority
-              className="h-14 w-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] sm:h-16"
+              className="h-12 w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
             />
           </Link>
 
