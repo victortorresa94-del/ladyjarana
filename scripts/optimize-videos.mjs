@@ -2,7 +2,7 @@
 // descarga cada uno, lo re-encoda con ffmpeg + faststart, y lo re-sube
 // con el mismo pathname pisando el original.
 // Trigger: tocar este comentario y push para forzar nueva ejecución
-// (último: Centro Astur).
+// (último: re-encode Centro Astur.mov → h264/mp4 para Chrome+Firefox).
 // Escribe un diagnóstico claro en el RESUMEN del run de GitHub Actions
 // (pestaña "Summary") y hace fallar el run en rojo si algo va mal.
 // Run: node scripts/optimize-videos.mjs

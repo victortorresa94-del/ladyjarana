@@ -60,10 +60,19 @@ export const liveVideos: LiveVideo[] = [
     description: 'Versión Lady Jarana',
     aspectRatio: '9:16',
   },
-  // — Centro Asturiano SACADO TEMPORALMENTE: el filename en Vercel Blob
-  // no coincide con ninguna de las 8 variantes que probamos (Centro
-  // Astur/Asturiano × .MOV/.mov/.mp4/.MP4). Reincorporar cuando Víctor
-  // confirme el nombre exacto desde el panel Vercel → Storage → Blob.
+  // 7 — Centro Asturiano. Filename real en Blob confirmado por Víctor:
+  // /Centro Astur.mov (minúsculas). El workflow optimize-videos.mjs
+  // se encarga de re-encodear el contenido a h264/mp4 manteniendo el
+  // pathname .mov pero con Content-Type video/mp4 — así Chrome y
+  // Firefox lo reproducen (sino el HEVC original del iPhone solo va
+  // en Safari).
+  {
+    source: 'native',
+    id: `${BLOB}/Centro%20Astur.mov`,
+    title: 'Centro Asturiano',
+    description: 'Verbena · directo',
+    aspectRatio: '9:16',
+  },
   // 8 — El chipirón
   {
     source: 'native',
