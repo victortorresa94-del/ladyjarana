@@ -9,11 +9,10 @@ import { WHATSAPP_URL } from '@/lib/contact';
 
 const links = [
   { label: 'Banda', href: '/#banda' },
-  { label: 'Música', href: '/#musica' },
   { label: 'Repertorio', href: '/repertorio' },
-  { label: 'Formatos', href: '/#formatos' },
   { label: 'Eventos', href: '/eventos' },
   { label: 'Galería', href: '/#galeria' },
+  { label: 'Precios', href: '/precios' },
 ];
 
 export default function Navbar() {

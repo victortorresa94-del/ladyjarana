@@ -7,26 +7,34 @@ import { WHATSAPP_URL, PHONE_DISPLAY, EMAIL } from '@/lib/contact';
 export const metadata: Metadata = {
   title: 'Contratar Lady Jarana — Banda en directo para tu evento | Barcelona',
   description:
-    'Contrata Lady Jarana para tu boda, fiesta mayor o evento privado. Respuesta en 24h. Cuarteto, trío y dúo. Disponibilidad temporada 2026.',
+    'Contrata Lady Jarana para tu boda, fiesta mayor o evento privado en Catalunya. Cuarteto desde 1000 €, +200 € por músico extra. Respuesta en minutos por WhatsApp.',
   alternates: { canonical: '/contratar' },
 };
 
 const faqs = [
   {
     q: '¿Cuánto cuesta contratar la banda?',
-    a: 'El precio depende del formato, la duración y la localización. Escríbenos y te enviamos presupuesto sin compromiso en menos de 24h.',
+    a: 'Cuarteto desde 1000 €. Cada músico adicional sobre el cuarteto suma 200 € (quinteto 1200 €, banda completa desde 1400 €). No hacemos dúo ni trío. Ver precios completos en /precios.',
   },
   {
     q: '¿Traéis equipo de sonido?',
-    a: 'Podemos llevar nuestro propio equipo o adaptarnos al vuestro. Indícalo en el formulario y lo hablamos.',
+    a: 'Preferimos que el sonido lo aporte el venue cuando es posible. Si no, llevamos PA propio y 2 técnicos desde 600 € — ideal para bodas en finca o fiestas privadas sin equipo.',
   },
   {
-    q: '¿Os desplazáis fuera de Barcelona?',
-    a: 'Sí, tocamos en toda Cataluña y resto de España. Solo necesitamos conocer la localización para ajustar logística.',
+    q: '¿Dónde tocáis?',
+    a: 'Toda Catalunya sin recargo: Barcelona ciudad, área metropolitana, costa catalana y comarcas. Fuera de Catalunya consultamos desplazamiento — no cerramos puertas, pero suma logística.',
+  },
+  {
+    q: '¿Cantáis en catalán?',
+    a: 'Show bilingüe español + catalán. Tenemos pop-rock catalán (L\'Empordà de Sopa de Cabra, Jennifer dels Catarres, Coti x Coti de The Tyets, La Marina sta morena…) además del castellano. El público manda.',
   },
   {
     q: '¿Se puede personalizar el repertorio?',
     a: 'Por supuesto. Si tenéis un tema especial para la ceremonia, el primer baile o un momento clave, lo preparamos.',
+  },
+  {
+    q: '¿Cuál es la formación mínima?',
+    a: 'Cuarteto. Voz/guitarra española (Víctor), eléctrica (Alejo), teclado/bajo (Iván) y batería (Diego). Quinteto si añadimos vientos. No hacemos formato más pequeño porque la fiesta lo notaría.',
   },
 ];
 

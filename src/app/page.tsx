@@ -13,6 +13,7 @@ import SpotifyCTA from '@/components/sections/SpotifyCTA';
 import Testimonios from '@/components/sections/Testimonios';
 import PressKit from '@/components/sections/PressKit';
 import TiposEventos from '@/components/sections/TiposEventos';
+import HanConfiado from '@/components/sections/HanConfiado';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <Galeria />
         <Formatos />
         <Trayectoria />
+        <HanConfiado />
         <ContactoCTA />
         <SpotifyCTA />
         <Testimonios />
