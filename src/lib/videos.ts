@@ -60,27 +60,10 @@ export const liveVideos: LiveVideo[] = [
     description: 'Versión Lady Jarana',
     aspectRatio: '9:16',
   },
-  // 7 — Centro Asturiano. Archivo original en Drive es quicktime .mov
-  // (ID 1THGgChoIoiO9Ex7ZJsqGV8kr6w_Z8qao). No sabemos la extensión exacta
-  // del Blob, así que listamos múltiples sources; el <video> usará la
-  // primera que cargue.
-  {
-    source: 'native',
-    id: `${BLOB}/Centro%20Astur.MOV`,
-    sources: [
-      `${BLOB}/Centro%20Astur.MOV`,
-      `${BLOB}/Centro%20Astur.mov`,
-      `${BLOB}/Centro%20Astur.mp4`,
-      `${BLOB}/Centro%20Astur.MP4`,
-      `${BLOB}/Centro%20Asturiano.mov`,
-      `${BLOB}/Centro%20Asturiano.MOV`,
-      `${BLOB}/Centro%20Asturiano.mp4`,
-      `${BLOB}/Centro%20Asturiano.MP4`,
-    ],
-    title: 'Centro Asturiano',
-    description: 'Verbena · directo',
-    aspectRatio: '9:16',
-  },
+  // — Centro Asturiano SACADO TEMPORALMENTE: el filename en Vercel Blob
+  // no coincide con ninguna de las 8 variantes que probamos (Centro
+  // Astur/Asturiano × .MOV/.mov/.mp4/.MP4). Reincorporar cuando Víctor
+  // confirme el nombre exacto desde el panel Vercel → Storage → Blob.
   // 8 — El chipirón
   {
     source: 'native',
