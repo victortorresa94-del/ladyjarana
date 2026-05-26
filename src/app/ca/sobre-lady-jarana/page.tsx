@@ -40,6 +40,7 @@ const milestones = [
   { year: '2026 · 31 maig', text: 'Segon concert a la Barceloneta. Escenari de capçalera consolidat.' },
   { year: '2026 · 23 juny', text: 'Revetlla de Sant Joan a l\'Arc de Triomf, Barcelona (Associació de Veïns de l\'Arc de Triomf).' },
   { year: '2026 · 27 juny', text: 'Lleida. Salt al circuit català fora de l\'àrea metropolitana.' },
+  { year: '2026 · 11 juliol', text: 'Festa del Correpintxos a Torregrossa (Pla d\'Urgell), 00:00. Revetlla de poble al Ponent.' },
 ];
 
 const generes = [

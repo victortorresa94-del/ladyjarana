@@ -159,6 +159,12 @@ export const proximosEventosCA: ProximoEvento[] = [
     fechaCorta: '27 jun',
     lugar: 'Lleida',
   },
+  {
+    fecha: '11 de Juliol 2026',
+    fechaCorta: '11 jul',
+    lugar: 'Correpintxos · Torregrossa',
+    hora: '00:00',
+  },
 ];
 
 // ─── Clients ──────────────────────────────────────────────────────────────

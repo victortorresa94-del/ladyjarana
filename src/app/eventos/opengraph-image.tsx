@@ -10,7 +10,7 @@ export default function OG() {
     eyebrow: '· Calendario en directo',
     title: 'Próximos bolos',
     subtitle:
-      'Barceloneta · Arc de Triomf (Sant Joan) · Lleida. Festes majors, bodas y conciertos en toda Catalunya 2026.',
+      'Barceloneta · Arc de Triomf (Sant Joan) · Lleida · Correpintxos Torregrossa. Festes majors, bodas y conciertos en toda Catalunya 2026.',
     accent: 'sol',
   });
 }
