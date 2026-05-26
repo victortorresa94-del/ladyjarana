@@ -29,12 +29,6 @@ const logos: Asset[] = [
 const fotos: Asset[] = [
   { src: '/fotos/grupo-2.jpg', name: 'Lady Jarana — grupo', filename: 'lady-jarana-grupo-2.jpg' },
   { src: '/fotos/grupo-1.jpg', name: 'Lady Jarana — grupo (alt 1)', filename: 'lady-jarana-grupo-1.jpg' },
-  { src: '/fotos/grupo-3.jpg', name: 'En directo (3)', filename: 'lady-jarana-grupo-3.jpg' },
-  { src: '/fotos/grupo-4.jpg', name: 'En directo (4)', filename: 'lady-jarana-grupo-4.jpg' },
-  { src: '/fotos/grupo-5.jpg', name: 'En directo (5)', filename: 'lady-jarana-grupo-5.jpg' },
-  { src: '/fotos/grupo-6.jpg', name: 'En directo (6)', filename: 'lady-jarana-grupo-6.jpg' },
-  { src: '/fotos/grupo-publico.jpg', name: 'Con el público', filename: 'lady-jarana-publico.jpg' },
-  { src: '/fotos/backstage.jpg', name: 'Backstage', filename: 'lady-jarana-backstage.jpg' },
 ];
 
 const ilustraciones: Asset[] = [
