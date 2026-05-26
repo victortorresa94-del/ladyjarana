@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'On toqueu?',
-    a: "Tota Catalunya sense recàrrec: Barcelona ciutat, àrea metropolitana, costa catalana i comarques. Fora de Catalunya consultem desplaçament — no tanquem portes, però suma logística.",
+    a: "Tota Catalunya · +100 € de desplaçament: Barcelona ciutat, àrea metropolitana, costa catalana i comarques. Fora de Catalunya consultem desplaçament — no tanquem portes, però suma logística.",
   },
   {
     q: 'Canteu en català?',
@@ -136,7 +136,7 @@ export default function ContractarPage() {
                 📍 Tota Catalunya
               </p>
               <p className="mt-1 font-body text-sm text-negro/75">
-                Sense recàrrec a Catalunya. Fora consultem desplaçament. Xou
+                100 € de desplaçament a tota Catalunya. Fora consultem. Xou
                 bilingüe ES/CA.
               </p>
             </div>

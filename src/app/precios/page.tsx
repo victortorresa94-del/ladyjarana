@@ -314,7 +314,7 @@ export default function PreciosPage() {
               Toda <span className="text-sol">Catalunya.</span>
             </h2>
             <p className="mx-auto max-w-2xl font-body text-base text-blanco/90">
-              Sin recargo en Barcelona ciudad, área metropolitana, costa
+              100 € de desplazamiento en Barcelona ciudad, área metropolitana, costa
               catalana y comarcas. Fuera de Catalunya consultamos
               desplazamiento — <strong>no cerramos puertas</strong>.
             </p>

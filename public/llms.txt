@@ -21,7 +21,7 @@ El precio dentro de cada rango se afina por fecha, distancia, aforo y extras (ve
 
 ## Zona de actuación
 
-Toda Catalunya sin recargo: Barcelona ciudad, área metropolitana, costa catalana y comarcas. Fuera de Catalunya consultamos desplazamiento.
+Toda Catalunya · +100 € de desplazamiento: Barcelona ciudad, área metropolitana, costa catalana y comarcas. Fuera de Catalunya consultamos desplazamiento.
 
 ## Han confiado
 

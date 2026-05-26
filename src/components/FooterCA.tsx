@@ -117,7 +117,7 @@ export default function FooterCA() {
               ))}
             </ul>
             <p className="mt-4 font-body text-xs text-crema/50">
-              I tota Catalunya sense recàrrec.
+              I tota Catalunya · +100 € de desplaçament.
             </p>
           </div>
 

@@ -55,7 +55,7 @@ export const serviciosES: Record<string, ServicioContent> = {
     faqs: [
       {
         q: '¿Cuánto cuesta contratar una banda para una boda en Barcelona?',
-        a: 'Lady Jarana en formato cuarteto cuesta 800–1.000 €. Quinteto 1.000–1.300 €. Banda completa desde 1.400 €. Sonido propio + 2 técnicos desde 600 € si el venue no tiene PA. Toda Catalunya sin recargo.',
+        a: 'Lady Jarana en formato cuarteto cuesta 800–1.000 €. Quinteto 1.000–1.300 €. Banda completa desde 1.400 €. Sonido propio + 2 técnicos desde 600 € si el venue no tiene PA. Toda Catalunya · +100 € de desplazamiento.',
       },
       {
         q: '¿Tocáis durante la ceremonia?',
@@ -121,7 +121,7 @@ export const serviciosES: Record<string, ServicioContent> = {
       },
       {
         q: '¿Dónde tocáis?',
-        a: 'Toda Catalunya sin recargo: Barcelona, área metropolitana, Costa Brava, Maresme, Garraf, Vallès, Anoia, Penedès, Osona, Pirineu y todas las comarcas catalanas.',
+        a: 'Toda Catalunya · +100 € de desplazamiento: Barcelona, área metropolitana, Costa Brava, Maresme, Garraf, Vallès, Anoia, Penedès, Osona, Pirineu y todas las comarcas catalanas.',
       },
     ],
     serviceType: 'Banda para festes majors municipales',
@@ -133,7 +133,7 @@ export const serviciosES: Record<string, ServicioContent> = {
     slugAlt: 'esdeveniments-privats',
     titulo: 'Banda en directo para eventos privados en Barcelona y Catalunya',
     intro:
-      'Lady Jarana para aniversarios, cumpleaños grandes, fiestas en finca, fiestas de barrio, celebraciones familiares o cualquier evento privado que merezca banda en directo. Formato flexible desde cuarteto (800–1.000 €), sonido propio opcional si el espacio no tiene equipo. Toda Catalunya sin recargo.',
+      'Lady Jarana para aniversarios, cumpleaños grandes, fiestas en finca, fiestas de barrio, celebraciones familiares o cualquier evento privado que merezca banda en directo. Formato flexible desde cuarteto (800–1.000 €), sonido propio opcional si el espacio no tiene equipo. Toda Catalunya · +100 € de desplazamiento.',
     eyebrow: 'Eventos privados',
     hero: { foto: '/fotos/eventos-privados.jpg', objectPosition: 'center 30%' },
     queHacemos: [
@@ -215,7 +215,7 @@ export const serviciosES: Record<string, ServicioContent> = {
       },
       {
         q: '¿Tocáis fuera de Catalunya?',
-        a: 'Toda Catalunya sin recargo. Fuera de Catalunya consultamos desplazamiento, dietas y alojamiento. No cerramos puertas — hemos tocado en otras zonas de España con presupuesto adecuado.',
+        a: 'Toda Catalunya · +100 € de desplazamiento. Fuera de Catalunya consultamos desplazamiento, dietas y alojamiento. No cerramos puertas — hemos tocado en otras zonas de España con presupuesto adecuado.',
       },
     ],
     serviceType: 'Banda en directo para eventos corporativos',
@@ -252,7 +252,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
     faqs: [
       {
         q: 'Quant costa contractar un grup per a un casament a Barcelona?',
-        a: 'Lady Jarana en format quartet costa 800–1.000 €. Quintet 1.000–1.300 €. Banda completa des de 1.400 €. So propi + 2 tècnics des de 600 € si el venue no té PA. Tota Catalunya sense recàrrec.',
+        a: 'Lady Jarana en format quartet costa 800–1.000 €. Quintet 1.000–1.300 €. Banda completa des de 1.400 €. So propi + 2 tècnics des de 600 € si el venue no té PA. Tota Catalunya · +100 € de desplaçament.',
       },
       {
         q: 'Toqueu durant la cerimònia?',
@@ -318,7 +318,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
       },
       {
         q: 'On toqueu?',
-        a: 'Tota Catalunya sense recàrrec: Barcelona, àrea metropolitana, Costa Brava, Maresme, Garraf, Vallès, Anoia, Penedès, Osona, Pirineu i totes les comarques catalanes.',
+        a: 'Tota Catalunya · +100 € de desplaçament: Barcelona, àrea metropolitana, Costa Brava, Maresme, Garraf, Vallès, Anoia, Penedès, Osona, Pirineu i totes les comarques catalanes.',
       },
     ],
     serviceType: 'Grup per a festes majors municipals',
@@ -330,7 +330,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
     slugAlt: 'eventos-privados',
     titulo: 'Grup en directe per a esdeveniments privats a Barcelona i Catalunya',
     intro:
-      'Lady Jarana per a aniversaris, festes a finca, festes de barri, celebracions familiars o qualsevol esdeveniment privat que mereixi banda en directe. Format flexible des de quartet (800–1.000 €), so propi opcional si l\'espai no té equip. Tota Catalunya sense recàrrec.',
+      'Lady Jarana per a aniversaris, festes a finca, festes de barri, celebracions familiars o qualsevol esdeveniment privat que mereixi banda en directe. Format flexible des de quartet (800–1.000 €), so propi opcional si l\'espai no té equip. Tota Catalunya · +100 € de desplaçament.',
     eyebrow: 'Esdeveniments privats',
     hero: { foto: '/fotos/eventos-privados.jpg', objectPosition: 'center 30%' },
     queHacemos: [
@@ -412,7 +412,7 @@ export const serviciosCA: Record<string, ServicioContent> = {
       },
       {
         q: 'Toqueu fora de Catalunya?',
-        a: 'Tota Catalunya sense recàrrec. Fora de Catalunya consultem desplaçament, dietes i allotjament. No tanquem portes.',
+        a: 'Tota Catalunya · +100 € de desplaçament. Fora de Catalunya consultem desplaçament, dietes i allotjament. No tanquem portes.',
       },
     ],
     serviceType: 'Grup en directe per a esdeveniments corporatius',

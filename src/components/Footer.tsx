@@ -119,7 +119,7 @@ export default function Footer() {
               ))}
             </ul>
             <p className="mt-4 font-body text-xs text-crema/50">
-              Y toda Catalunya sin recargo.
+              Y toda Catalunya · +100 € de desplazamiento.
             </p>
           </div>
 

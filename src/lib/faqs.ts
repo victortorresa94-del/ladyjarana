@@ -72,12 +72,12 @@ export const faqsES: FAQ[] = [
   {
     cat: 'zona',
     q: '¿Dónde tocáis?',
-    a: 'Toda Catalunya sin recargo de desplazamiento: Barcelona ciudad, área metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarcas interiores y Pirineos. Fuera de Catalunya consultamos desplazamiento + dietas, pero no cerramos puertas: hemos tocado en otras zonas de España bajo presupuesto específico.',
+    a: 'Toda Catalunya · +100 € de desplazamiento: Barcelona ciudad, área metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarcas interiores y Pirineos. Fuera de Catalunya consultamos desplazamiento + dietas, pero no cerramos puertas: hemos tocado en otras zonas de España bajo presupuesto específico.',
   },
   {
     cat: 'zona',
     q: '¿Cobráis desplazamiento dentro de Catalunya?',
-    a: 'No. El desplazamiento dentro de Catalunya está incluido en el precio del formato. Solo se aplica recargo en eventos fuera de Catalunya, donde sumamos kilometraje + alojamiento si corresponde.',
+    a: 'Sí. 100 € fijos de desplazamiento dentro de Catalunya (cualquier punto, sin variación por kilómetros). Fuera de Catalunya consultamos kilometraje + dietas + alojamiento si corresponde.',
   },
 
   // Show
@@ -224,12 +224,12 @@ export const faqsCA: FAQ[] = [
   {
     cat: 'zona',
     q: 'On toqueu?',
-    a: 'Tota Catalunya sense recàrrec de desplaçament: Barcelona ciutat, àrea metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarques interiors i Pirineu. Fora de Catalunya consultem desplaçament + dietes, però no tanquem portes: hem tocat en altres zones d\'Espanya amb pressupost específic.',
+    a: 'Tota Catalunya · +100 € de desplaçament: Barcelona ciutat, àrea metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarques interiors i Pirineu. Fora de Catalunya consultem desplaçament + dietes, però no tanquem portes: hem tocat en altres zones d\'Espanya amb pressupost específic.',
   },
   {
     cat: 'zona',
     q: 'Cobreu desplaçament dins de Catalunya?',
-    a: 'No. El desplaçament dins de Catalunya està inclòs al preu del format. Només s\'aplica recàrrec en esdeveniments fora de Catalunya, on sumem quilometratge + allotjament si correspon.',
+    a: 'Sí. 100 € fixos de desplaçament dins de Catalunya (qualsevol punt, sense variació per quilòmetres). Fora de Catalunya consultem quilometratge + dietes + allotjament si correspon.',
   },
 
   // Xou

@@ -298,7 +298,7 @@ export default function PreusPage() {
               Tota <span className="text-sol">Catalunya.</span>
             </h2>
             <p className="mx-auto max-w-2xl font-body text-base text-blanco/90">
-              Sense recàrrec a Barcelona ciutat, àrea metropolitana, costa
+              100 € de desplaçament a Barcelona ciutat, àrea metropolitana, costa
               catalana i comarques. Fora de Catalunya consultem desplaçament —{' '}
               <strong>no tanquem portes</strong>.
             </p>

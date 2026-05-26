@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: '¿Dónde tocáis?',
-    a: 'Toda Catalunya sin recargo: Barcelona ciudad, área metropolitana, costa catalana y comarcas. Fuera de Catalunya consultamos desplazamiento — no cerramos puertas, pero suma logística.',
+    a: 'Toda Catalunya · +100 € de desplazamiento: Barcelona ciudad, área metropolitana, costa catalana y comarcas. Fuera de Catalunya consultamos desplazamiento — no cerramos puertas, pero suma logística.',
   },
   {
     q: '¿Cantáis en catalán?',
@@ -143,7 +143,7 @@ export default function ContratarPage() {
                       Toda Catalunya
                     </p>
                     <p className="font-body text-sm text-negro/60">
-                      Sin recargo en Catalunya. Fuera consultamos desplazamiento. Show bilingüe ES/CA.
+                      100 € de desplazamiento en toda Catalunya. Fuera consultamos. Show bilingüe ES/CA.
                     </p>
                   </div>
                 </div>

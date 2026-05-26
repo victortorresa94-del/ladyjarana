@@ -158,8 +158,8 @@ export default function CiudadLanding({ content, locale }: Props) {
             </div>
             <p className="mt-6 font-body text-sm text-negro/65">
               {locale === 'es'
-                ? 'Desplazamiento incluido en el precio del formato dentro de Catalunya.'
-                : 'Desplaçament inclòs en el preu del format dins de Catalunya.'}
+                ? 'Desplazamiento de 100 € dentro de Catalunya (incluido en el presupuesto).'
+                : 'Desplaçament de 100 € dins de Catalunya (inclòs al pressupost).'}
             </p>
           </div>
         </section>

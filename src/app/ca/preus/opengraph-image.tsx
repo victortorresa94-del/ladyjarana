@@ -10,7 +10,7 @@ export default function OG() {
     eyebrow: '· Preus sense sorpreses',
     title: 'Quartet 800–1.000 €',
     subtitle:
-      'Quintet 1.000–1.300 € · Banda completa des de 1.400 € · Tota Catalunya sense recàrrec · So propi opcional.',
+      'Quintet 1.000–1.300 € · Banda completa des de 1.400 € · 100 € desplaçament · So propi opcional · Tota Catalunya.',
     accent: 'sol',
   });
 }

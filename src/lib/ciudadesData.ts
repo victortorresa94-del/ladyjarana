@@ -62,7 +62,7 @@ export const ciudadesES: Record<string, CiudadContent> = {
       'Lady Jarana toca para bodas, festes majors y eventos privados en Girona y toda la provincia: Costa Brava, Empordà, Garrotxa, Cerdanya y Ripollès. Banda de Barcelona con experiencia en fincas y masías de l\'Empordà. Cuarteto desde 800 €, show bilingüe ES/CA.',
     porQue: [
       'Trabajamos las bodas en masías de l\'Empordà — espacios con encanto que requieren banda profesional y sonido propio para exteriores.',
-      'Nos desplazamos sin recargo dentro de Catalunya: Barcelona-Girona es una hora.',
+      'Desplazamiento de 100 € dentro de Catalunya: Barcelona-Girona es una hora.',
       'Repertorio con peso de pop-rock catalán (L\'Empordà de Sopa de Cabra, Els Catarres, La Marina sta morena) que conecta especialmente bien con público gironès.',
     ],
     tiposEvento:
@@ -85,9 +85,9 @@ export const ciudadesES: Record<string, CiudadContent> = {
       'Terra Alta',
     ],
     intro:
-      'Lady Jarana es la banda en directo para bodas, festes majors y eventos privados en Tarragona, Reus, Salou, Cambrils y toda la Costa Daurada. Desplazamiento incluido dentro de Catalunya. Cuarteto desde 800 €.',
+      'Lady Jarana es la banda en directo para bodas, festes majors y eventos privados en Tarragona, Reus, Salou, Cambrils y toda la Costa Daurada. Desplazamiento de 100 € dentro de Catalunya. Cuarteto desde 800 €.',
     porQue: [
-      'Cubrimos toda la Costa Daurada y el interior (Priorat, Conca de Barberà) sin recargo.',
+      'Cubrimos toda la Costa Daurada y el interior (Priorat, Conca de Barberà) con 100 € de desplazamiento.',
       'Banda con experiencia en espacios al aire libre — opción de sonido propio (PA + 2 técnicos desde 600 €) para fincas y bodas en playa.',
       'Repertorio que mezcla pop-rock español/catalán con rumba y latineo — encaja en bodas de la Costa Daurada y festes majors del Camp.',
     ],
@@ -115,7 +115,7 @@ export const ciudadesES: Record<string, CiudadContent> = {
       'Lady Jarana toca en Lleida ciudad, las comarcas del Segrià y l\'Urgell, y los Pirineos. Banda en directo para bodas, festes majors y eventos privados en Ponent y la Catalunya interior. Cuarteto desde 800 €.',
     porQue: [
       'Tocamos en Lleida el 27 de junio de 2026 — el salto al circuito catalán más allá del área metropolitana.',
-      'Desplazamiento dentro de Catalunya incluido (Barcelona-Lleida ~2 h por autopista).',
+      'Desplazamiento de 100 € dentro de Catalunya (Barcelona-Lleida ~2 h por autopista).',
       'Repertorio adaptable: mezclamos el pop-rock catalán con verbeneras y latineo, encaja con el público de Ponent y comarcas del Pirineu.',
     ],
     tiposEvento:
@@ -155,7 +155,7 @@ export const ciudadesCA: Record<string, Omit<CiudadContent, 'porQue' | 'tiposEve
       'Lady Jarana toca per a casaments, festes majors i esdeveniments privats a Girona i tota la província: Costa Brava, Empordà, Garrotxa, Cerdanya i Ripollès. Grup de Barcelona amb experiència en finques i masies de l\'Empordà. Quartet des de 800 €, xou bilingüe ES/CA.',
     porQue: [
       'Treballem els casaments en masies de l\'Empordà — espais amb encant que requereixen banda professional i so propi per a exteriors.',
-      'Ens desplacem sense recàrrec dins de Catalunya: Barcelona-Girona és una hora.',
+      'Desplaçament de 100 € dins de Catalunya: Barcelona-Girona és una hora.',
       'Repertori amb pes de pop-rock català (L\'Empordà de Sopa de Cabra, Els Catarres, La Marina sta morena) que connecta especialment bé amb públic gironí.',
     ],
     tiposEvento:
@@ -168,9 +168,9 @@ export const ciudadesCA: Record<string, Omit<CiudadContent, 'porQue' | 'tiposEve
     provincia: 'Tarragona',
     zonas: ciudadesES.tarragona.zonas,
     intro:
-      'Lady Jarana és el grup en directe per a casaments, festes majors i esdeveniments privats a Tarragona, Reus, Salou, Cambrils i tota la Costa Daurada. Desplaçament inclòs dins de Catalunya. Quartet des de 800 €.',
+      'Lady Jarana és el grup en directe per a casaments, festes majors i esdeveniments privats a Tarragona, Reus, Salou, Cambrils i tota la Costa Daurada. Desplaçament de 100 € dins de Catalunya. Quartet des de 800 €.',
     porQue: [
-      'Cobrim tota la Costa Daurada i l\'interior (Priorat, Conca de Barberà) sense recàrrec.',
+      'Cobrim tota la Costa Daurada i l\'interior (Priorat, Conca de Barberà) amb 100 € de desplaçament.',
       'Banda amb experiència en espais a l\'aire lliure — opció de so propi (PA + 2 tècnics des de 600 €) per a finques i casaments a la platja.',
       'Repertori que barreja pop-rock espanyol/català amb rumba i latineig — encaixa en casaments de la Costa Daurada i festes majors del Camp.',
     ],
@@ -187,7 +187,7 @@ export const ciudadesCA: Record<string, Omit<CiudadContent, 'porQue' | 'tiposEve
       'Lady Jarana toca a Lleida ciutat, les comarques del Segrià i l\'Urgell, i els Pirineus. Grup en directe per a casaments, festes majors i esdeveniments privats a Ponent i la Catalunya interior. Quartet des de 800 €.',
     porQue: [
       'Toquem a Lleida el 27 de juny de 2026 — el salt al circuit català més enllà de l\'àrea metropolitana.',
-      'Desplaçament dins de Catalunya inclòs (Barcelona-Lleida ~2 h per autopista).',
+      'Desplaçament de 100 € dins de Catalunya (Barcelona-Lleida ~2 h per autopista).',
       'Repertori adaptable: barregem el pop-rock català amb revetlleres i latineig, encaixa amb el públic de Ponent i comarques del Pirineu.',
     ],
     tiposEvento:
