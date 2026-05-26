@@ -27,12 +27,15 @@ export default function PressKitCA() {
               per anunciar el teu bolo o publicar-nos a premsa.
             </p>
 
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/material" variant="secondary">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:flex-wrap">
+              <Button href="/ca/material" variant="secondary">
                 Material gràfic ↓
               </Button>
               <Button href="/dossier-lady-jarana.pdf" variant="primary">
                 Dossier PDF →
+              </Button>
+              <Button href="/ca/material#rider-tecnic" variant="secondary">
+                Rider tècnic ↓
               </Button>
             </div>
           </div>

@@ -15,6 +15,8 @@ interface Asset {
 }
 
 const logos: Asset[] = [
+  { src: '/logo/lady-jarana-nuevo.png', name: 'Logo principal (palmera nova)', filename: 'lady-jarana-nuevo.png', bg: 'bg-crema' },
+  { src: '/logo/palmera-nueva.png', name: 'Palmera nova (transparent)', filename: 'palmera-nueva.png', bg: 'bg-azul' },
   { src: '/logo/lady-jarana-blanco.png', name: 'Wordmark blanc', filename: 'lady-jarana-blanco.png', bg: 'bg-negro' },
   { src: '/logo/lady-jarana-crema.png', name: 'Wordmark crema', filename: 'lady-jarana-crema.png', bg: 'bg-azul' },
   { src: '/logo/lady-jarana-melon.png', name: 'Wordmark meló', filename: 'lady-jarana-melon.png', bg: 'bg-rojo' },
@@ -22,6 +24,13 @@ const logos: Asset[] = [
   { src: '/logo/palmera.png', name: 'Palmera original', filename: 'palmera.png', bg: 'bg-crema' },
   { src: '/logo/palmera-melon.png', name: 'Palmera meló', filename: 'palmera-melon.png', bg: 'bg-azul' },
   { src: '/logo/palmera-sol.png', name: 'Palmera sol', filename: 'palmera-sol.png', bg: 'bg-negro' },
+];
+
+const fotos: Asset[] = [
+  { src: '/fotos/grupo-2.jpg', name: 'Lady Jarana — grup', filename: 'lady-jarana-grupo-2.jpg' },
+  { src: '/fotos/grupo-1.jpg', name: 'Lady Jarana — grup (alt 1)', filename: 'lady-jarana-grupo-1.jpg' },
+  { src: '/fotos/grupo-publico.jpg', name: 'Amb el públic', filename: 'lady-jarana-publico.jpg' },
+  { src: '/fotos/backstage.jpg', name: 'Backstage', filename: 'lady-jarana-backstage.jpg' },
 ];
 
 const ilustraciones: Asset[] = [
@@ -130,20 +139,116 @@ export default function MaterialPageCA() {
             </motion.a>
 
             <motion.a
-              href="/fotos/grupo-1.jpg"
-              download="lady-jarana-foto-grupo.jpg"
+              href="/rider/rider-tecnico-lady-jarana-2026.png"
+              download="rider-tecnico-lady-jarana-2026.png"
               className="group flex flex-col justify-between overflow-hidden rounded-3xl border-4 border-negro bg-blanco shadow-[6px_6px_0_var(--negro)] transition-transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className="relative aspect-video w-full bg-negro">
-                <Image src="/fotos/grupo-1.jpg" alt="Foto del grup" fill sizes="33vw" className="object-cover" />
+              <div className="relative aspect-video w-full bg-crema">
+                <Image
+                  src="/rider/rider-tecnico-lady-jarana-2026.png"
+                  alt="Rider tècnic Lady Jarana 2026"
+                  fill
+                  sizes="33vw"
+                  className="object-contain p-4"
+                />
               </div>
               <div className="p-6 text-negro">
-                <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">JPG · 2.5 MB · alta resolució</p>
-                <h2 className="mt-2 font-display text-2xl italic">Foto del grup</h2>
+                <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">PNG + XLSX · 2026</p>
+                <h2 className="mt-2 font-display text-2xl italic">Rider tècnic</h2>
+                <p className="mt-2 text-sm opacity-70">Plànol d&apos;escenari + input list. PNG aquí, Excel a la secció Rider.</p>
+              </div>
+            </motion.a>
+          </div>
+        </section>
+
+        {/* Fotos del grup */}
+        <section className="mx-auto max-w-7xl px-6 py-12">
+          <motion.h2
+            className="mb-2 font-display text-3xl text-negro lg:text-4xl"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Fotos
+          </motion.h2>
+          <p className="mb-8 font-body text-negro/70">
+            Fotos de Lady Jarana en alta resolució per a ús de premsa i
+            organitzadors. Necessites alguna en concret o una sessió pròpia?
+            Escriu-nos.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {fotos.map((f) => (
+              <DownloadCard key={f.filename} asset={f} />
+            ))}
+          </div>
+        </section>
+
+        {/* Rider tècnic (PNG + XLSX) */}
+        <section id="rider-tecnic" className="mx-auto max-w-7xl px-6 py-12 scroll-mt-24">
+          <motion.h2
+            className="mb-2 font-display text-3xl text-negro lg:text-4xl"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Rider tècnic
+          </motion.h2>
+          <p className="mb-8 font-body text-negro/70">
+            Document tècnic per a l&apos;equip de so del venue: plànol
+            d&apos;escenari, micros, monitors i input list. Dos formats —
+            imatge per visualitzar i Excel per editar/imprimir.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <motion.a
+              href="/rider/rider-tecnico-lady-jarana-2026.png"
+              download="rider-tecnico-lady-jarana-2026.png"
+              className="group flex flex-col overflow-hidden rounded-2xl border-4 border-negro bg-blanco shadow-[6px_6px_0_var(--negro)] transition-transform hover:-translate-y-1"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative aspect-video w-full bg-crema">
+                <Image
+                  src="/rider/rider-tecnico-lady-jarana-2026.png"
+                  alt="Rider tècnic Lady Jarana 2026 (visual)"
+                  fill
+                  sizes="50vw"
+                  className="object-contain p-4"
+                />
+              </div>
+              <div className="flex items-center justify-between gap-3 border-t-4 border-negro bg-blanco p-4">
+                <div className="min-w-0">
+                  <p className="font-body text-sm font-bold text-negro">Rider tècnic (imatge)</p>
+                  <p className="font-body text-[10px] text-negro/50">rider-tecnico-lady-jarana-2026.png</p>
+                </div>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rojo text-blanco shadow-[2px_2px_0_var(--negro)] border-2 border-negro">↓</span>
+              </div>
+            </motion.a>
+            <motion.a
+              href="/rider/lady-jarana-input-list-2026.xlsx"
+              download="lady-jarana-input-list-2026.xlsx"
+              className="group flex flex-col overflow-hidden rounded-2xl border-4 border-negro bg-blanco shadow-[6px_6px_0_var(--negro)] transition-transform hover:-translate-y-1"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+            >
+              <div className="relative flex aspect-video w-full items-center justify-center bg-verde/30">
+                <div className="text-center">
+                  <p className="font-display text-6xl font-bold italic text-verde">XLS</p>
+                  <p className="mt-2 font-body text-xs font-bold uppercase tracking-widest text-negro/70">Input list editable</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between gap-3 border-t-4 border-negro bg-blanco p-4">
+                <div className="min-w-0">
+                  <p className="font-body text-sm font-bold text-negro">Input list (Excel)</p>
+                  <p className="font-body text-[10px] text-negro/50">lady-jarana-input-list-2026.xlsx</p>
+                </div>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rojo text-blanco shadow-[2px_2px_0_var(--negro)] border-2 border-negro">↓</span>
               </div>
             </motion.a>
           </div>

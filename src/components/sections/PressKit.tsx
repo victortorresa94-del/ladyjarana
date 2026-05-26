@@ -26,12 +26,15 @@ export default function PressKit() {
               para anunciar tu bolo o publicarnos en prensa.
             </p>
 
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:flex-wrap">
               <Button href="/material" variant="secondary">
                 Material gráfico ↓
               </Button>
               <Button href="/dossier-lady-jarana.pdf" variant="primary">
                 Dossier PDF →
+              </Button>
+              <Button href="/material#rider-tecnico" variant="secondary">
+                Rider técnico ↓
               </Button>
             </div>
           </div>
