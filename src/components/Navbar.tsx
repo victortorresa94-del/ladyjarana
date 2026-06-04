@@ -10,13 +10,30 @@ import { WHATSAPP_URL } from '@/lib/contact';
 
 type Locale = 'es' | 'ca';
 
-const linksByLocale: Record<Locale, { label: string; href: string }[]> = {
+interface NavLink {
+  label: string;
+  href: string;
+  /** Sub-items para dropdown ("Recursos") */
+  children?: { label: string; href: string; desc?: string }[];
+}
+
+const linksByLocale: Record<Locale, NavLink[]> = {
   es: [
     { label: 'Banda', href: '/#banda' },
     { label: 'Repertorio', href: '/repertorio' },
     { label: 'Eventos', href: '/eventos' },
     { label: 'Precios', href: '/precios' },
     { label: 'FAQ', href: '/faq' },
+    {
+      label: 'Recursos',
+      href: '/material',
+      children: [
+        { label: 'Material gráfico', href: '/material', desc: 'Logos, fotos, ilustraciones' },
+        { label: 'Dossier PDF', href: '/dossier-lady-jarana.pdf', desc: 'Bio, fotos, formatos' },
+        { label: 'Rider técnico', href: '/material#rider-tecnico', desc: 'PNG + input list Excel' },
+        { label: 'Repertorio PDF', href: '/repertorio-lady-jarana.pdf', desc: 'Listado completo' },
+      ],
+    },
   ],
   ca: [
     { label: 'La banda', href: '/ca/#banda' },
@@ -24,6 +41,16 @@ const linksByLocale: Record<Locale, { label: string; href: string }[]> = {
     { label: 'Esdeveniments', href: '/ca/esdeveniments' },
     { label: 'Preus', href: '/ca/preus' },
     { label: 'FAQ', href: '/ca/faq' },
+    {
+      label: 'Recursos',
+      href: '/ca/material',
+      children: [
+        { label: 'Material gràfic', href: '/ca/material', desc: 'Logos, fotos, il·lustracions' },
+        { label: 'Dossier PDF', href: '/dossier-lady-jarana.pdf', desc: 'Bio, fotos, formats' },
+        { label: 'Rider tècnic', href: '/ca/material#rider-tecnic', desc: 'PNG + input list Excel' },
+        { label: 'Repertori PDF', href: '/repertorio-lady-jarana.pdf', desc: 'Llistat complet' },
+      ],
+    },
   ],
 };
 
@@ -135,19 +162,58 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden items-center gap-7 lg:flex">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`font-body text-sm font-bold transition-colors hover:text-rojo ${
-                  scrolled
-                    ? 'text-negro'
-                    : 'text-crema drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]'
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map((link) =>
+              link.children ? (
+                <div key={link.href} className="group relative">
+                  <button
+                    type="button"
+                    className={`flex items-center gap-1 font-body text-sm font-bold transition-colors hover:text-rojo ${
+                      scrolled
+                        ? 'text-negro'
+                        : 'text-crema drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]'
+                    }`}
+                  >
+                    {link.label}
+                    <svg
+                      className="h-3 w-3 transition-transform group-hover:rotate-180"
+                      viewBox="0 0 12 12"
+                      fill="currentColor"
+                      aria-hidden
+                    >
+                      <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                    </svg>
+                  </button>
+                  <div className="invisible absolute right-0 top-full z-50 mt-2 w-72 origin-top-right scale-95 rounded-2xl border-4 border-negro bg-blanco p-2 opacity-0 shadow-[6px_6px_0_var(--negro)] transition-all duration-150 group-hover:visible group-hover:scale-100 group-hover:opacity-100">
+                    {link.children.map((c) => (
+                      <a
+                        key={c.href}
+                        href={c.href}
+                        className="block rounded-xl px-4 py-3 transition-colors hover:bg-crema"
+                      >
+                        <p className="font-display text-base font-bold italic text-negro">
+                          {c.label}
+                        </p>
+                        {c.desc && (
+                          <p className="font-body text-xs text-negro/60">{c.desc}</p>
+                        )}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`font-body text-sm font-bold transition-colors hover:text-rojo ${
+                    scrolled
+                      ? 'text-negro'
+                      : 'text-crema drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ),
+            )}
 
             <Link
               href={switchHref}
@@ -204,19 +270,42 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <nav className="flex flex-col items-center gap-8">
+            <nav className="flex flex-col items-center gap-6">
               {links.map((link, i) => (
-                <motion.a
+                <div
                   key={link.href}
-                  href={link.href}
-                  className="font-display text-4xl font-bold text-azul hover:text-rojo transition-colors italic"
-                  onClick={() => setMenuOpen(false)}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 }}
+                  className="flex flex-col items-center"
                 >
-                  {link.label}
-                </motion.a>
+                  <motion.a
+                    href={link.href}
+                    className="font-display text-4xl font-bold text-azul hover:text-rojo transition-colors italic"
+                    onClick={() => setMenuOpen(false)}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.06 }}
+                  >
+                    {link.label}
+                  </motion.a>
+                  {link.children && (
+                    <motion.div
+                      className="mt-2 flex flex-col items-center gap-1"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: i * 0.06 + 0.1 }}
+                    >
+                      {link.children.map((c) => (
+                        <a
+                          key={c.href}
+                          href={c.href}
+                          onClick={() => setMenuOpen(false)}
+                          className="font-body text-sm font-medium text-negro/70 hover:text-rojo"
+                        >
+                          → {c.label}
+                        </a>
+                      ))}
+                    </motion.div>
+                  )}
+                </div>
               ))}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
