@@ -60,7 +60,14 @@ export const trayectoria: Hito[] = [
     tipo: 'concierto',
     lugar: 'Arco de Triunfo, Barcelona',
     descripcion:
-      'Verbena de Sant Joan. 23:00. Concierto especial en el corazón de la ciudad.',
+      'Revetlla de Sant Joan. 23:00. Lleno en el corazón de la ciudad, con la Asociación de Vecinos del Arc de Triomf.',
+  },
+  {
+    fecha: '27 Junio 2026',
+    tipo: 'concierto',
+    lugar: 'Lleida',
+    descripcion:
+      'Salto al circuito catalán fuera del área metropolitana de Barcelona.',
   },
 ];
 
@@ -75,26 +82,10 @@ export interface ProximoEvento {
 
 export const proximosEventos: ProximoEvento[] = [
   {
-    fecha: '23 de Junio 2026',
-    fechaCorta: '23 jun',
-    lugar: 'Arco de Triunfo, Barcelona',
-    hora: '23:00',
-    destacado: true,
-  },
-  {
-    fecha: '31 de Mayo 2026',
-    fechaCorta: '31 may',
-    lugar: 'Puerto de la Barceloneta',
-  },
-  {
-    fecha: '27 de Junio 2026',
-    fechaCorta: '27 jun',
-    lugar: 'Lleida',
-  },
-  {
     fecha: '11 de Julio 2026',
     fechaCorta: '11 jul',
     lugar: 'Correpintxos · Torregrossa',
     hora: '00:00',
+    destacado: true,
   },
 ];

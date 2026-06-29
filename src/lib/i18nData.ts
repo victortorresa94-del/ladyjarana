@@ -136,34 +136,25 @@ export const trayectoriaCA: Hito[] = [
     tipo: 'concierto',
     lugar: 'Arc de Triomf, Barcelona',
     descripcion:
-      'Revetlla de Sant Joan. 23:00. Concert especial al cor de la ciutat.',
+      'Revetlla de Sant Joan. 23:00. Plé al cor de la ciutat, amb l\'Associació de Veïns de l\'Arc de Triomf.',
+  },
+  {
+    fecha: '27 Juny 2026',
+    tipo: 'concierto',
+    lugar: 'Lleida',
+    descripcion:
+      'Salt al circuit català fora de l\'àrea metropolitana de Barcelona.',
   },
 ];
 
 // ─── Pròxims esdeveniments ────────────────────────────────────────────────
 export const proximosEventosCA: ProximoEvento[] = [
   {
-    fecha: '23 de Juny 2026',
-    fechaCorta: '23 jun',
-    lugar: 'Arc de Triomf, Barcelona',
-    hora: '23:00',
-    destacado: true,
-  },
-  {
-    fecha: '31 de Maig 2026',
-    fechaCorta: '31 mai',
-    lugar: 'Port de la Barceloneta',
-  },
-  {
-    fecha: '27 de Juny 2026',
-    fechaCorta: '27 jun',
-    lugar: 'Lleida',
-  },
-  {
     fecha: '11 de Juliol 2026',
     fechaCorta: '11 jul',
     lugar: 'Correpintxos · Torregrossa',
     hora: '00:00',
+    destacado: true,
   },
 ];
 

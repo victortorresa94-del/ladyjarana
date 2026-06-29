@@ -10,7 +10,7 @@ export default function OG() {
     eyebrow: '· Calendario en directo',
     title: 'Próximos bolos',
     subtitle:
-      'Barceloneta · Arc de Triomf (Sant Joan) · Lleida · Correpintxos Torregrossa. Festes majors, bodas y conciertos en toda Catalunya 2026.',
+      'Próxima parada: 11 julio · Correpintxos · Torregrossa. Festes majors, bodas y conciertos en toda Catalunya 2026.',
     accent: 'sol',
   });
 }
