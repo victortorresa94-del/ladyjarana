@@ -18,6 +18,23 @@ const BLOB = 'https://f8gfdg48kikp71xk.public.blob.vercel-storage.com';
 // Posiciones 7 y 8 elegidas por Víctor: 7 = Centro Asturiano (nuevo),
 // 8 = reel de Instagram (único que enlaza al perfil, estrategia "síguenos").
 export const liveVideos: LiveVideo[] = [
+  // 1 — Arc de Triomf, Revetlla de Sant Joan 23 jun 2026 (concierto pleno
+  // organizado por la AAVV del Arc de Triomf). Subido al Blob por Víctor
+  // como "Lady Jarana Arc de Triomf". Multi-source para que el browser
+  // pruebe extensiones .mp4/.MP4/.mov/.MOV — la que el Blob tenga gana.
+  {
+    source: 'native',
+    id: `${BLOB}/Lady%20Jarana%20Arc%20de%20Triomf.mp4`,
+    sources: [
+      `${BLOB}/Lady%20Jarana%20Arc%20de%20Triomf.mp4`,
+      `${BLOB}/Lady%20Jarana%20Arc%20de%20Triomf.MP4`,
+      `${BLOB}/Lady%20Jarana%20Arc%20de%20Triomf.mov`,
+      `${BLOB}/Lady%20Jarana%20Arc%20de%20Triomf.MOV`,
+    ],
+    title: 'Arc de Triomf',
+    description: 'Revetlla de Sant Joan · 23 jun 2026',
+    aspectRatio: '9:16',
+  },
   {
     source: 'native',
     id: `${BLOB}/Presentacion%20Lady%20Jarana.mp4`,
