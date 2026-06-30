@@ -31,9 +31,8 @@ export const liveVideos: LiveVideo[] = [
       `${BLOB}/Lady%20Jarana%20Arc%20de%20Triomf.mov`,
       `${BLOB}/Lady%20Jarana%20Arc%20de%20Triomf.MOV`,
     ],
-    // Poster temporal mientras el video carga (evita el rectángulo negro
-    // del primer frame que el browser no extrae bien con multi-source).
-    thumbnail: '/fotos/grupo-publico.jpg',
+    // Poster real del concierto (foto en escenario con la plaza llena).
+    thumbnail: '/fotos/arc-de-triomf-poster.jpg',
     title: 'Arc de Triomf',
     description: 'Revetlla de Sant Joan · 23 jun 2026',
     aspectRatio: '9:16',
