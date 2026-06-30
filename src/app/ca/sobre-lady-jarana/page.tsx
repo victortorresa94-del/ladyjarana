@@ -360,11 +360,7 @@ export default function SobreCAPage() {
               Parlem per WhatsApp →
             </Button>
             <p className="mt-6 font-body text-sm text-blanco/70">
-              També pots veure{' '}
-              <Link href="/ca/preus" className="text-sol underline font-bold">
-                preus
-              </Link>{' '}
-              o les{' '}
+              També pots veure les{' '}
               <Link href="/ca/faq" className="text-sol underline font-bold">
                 preguntes freqüents
               </Link>

@@ -218,7 +218,6 @@ Lady Jarana es proyecto de **94 Music**, con NIF regularizado. Emitimos factura 
 
 ### Español
 - Inicio: <https://ladyjarana.es/>
-- Precios: <https://ladyjarana.es/precios>
 - Contratar: <https://ladyjarana.es/contratar>
 - FAQ: <https://ladyjarana.es/faq>
 - Repertorio: <https://ladyjarana.es/repertorio>
@@ -229,7 +228,6 @@ Lady Jarana es proyecto de **94 Music**, con NIF regularizado. Emitimos factura 
 
 ### Catalán
 - Inici: <https://ladyjarana.es/ca>
-- Preus: <https://ladyjarana.es/ca/preus>
 - Contractar: <https://ladyjarana.es/ca/contractar>
 - FAQ: <https://ladyjarana.es/ca/faq>
 - Repertori: <https://ladyjarana.es/ca/repertori>

@@ -22,7 +22,6 @@ const linksByLocale: Record<Locale, NavLink[]> = {
     { label: 'Banda', href: '/#banda' },
     { label: 'Repertorio', href: '/repertorio' },
     { label: 'Eventos', href: '/eventos' },
-    { label: 'Precios', href: '/precios' },
     { label: 'FAQ', href: '/faq' },
     {
       label: 'Recursos',
@@ -39,7 +38,6 @@ const linksByLocale: Record<Locale, NavLink[]> = {
     { label: 'La banda', href: '/ca/#banda' },
     { label: 'Repertori', href: '/ca/repertori' },
     { label: 'Esdeveniments', href: '/ca/esdeveniments' },
-    { label: 'Preus', href: '/ca/preus' },
     { label: 'FAQ', href: '/ca/faq' },
     {
       label: 'Recursos',
@@ -62,7 +60,6 @@ const ctaLabel: Record<Locale, string> = {
 // Mapeo de rutas equivalentes para el selector de idioma
 const routeMap: Record<string, { es: string; ca: string }> = {
   '/': { es: '/', ca: '/ca' },
-  '/precios': { es: '/precios', ca: '/ca/preus' },
   '/contratar': { es: '/contratar', ca: '/ca/contractar' },
   '/repertorio': { es: '/repertorio', ca: '/ca/repertori' },
   '/eventos': { es: '/eventos', ca: '/ca/esdeveniments' },
@@ -87,7 +84,6 @@ function languageSwitchHref(pathname: string, currentLocale: Locale): string {
   // Reverso para CA → ES: necesitamos buscar por el slug catalán
   if (currentLocale === 'ca') {
     const map: Record<string, string> = {
-      '/preus': '/precios',
       '/contractar': '/contratar',
       '/repertori': '/repertorio',
       '/esdeveniments': '/eventos',

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: '¿Cuánto cuesta contratar la banda?',
-    a: 'Cuarteto 800–1.000 €, quinteto 1.000–1.300 €, banda completa desde 1.400 €. El precio dentro de cada rango varía por fecha, sitio y extras. No hacemos dúo ni trío. Ver precios completos en /precios.',
+    a: 'Cuarteto 800–1.000 €, quinteto 1.000–1.300 €, banda completa desde 1.400 €. El precio dentro de cada rango varía por fecha, sitio y extras. No hacemos dúo ni trío. Pide presupuesto cerrado por WhatsApp.',
   },
   {
     q: '¿Traéis equipo de sonido?',

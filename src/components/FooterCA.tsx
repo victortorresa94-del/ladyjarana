@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'Repertori', href: '/ca/repertori' },
   { label: 'Esdeveniments', href: '/ca/esdeveniments' },
   { label: 'Galeria', href: '/ca/#galeria' },
-  { label: 'Preus', href: '/ca/preus' },
   { label: 'FAQ', href: '/ca/faq' },
   { label: 'Contractar', href: '/ca/contractar' },
 ];

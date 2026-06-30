@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Quant costa contractar la banda?',
-    a: 'Quartet 800–1.000 €, quintet 1.000–1.300 €, banda completa des de 1.400 €. El preu dins de cada rang varia per data, lloc i extres. No fem duo ni trio. Tens els preus complets a /ca/preus.',
+    a: 'Quartet 800–1.000 €, quintet 1.000–1.300 €, banda completa des de 1.400 €. El preu dins de cada rang varia per data, lloc i extres. No fem duo ni trio. Demana pressupost tancat per WhatsApp.',
   },
   {
     q: 'Porteu equip de so?',

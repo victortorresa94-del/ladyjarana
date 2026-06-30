@@ -15,19 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
-      url: `${BASE}/precios`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.95,
-      alternates: {
-        languages: {
-          es: `${BASE}/precios`,
-          ca: `${BASE}/ca/preus`,
-          'x-default': `${BASE}/precios`,
-        },
-      },
-    },
-    {
       url: `${BASE}/contratar`,
       lastModified: now,
       changeFrequency: 'monthly',
@@ -88,7 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const caRoutes: MetadataRoute.Sitemap = [
     { url: `${BASE}/ca`, lastModified: now, changeFrequency: 'weekly', priority: 0.98 },
-    { url: `${BASE}/ca/preus`, lastModified: now, changeFrequency: 'monthly', priority: 0.93 },
     { url: `${BASE}/ca/contractar`, lastModified: now, changeFrequency: 'monthly', priority: 0.88 },
     { url: `${BASE}/ca/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/ca/sobre-lady-jarana`, lastModified: now, changeFrequency: 'monthly', priority: 0.82 },

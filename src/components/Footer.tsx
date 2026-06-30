@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'Repertorio', href: '/repertorio' },
   { label: 'Eventos', href: '/eventos' },
   { label: 'Galería', href: '/#galeria' },
-  { label: 'Precios', href: '/precios' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contratar', href: '/contratar' },
   { label: 'Dossier', href: '/dossier-lady-jarana.pdf' },

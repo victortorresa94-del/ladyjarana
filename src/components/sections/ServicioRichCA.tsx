@@ -33,7 +33,6 @@ export function ServicioRichCAFull({ content }: { content: ServicioContent }) {
   const baseUrl = 'https://ladyjarana.es';
   const servicePath = `/ca/serveis/${content.slug}`;
   const homePath = '/ca';
-  const preciosPath = '/ca/preus';
   const faqPath = '/ca/faq';
 
   const t = {
@@ -47,7 +46,6 @@ export function ServicioRichCAFull({ content }: { content: ServicioContent }) {
     ctaText:
       "Explica'ns data, lloc i format. Et responem en minuts per WhatsApp amb disponibilitat i pressupost.",
     ctaButton: 'Parlem per WhatsApp →',
-    ctaSecondary: 'Veure preus complets',
     ctaTertiary: 'FAQ general',
     breadcrumbHome: 'Inici',
     breadcrumbServices: 'Serveis',
@@ -195,7 +193,6 @@ export function ServicioRichCAFull({ content }: { content: ServicioContent }) {
             <p className="mx-auto mb-8 max-w-xl font-body text-base text-blanco/90">{t.ctaText}</p>
             <Button href={WHATSAPP_URL} variant="secondary">{t.ctaButton}</Button>
             <p className="mt-6 font-body text-sm text-blanco/70">
-              <Link href={preciosPath} className="text-sol underline font-bold">{t.ctaSecondary}</Link>{' '}·{' '}
               <Link href={faqPath} className="text-sol underline font-bold">{t.ctaTertiary}</Link>
             </p>
           </div>

@@ -23,7 +23,6 @@ const labels = {
     ctaText:
       'Cuéntanos fecha, lugar y formato. Te respondemos en minutos por WhatsApp con disponibilidad y presupuesto.',
     ctaButton: 'Hablemos por WhatsApp →',
-    ctaSecondary: 'Ver precios completos',
     ctaTertiary: 'FAQ general',
     breadcrumbHome: 'Inicio',
     breadcrumbServices: 'Servicios',
@@ -39,7 +38,6 @@ const labels = {
     ctaText:
       "Explica'ns data, lloc i format. Et responem en minuts per WhatsApp amb disponibilitat i pressupost.",
     ctaButton: 'Parlem per WhatsApp →',
-    ctaSecondary: 'Veure preus complets',
     ctaTertiary: 'FAQ general',
     breadcrumbHome: 'Inici',
     breadcrumbServices: 'Serveis',
@@ -58,7 +56,6 @@ export default function ServicioRich({ content, locale }: Props) {
       ? `/ca/serveis/${content.slugAlt}`
       : `/servicios/${content.slugAlt}`;
   const homePath = locale === 'es' ? '/' : '/ca';
-  const preciosPath = locale === 'es' ? '/precios' : '/ca/preus';
   const faqPath = locale === 'es' ? '/faq' : '/ca/faq';
 
   const serviceJsonLd = {
@@ -268,10 +265,6 @@ export default function ServicioRich({ content, locale }: Props) {
               {t.ctaButton}
             </Button>
             <p className="mt-6 font-body text-sm text-blanco/70">
-              <Link href={preciosPath} className="text-sol underline font-bold">
-                {t.ctaSecondary}
-              </Link>{' '}
-              ·{' '}
               <Link href={faqPath} className="text-sol underline font-bold">
                 {t.ctaTertiary}
               </Link>

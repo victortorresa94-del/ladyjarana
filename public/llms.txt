@@ -45,14 +45,12 @@ Toda Catalunya · +100 € de desplazamiento: Barcelona ciudad, área metropolit
 
 ### Español
 - [Inicio](https://ladyjarana.es/): banda + show
-- [Precios](https://ladyjarana.es/precios): tarifas, sonido, zona
 - [Contratar](https://ladyjarana.es/contratar): WhatsApp + FAQ
 - [Repertorio](https://ladyjarana.es/repertorio): canciones + Spotify
 - [Eventos](https://ladyjarana.es/eventos): próximos bolos + trayectoria
 
 ### Catalán
 - [Inici](https://ladyjarana.es/ca)
-- [Preus](https://ladyjarana.es/ca/preus)
 - [Contractar](https://ladyjarana.es/ca/contractar)
 - [Repertori](https://ladyjarana.es/ca/repertori)
 - [Esdeveniments](https://ladyjarana.es/ca/esdeveniments)

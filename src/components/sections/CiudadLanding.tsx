@@ -26,8 +26,6 @@ const labels = {
     ctaSub:
       'Mándanos fecha, lugar y formato por WhatsApp. Respondemos en minutos.',
     ctaButton: 'Hablemos por WhatsApp →',
-    seeMore: 'Ver',
-    precios: 'precios completos',
     faq: 'FAQ general',
     breadcrumbHome: 'Inicio',
     musicos: 'músicos',
@@ -45,8 +43,6 @@ const labels = {
     ctaSub:
       "Envia'ns data, lloc i format per WhatsApp. Responem en minuts.",
     ctaButton: 'Parlem per WhatsApp →',
-    seeMore: 'Veure',
-    precios: 'preus complets',
     faq: 'FAQ general',
     breadcrumbHome: 'Inici',
     musicos: 'músics',
@@ -61,7 +57,6 @@ export default function CiudadLanding({ content, locale }: Props) {
   const path = `/${slug}`;
   const altPath = locale === 'es' ? `/ca/${altSlug}` : `/${altSlug}`;
   const homePath = locale === 'es' ? '/' : '/ca';
-  const preciosPath = locale === 'es' ? '/precios' : '/ca/preus';
   const faqPath = locale === 'es' ? '/faq' : '/ca/faq';
 
   const localBusinessJsonLd = {
@@ -218,9 +213,9 @@ export default function CiudadLanding({ content, locale }: Props) {
               </div>
             </div>
             <p className="mt-4 font-body text-sm text-negro/65 text-center">
-              <Link href={preciosPath} className="text-rojo underline font-bold">
-                {t.seeMore} {t.precios} →
-              </Link>
+              {locale === 'es'
+                ? 'Presupuesto cerrado en minutos por WhatsApp.'
+                : 'Pressupost tancat en minuts per WhatsApp.'}
             </p>
           </div>
         </section>

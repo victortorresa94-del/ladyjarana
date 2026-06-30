@@ -363,10 +363,6 @@ export default function CuantoCuestaPage() {
               Hablemos por WhatsApp →
             </Button>
             <p className="mt-4 font-body text-xs text-blanco/70">
-              <Link href="/precios" className="text-sol underline">
-                Ver precios detallados
-              </Link>{' '}
-              ·{' '}
               <Link href="/faq" className="text-sol underline">
                 FAQ completa
               </Link>

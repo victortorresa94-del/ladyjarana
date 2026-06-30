@@ -368,11 +368,7 @@ export default function SobrePage() {
               Hablemos por WhatsApp →
             </Button>
             <p className="mt-6 font-body text-sm text-blanco/70">
-              También puedes ver{' '}
-              <Link href="/precios" className="text-sol underline font-bold">
-                precios
-              </Link>{' '}
-              o las{' '}
+              También puedes ver las{' '}
               <Link href="/faq" className="text-sol underline font-bold">
                 preguntas frecuentes
               </Link>
