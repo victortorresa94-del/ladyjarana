@@ -148,16 +148,22 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link
             href={homeHref}
-            className="flex items-center"
+            className="relative z-50 flex items-center"
             aria-label="Lady Jarana — inici"
           >
+            {/* Logo cambia según contexto:
+                - Sobre hero (transparente): palmera-melon con sombra oscura para contrastar
+                - Scrolled o menú abierto (fondo crema): palmera.png con tinte natural,
+                  sin shadow oscuro que la difumine. */}
             <Image
-              src="/logo/palmera-melon.png"
+              src={scrolled || menuOpen ? '/logo/palmera.png' : '/logo/palmera-melon.png'}
               alt="Lady Jarana"
               width={120}
               height={120}
               priority
-              className="h-12 w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
+              className={`h-12 w-auto transition-all ${
+                scrolled || menuOpen ? '' : 'drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]'
+              }`}
             />
           </Link>
 
@@ -264,43 +270,40 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-crema"
+            className="fixed inset-0 z-40 flex flex-col items-center overflow-y-auto bg-crema px-6 pb-10 pt-24"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.25 }}
           >
-            <nav className="flex flex-col items-center gap-6">
+            <nav className="flex w-full max-w-md flex-col items-stretch gap-3">
               {links.map((link, i) => (
-                <div
-                  key={link.href}
-                  className="flex flex-col items-center"
-                >
+                <div key={link.href} className="w-full">
                   <motion.a
                     href={link.href}
-                    className="font-display text-4xl font-bold text-azul hover:text-rojo transition-colors italic"
+                    className="block w-full rounded-2xl border-2 border-negro/15 bg-blanco px-5 py-3 text-center font-display text-2xl font-bold italic text-azul transition-colors hover:border-rojo hover:text-rojo"
                     onClick={() => setMenuOpen(false)}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.06 }}
+                    transition={{ delay: i * 0.04 }}
                   >
                     {link.label}
                   </motion.a>
                   {link.children && (
                     <motion.div
-                      className="mt-2 flex flex-col items-center gap-1"
+                      className="mt-1.5 grid grid-cols-2 gap-1.5"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: i * 0.06 + 0.1 }}
+                      transition={{ delay: i * 0.04 + 0.08 }}
                     >
                       {link.children.map((c) => (
                         <a
                           key={c.href}
                           href={c.href}
                           onClick={() => setMenuOpen(false)}
-                          className="font-body text-sm font-medium text-negro/70 hover:text-rojo"
+                          className="rounded-xl border-2 border-negro/10 bg-crema px-3 py-2 text-center font-body text-xs font-semibold text-negro/75 transition-colors hover:border-rojo hover:bg-blanco hover:text-rojo"
                         >
-                          → {c.label}
+                          {c.label}
                         </a>
                       ))}
                     </motion.div>
@@ -308,9 +311,10 @@ export default function Navbar() {
                 </div>
               ))}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                className="mt-4 flex flex-col items-center gap-3"
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: links.length * 0.08 }}
+                transition={{ delay: links.length * 0.04 + 0.05 }}
               >
                 <Button
                   href={WHATSAPP_URL}
@@ -319,17 +323,10 @@ export default function Navbar() {
                 >
                   {ctaLabel[locale]}
                 </Button>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: (links.length + 1) * 0.08 }}
-                className="mt-2"
-              >
                 <Link
                   href={switchHref}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-full border-2 border-negro px-5 py-2 font-body text-sm font-bold text-negro"
+                  className="rounded-full border-2 border-negro px-4 py-1.5 font-body text-xs font-bold text-negro"
                 >
                   {locale === 'es' ? '🌐 Veure en català' : '🌐 Ver en castellano'}
                 </Link>
