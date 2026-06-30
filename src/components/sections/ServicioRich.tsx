@@ -68,14 +68,6 @@ export default function ServicioRich({ content, locale }: Props) {
     areaServed: { '@type': 'AdministrativeArea', name: 'Catalunya' },
     audience: { '@type': 'Audience', audienceType: content.audience },
     url: `${baseUrl}${servicePath}`,
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'EUR',
-      lowPrice: 800,
-      highPrice: 2000,
-      offerCount: 3,
-      availability: 'https://schema.org/InStock',
-    },
   };
 
   const faqJsonLd = {

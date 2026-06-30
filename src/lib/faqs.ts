@@ -11,7 +11,7 @@ export const faqsES: FAQ[] = [
   {
     cat: 'precios',
     q: '¿Cuánto cuesta contratar Lady Jarana?',
-    a: 'Cuarteto 800–1.000 €. Quinteto 1.000–1.300 €. Banda completa desde 1.400 €. El precio dentro de cada rango depende de la fecha, el sitio y los extras. No hacemos dúo ni trío. Incluye 120 minutos de show, repertorio personalizable y coordinación previa con tu wedding planner o programador.',
+    a: 'El precio depende del formato (cuarteto, quinteto o banda completa), la fecha, el lugar y los extras (segundo set, primer baile a medida, sonido propio). No hacemos dúo ni trío. Pídenos presupuesto cerrado por WhatsApp y te respondemos en minutos.',
   },
   {
     cat: 'precios',
@@ -55,7 +55,7 @@ export const faqsES: FAQ[] = [
   {
     cat: 'sonido',
     q: '¿Lleváis equipo de sonido?',
-    a: 'Tenemos dos opciones. Opción A (recomendada): el venue aporta PA y técnico de sonido, nosotros mandamos rider y nos coordinamos con su técnico. Opción B: PA propio + 2 técnicos desde 600 €. La opción B es ideal para bodas en finca, espacios sin equipo o eventos privados al aire libre.',
+    a: 'Tenemos dos opciones. Opción A (recomendada): el venue aporta PA y técnico de sonido, nosotros mandamos rider y nos coordinamos con su técnico. Opción B: PA propio + 2 técnicos (presupuesto aparte). La opción B es ideal para bodas en finca, espacios sin equipo o eventos privados al aire libre.',
   },
   {
     cat: 'sonido',
@@ -72,12 +72,12 @@ export const faqsES: FAQ[] = [
   {
     cat: 'zona',
     q: '¿Dónde tocáis?',
-    a: 'Toda Catalunya · +100 € de desplazamiento: Barcelona ciudad, área metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarcas interiores y Pirineos. Fuera de Catalunya consultamos desplazamiento + dietas, pero no cerramos puertas: hemos tocado en otras zonas de España bajo presupuesto específico.',
+    a: 'Toda Catalunya: Barcelona ciudad, área metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarcas interiores y Pirineos. Pequeña tarifa de desplazamiento dentro de Catalunya (te la indicamos en el presupuesto). Fuera de Catalunya consultamos desplazamiento + dietas, pero no cerramos puertas: hemos tocado en otras zonas de España bajo presupuesto específico.',
   },
   {
     cat: 'zona',
     q: '¿Cobráis desplazamiento dentro de Catalunya?',
-    a: 'Sí. 100 € fijos de desplazamiento dentro de Catalunya (cualquier punto, sin variación por kilómetros). Fuera de Catalunya consultamos kilometraje + dietas + alojamiento si corresponde.',
+    a: 'Sí, una pequeña tarifa fija de desplazamiento dentro de Catalunya (cualquier punto, sin variación por kilómetros). Te la indicamos en el presupuesto. Fuera de Catalunya consultamos kilometraje + dietas + alojamiento si corresponde.',
   },
 
   // Show
@@ -163,7 +163,7 @@ export const faqsCA: FAQ[] = [
   {
     cat: 'precios',
     q: 'Quant costa contractar Lady Jarana?',
-    a: 'Quartet 800–1.000 €. Quintet 1.000–1.300 €. Banda completa des de 1.400 €. El preu dins de cada rang depèn de la data, el lloc i els extres. No fem duo ni trio. Inclou 120 minuts de xou, repertori personalitzable i coordinació prèvia amb el teu wedding planner o programador.',
+    a: 'El preu depèn del format (quartet, quintet o banda completa), la data, el lloc i els extres (segon set, primer ball a mida, so propi). No fem duo ni trio. Demana pressupost tancat per WhatsApp i et responem en minuts.',
   },
   {
     cat: 'precios',
@@ -207,7 +207,7 @@ export const faqsCA: FAQ[] = [
   {
     cat: 'sonido',
     q: 'Porteu equip de so?',
-    a: 'Tenim dues opcions. Opció A (recomanada): el venue aporta PA i tècnic de so, nosaltres enviem rider i ens coordinem amb el seu tècnic. Opció B: PA propi + 2 tècnics des de 600 €. L\'opció B és ideal per a casaments a finca, espais sense equip o esdeveniments privats a l\'aire lliure.',
+    a: 'Tenim dues opcions. Opció A (recomanada): el venue aporta PA i tècnic de so, nosaltres enviem rider i ens coordinem amb el seu tècnic. Opció B: PA propi + 2 tècnics (pressupost a banda). L\'opció B és ideal per a casaments a finca, espais sense equip o esdeveniments privats a l\'aire lliure.',
   },
   {
     cat: 'sonido',
@@ -224,12 +224,12 @@ export const faqsCA: FAQ[] = [
   {
     cat: 'zona',
     q: 'On toqueu?',
-    a: 'Tota Catalunya · +100 € de desplaçament: Barcelona ciutat, àrea metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarques interiors i Pirineu. Fora de Catalunya consultem desplaçament + dietes, però no tanquem portes: hem tocat en altres zones d\'Espanya amb pressupost específic.',
+    a: 'Tota Catalunya: Barcelona ciutat, àrea metropolitana, costa catalana (Costa Brava, Maresme, Garraf), comarques interiors i Pirineu. Petita tarifa de desplaçament dins de Catalunya (te la indiquem al pressupost). Fora de Catalunya consultem desplaçament + dietes, però no tanquem portes: hem tocat en altres zones d\'Espanya amb pressupost específic.',
   },
   {
     cat: 'zona',
     q: 'Cobreu desplaçament dins de Catalunya?',
-    a: 'Sí. 100 € fixos de desplaçament dins de Catalunya (qualsevol punt, sense variació per quilòmetres). Fora de Catalunya consultem quilometratge + dietes + allotjament si correspon.',
+    a: 'Sí, una petita tarifa fixa de desplaçament dins de Catalunya (qualsevol punt, sense variació per quilòmetres). Te la indiquem al pressupost. Fora de Catalunya consultem quilometratge + dietes + allotjament si correspon.',
   },
 
   // Xou

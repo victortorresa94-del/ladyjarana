@@ -6,11 +6,11 @@ export const contentType = ogContentType;
 export const runtime = 'nodejs';
 
 export default function OG() {
-  return renderOG({
-    eyebrow: '· Banda en directo · Barcelona',
-    title: 'Lady Jarana',
-    subtitle:
-      'Pop-rock, rumba y latineo para bodas, fiestas mayores y eventos privados en toda Catalunya. Cuarteto desde 800 €. Show bilingüe ES/CA.',
-    accent: 'sol',
-  });
+ return renderOG({
+ eyebrow: '· Banda en directo · Barcelona',
+ title: 'Lady Jarana',
+ subtitle:
+ 'Pop-rock, rumba y latineo para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe ES/CA.',
+ accent: 'sol',
+ });
 }

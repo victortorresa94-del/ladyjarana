@@ -8,25 +8,19 @@ import { WHATSAPP_URL } from '@/lib/contact';
 export const metadata: Metadata = {
   title: 'Banda en directo vs DJ para boda — comparativa honesta (Barcelona 2026)',
   description:
-    'Comparativa real banda en directo vs DJ para boda en Barcelona y Catalunya: precio, energía, momento foto, repertorio, espacio, sonido. Cuándo elegir banda, cuándo DJ, cuándo combinar. Lady Jarana 800-1.400 €.',
+    'Comparativa real banda en directo vs DJ para boda en Barcelona y Catalunya: energía, momento foto, repertorio, espacio, sonido. Cuándo elegir banda, cuándo DJ, cuándo combinar.',
   alternates: {
     canonical: 'https://ladyjarana.es/banda-versus-dj-boda',
   },
   openGraph: {
     title: 'Banda vs DJ para boda — comparativa honesta',
     description:
-      'Precio, energía, repertorio, espacio. Cuándo banda, cuándo DJ, cuándo los dos. Sin marketing.',
+      'Energía, repertorio, espacio. Cuándo banda, cuándo DJ, cuándo los dos. Sin marketing.',
     type: 'article',
   },
 };
 
 const filas = [
-  {
-    criterio: 'Precio típico (Barcelona 2026)',
-    banda: '800–2.000 € según formato',
-    dj: '600–1.500 € según experiencia y equipo',
-    gana: 'dj',
-  },
   {
     criterio: 'Momento foto / wow',
     banda: 'Sí — fotos icónicas en escenario',
@@ -41,7 +35,7 @@ const filas = [
   },
   {
     criterio: 'Catálogo musical',
-    banda: '60-120 temas trabajados',
+    banda: 'Catálogo trabajado, finito',
     dj: 'Catálogo infinito + remixes',
     gana: 'dj',
   },
@@ -53,13 +47,13 @@ const filas = [
   },
   {
     criterio: 'Espacio físico necesario',
-    banda: '4×3 m mínimo + tomas de luz',
-    dj: '2×2 m con mesa y altavoces',
+    banda: 'Escenario amplio + tomas de luz',
+    dj: 'Mesa + altavoces (poco espacio)',
     gana: 'dj',
   },
   {
     criterio: 'Sonido (PA) incluido',
-    banda: 'A veces (Lady Jarana: +600 € PA propio)',
+    banda: 'A veces (Lady Jarana lo aporta a parte)',
     dj: 'Casi siempre incluido',
     gana: 'dj',
   },
@@ -97,7 +91,7 @@ export default function BandaVsDjPage() {
     inLanguage: 'es-ES',
     headline: 'Banda en directo vs DJ para boda — comparativa honesta (Barcelona 2026)',
     description:
-      'Comparativa real banda vs DJ para boda en Barcelona: precio, energía, momento foto, repertorio, espacio. Cuándo elegir cada uno y cuándo combinarlos.',
+      'Comparativa real banda vs DJ para boda en Barcelona: energía, momento foto, repertorio, espacio. Cuándo elegir cada uno y cuándo combinarlos.',
     author: { '@id': 'https://ladyjarana.es/#musicgroup' },
     publisher: { '@id': 'https://ladyjarana.es/#musicgroup' },
     datePublished: '2026-06-30',
@@ -123,15 +117,7 @@ export default function BandaVsDjPage() {
         name: '¿Qué es mejor para una boda, banda en directo o DJ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Depende del momento y del presupuesto. La banda da el "momento foto" y la energía irrepetible del directo (ideal para cóctel + 2-3 sets durante el banquete y baile). El DJ da catálogo infinito y pista continua sin descanso (ideal para after-party hasta las 5). Lo que mejor funciona en boda en Barcelona es combinar: banda 2 horas + DJ continúa. Presupuesto típico combinado: 1.500–2.500 €.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '¿Cuánto cuesta una banda en directo vs un DJ en Barcelona?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Banda en directo: 800 € (cuarteto) a 2.000 € (banda completa 6-7 músicos). DJ: 600 € (DJ junior con equipo básico) a 1.500 € (DJ experimentado con cabina premium + iluminación). Lady Jarana cuarteto desde 800 €, quinteto 1.000-1.300 €, banda completa desde 1.400 €.',
+          text: 'Depende del momento y de tus prioridades. La banda da el "momento foto" y la energía irrepetible del directo (ideal para cóctel + 2-3 sets durante el banquete y baile). El DJ da catálogo infinito y pista continua sin descanso (ideal para after-party hasta las 5). Lo que mejor funciona en boda en Barcelona es combinar: banda 2 horas + DJ continúa.',
         },
       },
       {
@@ -193,7 +179,7 @@ export default function BandaVsDjPage() {
             </h1>
             <p className="lead font-body text-lg text-negro/75 leading-relaxed">
               La pregunta que toda pareja se hace en Barcelona. Aquí va la
-              comparativa sin marketing — diez criterios reales, una tabla
+              comparativa sin marketing — nueve criterios reales, una tabla
               honesta y la respuesta que casi nadie te da: <strong>los dos</strong>.
             </p>
           </header>
@@ -208,19 +194,19 @@ export default function BandaVsDjPage() {
                 primer baile personalizado, fotos icónicas.
               </li>
               <li>
-                🎧 <strong>DJ</strong> gana en: precio base, catálogo, pista
-                continua, espacio, sonido autónomo.
+                🎧 <strong>DJ</strong> gana en: catálogo, pista continua,
+                espacio, sonido autónomo.
               </li>
               <li>
                 🤝 <strong>Banda + DJ</strong> gana casi siempre — banda 2 h en
-                el "prime time" + DJ continúa hasta el final. 1.500–2.500 €.
+                el "prime time" + DJ continúa hasta el final.
               </li>
             </ul>
           </section>
 
           <section className="mb-12">
             <h2 className="mb-6 font-display text-3xl font-bold italic text-negro lg:text-4xl">
-              La tabla — 10 criterios reales
+              La tabla — 9 criterios reales
             </h2>
             <div className="overflow-x-auto rounded-2xl border-4 border-negro bg-blanco">
               <table className="w-full font-body text-sm">
@@ -252,8 +238,8 @@ export default function BandaVsDjPage() {
               </table>
             </div>
             <p className="mt-3 font-body text-xs text-negro/60">
-              Resultado: 4 a banda, 4 a DJ, 2 empates. Es decir: no hay ganador
-              objetivo — depende de qué priorizáis.
+              No hay ganador objetivo — depende de qué priorizáis. Por eso casi
+              siempre recomendamos combinar los dos.
             </p>
           </section>
 
@@ -264,7 +250,7 @@ export default function BandaVsDjPage() {
             <ul className="space-y-3 font-body text-base text-negro/80 leading-relaxed">
               <li>
                 <strong>El cóctel y el banquete son el momento clave.</strong>{' '}
-                Querés que la gente se acuerde de la música del primer plato,
+                Queréis que la gente se acuerde de la música del primer plato,
                 no de la pista a las 3 de la mañana.
               </li>
               <li>
@@ -291,10 +277,6 @@ export default function BandaVsDjPage() {
               <li>
                 <strong>Queréis fiesta hasta las 5 de la madrugada.</strong>{' '}
                 Ninguna banda puede tocar 6 horas seguidas sin pausa.
-              </li>
-              <li>
-                <strong>El presupuesto musical es ajustado.</strong> DJ base
-                desde 600 €, banda cuarteto desde 800 €.
               </li>
               <li>
                 <strong>El espacio es muy reducido</strong> (jardín, terraza
@@ -331,8 +313,9 @@ export default function BandaVsDjPage() {
               </li>
             </ol>
             <p className="mt-4 font-body text-sm text-blanco/80">
-              Presupuesto total típico (Barcelona 2026): 1.500–2.500 €. Lady
-              Jarana cuarteto + DJ recomendado por nosotros = aprox. 1.500 €.
+              Para que te cuadre el combo, mándanos fecha + venue + aforo por
+              WhatsApp. Te decimos qué formato encaja y con qué DJs de
+              confianza solemos cerrar el plan.
             </p>
           </section>
 
@@ -352,7 +335,7 @@ export default function BandaVsDjPage() {
                 href="/cuanto-cuesta-banda-boda-barcelona"
                 className="rounded-full border-2 border-negro bg-blanco px-6 py-3 font-body font-bold text-negro shadow-[3px_3px_0_var(--negro)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0_var(--negro)] transition-all"
               >
-                Guía completa de precios →
+                Guía de precios honesta →
               </Link>
             </div>
           </section>

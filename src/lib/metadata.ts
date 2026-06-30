@@ -10,7 +10,7 @@ export const siteMetadata: Metadata = {
     template: '%s | Lady Jarana',
   },
   description:
-    'Banda en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Pop-rock español y catalán, rumba y latineo. Cuarteto 800–1.000 €, quinteto 1.000–1.300 €, banda completa desde 1.400 €. Show bilingüe ES/CA.',
+    'Banda en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Pop-rock español y catalán, rumba y latineo. Cuarteto, quinteto o banda completa. Show bilingüe ES/CA. Pídenos presupuesto por WhatsApp.',
   keywords: [
     'banda para bodas Barcelona',
     'banda en directo Catalunya',
@@ -35,7 +35,7 @@ export const siteMetadata: Metadata = {
     title:
       'Lady Jarana — Banda en directo de pop-rock, rumba y latineo | Barcelona y Catalunya',
     description:
-      'Banda en directo para bodas, fiestas mayores y eventos privados en toda Catalunya. Pop-rock ES/CA, rumba y latineo. Cuarteto desde 800 €.',
+      'Banda en directo para bodas, fiestas mayores y eventos privados en toda Catalunya. Pop-rock ES/CA, rumba y latineo. Pídenos presupuesto por WhatsApp.',
     images: [
       {
         url: '/og-image.jpg',
@@ -49,7 +49,7 @@ export const siteMetadata: Metadata = {
     card: 'summary_large_image',
     title: 'Lady Jarana — Banda en directo · Barcelona y Catalunya',
     description:
-      'Pop-rock ES/CA, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor. Cuarteto desde 800 €.',
+      'Pop-rock ES/CA, rumba y latineo en directo. La banda que convierte tu evento en fiesta mayor.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -168,7 +168,7 @@ export const jsonLdMusicGroup = {
     `${BASE_URL}/fotos/grupo-publico.jpg`,
   ],
   description:
-    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe español + catalán. Cuarteto desde 800 €.',
+    'Banda de Rumba & Rock de Barcelona para bodas, fiestas mayores y eventos privados en toda Catalunya. Show bilingüe español + catalán.',
   slogan: 'Rumba & Rock Band',
   foundingDate: '2025',
   foundingLocation: {
@@ -218,13 +218,12 @@ export const jsonLdLocalBusiness = {
   '@id': LOCALBUSINESS_ID,
   name: 'Lady Jarana',
   description:
-    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Show bilingüe ES/CA. Cuarteto desde 800 €.',
+    'Banda de música en directo para bodas, fiestas mayores y eventos privados en Barcelona y toda Catalunya. Show bilingüe ES/CA.',
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Barcelona' },
     { '@type': 'AdministrativeArea', name: 'Catalunya' },
     { '@type': 'Country', name: 'España' },
   ],
-  priceRange: '€€',
   telephone: '+34627281459',
   email: 'ladyjaranamusic@gmail.com',
   url: BASE_URL,
@@ -235,16 +234,6 @@ export const jsonLdLocalBusiness = {
     addressLocality: 'Barcelona',
     addressRegion: 'Catalunya',
     addressCountry: 'ES',
-  },
-  makesOffer: {
-    '@type': 'AggregateOffer',
-    priceCurrency: 'EUR',
-    lowPrice: 800,
-    highPrice: 2000,
-    offerCount: 3,
-    availability: 'https://schema.org/InStock',
-    seller: { '@id': MUSICGROUP_ID },
-    eligibleRegion: { '@type': 'AdministrativeArea', name: 'Catalunya' },
   },
   sameAs: [
     'https://instagram.com/lady.jarana',
@@ -264,11 +253,6 @@ export const jsonLdHowToContratarES = {
   description:
     'Proceso paso a paso para reservar fecha con Lady Jarana en Barcelona y Catalunya: WhatsApp → presupuesto → contrato → coordinación → bolo.',
   totalTime: 'PT24H',
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'EUR',
-    value: '800',
-  },
   supply: [
     { '@type': 'HowToSupply', name: 'Fecha del evento' },
     { '@type': 'HowToSupply', name: 'Ubicación / venue' },
@@ -289,7 +273,7 @@ export const jsonLdHowToContratarES = {
       position: 2,
       name: 'Recibe disponibilidad y presupuesto',
       text:
-        'En minutos te confirmamos si la fecha está libre y te enviamos presupuesto cerrado: cuarteto 800–1.000 €, quinteto 1.000–1.300 €, banda completa desde 1.400 €.',
+        'En minutos te confirmamos si la fecha está libre y te enviamos presupuesto cerrado, ajustado a tu formato (cuarteto, quinteto o banda completa), fecha y lugar.',
     },
     {
       '@type': 'HowToStep',
@@ -303,7 +287,7 @@ export const jsonLdHowToContratarES = {
       position: 4,
       name: 'Coordinamos detalles 4-6 semanas antes',
       text:
-        'Repaso de timing (ceremonia, primer baile, set largo), repertorio, rider técnico y, si toca, opción de PA propio (+600 €) o coordinación con el técnico del venue.',
+        'Repaso de timing (ceremonia, primer baile, set largo), repertorio, rider técnico y, si toca, opción de PA propio o coordinación con el técnico del venue.',
     },
     {
       '@type': 'HowToStep',
@@ -324,11 +308,6 @@ export const jsonLdHowToContractarCA = {
   description:
     'Procés pas a pas per reservar data amb Lady Jarana a Barcelona i Catalunya: WhatsApp → pressupost → contracte → coordinació → bolo.',
   totalTime: 'PT24H',
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'EUR',
-    value: '800',
-  },
   supply: [
     { '@type': 'HowToSupply', name: 'Data de l’esdeveniment' },
     { '@type': 'HowToSupply', name: 'Ubicació / venue' },
@@ -349,7 +328,7 @@ export const jsonLdHowToContractarCA = {
       position: 2,
       name: 'Rep disponibilitat i pressupost',
       text:
-        'En minuts et confirmem si la data és lliure i t’enviem pressupost tancat: quartet 800–1.000 €, quintet 1.000–1.300 €, banda completa des de 1.400 €.',
+        'En minuts et confirmem si la data és lliure i t’enviem pressupost tancat, ajustat al teu format (quartet, quintet o banda completa), data i lloc.',
     },
     {
       '@type': 'HowToStep',
@@ -363,7 +342,7 @@ export const jsonLdHowToContractarCA = {
       position: 4,
       name: 'Coordinem detalls 4-6 setmanes abans',
       text:
-        'Repàs de timing (cerimònia, primer ball, set llarg), repertori, rider tècnic i, si cal, opció de PA propi (+600 €) o coordinació amb el tècnic del venue.',
+        'Repàs de timing (cerimònia, primer ball, set llarg), repertori, rider tècnic i, si cal, opció de PA propi o coordinació amb el tècnic del venue.',
     },
     {
       '@type': 'HowToStep',
