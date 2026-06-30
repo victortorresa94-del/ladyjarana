@@ -6,6 +6,7 @@ import {
   PHONE_DISPLAY,
   EMAIL,
 } from '@/lib/contact';
+import { jsonLdHowToContractarCA, speakableSpec } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Contractar Lady Jarana — Grup en directe per al teu esdeveniment | Catalunya',
@@ -53,6 +54,7 @@ export default function ContractarPage() {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     inLanguage: 'ca-ES',
+    speakable: speakableSpec,
     mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
@@ -67,6 +69,10 @@ export default function ContractarPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowToContractarCA) }}
         />
         <div className="mx-auto max-w-4xl px-6">
           <a

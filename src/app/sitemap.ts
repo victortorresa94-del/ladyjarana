@@ -59,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.78,
     },
+    {
+      url: `${BASE}/banda-versus-dj-boda`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.76,
+    },
     { url: `${BASE}/banda-musica-barcelona`, lastModified: now, changeFrequency: 'monthly', priority: 0.8, alternates: { languages: { es: `${BASE}/banda-musica-barcelona`, ca: `${BASE}/ca/grup-musica-barcelona` } } },
     { url: `${BASE}/banda-musica-girona`, lastModified: now, changeFrequency: 'monthly', priority: 0.75, alternates: { languages: { es: `${BASE}/banda-musica-girona`, ca: `${BASE}/ca/grup-musica-girona` } } },
     { url: `${BASE}/banda-musica-tarragona`, lastModified: now, changeFrequency: 'monthly', priority: 0.75, alternates: { languages: { es: `${BASE}/banda-musica-tarragona`, ca: `${BASE}/ca/grup-musica-tarragona` } } },

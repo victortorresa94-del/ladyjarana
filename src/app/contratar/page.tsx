@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContratarForm from './ContratarForm';
 import { WHATSAPP_URL, PHONE_DISPLAY, EMAIL } from '@/lib/contact';
+import { jsonLdHowToContratarES, speakableSpec } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Contratar Lady Jarana — Banda en directo para tu evento | Barcelona',
@@ -49,6 +50,8 @@ export default function ContratarPage() {
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: 'es-ES',
+    speakable: speakableSpec,
     mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
@@ -63,6 +66,10 @@ export default function ContratarPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowToContratarES) }}
         />
         <div className="mx-auto max-w-7xl px-6">
           {/* CTA rápido WhatsApp — la vía recomendada */}

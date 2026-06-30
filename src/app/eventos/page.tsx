@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Button from '@/components/ui/Button';
 import { proximosEventos, trayectoria } from '@/lib/trayectoria';
 import { WHATSAPP_URL } from '@/lib/contact';
+import { jsonLdEventSeriesRumbaBeach, speakableSpec } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Eventos · Lady Jarana en directo — bodas, verbenas y fiestas',
@@ -47,6 +48,15 @@ export default function EventosPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://ladyjarana.es/eventos#page',
+        inLanguage: 'es-ES',
+        name: 'Eventos · Lady Jarana en directo',
+        url: 'https://ladyjarana.es/eventos',
+        speakable: speakableSpec,
+      },
+      jsonLdEventSeriesRumbaBeach,
       ...proximosEventos.map((ev) => ({
         '@type': 'MusicEvent',
         name: `Lady Jarana — ${ev.lugar}`,

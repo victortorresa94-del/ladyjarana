@@ -8,7 +8,7 @@ import { WHATSAPP_URL } from '@/lib/contact';
 export const metadata: Metadata = {
   title: 'Cuánto cuesta contratar una banda para boda en Barcelona (2026)',
   description:
-    'Guía honesta de precios de banda en directo para boda en Barcelona y Catalunya: tarifas reales 2026, qué entra, qué no, comparativa banda vs DJ, cuándo cuarteto y cuándo quinteto. Lady Jarana desde 1.000 €.',
+    'Guía honesta de precios de banda en directo para boda en Barcelona y Catalunya: tarifas reales 2026, qué entra, qué no, comparativa banda vs DJ, cuándo cuarteto y cuándo quinteto. Lady Jarana desde 800 €.',
   alternates: {
     canonical: 'https://ladyjarana.es/cuanto-cuesta-banda-boda-barcelona',
     languages: {

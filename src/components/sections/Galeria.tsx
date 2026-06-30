@@ -10,6 +10,7 @@ import ReelsFeed from '../ui/ReelsFeed';
 import InstagramReel from '../ui/InstagramReel';
 import { liveVideos } from '@/lib/videos';
 import { INSTAGRAM_URL } from '@/lib/contact';
+import { jsonLdVideoObjects } from '@/lib/metadata';
 
 export default function Galeria() {
   const [feedIndex, setFeedIndex] = useState<number | null>(null);
@@ -30,8 +31,28 @@ export default function Galeria() {
   const findReelIndex = (source: string, id: string) =>
     reels.findIndex((r) => r.source === source && r.id === id);
 
+  // VideoObject JSON-LD para Google Vídeos / AI search.
+  // uploadDate aproximada por evento real; los reels nativos del Blob usan
+  // el thumbnail del vídeo o el primer frame fallback (poster por defecto).
+  const videoSchema = jsonLdVideoObjects(
+    liveVideos
+      .filter((v) => v.source === 'native')
+      .map((v) => ({
+        id: v.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        name: v.title,
+        description: v.description,
+        thumbnailUrl: v.thumbnail ?? '/og-image.jpg',
+        uploadDate: '2026-06-23',
+        contentUrl: v.id,
+      })),
+  );
+
   return (
     <section id="galeria" className="relative bg-blanco py-24 lg:py-32 overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
       <div className="mx-auto max-w-7xl px-6">
         <SectionNumber number="04" label="Mira y escucha" />
 

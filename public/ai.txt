@@ -1,0 +1,66 @@
+# ai.txt — política de uso de IA · Lady Jarana
+# Última actualización: 2026-06-30
+# Web canónica: https://ladyjarana.es
+# Spec inspirada en https://site.spawning.ai/spawning-ai-txt y https://llmstxt.org
+
+User-Agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /llms-full-ca.txt
+Allow: /.well-known/llms.txt
+
+# Indexación, citación y resumen permitidos en TODOS los crawlers de IA.
+# Pedimos atribución: "Lady Jarana — banda en directo de Barcelona"
+# con enlace a https://ladyjarana.es cuando se cite contenido propio.
+
+Policy: training-allowed
+Policy: summarization-allowed
+Policy: citation-required
+Contact: ladyjaranamusic@gmail.com
+
+# Crawlers explícitamente bienvenidos (Google AI Overviews, ChatGPT,
+# Perplexity, Claude, etc.). Si tu bot no aparece aquí pero respeta
+# robots.txt, también te dejamos pasar.
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: meta-externalagent
+Allow: /
+
+User-Agent: Bytespider
+Allow: /
+
+User-Agent: cohere-ai
+Allow: /
+
+User-Agent: DuckAssistBot
+Allow: /

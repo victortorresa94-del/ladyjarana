@@ -5,6 +5,7 @@ import FooterCA from '@/components/FooterCA';
 import Button from '@/components/ui/Button';
 import { proximosEventosCA, trayectoriaCA } from '@/lib/i18nData';
 import { WHATSAPP_URL } from '@/lib/contact';
+import { jsonLdEventSeriesRumbaBeach, speakableSpec } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Esdeveniments · Lady Jarana en directe — casaments, revetlles i festes',
@@ -47,6 +48,15 @@ export default function EsdevenimentsPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://ladyjarana.es/ca/esdeveniments#page',
+        inLanguage: 'ca-ES',
+        name: 'Esdeveniments · Lady Jarana en directe',
+        url: 'https://ladyjarana.es/ca/esdeveniments',
+        speakable: speakableSpec,
+      },
+      jsonLdEventSeriesRumbaBeach,
       ...proximosEventosCA.map((ev) => ({
         '@type': 'MusicEvent',
         name: `Lady Jarana — ${ev.lugar}`,
